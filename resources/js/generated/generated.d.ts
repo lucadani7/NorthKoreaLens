@@ -6,6 +6,13 @@ slug: string,
 name: string,
 isPropaganda: boolean,
 };
+export type PageData = {
+slug: string,
+title: string,
+description: string | null,
+html: string,
+locale: string,
+};
 export type PaginationData = {
 currentPage: number,
 lastPage: number,
@@ -32,6 +39,12 @@ name: string,
 slug: string,
 type: App.Enums.SourceType,
 websiteUrl: string,
+};
+export type SourceListingData = {
+id: number,
+name: string,
+type: App.Enums.SourceType,
+websiteUrl: string | null,
 };
 }
 namespace Enums {

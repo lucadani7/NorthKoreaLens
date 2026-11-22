@@ -153,6 +153,35 @@
         @apply bg-background text-foreground;
     }
 
+    /* Body text of the pages written in Markdown (About us, editorial policy…). */
+    .nk-prose {
+        @apply text-[17px] leading-relaxed text-slate-800 dark:text-slate-200;
+    }
+
+    .nk-prose > * + * {
+        @apply mt-4;
+    }
+
+    .nk-prose h2 {
+        @apply mt-10 font-display text-xl font-bold text-slate-900 dark:text-white;
+    }
+
+    .nk-prose ul {
+        @apply list-disc space-y-2 pl-6;
+    }
+
+    .nk-prose a {
+        @apply font-semibold text-nk-blue underline underline-offset-4 dark:text-sky-300;
+    }
+
+    .nk-prose strong {
+        @apply font-semibold text-slate-900 dark:text-white;
+    }
+
+    .nk-prose em {
+        @apply text-slate-600 dark:text-slate-400;
+    }
+
     /* Korean wraps between words, not inside them ("지지하지", not "지 / 지하지"). */
     :lang(ko) {
         word-break: keep-all;

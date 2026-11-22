@@ -17,6 +17,8 @@ void createInertiaApp({
                 return null;
             case name === 'feed':
             case name === 'post':
+            case name === 'page':
+            case name === 'sources':
                 return PublicLayout;
             case name.startsWith('auth/'):
                 return AuthLayout;
