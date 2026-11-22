@@ -25,6 +25,7 @@ return [
         'uncompromised' => 'Esta :attribute ha aparecido en una filtración de datos. Elige otra.',
     ],
     'attributes' => [
+        'current_password' => 'contraseña actual',
         'name' => 'nombre',
         'email' => 'correo electrónico',
         'password' => 'contraseña',

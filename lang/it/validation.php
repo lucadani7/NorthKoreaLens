@@ -25,6 +25,7 @@ return [
         'uncompromised' => 'Questa :attribute è comparsa in una fuga di dati. Scegline un’altra.',
     ],
     'attributes' => [
+        'current_password' => 'password attuale',
         'name' => 'nome',
         'email' => 'email',
         'password' => 'password',

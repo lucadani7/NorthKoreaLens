@@ -25,6 +25,7 @@ return [
         'uncompromised' => 'Ce :attribute est apparu dans une fuite de données. Veuillez en choisir un autre.',
     ],
     'attributes' => [
+        'current_password' => 'mot de passe actuel',
         'name' => 'nom',
         'email' => 'e-mail',
         'password' => 'mot de passe',

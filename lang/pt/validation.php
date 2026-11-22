@@ -25,6 +25,7 @@ return [
         'uncompromised' => 'Esta :attribute apareceu em um vazamento de dados. Escolha outra.',
     ],
     'attributes' => [
+        'current_password' => 'senha atual',
         'name' => 'nome',
         'email' => 'e-mail',
         'password' => 'senha',

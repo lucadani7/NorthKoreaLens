@@ -25,6 +25,7 @@ return [
         'uncompromised' => ':attribute a apărut într-o scurgere de date. Alege altă :attribute.',
     ],
     'attributes' => [
+        'current_password' => 'parola actuală',
         'name' => 'nume',
         'email' => 'email',
         'password' => 'parola',

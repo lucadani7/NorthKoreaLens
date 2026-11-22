@@ -25,6 +25,7 @@ return [
         'uncompromised' => 'Bu :attribute bir veri sızıntısında görüldü. Lütfen başka bir :attribute seç.',
     ],
     'attributes' => [
+        'current_password' => 'mevcut şifre',
         'name' => 'ad',
         'email' => 'e-posta',
         'password' => 'şifre',

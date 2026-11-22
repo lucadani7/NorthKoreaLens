@@ -25,6 +25,7 @@ return [
         'uncompromised' => 'Das angegebene :attribute ist in einem Datenleck aufgetaucht. Bitte wähle ein anderes :attribute.',
     ],
     'attributes' => [
+        'current_password' => 'aktuelles Passwort',
         'name' => 'Name',
         'email' => 'E-Mail',
         'password' => 'Passwort',

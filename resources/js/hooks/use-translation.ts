@@ -1,4 +1,5 @@
 import { usePage } from '@inertiajs/react';
+import { useCallback } from 'react';
 
 type Replacements = Record<string, string | number>;
 
@@ -10,15 +11,18 @@ type Replacements = Record<string, string | number>;
 export function useTranslation() {
     const { translations, locale } = usePage().props;
 
-    const t = (key: string, replacements: Replacements = {}): string => {
-        let text = translations[key] ?? key;
+    const t = useCallback(
+        (key: string, replacements: Replacements = {}): string => {
+            let text = translations[key] ?? key;
 
-        for (const [name, value] of Object.entries(replacements)) {
-            text = text.replaceAll(`:${name}`, String(value));
-        }
+            for (const [name, value] of Object.entries(replacements)) {
+                text = text.replaceAll(`:${name}`, String(value));
+            }
 
-        return text;
-    };
+            return text;
+        },
+        [translations],
+    );
 
     return { t, locale };
 }

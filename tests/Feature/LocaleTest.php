@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Inertia\Testing\AssertableInertia as Assert;
 use Tests\TestCase;
@@ -102,7 +103,33 @@ class LocaleTest extends TestCase
             ]);
     }
 
-    /** Every literal passed to t('…') in the React code. */
+    public function test_settings_pages_are_shown_in_the_visitor_language(): void
+    {
+        $this->actingAs(User::factory()->create())
+            ->withCookie('locale', 'ro')
+            ->get(route('profile.edit'))
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('settings/profile')
+                ->where('locale', 'ro')
+                ->where('translations.Settings', 'Setări')
+                ->where('translations.Delete account', 'Șterge contul')
+            );
+    }
+
+    public function test_password_change_errors_are_translated(): void
+    {
+        $this->actingAs(User::factory()->create())
+            ->withCookie('locale', 'ro')
+            ->from(route('security.edit'))
+            ->put(route('user-password.update'), [
+                'current_password' => 'wrong-password',
+                'password' => 'a-new-long-password',
+                'password_confirmation' => 'a-new-long-password',
+            ])
+            ->assertSessionHasErrors(['current_password' => 'Parola este greșită.']);
+    }
+
+    /** Every literal passed to t('…') in the React code, plus the strings the server translates for it. */
     private function keysUsedByTheInterface(): array
     {
         $keys = [];
@@ -118,11 +145,21 @@ class LocaleTest extends TestCase
             preg_match_all("/\\bt\\(\\s*'((?:[^'\\\\]|\\\\.)*)'/", $source, $matches);
             array_push($keys, ...array_map(fn ($key) => stripslashes($key), $matches[1]));
 
-            // Auth pages pass an English title and description to their layout, which translates them.
-            if (str_contains($file->getPathname(), 'pages'.DIRECTORY_SEPARATOR.'auth')) {
-                preg_match_all("/\\b(?:title|description):\\s*'((?:[^'\\\\]|\\\\.)*)'/", $source, $matches);
-                array_push($keys, ...array_map(fn ($key) => stripslashes($key), $matches[1]));
+            // Page layouts, navigation items and breadcrumbs carry English titles that are translated where they are shown.
+            preg_match_all("/\\b(?:title|description):\\s*'((?:[^'\\\\]|\\\\.)*)'/", $source, $matches);
+            array_push($keys, ...array_map(fn ($key) => stripslashes($key), $matches[1]));
+        }
+
+        // Messages the server sends to the interface, such as toasts.
+        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator(app_path()));
+
+        foreach ($files as $file) {
+            if ($file->getExtension() !== 'php') {
+                continue;
             }
+
+            preg_match_all("/\\b__\\(\\s*'((?:[^'\\\\]|\\\\.)*)'/", file_get_contents($file->getPathname()), $matches);
+            array_push($keys, ...array_map(fn ($key) => stripslashes($key), $matches[1]));
         }
 
         return array_values(array_unique($keys));

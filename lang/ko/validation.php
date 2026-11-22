@@ -25,6 +25,7 @@ return [
         'uncompromised' => '입력한 :attribute이(가) 데이터 유출에서 발견되었습니다. 다른 :attribute을(를) 선택하세요.',
     ],
     'attributes' => [
+        'current_password' => '현재 비밀번호',
         'name' => '이름',
         'email' => '이메일',
         'password' => '비밀번호',
