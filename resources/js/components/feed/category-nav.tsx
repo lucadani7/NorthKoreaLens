@@ -6,23 +6,29 @@ import { home } from '@/routes';
 type Props = {
     categories: App.Data.CategoryData[];
     active: string | null;
+    /** Called after a section is picked, e.g. to close the menu it sits in. */
+    onNavigate?: () => void;
+    className?: string;
 };
 
 function NavLink({
     href,
     active,
     propaganda,
+    onNavigate,
     children,
 }: {
     href: ReturnType<typeof home>;
     active: boolean;
     propaganda?: boolean;
+    onNavigate?: () => void;
     children: string;
 }) {
     return (
         <Link
             href={href}
             aria-current={active ? 'page' : undefined}
+            onClick={onNavigate}
             className={cn(
                 'flex min-h-11 items-center gap-3 rounded-lg px-3 text-[15px] whitespace-nowrap',
                 active
@@ -42,16 +48,25 @@ function NavLink({
     );
 }
 
-/** Sections of the feed: a column on large screens, a scrollable row on phones. */
-export default function CategoryNav({ categories, active }: Props) {
+/** Sections of the feed, as a column: beside the feed on large screens, in the menu on phones. */
+export default function CategoryNav({
+    categories,
+    active,
+    onNavigate,
+    className,
+}: Props) {
     const { t } = useTranslation();
 
     return (
         <nav
             aria-label={t('Sections')}
-            className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible"
+            className={cn('flex flex-col gap-1', className)}
         >
-            <NavLink href={home()} active={active === null}>
+            <NavLink
+                href={home()}
+                active={active === null}
+                onNavigate={onNavigate}
+            >
                 {t('All')}
             </NavLink>
             {categories.map((category) => (
@@ -60,6 +75,7 @@ export default function CategoryNav({ categories, active }: Props) {
                     href={home({ query: { category: category.slug } })}
                     active={active === category.slug}
                     propaganda={category.isPropaganda}
+                    onNavigate={onNavigate}
                 >
                     {category.name}
                 </NavLink>

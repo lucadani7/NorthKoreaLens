@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Data\CategoryData;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -42,6 +44,8 @@ class HandleInertiaRequests extends Middleware
             'locales' => $this->locales(),
             // Interface strings of the current language (lang/{locale}.json), keyed by the English text.
             'translations' => fn () => app('translator')->getLoader()->load(app()->getLocale(), '*', '*'),
+            // Feed sections for the phone menu, which is on every public page.
+            'sections' => fn () => CategoryData::collect(Category::orderBy('sort_order')->get()),
             'auth' => [
                 'user' => $request->user(),
             ],

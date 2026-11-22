@@ -14,6 +14,7 @@ declare module '@inertiajs/core' {
             locale: string;
             locales: { code: string; name: string }[];
             translations: Record<string, string>;
+            sections: App.Data.CategoryData[];
             sidebarOpen: boolean;
             [key: string]: unknown;
         };

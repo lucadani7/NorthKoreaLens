@@ -27,6 +27,18 @@ class FeedTest extends TestCase
         return Category::where('slug', $slug)->firstOrFail();
     }
 
+    public function test_every_page_shares_the_sections_for_the_phone_menu(): void
+    {
+        $post = Post::factory()->for($this->category('analysis'))->create();
+
+        $this->get(route('posts.show', $post))
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('post')
+                ->has('sections', 6)
+                ->where('sections.0.slug', 'news')
+            );
+    }
+
     public function test_guests_can_see_the_feed(): void
     {
         $post = Post::factory()->for($this->category('news'))->create(['title' => 'Kim visits a shipyard']);

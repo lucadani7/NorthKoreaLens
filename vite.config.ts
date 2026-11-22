@@ -4,7 +4,7 @@ import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
-import { bunny } from 'laravel-vite-plugin/fonts';
+import { google } from 'laravel-vite-plugin/fonts';
 import { defineConfig, lazyPlugins } from 'vite-plus';
 
 export default defineConfig({
@@ -12,9 +12,27 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             refresh: true,
+            // Downloaded from Google Fonts at build time and served from our own domain,
+            // so visitors' browsers never contact a font CDN (GDPR). Google rather than
+            // Bunny because it sends only WOFF2 and splits Noto Sans KR into small slices.
             fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
+                google('Inter', {
+                    weights: [400, 500, 600, 700],
+                    subsets: ['latin', 'latin-ext'],
+                    preload: [{ weight: 400 }],
+                }),
+                google('Space Grotesk', {
+                    weights: [700],
+                    subsets: ['latin', 'latin-ext'],
+                    preload: false,
+                }),
+                // About 100 slices per weight; browsers fetch only the slices whose
+                // characters appear on the page.
+                google('Noto Sans KR', {
+                    weights: [400, 500, 700],
+                    subsets: ['korean'],
+                    preload: false,
+                    optimizedFallbacks: false,
                 }),
             ],
         }),

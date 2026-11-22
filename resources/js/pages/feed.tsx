@@ -34,8 +34,13 @@ export default function Feed({
             <Head title={current?.name ?? t('Feed')} />
 
             <main className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:flex-row lg:items-start">
-                <aside className="lg:w-60 lg:shrink-0">
-                    <h2 className="mb-2 ml-3 hidden text-xs font-semibold tracking-widest text-slate-600 uppercase lg:block dark:text-slate-400">
+                {/* On phones the sections are in the header menu; the current one is named here. */}
+                <h1 className="font-display text-2xl font-bold lg:hidden">
+                    {current?.name ?? t('All')}
+                </h1>
+
+                <aside className="hidden lg:block lg:w-60 lg:shrink-0">
+                    <h2 className="mb-2 ml-3 text-xs font-semibold tracking-widest text-slate-600 uppercase dark:text-slate-400">
                         {t('Sections')}
                     </h2>
                     <CategoryNav

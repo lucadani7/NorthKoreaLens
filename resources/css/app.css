@@ -15,13 +15,14 @@
     --color-nk-red: #ed1c27;
     --color-nk-red-dark: #b5141d;
 
-    --font-display: 'Space Grotesk', var(--font-sans);
+    --font-display: var(--font-space-grotesk), var(--font-sans);
 }
 
 @theme {
+    /* Font families come from the fonts option in vite.config.ts (the @fonts directive). */
     --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        var(--font-inter), var(--font-noto-sans-kr), ui-sans-serif, system-ui,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
     --radius-lg: var(--radius);
@@ -150,5 +151,11 @@
 
     body {
         @apply bg-background text-foreground;
+    }
+
+    /* Korean wraps between words, not inside them ("지지하지", not "지 / 지하지"). */
+    :lang(ko) {
+        word-break: keep-all;
+        overflow-wrap: anywhere;
     }
 }
