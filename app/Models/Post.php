@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\SourceType;
+use Database\Factories\PostFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -11,8 +12,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
-    /** @use HasFactory<\Database\Factories\PostFactory> */
+    /** @use HasFactory<PostFactory> */
     use HasFactory;
+
     use SoftDeletes;
 
     protected $fillable = [

@@ -7,6 +7,15 @@ use Laravel\Fortify\Features;
 
 abstract class TestCase extends BaseTestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // Tests check what the server sends, not the built JS/CSS, so they must not depend
+        // on a Vite manifest that may be stale or missing (for example in CI).
+        $this->withoutVite();
+    }
+
     protected function skipUnlessFortifyHas(string $feature, ?string $message = null): void
     {
         if (! Features::enabled($feature)) {

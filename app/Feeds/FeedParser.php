@@ -15,7 +15,9 @@ class FeedParser
     public const EXCERPT_LENGTH = 300;
 
     private const NS_MEDIA = 'http://search.yahoo.com/mrss/';
+
     private const NS_CONTENT = 'http://purl.org/rss/1.0/modules/content/';
+
     private const NS_ATOM = 'http://www.w3.org/2005/Atom';
 
     /**
@@ -174,7 +176,7 @@ class FeedParser
         $cut = mb_substr($text, 0, self::EXCERPT_LENGTH);
         $lastSpace = mb_strrpos($cut, ' ');
 
-        return rtrim($lastSpace !== false ? mb_substr($cut, 0, $lastSpace) : $cut, " ,.;:").'…';
+        return rtrim($lastSpace !== false ? mb_substr($cut, 0, $lastSpace) : $cut, ' ,.;:').'…';
     }
 
     private function cleanText(string $html): string
