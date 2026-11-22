@@ -78,8 +78,28 @@ class LocaleTest extends TestCase
             $missing = array_diff($keys, array_keys($translations));
 
             $this->assertSame([], array_values($missing), "lang/{$locale}.json is missing keys.");
-            $this->assertFileExists(lang_path("{$locale}/categories.php"));
+
+            foreach (['categories', 'auth', 'passwords', 'validation'] as $group) {
+                $this->assertFileExists(lang_path("{$locale}/{$group}.php"));
+            }
         }
+    }
+
+    public function test_login_errors_are_shown_in_the_visitor_language(): void
+    {
+        $this->withCookie('locale', 'ro')
+            ->post('/login', ['email' => 'nobody@example.com', 'password' => 'wrong-password'])
+            ->assertSessionHasErrors(['email' => 'Datele de autentificare nu sunt corecte.']);
+    }
+
+    public function test_validation_messages_are_translated(): void
+    {
+        $this->withCookie('locale', 'de')
+            ->post('/register', ['name' => '', 'email' => 'not-an-email', 'password' => 'x', 'password_confirmation' => 'y'])
+            ->assertSessionHasErrors([
+                'name' => 'Das Feld Name ist erforderlich.',
+                'email' => 'Das Feld E-Mail muss eine gültige E-Mail-Adresse sein.',
+            ]);
     }
 
     /** Every literal passed to t('…') in the React code. */
@@ -93,8 +113,16 @@ class LocaleTest extends TestCase
                 continue;
             }
 
-            preg_match_all("/\\bt\\(\\s*'((?:[^'\\\\]|\\\\.)*)'/", file_get_contents($file->getPathname()), $matches);
+            $source = file_get_contents($file->getPathname());
+
+            preg_match_all("/\\bt\\(\\s*'((?:[^'\\\\]|\\\\.)*)'/", $source, $matches);
             array_push($keys, ...array_map(fn ($key) => stripslashes($key), $matches[1]));
+
+            // Auth pages pass an English title and description to their layout, which translates them.
+            if (str_contains($file->getPathname(), 'pages'.DIRECTORY_SEPARATOR.'auth')) {
+                preg_match_all("/\\b(?:title|description):\\s*'((?:[^'\\\\]|\\\\.)*)'/", $source, $matches);
+                array_push($keys, ...array_map(fn ($key) => stripslashes($key), $matches[1]));
+            }
         }
 
         return array_values(array_unique($keys));
