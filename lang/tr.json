@@ -184,5 +184,11 @@
     "Team": "Ekip",
     "In South Korea the law restricts access to North Korean websites, so we do not link to the original.": "Güney Kore’de yasa Kuzey Kore sitelerine erişimi kısıtladığı için orijinale bağlantı vermiyoruz.",
     "Learn more": "Daha fazla bilgi",
-    "The language of the site and of the emails we send you.": "Sitenin ve sana gönderdiğimiz e-postaların dili."
+    "The language of the site and of the emails we send you.": "Sitenin ve sana gönderdiğimiz e-postaların dili.",
+    "Play video: :title": "Videoyu oynat: :title",
+    "The video is played from YouTube, which may set cookies.": "Video YouTube üzerinden oynatılır; YouTube çerez kullanabilir.",
+    "Watch on YouTube": "YouTube'da izle",
+    "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Güney Kore haber ajansı Yonhap’ın İngilizce YouTube kanalı KOREA NOW’dan Kuzey Kore ile ilgili videolar. Kanalı her gün kontrol ediyoruz; başka konulardaki videolar burada yer almıyor.",
+    "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Henüz Kuzey Kore ile ilgili video yok. Kanalı her gün kontrol ediyoruz; yenileri burada görünecek.",
+    ":source does not allow AI tools to be used on its content. NK Lens respects this and runs no AI features on it.": ":source, içeriğinde yapay zekâ araçlarının kullanılmasına izin vermiyor. NK Lens buna saygı gösteriyor ve bu içerikte hiçbir yapay zekâ özelliği kullanmıyor."
 }

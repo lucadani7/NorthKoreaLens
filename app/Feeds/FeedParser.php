@@ -8,6 +8,7 @@ use SimpleXMLElement;
 
 /**
  * Reads RSS 2.0 and Atom feeds into FeedItem objects, with no third-party packages.
+ * YouTube channel feeds are Atom with the description and thumbnail in <media:group>.
  */
 class FeedParser
 {
@@ -71,6 +72,7 @@ class FeedParser
                 excerpt: $this->excerpt($description !== '' ? $description : $content),
                 imageUrl: $this->rssImage($item, $content.$description),
                 publishedAt: $this->date((string) $item->pubDate),
+                description: $this->cleanText($description !== '' ? $description : $content),
             );
         }
 
@@ -92,14 +94,23 @@ class FeedParser
             }
 
             $summary = (string) ($entry->summary ?? '') ?: (string) ($entry->content ?? '');
+            // children() of an element that is not there gives null, hence the ?-> all the way.
+            $media = $entry->children(self::NS_MEDIA)->group?->children(self::NS_MEDIA);
+
+            if ($summary === '') {
+                $summary = (string) $media?->description;
+            }
+
+            $thumbnail = (string) $media?->thumbnail?->attributes()?->url;
 
             $items[] = new FeedItem(
                 guid: trim((string) $entry->id) ?: $link,
                 title: $title,
                 link: $link,
                 excerpt: $this->excerpt($summary),
-                imageUrl: $this->firstImageIn($summary),
+                imageUrl: $this->firstImageIn($summary) ?? $this->safeUrl($thumbnail),
                 publishedAt: $this->date((string) ($entry->published ?? '') ?: (string) $entry->updated),
+                description: $this->cleanText($summary),
             );
         }
 

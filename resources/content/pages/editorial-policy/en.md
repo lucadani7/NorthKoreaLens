@@ -45,7 +45,7 @@ Posts written by the NK Lens team are marked as ours. We say where our informati
 
 ## Artificial intelligence
 
-We plan to offer short AI explanations for some posts. When we do, they will always be clearly marked, they will never replace the original article, and you will be able to report a mistake in them.
+We plan to offer short AI explanations for some posts. When we do, they will always be clearly marked, they will never replace the original article, and you will be able to report a mistake in them. Some sources, such as the South Korean news agency Yonhap, do not allow AI tools to be used on their content; we respect that, say so on their posts and run no AI features on them.
 
 ## Protecting people
 

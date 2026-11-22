@@ -4,6 +4,8 @@ namespace App\Filament\Resources\Posts\Tables;
 
 use App\Models\Category;
 use App\Models\Post;
+use Filament\Actions\Action;
+use Filament\Actions\BulkAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -16,6 +18,7 @@ use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 
 class PostsTable
 {
@@ -71,10 +74,25 @@ class PostsTable
                 TrashedFilter::make(),
             ])
             ->recordActions([
+                Action::make('publish')
+                    ->icon('heroicon-o-check-circle')
+                    ->color('success')
+                    ->visible(fn (Post $record) => $record->published_at === null)
+                    ->action(fn (Post $record) => $record->publish()),
                 EditAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
+                    BulkAction::make('publish')
+                        ->icon('heroicon-o-check-circle')
+                        ->color('success')
+                        ->action(function (Collection $records): void {
+                            foreach ($records as $post) {
+                                if ($post instanceof Post) {
+                                    $post->publish();
+                                }
+                            }
+                        }),
                     DeleteBulkAction::make(),
                     RestoreBulkAction::make(),
                     ForceDeleteBulkAction::make(),

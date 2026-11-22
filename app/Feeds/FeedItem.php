@@ -16,5 +16,7 @@ final readonly class FeedItem
         public ?string $excerpt,
         public ?string $imageUrl,
         public ?DateTimeImmutable $publishedAt,
+        /** The whole description as plain text, used to match the source's keywords. */
+        public string $description = '',
     ) {}
 }

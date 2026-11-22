@@ -3,7 +3,9 @@
 namespace App\Filament\Resources\Sources\Schemas;
 
 use App\Enums\SourceType;
+use App\Models\Category;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
@@ -41,6 +43,23 @@ class SourceForm
                 ->url()
                 ->maxLength(255)
                 ->helperText('Leave empty for sources without a feed; their posts are added by hand.'),
+            Select::make('category_id')
+                ->label('Section')
+                ->options(fn () => Category::orderBy('sort_order')->get()->mapWithKeys(
+                    fn (Category $category) => [$category->id => $category->name()],
+                ))
+                ->placeholder('Default for the type (news, analysis or propaganda)'),
+            TagsInput::make('keywords')
+                ->label('Only import items that mention')
+                ->placeholder('e.g. North Korea')
+                ->helperText('Matched in the title and description, ignoring case. Leave empty to import everything.'),
+            Toggle::make('needs_review')
+                ->label('Import as drafts, to be published by hand')
+                ->default(false),
+            Toggle::make('forbids_ai')
+                ->label('The source forbids AI tools on its content')
+                ->helperText('Readers see a notice on its posts, and NK Lens runs no AI features on them.')
+                ->default(false),
             Toggle::make('is_active')
                 ->label('Fetch this source every hour')
                 ->default(true),

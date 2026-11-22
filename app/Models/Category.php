@@ -22,6 +22,9 @@ class Category extends Model
 
     public const PROPAGANDA = 'propaganda';
 
+    /** Videos from Yonhap's KOREA NOW channel about North Korea. */
+    public const KOREA_NOW = 'korea-now';
+
     protected $fillable = [
         'slug',
         'sort_order',

@@ -25,6 +25,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $image_url
  * @property string $language
  * @property Carbon|null $published_at
+ * @property Carbon|null $source_published_at When the source published it; drafts keep it until published
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
@@ -52,12 +53,14 @@ class Post extends Model
         'image_url',
         'language',
         'published_at',
+        'source_published_at',
     ];
 
     protected function casts(): array
     {
         return [
             'published_at' => 'datetime',
+            'source_published_at' => 'datetime',
         ];
     }
 
@@ -115,6 +118,17 @@ class Post extends Model
     }
 
     /** Visible to the public: it has a publication date and that date has come. */
+    /** Makes a draft public, with the date the source gave it (or now, when there is none). */
+    public function publish(): void
+    {
+        if ($this->published_at !== null) {
+            return;
+        }
+
+        $this->published_at = $this->source_published_at ?? Carbon::now();
+        $this->save();
+    }
+
     public function isPublished(): bool
     {
         return $this->published_at !== null && $this->published_at->lte(now());

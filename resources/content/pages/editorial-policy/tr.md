@@ -45,7 +45,7 @@ NK Lens ekibinin yazdığı gönderiler bizim olarak işaretlenir. Bilgilerimizi
 
 ## Yapay zekâ
 
-Bazı gönderiler için yapay zekâyla hazırlanmış kısa açıklamalar sunmayı planlıyoruz. Bunu yaptığımızda bu açıklamalar her zaman açıkça işaretlenecek, asla orijinal makalenin yerini almayacak ve içlerindeki hataları bildirebileceksin.
+Bazı gönderiler için yapay zekâyla hazırlanmış kısa açıklamalar sunmayı planlıyoruz. Bunu yaptığımızda bu açıklamalar her zaman açıkça işaretlenecek, asla orijinal makalenin yerini almayacak ve içlerindeki hataları bildirebileceksin. Güney Kore haber ajansı Yonhap gibi bazı kaynaklar, içeriklerinde yapay zekâ araçlarının kullanılmasına izin vermiyor; buna saygı gösteriyor, gönderilerinde bunu belirtiyor ve bu gönderilerde hiçbir yapay zekâ özelliği kullanmıyoruz.
 
 ## İnsanları korumak
 

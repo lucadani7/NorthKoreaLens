@@ -4,6 +4,7 @@ namespace App\Data;
 
 use App\Models\Post;
 use App\Support\VisitorRegion;
+use App\Support\YouTube;
 use Spatie\LaravelData\Data;
 
 /**
@@ -28,6 +29,8 @@ class PostData extends Data
         public bool $hasBody,
         /** True when the original exists but is not linked for this visitor (South Korea). */
         public bool $linkWithheld,
+        /** Set when the original is a YouTube video, so it can be played on the page. */
+        public ?string $youtubeId,
         public CategoryData $category,
         public ?SourceData $source,
     ) {}
@@ -48,6 +51,7 @@ class PostData extends Data
             editorialNote: $post->editorial_note,
             hasBody: filled($post->body),
             linkWithheld: ! $linkAllowed,
+            youtubeId: $linkAllowed ? YouTube::videoId($post->original_url) : null,
             category: CategoryData::fromModel($post->category),
             source: $post->source ? SourceData::fromModel($post->source) : null,
         );

@@ -31,6 +31,7 @@ isPropaganda: boolean,
 editorialNote: string | null,
 hasBody: boolean,
 linkWithheld: boolean,
+youtubeId: string | null,
 category: App.Data.CategoryData,
 source: App.Data.SourceData | null,
 };
@@ -40,6 +41,7 @@ name: string,
 slug: string,
 type: App.Enums.SourceType,
 websiteUrl: string | null,
+forbidsAi: boolean,
 };
 export type SourceListingData = {
 id: number,

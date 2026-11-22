@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\SourceType;
+use App\Models\Category;
 use App\Models\Source;
 use Illuminate\Database\Seeder;
 
@@ -44,6 +45,26 @@ class SourceSeeder extends Seeder
                 'website_url' => 'http://www.rodong.rep.kp',
                 'feed_url' => null,
             ],
+        ];
+
+        // Yonhap's English YouTube channel covers all of Korea, mostly the South. Only videos
+        // that mention North Korea are imported, and they wait as drafts for review.
+        $sources[] = [
+            'name' => 'KOREA NOW (Yonhap)',
+            'slug' => 'korea-now',
+            'type' => SourceType::Independent,
+            'category_id' => Category::where('slug', Category::KOREA_NOW)->value('id'),
+            'website_url' => 'https://www.youtube.com/@KOREANOWyna',
+            'feed_url' => 'https://www.youtube.com/feeds/videos.xml?channel_id=UCR-L8oZkHzgDh1ahJhH2WDQ',
+            'keywords' => [
+                'North Korea', 'N. Korea', 'N.Korea', 'DPRK', 'Pyongyang',
+                'Kim Jong Un', 'Kim Jong-un', 'Kim Yo Jong', 'Kim Yo-jong', 'Kim Ju Ae', 'Kim Ju-ae',
+                'inter-Korean', 'defector', 'Panmunjom', 'DMZ', 'Korean War', 'unification',
+                '북한', '평양', '김정은',
+            ],
+            'needs_review' => true,
+            // Every KOREA NOW description says AI tools may not be used on Yonhap's videos.
+            'forbids_ai' => true,
         ];
 
         foreach ($sources as $source) {

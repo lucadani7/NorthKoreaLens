@@ -2,18 +2,16 @@
 
 namespace App\Jobs;
 
+use App\Feeds\FeedImporter;
 use App\Feeds\FeedParser;
-use App\Models\Category;
-use App\Models\Post;
 use App\Models\Source;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Str;
 
 /**
- * Reads one source's RSS feed and stores the articles we have not seen yet.
+ * Reads one source's RSS or Atom feed (YouTube channels included) and stores the items we
+ * have not seen yet, keeping only those that match the source's keywords.
  */
 class FetchSourceFeed implements ShouldQueue
 {
@@ -30,7 +28,7 @@ class FetchSourceFeed implements ShouldQueue
 
     public function __construct(public Source $source) {}
 
-    public function handle(FeedParser $parser): void
+    public function handle(FeedParser $parser, FeedImporter $importer): void
     {
         if (! $this->source->is_active || $this->source->feed_url === null) {
             return;
@@ -42,22 +40,8 @@ class FetchSourceFeed implements ShouldQueue
             ->get($this->source->feed_url)
             ->throw();
 
-        $category = Category::where('slug', $this->source->type->defaultCategorySlug())->firstOrFail();
-
         foreach ($parser->parse($response->body()) as $item) {
-            Post::firstOrCreate(
-                ['source_id' => $this->source->id, 'guid' => Str::limit($item->guid, 250, '')],
-                [
-                    'category_id' => $category->id,
-                    'title' => Str::limit($item->title, 250),
-                    'excerpt' => $item->excerpt,
-                    'original_url' => $item->link,
-                    'image_url' => $item->imageUrl,
-                    'language' => $this->source->language,
-                    // A feed item without a date is shown as published when we first saw it.
-                    'published_at' => $item->publishedAt ? Carbon::instance($item->publishedAt) : now(),
-                ],
-            );
+            $importer->import($this->source, $item);
         }
 
         $this->source->forceFill(['last_fetched_at' => now()])->save();

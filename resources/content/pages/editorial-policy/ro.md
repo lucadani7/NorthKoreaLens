@@ -45,7 +45,7 @@ Postările scrise de echipa NK Lens sunt marcate ca fiind ale noastre. Spunem de
 
 ## Inteligența artificială
 
-Plănuim să oferim explicații scurte generate cu AI pentru unele postări. Când o vom face, vor fi mereu marcate clar, nu vor înlocui niciodată articolul original și vei putea raporta o greșeală în ele.
+Plănuim să oferim explicații scurte generate cu AI pentru unele postări. Când o vom face, vor fi mereu marcate clar, nu vor înlocui niciodată articolul original și vei putea raporta o greșeală în ele. Unele surse, precum agenția sud-coreeană de presă Yonhap, nu permit folosirea instrumentelor AI pe conținutul lor; respectăm acest lucru, o spunem pe postările lor și nu folosim nicio funcție AI pe ele.
 
 ## Protecția oamenilor
 

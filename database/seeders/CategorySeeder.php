@@ -13,6 +13,7 @@ class CategorySeeder extends Seeder
         'analysis',
         'human-rights',
         'curiosities',
+        Category::KOREA_NOW,
         Category::PROPAGANDA,
         'discussions',
     ];

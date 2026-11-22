@@ -1,6 +1,7 @@
 import { Link } from '@inertiajs/react';
 import { ExternalLink } from 'lucide-react';
 import EditorialNote from '@/components/feed/editorial-note';
+import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { cn } from '@/lib/utils';
@@ -89,14 +90,22 @@ export default function PostCard({ post, now }: Props) {
                 )}
             </div>
 
-            {post.imageUrl && (
-                <img
-                    src={post.imageUrl}
-                    alt=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                    className="aspect-video w-full bg-slate-200 object-cover dark:bg-slate-800"
+            {post.youtubeId ? (
+                <YouTubeEmbed
+                    videoId={post.youtubeId}
+                    title={post.title}
+                    thumbnailUrl={post.imageUrl}
                 />
+            ) : (
+                post.imageUrl && (
+                    <img
+                        src={post.imageUrl}
+                        alt=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        className="aspect-video w-full bg-slate-200 object-cover dark:bg-slate-800"
+                    />
+                )
             )}
 
             {post.originalUrl && (
@@ -107,11 +116,22 @@ export default function PostCard({ post, now }: Props) {
                         rel="noopener noreferrer"
                         className="inline-flex h-11 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:text-sky-300"
                     >
-                        {t('Read on :source', { source: author })}
+                        {post.youtubeId
+                            ? t('Watch on YouTube')
+                            : t('Read on :source', { source: author })}
                         <ExternalLink aria-hidden="true" className="size-4" />
                     </a>
                 </div>
             )}
+            {post.source?.forbidsAi && (
+                <p className="border-t border-slate-100 px-5 py-3 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400">
+                    {t(
+                        ':source does not allow AI tools to be used on its content. NK Lens respects this and runs no AI features on it.',
+                        { source: post.source.name },
+                    )}
+                </p>
+            )}
+
             {post.linkWithheld && (
                 <p className="border-t border-slate-100 px-5 py-3 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400">
                     {t(

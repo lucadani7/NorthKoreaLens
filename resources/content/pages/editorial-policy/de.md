@@ -45,7 +45,7 @@ Beiträge des NK-Lens-Teams sind als unsere gekennzeichnet. Wir sagen, woher uns
 
 ## Künstliche Intelligenz
 
-Wir planen, für einige Beiträge kurze KI-Erklärungen anzubieten. Wenn es so weit ist, werden sie immer deutlich gekennzeichnet sein, nie den Originalartikel ersetzen, und du wirst Fehler darin melden können.
+Wir planen, für einige Beiträge kurze KI-Erklärungen anzubieten. Wenn es so weit ist, werden sie immer deutlich gekennzeichnet sein, nie den Originalartikel ersetzen, und du wirst Fehler darin melden können. Manche Quellen, etwa die südkoreanische Nachrichtenagentur Yonhap, erlauben keine KI-Werkzeuge für ihre Inhalte; wir respektieren das, weisen bei ihren Beiträgen darauf hin und nutzen dort keine KI-Funktionen.
 
 ## Schutz von Menschen
 

@@ -16,6 +16,8 @@ class SourceData extends Data
         public SourceType $type,
         /** Null when the site may not be linked for this visitor (North Korean sites, in South Korea). */
         public ?string $websiteUrl,
+        /** The source forbids AI tools on its content, which readers are told. */
+        public bool $forbidsAi,
     ) {}
 
     public static function fromModel(Source $source): self
@@ -26,6 +28,7 @@ class SourceData extends Data
             slug: $source->slug,
             type: $source->type,
             websiteUrl: VisitorRegion::current()->allows($source->website_url) ? $source->website_url : null,
+            forbidsAi: $source->forbids_ai,
         );
     }
 }

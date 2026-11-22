@@ -12,6 +12,18 @@ type Props = {
     now: string;
 };
 
+/** A short note at the top of a section, saying what it holds and how often it changes. */
+const SECTION_NOTES: Record<string, string> = {
+    'korea-now':
+        'Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.',
+};
+
+/** What an empty section says, when it has something more useful to say than the default. */
+const EMPTY_NOTES: Record<string, string> = {
+    'korea-now':
+        'No videos about North Korea yet. We check the channel every day, and new ones will appear here.',
+};
+
 const pagerLink =
     'flex h-11 items-center rounded-full border border-nk-blue px-5 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:border-sky-300 dark:text-sky-300';
 
@@ -28,6 +40,10 @@ export default function Feed({
     const current = categories.find(
         (category) => category.slug === activeCategory,
     );
+    const sectionNote = activeCategory ? SECTION_NOTES[activeCategory] : null;
+    const emptyNote =
+        (activeCategory && EMPTY_NOTES[activeCategory]) ??
+        'Nothing here yet. New articles arrive every hour.';
 
     return (
         <>
@@ -53,11 +69,15 @@ export default function Feed({
                     aria-label={t('Feed')}
                     className="flex max-w-2xl min-w-0 flex-1 flex-col gap-4"
                 >
+                    {sectionNote && (
+                        <p className="rounded-xl border-l-4 border-nk-blue bg-white px-5 py-4 text-[15px] leading-relaxed text-slate-700 dark:bg-slate-900 dark:text-slate-300">
+                            {t(sectionNote)}
+                        </p>
+                    )}
+
                     {posts.length === 0 ? (
                         <p className="rounded-xl bg-white p-8 text-center text-slate-600 dark:bg-slate-900 dark:text-slate-400">
-                            {t(
-                                'Nothing here yet. New articles arrive every hour.',
-                            )}
+                            {t(emptyNote)}
                         </p>
                     ) : (
                         posts.map((post) => (

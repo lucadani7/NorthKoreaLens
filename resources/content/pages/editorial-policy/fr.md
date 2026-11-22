@@ -45,7 +45,7 @@ Les publications écrites par l’équipe de NK Lens sont signalées comme telle
 
 ## Intelligence artificielle
 
-Nous prévoyons de proposer de courtes explications générées par IA pour certaines publications. Le moment venu, elles seront toujours clairement signalées, ne remplaceront jamais l’article original, et vous pourrez y signaler une erreur.
+Nous prévoyons de proposer de courtes explications générées par IA pour certaines publications. Le moment venu, elles seront toujours clairement signalées, ne remplaceront jamais l’article original, et vous pourrez y signaler une erreur. Certaines sources, comme l’agence de presse sud-coréenne Yonhap, n’autorisent pas l’utilisation d’outils d’IA sur leurs contenus ; nous le respectons, l’indiquons sur leurs publications et n’y appliquons aucune fonction d’IA.
 
 ## Protéger les personnes
 

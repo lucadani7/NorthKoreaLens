@@ -1,6 +1,7 @@
 import { Head, Link } from '@inertiajs/react';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import EditorialNote from '@/components/feed/editorial-note';
+import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { timeAgo } from '@/lib/time';
@@ -73,13 +74,23 @@ export default function Post({ post, body, now }: Props) {
                             {post.title}
                         </h1>
 
-                        {post.imageUrl && (
-                            <img
-                                src={post.imageUrl}
-                                alt=""
-                                referrerPolicy="no-referrer"
-                                className="aspect-video w-full rounded-lg bg-slate-200 object-cover dark:bg-slate-800"
-                            />
+                        {post.youtubeId ? (
+                            <div className="overflow-hidden rounded-lg">
+                                <YouTubeEmbed
+                                    videoId={post.youtubeId}
+                                    title={post.title}
+                                    thumbnailUrl={post.imageUrl}
+                                />
+                            </div>
+                        ) : (
+                            post.imageUrl && (
+                                <img
+                                    src={post.imageUrl}
+                                    alt=""
+                                    referrerPolicy="no-referrer"
+                                    className="aspect-video w-full rounded-lg bg-slate-200 object-cover dark:bg-slate-800"
+                                />
+                            )
                         )}
 
                         {paragraphs.length > 0 ? (
@@ -112,12 +123,23 @@ export default function Post({ post, body, now }: Props) {
                                 rel="noopener noreferrer"
                                 className="inline-flex h-11 w-fit items-center gap-2 rounded-full border border-nk-blue px-5 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:border-sky-300 dark:text-sky-300"
                             >
-                                {t('Read on :source', { source: author })}
+                                {post.youtubeId
+                                    ? t('Watch on YouTube')
+                                    : t('Read on :source', { source: author })}
                                 <ExternalLink
                                     aria-hidden="true"
                                     className="size-4"
                                 />
                             </a>
+                        )}
+
+                        {post.source?.forbidsAi && (
+                            <p className="text-xs text-slate-500 dark:text-slate-400">
+                                {t(
+                                    ':source does not allow AI tools to be used on its content. NK Lens respects this and runs no AI features on it.',
+                                    { source: post.source.name },
+                                )}
+                            </p>
                         )}
 
                         {post.linkWithheld && (

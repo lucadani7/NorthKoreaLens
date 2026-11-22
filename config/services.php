@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    // YouTube Data API v3, for searching channel archives (php artisan youtube:backfill).
+    'youtube' => [
+        'key' => env('YOUTUBE_API_KEY'),
+    ],
+
 ];
