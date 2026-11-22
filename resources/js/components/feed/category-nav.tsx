@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import { useTranslation } from '@/hooks/use-translation';
 import { cn } from '@/lib/utils';
 import { home } from '@/routes';
 
@@ -35,10 +36,12 @@ function NavLink({ href, active, propaganda, children }: {
 
 /** Sections of the feed: a column on large screens, a scrollable row on phones. */
 export default function CategoryNav({ categories, active }: Props) {
+    const { t } = useTranslation();
+
     return (
-        <nav aria-label="Sections" className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible">
+        <nav aria-label={t('Sections')} className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible">
             <NavLink href={home()} active={active === null}>
-                All
+                {t('All')}
             </NavLink>
             {categories.map((category) => (
                 <NavLink

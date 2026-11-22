@@ -38,6 +38,12 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'name' => config('app.name'),
+            'locale' => app()->getLocale(),
+            'locales' => collect(config('locales.supported'))
+                ->map(fn (string $name, string $code) => ['code' => $code, 'name' => $name])
+                ->values(),
+            // Interface strings of the current language (lang/{locale}.json), keyed by the English text.
+            'translations' => fn () => app('translator')->getLoader()->load(app()->getLocale(), '*', '*'),
             'auth' => [
                 'user' => $request->user(),
             ],

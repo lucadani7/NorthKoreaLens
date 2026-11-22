@@ -106,11 +106,11 @@ class FeedTest extends TestCase
         $this->get(route('home', ['category' => 'does-not-exist']))->assertNotFound();
     }
 
-    public function test_category_names_follow_the_app_locale(): void
+    public function test_category_names_follow_the_visitor_language(): void
     {
-        app()->setLocale('ro');
-
-        $this->get(route('home'))
+        // The SetLocale middleware picks the language per request, so the test sends it like a browser would.
+        $this->withCookie('locale', 'ro')
+            ->get(route('home'))
             ->assertInertia(fn (Assert $page) => $page->where('categories.0.name', 'Știri'));
     }
 }

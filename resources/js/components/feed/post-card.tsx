@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
+import { useTranslation } from '@/hooks/use-translation';
 import { cn } from '@/lib/utils';
 import { timeAgo } from '@/lib/time';
 
@@ -19,6 +20,7 @@ function initials(name: string): string {
 }
 
 export default function PostCard({ post, now }: Props) {
+    const { t, locale } = useTranslation();
     const author = post.source?.name ?? 'NK Lens';
 
     return (
@@ -46,7 +48,7 @@ export default function PostCard({ post, now }: Props) {
                     <div className="truncate text-[15px] font-semibold">{author}</div>
                     {post.publishedAt && (
                         <time dateTime={post.publishedAt} className="text-[13px] text-slate-600 dark:text-slate-400">
-                            {timeAgo(post.publishedAt, 'en', now)}
+                            {timeAgo(post.publishedAt, locale, now)}
                         </time>
                     )}
                 </div>
@@ -95,7 +97,7 @@ export default function PostCard({ post, now }: Props) {
                         rel="noopener noreferrer"
                         className="inline-flex h-11 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:text-sky-300"
                     >
-                        Read on {author}
+                        {t('Read on :source', { source: author })}
                         <ExternalLink aria-hidden="true" className="size-4" />
                     </a>
                 </div>
