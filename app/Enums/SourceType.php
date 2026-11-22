@@ -20,4 +20,14 @@ enum SourceType: string
     {
         return $this === self::StateMedia;
     }
+
+    /** The category that imported posts from this kind of source land in. */
+    public function defaultCategorySlug(): string
+    {
+        return match ($this) {
+            self::Independent => 'news',
+            self::Analysis => 'analysis',
+            self::StateMedia => 'propaganda',
+        };
+    }
 }

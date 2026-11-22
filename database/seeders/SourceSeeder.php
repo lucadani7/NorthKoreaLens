@@ -10,7 +10,9 @@ class SourceSeeder extends Seeder
 {
     public function run(): void
     {
-        // TODO: confirm each feed URL before enabling the RSS fetcher.
+        // NK News and Daily NK feeds checked on 2026-11-22 (RSS 2.0).
+        // 38 North sits behind a Cloudflare challenge that blocks feed readers (HTTP 403),
+        // so it stays inactive until they allow our reader or we add its posts by hand.
         $sources = [
             [
                 'name' => 'NK News',
@@ -32,6 +34,7 @@ class SourceSeeder extends Seeder
                 'type' => SourceType::Analysis,
                 'website_url' => 'https://www.38north.org',
                 'feed_url' => 'https://www.38north.org/feed/',
+                'is_active' => false,
             ],
             [
                 // No public RSS feed: posts are added through KCNA Watch or by hand.

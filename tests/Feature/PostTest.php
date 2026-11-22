@@ -68,7 +68,8 @@ class PostTest extends TestCase
 
         $this->assertSame(6, Category::count());
         $this->assertTrue(Source::where('slug', 'rodong-sinmun')->first()->type->isPropaganda());
-        $this->assertSame(3, Source::fetchable()->count());
+        // 38 North is seeded inactive, so only NK News and Daily NK are fetched.
+        $this->assertSame(2, Source::fetchable()->count());
     }
 
     public function test_category_names_are_translated(): void
