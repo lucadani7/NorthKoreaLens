@@ -17,7 +17,11 @@ export default function ThemeToggle({ className }: { className?: string }) {
     const { t } = useTranslation();
 
     return (
-        <div role="group" aria-label={t('Colour theme')} className={cn('flex rounded-full bg-white/15 p-1', className)}>
+        <div
+            role="group"
+            aria-label={t('Colour theme')}
+            className={cn('flex rounded-full bg-white/15 p-1', className)}
+        >
             {OPTIONS.map(({ value, icon: Icon, label }) => (
                 <button
                     key={value}
@@ -28,7 +32,9 @@ export default function ThemeToggle({ className }: { className?: string }) {
                     title={t(label)}
                     className={cn(
                         'flex size-9 items-center justify-center rounded-full transition-colors',
-                        appearance === value ? 'bg-white text-nk-blue' : 'text-white hover:bg-white/20',
+                        appearance === value
+                            ? 'bg-white text-nk-blue'
+                            : 'text-white hover:bg-white/20',
                     )}
                 >
                     <Icon aria-hidden="true" className="size-4" />

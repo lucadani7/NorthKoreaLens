@@ -9,9 +9,37 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   ci:
     runs-on: ubuntu-latest
+
+    # Same database engine as in Sail, so tests behave like they do locally.
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testing
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DB_CONNECTION: pgsql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_DATABASE: testing
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
 
     steps:
       - name: Checkout code
@@ -22,17 +50,50 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
-          php-version: '8.3'
+          php-version: '8.5'
+          extensions: pdo_pgsql, intl
           tools: composer:v2
           coverage: none
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Setup Node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '22'
+          cache: pnpm
 
-      - name: Setup Application
-        run: composer setup
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
 
-      - name: Run CI Checks
-        run: composer ci:check
+      - name: Install JS dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Prepare the application
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Check that the generated TypeScript types are up to date
+        run: |
+          php artisan typescript:transform
+          git diff --exit-code -- resources/js/generated || (echo "Run 'php artisan typescript:transform' and commit the result." && exit 1)
+
+      - name: Generate Wayfinder routes
+        run: php artisan wayfinder:generate --with-form
+
+      - name: Lint and format (JS/TS)
+        run: pnpm run check
+
+      - name: Type check (TS)
+        run: pnpm run types:check
+
+      - name: Code style (PHP)
+        run: vendor/bin/pint --test
+
+      - name: Static analysis (PHP)
+        run: vendor/bin/phpstan analyse --no-progress --memory-limit=1G
+
+      - name: Tests
+        run: php artisan test

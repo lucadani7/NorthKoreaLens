@@ -48,9 +48,14 @@ export default function PostCard({ post, now }: Props) {
                     {initials(author)}
                 </div>
                 <div className="min-w-0 flex-1">
-                    <div className="truncate text-[15px] font-semibold">{author}</div>
+                    <div className="truncate text-[15px] font-semibold">
+                        {author}
+                    </div>
                     {post.publishedAt && (
-                        <time dateTime={post.publishedAt} className="text-[13px] text-slate-600 dark:text-slate-400">
+                        <time
+                            dateTime={post.publishedAt}
+                            className="text-[13px] text-slate-600 dark:text-slate-400"
+                        >
                             {timeAgo(post.publishedAt, locale, now)}
                         </time>
                     )}
@@ -64,12 +69,17 @@ export default function PostCard({ post, now }: Props) {
 
             <div className="px-5 pt-3 pb-4">
                 <h2 className="font-display text-xl leading-snug font-bold">
-                    <Link href={show(post.id)} className="hover:text-nk-blue hover:underline dark:hover:text-sky-300">
+                    <Link
+                        href={show(post.id)}
+                        className="hover:text-nk-blue hover:underline dark:hover:text-sky-300"
+                    >
                         {post.title}
                     </Link>
                 </h2>
                 {post.excerpt && (
-                    <p className="mt-2 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">{post.excerpt}</p>
+                    <p className="mt-2 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
+                        {post.excerpt}
+                    </p>
                 )}
                 {post.editorialNote && (
                     <div className="mt-4">

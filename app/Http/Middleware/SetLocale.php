@@ -25,6 +25,7 @@ class SetLocale
 
     private function resolve(Request $request): string
     {
+        /** @var list<string> $supported */
         $supported = array_keys(config('locales.supported'));
         $saved = $request->cookie(config('locales.cookie'));
 

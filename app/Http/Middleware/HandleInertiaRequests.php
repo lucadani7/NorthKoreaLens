@@ -39,9 +39,7 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'name' => config('app.name'),
             'locale' => app()->getLocale(),
-            'locales' => collect(config('locales.supported'))
-                ->map(fn (string $name, string $code) => ['code' => $code, 'name' => $name])
-                ->values(),
+            'locales' => $this->locales(),
             // Interface strings of the current language (lang/{locale}.json), keyed by the English text.
             'translations' => fn () => app('translator')->getLoader()->load(app()->getLocale(), '*', '*'),
             'auth' => [
@@ -49,5 +47,24 @@ class HandleInertiaRequests extends Middleware
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
         ];
+    }
+
+    /**
+     * The interface languages for the language picker, in their own names.
+     *
+     * @return list<array{code: string, name: string}>
+     */
+    private function locales(): array
+    {
+        /** @var array<string, string> $supported */
+        $supported = config('locales.supported');
+
+        $locales = [];
+
+        foreach ($supported as $code => $name) {
+            $locales[] = ['code' => $code, 'name' => $name];
+        }
+
+        return $locales;
     }
 }

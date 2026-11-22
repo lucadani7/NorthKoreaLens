@@ -15,11 +15,19 @@ type Props = {
 const pagerLink =
     'flex h-11 items-center rounded-full border border-nk-blue px-5 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:border-sky-300 dark:text-sky-300';
 
-export default function Feed({ posts, pagination, categories, activeCategory, now: serverNow }: Props) {
+export default function Feed({
+    posts,
+    pagination,
+    categories,
+    activeCategory,
+    now: serverNow,
+}: Props) {
     // The server's clock keeps relative times identical in the SSR HTML and after hydration.
     const now = new Date(serverNow);
     const { t } = useTranslation();
-    const current = categories.find((category) => category.slug === activeCategory);
+    const current = categories.find(
+        (category) => category.slug === activeCategory,
+    );
 
     return (
         <>
@@ -30,22 +38,38 @@ export default function Feed({ posts, pagination, categories, activeCategory, no
                     <h2 className="mb-2 ml-3 hidden text-xs font-semibold tracking-widest text-slate-600 uppercase lg:block dark:text-slate-400">
                         {t('Sections')}
                     </h2>
-                    <CategoryNav categories={categories} active={activeCategory} />
+                    <CategoryNav
+                        categories={categories}
+                        active={activeCategory}
+                    />
                 </aside>
 
-                <section aria-label={t('Feed')} className="flex min-w-0 max-w-2xl flex-1 flex-col gap-4">
+                <section
+                    aria-label={t('Feed')}
+                    className="flex max-w-2xl min-w-0 flex-1 flex-col gap-4"
+                >
                     {posts.length === 0 ? (
                         <p className="rounded-xl bg-white p-8 text-center text-slate-600 dark:bg-slate-900 dark:text-slate-400">
-                            {t('Nothing here yet. New articles arrive every hour.')}
+                            {t(
+                                'Nothing here yet. New articles arrive every hour.',
+                            )}
                         </p>
                     ) : (
-                        posts.map((post) => <PostCard key={post.id} post={post} now={now} />)
+                        posts.map((post) => (
+                            <PostCard key={post.id} post={post} now={now} />
+                        ))
                     )}
 
                     {pagination.lastPage > 1 && (
-                        <nav aria-label={t('Pages')} className="flex items-center justify-between gap-4 py-2">
+                        <nav
+                            aria-label={t('Pages')}
+                            className="flex items-center justify-between gap-4 py-2"
+                        >
                             {pagination.previousPageUrl ? (
-                                <Link href={pagination.previousPageUrl} className={pagerLink}>
+                                <Link
+                                    href={pagination.previousPageUrl}
+                                    className={pagerLink}
+                                >
                                     {t('Newer')}
                                 </Link>
                             ) : (
@@ -58,7 +82,10 @@ export default function Feed({ posts, pagination, categories, activeCategory, no
                                 })}
                             </span>
                             {pagination.nextPageUrl ? (
-                                <Link href={pagination.nextPageUrl} className={pagerLink}>
+                                <Link
+                                    href={pagination.nextPageUrl}
+                                    className={pagerLink}
+                                >
                                     {t('Older')}
                                 </Link>
                             ) : (

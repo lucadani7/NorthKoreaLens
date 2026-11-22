@@ -36,7 +36,9 @@ export default function TwoFactorChallenge() {
 
         return {
             title: t('Authentication code'),
-            description: t('Enter the authentication code provided by your authenticator application.'),
+            description: t(
+                'Enter the authentication code provided by your authenticator application.',
+            ),
             toggleText: t('login using a recovery code'),
         };
     }, [showRecoveryInput, t]);

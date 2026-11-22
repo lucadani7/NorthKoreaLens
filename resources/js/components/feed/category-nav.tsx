@@ -8,7 +8,12 @@ type Props = {
     active: string | null;
 };
 
-function NavLink({ href, active, propaganda, children }: {
+function NavLink({
+    href,
+    active,
+    propaganda,
+    children,
+}: {
     href: ReturnType<typeof home>;
     active: boolean;
     propaganda?: boolean;
@@ -27,7 +32,10 @@ function NavLink({ href, active, propaganda, children }: {
         >
             <span
                 aria-hidden="true"
-                className={cn('size-2.5 shrink-0 rounded-full', propaganda ? 'bg-nk-red-dark' : 'bg-nk-blue')}
+                className={cn(
+                    'size-2.5 shrink-0 rounded-full',
+                    propaganda ? 'bg-nk-red-dark' : 'bg-nk-blue',
+                )}
             />
             {children}
         </Link>
@@ -39,7 +47,10 @@ export default function CategoryNav({ categories, active }: Props) {
     const { t } = useTranslation();
 
     return (
-        <nav aria-label={t('Sections')} className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible">
+        <nav
+            aria-label={t('Sections')}
+            className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible"
+        >
             <NavLink href={home()} active={active === null}>
                 {t('All')}
             </NavLink>

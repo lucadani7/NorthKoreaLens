@@ -21,7 +21,11 @@ class FetchSourceFeed implements ShouldQueue
 
     public int $tries = 3;
 
-    /** Seconds to wait before each retry. */
+    /**
+     * Seconds to wait before each retry.
+     *
+     * @var list<int>
+     */
     public array $backoff = [60, 300];
 
     public function __construct(public Source $source) {}

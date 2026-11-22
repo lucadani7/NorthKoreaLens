@@ -58,8 +58,8 @@ class PostsTable
                     ->relationship('source', 'name'),
                 TernaryFilter::make('propaganda')
                     ->queries(
-                        true: fn (Builder $query) => $query->propaganda(),
-                        false: fn (Builder $query) => $query->whereNot(fn (Builder $query) => $query->propaganda()),
+                        true: fn (Builder $query) => $query->whereIn('id', Post::query()->propaganda()->select('id')),
+                        false: fn (Builder $query) => $query->whereNotIn('id', Post::query()->propaganda()->select('id')),
                         blank: fn (Builder $query) => $query,
                     ),
                 TernaryFilter::make('published')

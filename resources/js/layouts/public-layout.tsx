@@ -23,7 +23,9 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
             <footer className="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
                 <p className="mx-auto max-w-7xl px-6 py-5 text-sm text-slate-600 dark:text-slate-400">
                     © NK Lens ·{' '}
-                    {t('We are not affiliated with the government of the DPRK and do not support the regime in Pyongyang.')}
+                    {t(
+                        'We are not affiliated with the government of the DPRK and do not support the regime in Pyongyang.',
+                    )}
                 </p>
             </footer>
         </div>

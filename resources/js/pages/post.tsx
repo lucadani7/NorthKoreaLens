@@ -19,12 +19,16 @@ export default function Post({ post, body, now }: Props) {
     const { t, locale } = useTranslation();
     const author = post.source?.name ?? 'NK Lens';
     // Plain text only: paragraphs are separated by blank lines, nothing is rendered as HTML.
-    const paragraphs = (body ?? '').split(/\n{2,}/).filter((paragraph) => paragraph.trim() !== '');
+    const paragraphs = (body ?? '')
+        .split(/\n{2,}/)
+        .filter((paragraph) => paragraph.trim() !== '');
 
     return (
         <>
             <Head title={post.title}>
-                {post.excerpt && <meta name="description" content={post.excerpt} />}
+                {post.excerpt && (
+                    <meta name="description" content={post.excerpt} />
+                )}
             </Head>
 
             <main className="mx-auto flex max-w-3xl flex-col gap-4 px-4 py-6 sm:px-6">
@@ -46,9 +50,17 @@ export default function Post({ post, body, now }: Props) {
 
                     <div className="flex flex-col gap-5 p-6 sm:p-8">
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
-                            <span className="font-semibold text-slate-900 dark:text-slate-100">{author}</span>
+                            <span className="font-semibold text-slate-900 dark:text-slate-100">
+                                {author}
+                            </span>
                             {post.publishedAt && (
-                                <time dateTime={post.publishedAt}>{timeAgo(post.publishedAt, locale, new Date(now))}</time>
+                                <time dateTime={post.publishedAt}>
+                                    {timeAgo(
+                                        post.publishedAt,
+                                        locale,
+                                        new Date(now),
+                                    )}
+                                </time>
                             )}
                             {!post.isPropaganda && (
                                 <span className="rounded-full bg-nk-blue/10 px-2.5 py-1 text-xs font-semibold text-nk-blue-dark dark:bg-nk-blue/30 dark:text-white">
@@ -57,7 +69,9 @@ export default function Post({ post, body, now }: Props) {
                             )}
                         </div>
 
-                        <h1 className="font-display text-3xl leading-tight font-bold sm:text-4xl">{post.title}</h1>
+                        <h1 className="font-display text-3xl leading-tight font-bold sm:text-4xl">
+                            {post.title}
+                        </h1>
 
                         {post.imageUrl && (
                             <img
@@ -71,18 +85,25 @@ export default function Post({ post, body, now }: Props) {
                         {paragraphs.length > 0 ? (
                             <div className="flex flex-col gap-4 text-[17px] leading-relaxed text-slate-800 dark:text-slate-200">
                                 {paragraphs.map((paragraph, index) => (
-                                    <p key={index} className="whitespace-pre-line">
+                                    <p
+                                        key={index}
+                                        className="whitespace-pre-line"
+                                    >
                                         {paragraph}
                                     </p>
                                 ))}
                             </div>
                         ) : (
                             post.excerpt && (
-                                <p className="text-[17px] leading-relaxed text-slate-800 dark:text-slate-200">{post.excerpt}</p>
+                                <p className="text-[17px] leading-relaxed text-slate-800 dark:text-slate-200">
+                                    {post.excerpt}
+                                </p>
                             )
                         )}
 
-                        {post.editorialNote && <EditorialNote note={post.editorialNote} />}
+                        {post.editorialNote && (
+                            <EditorialNote note={post.editorialNote} />
+                        )}
 
                         {post.originalUrl && (
                             <a
@@ -92,7 +113,10 @@ export default function Post({ post, body, now }: Props) {
                                 className="inline-flex h-11 w-fit items-center gap-2 rounded-full border border-nk-blue px-5 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:border-sky-300 dark:text-sky-300"
                             >
                                 {t('Read on :source', { source: author })}
-                                <ExternalLink aria-hidden="true" className="size-4" />
+                                <ExternalLink
+                                    aria-hidden="true"
+                                    className="size-4"
+                                />
                             </a>
                         )}
                     </div>

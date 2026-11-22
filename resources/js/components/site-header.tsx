@@ -24,9 +24,14 @@ export default function SiteHeader() {
     return (
         <header className="bg-nk-blue text-white">
             <div className="mx-auto flex min-h-16 max-w-7xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-2">
-                <Link href={home()} className="flex items-center gap-2.5 text-white">
+                <Link
+                    href={home()}
+                    className="flex items-center gap-2.5 text-white"
+                >
                     <NkLensLogo className="size-8" />
-                    <span className="font-display text-xl font-bold tracking-tight">{name}</span>
+                    <span className="font-display text-xl font-bold tracking-tight">
+                        {name}
+                    </span>
                 </Link>
 
                 <div className="ml-auto flex flex-wrap items-center gap-2">

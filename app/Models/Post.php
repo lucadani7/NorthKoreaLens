@@ -9,7 +9,29 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 
+/**
+ * @property int $id
+ * @property int|null $source_id
+ * @property int|null $user_id
+ * @property int $category_id
+ * @property string $title
+ * @property string|null $excerpt
+ * @property string|null $body
+ * @property string|null $editorial_note
+ * @property string|null $original_url
+ * @property string|null $guid
+ * @property string|null $image_url
+ * @property string $language
+ * @property Carbon|null $published_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Carbon|null $deleted_at
+ * @property-read Source|null $source
+ * @property-read Category $category
+ * @property-read User|null $author
+ */
 class Post extends Model
 {
     /** @use HasFactory<PostFactory> */
@@ -57,7 +79,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    /** Posts that are published, newest first. */
+    /**
+     * Posts that are published, newest first.
+     *
+     * @param  Builder<Post>  $query
+     */
     public function scopeFeed(Builder $query): void
     {
         $query->whereNotNull('published_at')
@@ -65,7 +91,11 @@ class Post extends Model
             ->latest('published_at');
     }
 
-    /** Posts that must carry the propaganda label. */
+    /**
+     * Posts that must carry the propaganda label.
+     *
+     * @param  Builder<Post>  $query
+     */
     public function scopePropaganda(Builder $query): void
     {
         $query->where(function (Builder $query) {
@@ -80,9 +110,8 @@ class Post extends Model
      */
     public function isPropaganda(): bool
     {
-        return $this->category?->isPropaganda()
-            || $this->source?->type?->isPropaganda()
-            || false;
+        return $this->category->isPropaganda()
+            || ($this->source?->type->isPropaganda() ?? false);
     }
 
     /** Visible to the public: it has a publication date and that date has come. */

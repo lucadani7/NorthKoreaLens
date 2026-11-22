@@ -11,8 +11,14 @@ const UNITS: [Intl.RelativeTimeFormatUnit, number][] = [
  * "2 hours ago", "yesterday", in the given locale.
  * `now` is a parameter so the server and the browser can render the same text.
  */
-export function timeAgo(iso: string, locale = 'en', now: Date = new Date()): string {
-    const seconds = Math.round((new Date(iso).getTime() - now.getTime()) / 1000);
+export function timeAgo(
+    iso: string,
+    locale = 'en',
+    now: Date = new Date(),
+): string {
+    const seconds = Math.round(
+        (new Date(iso).getTime() - now.getTime()) / 1000,
+    );
     const format = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' });
 
     for (const [unit, size] of UNITS) {
