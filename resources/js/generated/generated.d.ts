@@ -30,6 +30,7 @@ publishedAt: string | null,
 isPropaganda: boolean,
 editorialNote: string | null,
 hasBody: boolean,
+linkWithheld: boolean,
 category: App.Data.CategoryData,
 source: App.Data.SourceData | null,
 };
@@ -38,7 +39,7 @@ id: number,
 name: string,
 slug: string,
 type: App.Enums.SourceType,
-websiteUrl: string,
+websiteUrl: string | null,
 };
 export type SourceListingData = {
 id: number,

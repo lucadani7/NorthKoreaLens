@@ -5,7 +5,7 @@ import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { timeAgo } from '@/lib/time';
 import { cn } from '@/lib/utils';
-import { home } from '@/routes';
+import { editorialPolicy, home } from '@/routes';
 
 type Props = {
     post: App.Data.PostData;
@@ -118,6 +118,20 @@ export default function Post({ post, body, now }: Props) {
                                     className="size-4"
                                 />
                             </a>
+                        )}
+
+                        {post.linkWithheld && (
+                            <p className="text-sm text-slate-600 dark:text-slate-400">
+                                {t(
+                                    'In South Korea the law restricts access to North Korean websites, so we do not link to the original.',
+                                )}{' '}
+                                <Link
+                                    href={editorialPolicy()}
+                                    className="font-semibold text-nk-blue underline underline-offset-4 dark:text-sky-300"
+                                >
+                                    {t('Learn more')}
+                                </Link>
+                            </p>
                         )}
                     </div>
                 </article>

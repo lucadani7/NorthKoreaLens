@@ -6,6 +6,7 @@ use Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -20,6 +21,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
  * @property int $id
  * @property string $name
  * @property string $email
+ * @property string|null $locale Interface and email language (config/locales.php)
  * @property Carbon|null $email_verified_at
  * @property string $password
  * @property bool $is_admin
@@ -30,9 +32,9 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
-#[Fillable(['name', 'email', 'password'])]
+#[Fillable(['name', 'email', 'locale', 'password'])]
 #[Hidden(['password', 'two_factor_secret', 'two_factor_recovery_codes', 'remember_token'])]
-class User extends Authenticatable implements FilamentUser, MustVerifyEmail, PasskeyUser
+class User extends Authenticatable implements FilamentUser, HasLocalePreference, MustVerifyEmail, PasskeyUser
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable, PasskeyAuthenticatable, TwoFactorAuthenticatable;
@@ -50,6 +52,15 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Pas
             'two_factor_confirmed_at' => 'datetime',
             'is_admin' => 'boolean',
         ];
+    }
+
+    /**
+     * The language of the interface after login, and of every email and notification
+     * we send this user. Null (or a language we no longer offer) means the app default.
+     */
+    public function preferredLocale(): ?string
+    {
+        return array_key_exists((string) $this->locale, config('locales.supported')) ? $this->locale : null;
     }
 
     /** Only admins and moderators may open the Filament panel at /admin. */

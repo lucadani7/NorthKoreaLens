@@ -1,6 +1,7 @@
 import { Head } from '@inertiajs/react';
 import AppearanceTabs from '@/components/appearance-tabs';
 import Heading from '@/components/heading';
+import LanguagePicker from '@/components/language-picker';
 import { edit as editAppearance } from '@/routes/appearance';
 import { useTranslation } from '@/hooks/use-translation';
 
@@ -22,6 +23,17 @@ export default function Appearance() {
                     )}
                 />
                 <AppearanceTabs />
+            </div>
+
+            <div className="space-y-6">
+                <Heading
+                    variant="small"
+                    title={t('Language')}
+                    description={t(
+                        'The language of the site and of the emails we send you.',
+                    )}
+                />
+                <LanguagePicker variant="plain" className="w-fit" />
             </div>
         </>
     );

@@ -27,6 +27,18 @@ Presa de stat nord-coreeană e o sursă importantă despre felul în care regimu
 
 A arăta propaganda nu înseamnă a fi de acord cu ea. O arătăm ca cititorii să o vadă așa cum este.
 
+## Pentru cititorii din Coreea de Sud
+
+Coreea de Sud blochează aproximativ 60 de site-uri nord-coreene, printre care cele ale Rodong Sinmun și ale Agenției Centrale de Presă Coreene (KCNA), în baza Legii privind rețelele de informații și comunicații. Dacă vizitezi NK Lens din Coreea de Sud:
+
+- vezi în continuare titlurile, fragmentele și notele noastre despre presa de stat nord-coreeană;
+- nu punem linkuri către site-uri nord-coreene și nu afișăm imagini găzduite pe ele, iar acolo unde ar fi fost un link îți spunem asta;
+- linkurile către toate celelalte site-uri, de exemplu redacțiile independente, funcționează normal.
+
+Țara în care te afli o aflăm doar din conexiunea ta la internet, care ne spune țara și nimic altceva, și nu o păstrăm.
+
+Din 30 decembrie 2025, ediția tipărită a Rodong Sinmun poate fi citită în Coreea de Sud fără aprobare specială, în biblioteci precum Centrul de informații despre Coreea de Nord de la Biblioteca Națională a Coreei din Seul. Dacă legea privind site-urile nord-coreene se schimbă, vom actualiza această regulă.
+
 ## Postările noastre
 
 Postările scrise de echipa NK Lens sunt marcate ca fiind ale noastre. Spunem de unde vin informațiile și, când ceva e nesigur sau neconfirmat, o spunem deschis.

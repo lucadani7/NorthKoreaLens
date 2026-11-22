@@ -58,26 +58,31 @@ class PagesTest extends TestCase
             );
     }
 
-    public function test_pages_fall_back_to_english_when_not_translated_yet(): void
+    public function test_a_page_falls_back_to_english_when_its_translation_is_missing(): void
     {
-        $this->withCookie('locale', 'de')
-            ->get(route('editorial-policy'))
-            ->assertInertia(fn (Assert $page) => $page
-                ->where('locale', 'de')
-                ->where('page.title', 'Editorial policy')
-                ->where('page.locale', 'en')
-            );
+        $page = PageData::load('editorial-policy', 'ja');
+
+        $this->assertSame('en', $page?->locale);
+        $this->assertSame('Editorial policy', $page->title);
     }
 
-    public function test_every_page_exists_in_english_and_romanian(): void
+    public function test_every_page_exists_in_every_interface_language(): void
     {
         foreach (['about', 'team', 'editorial-policy', 'how-to-help', 'sources'] as $slug) {
-            foreach (['en', 'ro'] as $locale) {
+            $english = PageData::load($slug, 'en');
+            $this->assertNotNull($english);
+
+            foreach (array_keys(config('locales.supported')) as $locale) {
                 $page = PageData::load($slug, $locale);
 
-                $this->assertNotNull($page, "{$slug}/{$locale}.md is missing.");
-                $this->assertSame($locale, $page->locale, "{$slug}/{$locale}.md is missing.");
+                $this->assertSame($locale, $page?->locale, "{$slug}/{$locale}.md is missing.");
                 $this->assertNotSame('', $page->title, "{$slug}/{$locale}.md has no title.");
+                // Same sections as the English page, so no part is left untranslated.
+                $this->assertSame(
+                    substr_count($english->html, '<h2>'),
+                    substr_count($page->html, '<h2>'),
+                    "{$slug}/{$locale}.md does not have the same sections as the English page.",
+                );
             }
         }
     }

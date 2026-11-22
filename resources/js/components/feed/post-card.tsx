@@ -5,6 +5,7 @@ import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { cn } from '@/lib/utils';
 import { timeAgo } from '@/lib/time';
+import { editorialPolicy } from '@/routes';
 import { show } from '@/routes/posts';
 
 type Props = {
@@ -110,6 +111,19 @@ export default function PostCard({ post, now }: Props) {
                         <ExternalLink aria-hidden="true" className="size-4" />
                     </a>
                 </div>
+            )}
+            {post.linkWithheld && (
+                <p className="border-t border-slate-100 px-5 py-3 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400">
+                    {t(
+                        'In South Korea the law restricts access to North Korean websites, so we do not link to the original.',
+                    )}{' '}
+                    <Link
+                        href={editorialPolicy()}
+                        className="font-semibold text-nk-blue underline underline-offset-4 dark:text-sky-300"
+                    >
+                        {t('Learn more')}
+                    </Link>
+                </p>
             )}
         </article>
     );

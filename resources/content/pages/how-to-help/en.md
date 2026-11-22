@@ -12,7 +12,7 @@ If a translation sounds wrong, a label seems unfair or an article is missing con
 
 ## Help with translations
 
-NK Lens is available in nine languages, and some translations have not yet been reviewed by native speakers. If you speak Romanian, Korean, German, French, Spanish, Italian, Portuguese or Turkish and would like to review a few pages, we would be glad of your help.
+NK Lens is available in ten languages, and some translations have not yet been reviewed by native speakers. If you speak Romanian, Korean, German, French, Spanish, Italian, Portuguese, Turkish or Norwegian and would like to review a few pages, we would be glad of your help.
 
 The code of NK Lens is open source on [GitHub](https://github.com/lucadani7/NorthKoreaLens), under the Apache 2.0 licence. Translations live in plain files there, so you can also suggest corrections directly.
 

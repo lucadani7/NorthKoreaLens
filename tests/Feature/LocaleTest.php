@@ -31,6 +31,25 @@ class LocaleTest extends TestCase
             );
     }
 
+    public function test_norwegian_browsers_get_bokmal(): void
+    {
+        foreach (['nb-NO,nb;q=0.9', 'no,en;q=0.8', 'nn-NO,nn;q=0.9,en;q=0.5'] as $header) {
+            $this->withHeader('Accept-Language', $header)
+                ->get(route('home'))
+                ->assertInertia(fn (Assert $page) => $page
+                    ->where('locale', 'nb')
+                    ->where('translations.Sections', 'Seksjoner')
+                );
+        }
+    }
+
+    public function test_the_first_supported_browser_language_wins(): void
+    {
+        $this->withHeader('Accept-Language', 'ja-JP,ja;q=0.9,de;q=0.8,en;q=0.7')
+            ->get(route('home'))
+            ->assertInertia(fn (Assert $page) => $page->where('locale', 'de'));
+    }
+
     public function test_an_unsupported_browser_language_falls_back_to_english(): void
     {
         $this->withHeader('Accept-Language', 'ja-JP,ja;q=0.9')

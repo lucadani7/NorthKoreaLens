@@ -9,7 +9,7 @@ use Illuminate\Validation\Rule;
 
 class LocaleController extends Controller
 {
-    /** Remembers the language the visitor picked, for a year. */
+    /** Remembers the language the visitor picked: in a cookie for a year, and in the account when signed in. */
     public function __invoke(Request $request): RedirectResponse
     {
         $validated = $request->validate([
@@ -17,6 +17,8 @@ class LocaleController extends Controller
         ]);
 
         Cookie::queue(config('locales.cookie'), $validated['locale'], 60 * 24 * 365);
+
+        $request->user()?->update(['locale' => $validated['locale']]);
 
         return back();
     }

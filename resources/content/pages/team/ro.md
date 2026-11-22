@@ -4,7 +4,7 @@ Aici afli cine face NK Lens și cine răspunde de ce publicăm. Fiecare membru a
 
 ## Luca Daniel Ionescu
 
-**Creatorul și redactorul NK Lens.** Programator autodidact din România, vorbește engleză, franceză și italiană. Urmărește Coreea de Nord din martie 2026, când vlogul de călătorie despre această țară al celor de la [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea și Ion), de pe YouTube, l-a făcut să vrea să o înțeleagă mai bine. Construiește site-ul și se ocupă de politica editorială.
+**Creatorul și redactorul NK Lens.** Programator autodidact din România, vorbește engleză, franceză și italiană. În martie 2026 a văzut vlogul de călătorie în Coreea de Nord al celor de la [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea și Ion), de pe YouTube. De atunci încearcă să afle cât mai multe despre această țară. Construiește site-ul și se ocupă de politica editorială.
 
 ## Alătură-te
 

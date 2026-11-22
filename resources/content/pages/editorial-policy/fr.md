@@ -1,0 +1,58 @@
+# Charte éditoriale
+
+Cette page explique comment NK Lens choisit, signale et corrige ce qu’il publie. Si quelque chose sur le site ne respecte pas ces règles, dites-le-nous.
+
+## D’où viennent nos contenus
+
+Nous utilisons trois types de sources, et chaque publication indique de laquelle elle provient :
+
+- **Rédactions indépendantes** qui couvrent la Corée du Nord selon leurs propres règles éditoriales.
+- **Analyse** : instituts de recherche et médias spécialisés.
+- **Médias d’État nord-coréens**, comme le Rodong Sinmun. Ils ne sont jamais présentés comme de l’information.
+
+La liste complète figure sur la page [Sources](/sources). Nous n’ajoutons une source qu’après avoir vérifié qu’il s’agit d’une vraie rédaction ou d’un vrai organisme de recherche, au travail reconnu.
+
+## Les articles d’autres sites
+
+Pour les articles d’autres sites, nous montrons le titre, un court extrait et un lien vers l’original. Nous ne copions pas d’articles entiers et nous n’en changeons pas le sens. Pour lire l’article complet, vous allez sur le site qui l’a publié.
+
+## Comment nous traitons la propagande
+
+Les médias d’État nord-coréens sont une source importante sur la façon dont le régime veut être perçu, mais pas une source de faits. C’est pourquoi :
+
+- toute publication issue des médias d’État se trouve dans la rubrique **Propagande** et porte une étiquette rouge, où qu’elle apparaisse ;
+- nous ne montrons que le titre et un court extrait, jamais d’articles entiers ;
+- quand c’est possible, nous ajoutons une courte note, **« Ce que l’article ne dit pas »**, avec le contexte que l’original passe sous silence ;
+- en Corée du Sud, où le partage des médias d’État nord-coréens est restreint par la loi, nous ne mettons pas de liens vers ces sites.
+
+Montrer la propagande ne veut pas dire l’approuver. Nous la montrons pour que les lecteurs la voient pour ce qu’elle est.
+
+## Pour les lecteurs en Corée du Sud
+
+La Corée du Sud bloque environ 60 sites nord-coréens, dont ceux du Rodong Sinmun et de l’Agence centrale de presse coréenne (KCNA), en vertu de sa loi sur les réseaux d’information et de communication. Si vous consultez NK Lens depuis la Corée du Sud :
+
+- vous voyez toujours les titres, les extraits et nos notes sur les médias d’État nord-coréens ;
+- nous ne mettons pas de liens vers des sites nord-coréens et n’affichons pas d’images hébergées sur ces sites, et nous vous le signalons là où il y aurait eu un lien ;
+- les liens vers tous les autres sites, comme les rédactions indépendantes, fonctionnent normalement.
+
+Nous ne connaissons votre pays que par votre connexion internet, qui nous indique le pays et rien d’autre, et nous ne le conservons pas.
+
+Depuis le 30 décembre 2025, l’édition papier du Rodong Sinmun peut être lue en Corée du Sud sans autorisation spéciale, dans des bibliothèques comme le Centre d’information sur la Corée du Nord de la Bibliothèque nationale de Corée à Séoul. Si la loi sur les sites nord-coréens change, nous mettrons cette règle à jour.
+
+## Nos propres publications
+
+Les publications écrites par l’équipe de NK Lens sont signalées comme telles. Nous indiquons d’où viennent nos informations et, quand quelque chose est incertain ou non confirmé, nous le disons clairement.
+
+## Intelligence artificielle
+
+Nous prévoyons de proposer de courtes explications générées par IA pour certaines publications. Le moment venu, elles seront toujours clairement signalées, ne remplaceront jamais l’article original, et vous pourrez y signaler une erreur.
+
+## Protéger les personnes
+
+Certaines personnes qui parlent de la Corée du Nord se mettent en danger, elles ou leur famille. Nous ne publions aucun détail permettant d’identifier un transfuge ou ses proches sans leur accord. Les profils sur NK Lens peuvent utiliser un pseudonyme, et nous n’affichons pas la localisation des lecteurs.
+
+## Corrections
+
+Quand nous nous trompons, nous corrigeons et indiquons ce que nous avons changé. Si vous repérez une erreur, dites-le-nous ; une adresse de contact sera bientôt indiquée ici.
+
+_Dernière mise à jour : 22 novembre 2026._

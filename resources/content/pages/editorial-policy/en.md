@@ -27,6 +27,18 @@ North Korean state media are an important source on how the regime wants to be s
 
 Showing propaganda is not the same as agreeing with it. We show it so readers can see it for what it is.
 
+## For readers in South Korea
+
+South Korea blocks around 60 North Korean websites, including those of Rodong Sinmun and the Korean Central News Agency, under its Information and Communications Network Act. If you visit NK Lens from South Korea:
+
+- you still see the headlines, excerpts and our notes on North Korean state media;
+- we do not link to North Korean websites or show images hosted on them, and we tell you so where a link would be;
+- links to every other site, such as independent newsrooms, work as usual.
+
+We know your country only from your internet connection, which tells us the country and nothing more, and we do not store it.
+
+Since 30 December 2025 the printed Rodong Sinmun can be read in South Korea without special permission, in libraries such as the North Korea Information Center at the National Library of Korea in Seoul. If the law on North Korean websites changes, we will update this rule.
+
 ## Our own posts
 
 Posts written by the NK Lens team are marked as ours. We say where our information comes from and, when something is uncertain or unconfirmed, we say so plainly.

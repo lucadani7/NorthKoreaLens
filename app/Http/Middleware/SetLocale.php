@@ -8,8 +8,8 @@ use Illuminate\Support\Carbon;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Picks the interface language: the visitor's saved choice first, then their browser's
- * preferred languages, then the app default.
+ * Picks the interface language: the signed-in user's language first, then the visitor's
+ * saved choice, then their browser's preferred languages, then the app default.
  */
 class SetLocale
 {
@@ -27,15 +27,31 @@ class SetLocale
     {
         /** @var list<string> $supported */
         $supported = array_keys(config('locales.supported'));
+        $userLocale = $request->user()?->preferredLocale();
+
+        if ($userLocale !== null) {
+            return $userLocale;
+        }
+
         $saved = $request->cookie(config('locales.cookie'));
 
         if (is_string($saved) && in_array($saved, $supported, true)) {
             return $saved;
         }
 
-        // getPreferredLanguage() also matches "ro-RO" to "ro"; it falls back to the first entry.
-        $preferred = $request->getPreferredLanguage($supported);
+        /** @var array<string, string> $aliases */
+        $aliases = config('locales.aliases', []);
 
-        return in_array($preferred, $supported, true) ? $preferred : config('app.locale');
+        // The browser's languages, most preferred first: "ro-RO" counts as "ro", "no" as "nb".
+        foreach ($request->getLanguages() as $language) {
+            $code = strtolower(explode('_', str_replace('-', '_', $language))[0]);
+            $code = $aliases[$code] ?? $code;
+
+            if (in_array($code, $supported, true)) {
+                return $code;
+            }
+        }
+
+        return config('app.locale');
     }
 }

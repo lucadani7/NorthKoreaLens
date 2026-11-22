@@ -4,7 +4,7 @@ Here you can see who makes NK Lens and who is responsible for what we publish. E
 
 ## Luca Daniel Ionescu
 
-**Creator and editor.** A self-taught developer from Romania, he speaks English, French and Italian. He has followed North Korea since March 2026, when a travel vlog about the country by the Romanian YouTube channel [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea and Ion) made him want to understand it better. He builds the site and looks after the editorial policy.
+**Creator and editor.** A self-taught developer from Romania, he speaks English, French and Italian. In March 2026 he watched the North Korea travel vlog by [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea and Ion), a Romanian YouTube channel. Since then he has been trying to learn as much as he can about the country. He builds the site and looks after the editorial policy.
 
 ## Join us
 

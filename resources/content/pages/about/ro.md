@@ -6,7 +6,7 @@ NK Lens este un site de știri și o comunitate despre Coreea de Nord. Adunăm l
 
 Coreea de Nord este una dintre cele mai închise țări din lume. Cetățenii ei nu pot citi presa străină, iar cei din afară văd fie propaganda oficială, fie titluri răzlețe. Jurnalism bun există, dar e împrăștiat pe multe site-uri și scris mai ales în engleză sau coreeană.
 
-NK Lens îl adună într-un singur loc, în nouă limbi, și pune presa de stat lângă jurnalismul independent, cu etichete clare. Cele două văzute alăturat sunt adesea cea mai rapidă cale de a înțelege ce se întâmplă de fapt.
+NK Lens îl adună într-un singur loc, în zece limbi, și pune presa de stat lângă jurnalismul independent, cu etichete clare. Cele două văzute alăturat sunt adesea cea mai rapidă cale de a înțelege ce se întâmplă de fapt.
 
 ## Ce găsești aici
 

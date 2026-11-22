@@ -6,7 +6,7 @@ NK Lens is a news and community site about North Korea. We bring together report
 
 North Korea is one of the most closed countries in the world. Its citizens cannot read foreign news, and outsiders mostly see either official propaganda or scattered headlines. Good reporting exists, but it is spread across many sites and mostly in English or Korean.
 
-NK Lens gathers it in one place, in nine languages, and puts state media next to independent reporting with clear labels. Seeing both side by side is often the fastest way to understand what is really going on.
+NK Lens gathers it in one place, in ten languages, and puts state media next to independent reporting with clear labels. Seeing both side by side is often the fastest way to understand what is really going on.
 
 ## What you will find here
 

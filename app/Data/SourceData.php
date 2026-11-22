@@ -4,6 +4,7 @@ namespace App\Data;
 
 use App\Enums\SourceType;
 use App\Models\Source;
+use App\Support\VisitorRegion;
 use Spatie\LaravelData\Data;
 
 class SourceData extends Data
@@ -13,7 +14,8 @@ class SourceData extends Data
         public string $name,
         public string $slug,
         public SourceType $type,
-        public string $websiteUrl,
+        /** Null when the site may not be linked for this visitor (North Korean sites, in South Korea). */
+        public ?string $websiteUrl,
     ) {}
 
     public static function fromModel(Source $source): self
@@ -23,7 +25,7 @@ class SourceData extends Data
             name: $source->name,
             slug: $source->slug,
             type: $source->type,
-            websiteUrl: $source->website_url,
+            websiteUrl: VisitorRegion::current()->allows($source->website_url) ? $source->website_url : null,
         );
     }
 }
