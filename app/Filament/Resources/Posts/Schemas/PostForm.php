@@ -27,6 +27,10 @@ class PostForm
                     Textarea::make('body')
                         ->rows(12)
                         ->helperText('Full text, only for content written by the NK Lens team.'),
+                    Textarea::make('editorial_note')
+                        ->label('What the article doesn\'t say')
+                        ->rows(4)
+                        ->helperText('Editorial context with independent sources. Shown in a box under the post, above all on propaganda.'),
                 ]),
             Section::make('Classification')
                 ->columns(2)

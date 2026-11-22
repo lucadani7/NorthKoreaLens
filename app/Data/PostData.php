@@ -19,6 +19,10 @@ class PostData extends Data
         /** ISO 8601 date, e.g. 2026-11-22T14:30:00+00:00 */
         public ?string $publishedAt,
         public bool $isPropaganda,
+        /** The team's context ("What the article doesn't say"). */
+        public ?string $editorialNote,
+        /** True for team posts with full text, shown on the post page. */
+        public bool $hasBody,
         public CategoryData $category,
         public ?SourceData $source,
     ) {}
@@ -33,6 +37,8 @@ class PostData extends Data
             imageUrl: $post->image_url,
             publishedAt: $post->published_at?->toIso8601String(),
             isPropaganda: $post->isPropaganda(),
+            editorialNote: $post->editorial_note,
+            hasBody: filled($post->body),
             category: CategoryData::fromModel($post->category),
             source: $post->source ? SourceData::fromModel($post->source) : null,
         );

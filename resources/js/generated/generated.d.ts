@@ -21,6 +21,8 @@ originalUrl: string | null,
 imageUrl: string | null,
 publishedAt: string | null,
 isPropaganda: boolean,
+editorialNote: string | null,
+hasBody: boolean,
 category: App.Data.CategoryData,
 source: App.Data.SourceData | null,
 };

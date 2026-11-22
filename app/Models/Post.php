@@ -24,6 +24,7 @@ class Post extends Model
         'title',
         'excerpt',
         'body',
+        'editorial_note',
         'original_url',
         'guid',
         'image_url',
@@ -82,5 +83,11 @@ class Post extends Model
         return $this->category?->isPropaganda()
             || $this->source?->type?->isPropaganda()
             || false;
+    }
+
+    /** Visible to the public: it has a publication date and that date has come. */
+    public function isPublished(): bool
+    {
+        return $this->published_at !== null && $this->published_at->lte(now());
     }
 }

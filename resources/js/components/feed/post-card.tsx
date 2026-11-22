@@ -1,8 +1,11 @@
+import { Link } from '@inertiajs/react';
 import { ExternalLink } from 'lucide-react';
+import EditorialNote from '@/components/feed/editorial-note';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { cn } from '@/lib/utils';
 import { timeAgo } from '@/lib/time';
+import { show } from '@/routes/posts';
 
 type Props = {
     post: App.Data.PostData;
@@ -61,21 +64,17 @@ export default function PostCard({ post, now }: Props) {
 
             <div className="px-5 pt-3 pb-4">
                 <h2 className="font-display text-xl leading-snug font-bold">
-                    {post.originalUrl ? (
-                        <a
-                            href={post.originalUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-nk-blue hover:underline dark:hover:text-sky-300"
-                        >
-                            {post.title}
-                        </a>
-                    ) : (
-                        post.title
-                    )}
+                    <Link href={show(post.id)} className="hover:text-nk-blue hover:underline dark:hover:text-sky-300">
+                        {post.title}
+                    </Link>
                 </h2>
                 {post.excerpt && (
                     <p className="mt-2 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">{post.excerpt}</p>
+                )}
+                {post.editorialNote && (
+                    <div className="mt-4">
+                        <EditorialNote note={post.editorialNote} />
+                    </div>
                 )}
             </div>
 
