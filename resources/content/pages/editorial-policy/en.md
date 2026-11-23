@@ -56,13 +56,14 @@ Posts written by the NK Lens team are marked as ours. We say where our informati
 
 ### How we use AI
 
-Our texts about North Korea, such as the curiosities and their translations, are drafted with the help of an AI assistant (Claude), based on sources we read. A person checks every text before it is published, and the sources are listed under it.
-
-Some sources, such as the South Korean news agency Yonhap, do not allow AI tools to be used on their content; we respect that and say so on their posts.
+- **Drafting:** the curiosities and their translations are written with the help of an AI assistant, starting from sources we have read. For the texts we write, we prefer Claude, by Anthropic; you can use any assistant you like (see below).
+- **Checking:** a person reads every text before it appears on the site.
+- **Sources:** they are listed under every text, so that you can check them too.
+- **Exceptions:** we do not use AI on content from sources that do not allow it, such as the South Korean news agency Yonhap, and we say so on their posts.
 
 ### Ask your own AI assistant
 
-On every post you can ask an AI assistant of your choice, such as ChatGPT, Claude, Perplexity or Gemini, to explain the story. The assistant opens in your own account with the question already written; NK Lens sends nothing to it and sees nothing of the conversation. We do not show these buttons on Yonhap posts.
+On every post you can ask any AI assistant you like to explain the story. ChatGPT, Claude and Perplexity open directly, with the question already written. For any other, such as Gemini, Copilot, DeepSeek or Le Chat, you copy the question with one click and paste it into the chat. Everything happens in your own account: NK Lens sends nothing to the assistant and sees nothing of the conversation. We do not show these buttons on Yonhap posts.
 
 We write only the first question, the one you see before you send it. Everything you ask after that, and what the assistant answers, is between you and the assistant, and is your responsibility, not NK Lens's.
 

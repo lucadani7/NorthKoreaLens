@@ -58,13 +58,14 @@ Ein Wort zur Sprache: Für die Kims verwenden wir manchmal das Wort „Führer�
 
 ### Wie wir KI nutzen
 
-Unsere Texte über Nordkorea, etwa die Kuriositäten und ihre Übersetzungen, entstehen mit Hilfe eines KI-Assistenten (Claude) auf Grundlage von Quellen, die wir lesen. Jeder Text wird vor der Veröffentlichung von einem Menschen geprüft, und die Quellen stehen darunter.
-
-Manche Quellen, etwa die südkoreanische Nachrichtenagentur Yonhap, erlauben keine KI-Werkzeuge für ihre Inhalte; wir respektieren das und weisen bei ihren Beiträgen darauf hin.
+- **Verfassen:** Die Kuriositäten und ihre Übersetzungen entstehen mit Hilfe eines KI-Assistenten, ausgehend von Quellen, die wir gelesen haben. Für die Texte, die wir schreiben, bevorzugen wir Claude von Anthropic; du kannst jeden Assistenten nutzen, den du möchtest (siehe unten).
+- **Prüfen:** Ein Mensch liest jeden Text, bevor er auf der Website erscheint.
+- **Quellen:** Sie stehen unter jedem Text, damit du sie selbst prüfen kannst.
+- **Ausnahmen:** Bei Inhalten von Quellen, die das nicht erlauben, etwa der südkoreanischen Nachrichtenagentur Yonhap, nutzen wir keine KI und weisen bei ihren Beiträgen darauf hin.
 
 ### Frag deinen eigenen KI-Assistenten
 
-Bei jedem Beitrag kannst du einen KI-Assistenten deiner Wahl, etwa ChatGPT, Claude, Perplexity oder Gemini, bitten, die Meldung zu erklären. Der Assistent öffnet sich in deinem eigenen Konto mit der bereits geschriebenen Frage; NK Lens schickt ihm nichts und sieht nichts von der Unterhaltung. Bei Beiträgen von Yonhap zeigen wir diese Schaltflächen nicht.
+Bei jedem Beitrag kannst du jeden beliebigen KI-Assistenten bitten, die Meldung zu erklären. ChatGPT, Claude und Perplexity öffnen sich direkt mit der bereits geschriebenen Frage. Bei allen anderen, etwa Gemini, Copilot, DeepSeek oder Le Chat, kopierst du die Frage mit einem Klick und fügst sie in den Chat ein. Alles geschieht in deinem eigenen Konto: NK Lens schickt dem Assistenten nichts und sieht nichts von der Unterhaltung. Bei Beiträgen von Yonhap zeigen wir diese Schaltflächen nicht.
 
 Wir schreiben nur die erste Frage, die du siehst, bevor du sie abschickst. Alles, was du danach fragst, und was der Assistent antwortet, ist eine Sache zwischen dir und dem Assistenten und liegt in deiner Verantwortung, nicht in der von NK Lens.
 

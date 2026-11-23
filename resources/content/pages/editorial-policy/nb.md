@@ -56,13 +56,14 @@ Innlegg skrevet av NK Lens-teamet er merket som våre. Vi sier hvor opplysningen
 
 ### Slik bruker vi KI
 
-Tekstene våre om Nord-Korea, som kuriositetene og oversettelsene av dem, skrives med hjelp fra en KI-assistent (Claude), ut fra kilder vi leser. Et menneske kontrollerer hver tekst før den publiseres, og kildene står under den.
-
-Noen kilder, som det sørkoreanske nyhetsbyrået Yonhap, tillater ikke at KI-verktøy brukes på innholdet deres; vi respekterer det og sier fra om det på innleggene deres.
+- **Skriving:** Kuriositetene og oversettelsene av dem skrives med hjelp fra en KI-assistent, med utgangspunkt i kilder vi har lest. For tekstene vi skriver, foretrekker vi Claude, fra Anthropic; du kan bruke hvilken assistent du vil (se nedenfor).
+- **Kontroll:** Et menneske leser hver tekst før den kommer på nettstedet.
+- **Kilder:** De står under hver tekst, så du kan sjekke dem selv.
+- **Unntak:** Vi bruker ikke KI på innhold fra kilder som ikke tillater det, som det sørkoreanske nyhetsbyrået Yonhap, og vi sier fra om det på innleggene deres.
 
 ### Spør din egen KI-assistent
 
-På hvert innlegg kan du be en KI-assistent du velger selv, som ChatGPT, Claude, Perplexity eller Gemini, om å forklare saken. Assistenten åpnes i din egen konto med spørsmålet ferdig skrevet; NK Lens sender ingenting til den og ser ingenting av samtalen. På innlegg fra Yonhap viser vi ikke disse knappene.
+På hvert innlegg kan du be hvilken som helst KI-assistent om å forklare saken. ChatGPT, Claude og Perplexity åpnes direkte, med spørsmålet ferdig skrevet. For alle andre, som Gemini, Copilot, DeepSeek eller Le Chat, kopierer du spørsmålet med ett klikk og limer det inn i chatten. Alt skjer i din egen konto: NK Lens sender ingenting til assistenten og ser ingenting av samtalen. På innlegg fra Yonhap viser vi ikke disse knappene.
 
 Vi skriver bare det første spørsmålet, det du ser før du sender det. Alt du spør om etterpå, og det assistenten svarer, er mellom deg og assistenten og ditt ansvar, ikke NK Lens' ansvar.
 

@@ -56,13 +56,14 @@ Les publications écrites par l’équipe de NK Lens sont signalées comme telle
 
 ### Comment nous utilisons l’IA
 
-Nos textes sur la Corée du Nord, comme les curiosités et leurs traductions, sont rédigés avec l’aide d’un assistant IA (Claude), à partir de sources que nous lisons. Chaque texte est vérifié par une personne avant publication, et les sources sont indiquées en dessous.
-
-Certaines sources, comme l’agence de presse sud-coréenne Yonhap, n’autorisent pas l’utilisation d’outils d’IA sur leurs contenus ; nous le respectons et l’indiquons sur leurs publications.
+- **Rédaction :** les curiosités et leurs traductions sont écrites avec l’aide d’un assistant IA, à partir de sources que nous avons lues. Pour les textes que nous écrivons, nous préférons Claude, d’Anthropic ; vous pouvez utiliser l’assistant de votre choix (voir plus bas).
+- **Vérification :** une personne lit chaque texte avant sa mise en ligne.
+- **Sources :** elles figurent sous chaque texte, pour que vous puissiez les vérifier vous aussi.
+- **Exceptions :** nous n’utilisons pas d’IA sur les contenus des sources qui ne l’autorisent pas, comme l’agence de presse sud-coréenne Yonhap, et nous l’indiquons sur leurs publications.
 
 ### Interrogez votre propre assistant IA
 
-Sur chaque publication, vous pouvez demander à l’assistant IA de votre choix, comme ChatGPT, Claude, Perplexity ou Gemini, d’expliquer l’article. L’assistant s’ouvre dans votre propre compte, avec la question déjà rédigée ; NK Lens ne lui envoie rien et ne voit rien de la conversation. Sur les publications de Yonhap, nous n’affichons pas ces boutons.
+Sur chaque publication, vous pouvez demander à l’assistant IA de votre choix d’expliquer l’article. ChatGPT, Claude et Perplexity s’ouvrent directement, avec la question déjà rédigée. Pour tous les autres, comme Gemini, Copilot, DeepSeek ou Le Chat, vous copiez la question en un clic et la collez dans le chat. Tout se passe dans votre propre compte : NK Lens n’envoie rien à l’assistant et ne voit rien de la conversation. Sur les publications de Yonhap, nous n’affichons pas ces boutons.
 
 Nous n'écrivons que la première question, celle que vous voyez avant de l'envoyer. Tout ce que vous demandez ensuite, et ce que l'assistant répond, reste entre vous et l'assistant et relève de votre responsabilité, non de celle de NK Lens.
 

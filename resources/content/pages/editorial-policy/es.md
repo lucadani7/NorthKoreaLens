@@ -56,13 +56,14 @@ Las publicaciones escritas por el equipo de NK Lens están marcadas como nuestra
 
 ### Cómo usamos la IA
 
-Nuestros textos sobre Corea del Norte, como las curiosidades y sus traducciones, se redactan con ayuda de un asistente de IA (Claude), a partir de fuentes que leemos. Una persona revisa cada texto antes de publicarlo, y las fuentes figuran debajo.
-
-Algunas fuentes, como la agencia de noticias surcoreana Yonhap, no permiten usar herramientas de IA con su contenido; lo respetamos y lo indicamos en sus publicaciones.
+- **Redacción:** las curiosidades y sus traducciones se escriben con ayuda de un asistente de IA, a partir de fuentes que hemos leído. Para los textos que escribimos, preferimos Claude, de Anthropic; tú puedes usar el asistente que quieras (ver más abajo).
+- **Revisión:** una persona lee cada texto antes de que aparezca en el sitio.
+- **Fuentes:** figuran debajo de cada texto, para que también puedas comprobarlas.
+- **Excepciones:** no usamos IA con el contenido de las fuentes que no lo permiten, como la agencia de noticias surcoreana Yonhap, y lo indicamos en sus publicaciones.
 
 ### Pregunta a tu propio asistente de IA
 
-En cada publicación puedes pedir a un asistente de IA de tu elección, como ChatGPT, Claude, Perplexity o Gemini, que te explique la noticia. El asistente se abre en tu propia cuenta con la pregunta ya escrita; NK Lens no le envía nada y no ve nada de la conversación. En las publicaciones de Yonhap no mostramos estos botones.
+En cada publicación puedes pedir a cualquier asistente de IA que te explique la noticia. ChatGPT, Claude y Perplexity se abren directamente, con la pregunta ya escrita. Para cualquier otro, como Gemini, Copilot, DeepSeek o Le Chat, copias la pregunta con un clic y la pegas en el chat. Todo ocurre en tu propia cuenta: NK Lens no le envía nada al asistente y no ve nada de la conversación. En las publicaciones de Yonhap no mostramos estos botones.
 
 Nosotros solo escribimos la primera pregunta, la que ves antes de enviarla. Todo lo que preguntes después, y lo que responda el asistente, queda entre tú y el asistente, y es responsabilidad tuya, no de NK Lens.
 

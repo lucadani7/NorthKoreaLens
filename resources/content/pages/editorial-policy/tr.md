@@ -56,13 +56,14 @@ NK Lens ekibinin yazdığı gönderiler bizim olarak işaretlenir. Bilgilerimizi
 
 ### Yapay zekâyı nasıl kullanıyoruz
 
-Kuzey Kore hakkındaki metinlerimiz, örneğin ilginç bilgiler ve çevirileri, okuduğumuz kaynaklara dayanarak bir yapay zekâ asistanının (Claude) yardımıyla yazılır. Her metin yayımlanmadan önce bir insan tarafından kontrol edilir ve kaynaklar metnin altında belirtilir.
-
-Güney Kore haber ajansı Yonhap gibi bazı kaynaklar, içeriklerinde yapay zekâ araçlarının kullanılmasına izin vermiyor; buna saygı gösteriyor ve gönderilerinde bunu belirtiyoruz.
+- **Yazım:** İlginç bilgiler ve çevirileri, okuduğumuz kaynaklardan yola çıkarak bir yapay zekâ asistanının yardımıyla yazılır. Kendi yazdığımız metinler için Anthropic'in geliştirdiği Claude'u tercih ediyoruz; sen istediğin asistanı kullanabilirsin (aşağıya bak).
+- **Denetim:** Her metni sitede yayımlanmadan önce bir insan okur.
+- **Kaynaklar:** Her metnin altında yer alır; böylece sen de kontrol edebilirsin.
+- **İstisnalar:** Güney Kore haber ajansı Yonhap gibi buna izin vermeyen kaynakların içeriğinde yapay zekâ kullanmıyor ve bunu gönderilerinde belirtiyoruz.
 
 ### Kendi yapay zekâ asistanına sor
 
-Her gönderide, seçtiğin bir yapay zekâ asistanından, örneğin ChatGPT, Claude, Perplexity ya da Gemini’den, haberi açıklamasını isteyebilirsin. Asistan, soru önceden yazılmış olarak kendi hesabında açılır; NK Lens ona hiçbir şey göndermez ve konuşmadan hiçbir şey görmez. Yonhap gönderilerinde bu düğmeleri göstermiyoruz.
+Her gönderide istediğin herhangi bir yapay zekâ asistanından haberi açıklamasını isteyebilirsin. ChatGPT, Claude ve Perplexity, soru önceden yazılmış olarak doğrudan açılır. Gemini, Copilot, DeepSeek ya da Le Chat gibi diğerleri için soruyu tek tıkla kopyalayıp sohbete yapıştırırsın. Her şey kendi hesabında gerçekleşir: NK Lens asistana hiçbir şey göndermez ve konuşmadan hiçbir şey görmez. Yonhap gönderilerinde bu düğmeleri göstermiyoruz.
 
 Biz yalnızca ilk soruyu, yani göndermeden önce gördüğün soruyu yazıyoruz. Ondan sonra sorduğun her şey ve asistanın verdiği yanıtlar seninle asistan arasındadır; sorumluluğu NK Lens'e değil, sana aittir.
 

@@ -56,13 +56,14 @@ Postările scrise de echipa NK Lens sunt marcate ca fiind ale noastre. Spunem de
 
 ### Cum folosim noi AI-ul
 
-Textele noastre despre Coreea de Nord, precum curiozitățile și traducerile lor, sunt redactate cu ajutorul unui asistent AI (Claude), pe baza unor surse pe care le citim. Fiecare text e verificat de un om înainte de publicare, iar sursele sunt trecute sub el.
-
-Unele surse, precum agenția sud-coreeană de presă Yonhap, nu permit folosirea instrumentelor AI pe conținutul lor; respectăm acest lucru și o spunem pe postările lor.
+- **Redactare:** curiozitățile și traducerile lor sunt scrise cu ajutorul unui asistent AI, pornind de la surse pe care le-am citit. Pentru textele scrise de noi, preferăm Claude, de la Anthropic; tu poți folosi orice asistent vrei (vezi mai jos).
+- **Verificare:** un om citește fiecare text înainte să apară pe site.
+- **Surse:** sunt trecute sub fiecare text, ca să le poți verifica și tu.
+- **Excepții:** nu folosim AI pe conținutul surselor care nu permit asta, precum agenția sud-coreeană Yonhap, și o spunem pe postările lor.
 
 ### Întreabă propriul tău asistent AI
 
-La fiecare postare poți cere unui asistent AI ales de tine, precum ChatGPT, Claude, Perplexity sau Gemini, să-ți explice știrea. Asistentul se deschide în contul tău, cu întrebarea deja scrisă; NK Lens nu îi trimite nimic și nu vede nimic din conversație. La postările Yonhap nu afișăm aceste butoane.
+La fiecare postare poți cere oricărui asistent AI vrei să-ți explice știrea. ChatGPT, Claude și Perplexity se deschid direct, cu întrebarea deja scrisă. Pentru oricare altul, de exemplu Gemini, Copilot, DeepSeek sau Le Chat, copiezi întrebarea cu un clic și o lipești în chat. Totul se întâmplă în contul tău: NK Lens nu îi trimite nimic asistentului și nu vede nimic din conversație. La postările Yonhap nu afișăm aceste butoane.
 
 Noi scriem doar prima întrebare, cea pe care o vezi înainte să o trimiți. Tot ce întrebi după aceea, și ce îți răspunde asistentul, rămâne între tine și asistent și este responsabilitatea ta, nu a NK Lens.
 
