@@ -6,7 +6,7 @@ NK Lens est un site d’information et une communauté consacrés à la Corée d
 
 La Corée du Nord est l’un des pays les plus fermés au monde. Ses habitants ne peuvent pas lire la presse étrangère, et de l’extérieur on ne voit le plus souvent que la propagande officielle ou des titres épars. Le bon journalisme existe, mais il est dispersé sur de nombreux sites, surtout en anglais ou en coréen.
 
-NK Lens le rassemble en un seul endroit, en dix langues, et place les médias d’État à côté du journalisme indépendant, avec des étiquettes claires. Voir les deux côte à côte est souvent le moyen le plus rapide de comprendre ce qui se passe vraiment.
+NK Lens le rassemble en un seul endroit, en treize langues, et place les médias d’État à côté du journalisme indépendant, avec des étiquettes claires. Voir les deux côte à côte est souvent le moyen le plus rapide de comprendre ce qui se passe vraiment.
 
 ## Ce que vous trouverez ici
 
@@ -31,4 +31,4 @@ NK Lens est pour l’instant le projet d’une seule personne. Pour en savoir pl
 
 Pour chaque article provenant d’une autre source, nous mettons un lien vers l’original et ne montrons que le titre et un court extrait. Nos propres publications sont écrites par l’équipe. La façon dont nous choisissons, signalons et corrigeons les contenus est décrite dans notre [charte éditoriale](/editorial-policy), et tous les médias que nous utilisons figurent sur la page [Sources](/sources).
 
-_Dernière mise à jour : 22 novembre 2026._
+_Dernière mise à jour : 23 novembre 2026._

@@ -12,7 +12,7 @@ Hvis en oversettelse høres rar ut, en merkelapp virker urettferdig eller en art
 
 ## Hjelp til med oversettelser
 
-NK Lens finnes på ti språk, og noen oversettelser er ennå ikke gjennomgått av morsmålsbrukere. Hvis du snakker rumensk, koreansk, tysk, fransk, spansk, italiensk, portugisisk, tyrkisk eller norsk og har lyst til å se over noen sider, setter vi stor pris på hjelpen.
+NK Lens finnes på tretten språk, og noen oversettelser er ennå ikke gjennomgått av morsmålsbrukere. Hvis du snakker rumensk, koreansk, tysk, fransk, spansk, italiensk, portugisisk, tyrkisk, norsk, russisk, ukrainsk eller ungarsk og har lyst til å se over noen sider, setter vi stor pris på hjelpen.
 
 Koden til NK Lens er åpen kildekode på [GitHub](https://github.com/lucadani7/NorthKoreaLens), under Apache 2.0-lisensen. Oversettelsene ligger der i enkle filer, så du kan også foreslå rettelser direkte.
 

@@ -12,7 +12,7 @@ Bir çeviri tuhaf geliyorsa, bir etiket haksız görünüyorsa ya da bir makaled
 
 ## Çevirilere yardım et
 
-NK Lens on dilde sunuluyor ve bazı çeviriler henüz anadili konuşanlar tarafından gözden geçirilmedi. Romence, Korece, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Türkçe ya da Norveççe biliyorsan ve birkaç sayfaya göz atmak istersen yardımına çok seviniriz.
+NK Lens on üç dilde sunuluyor ve bazı çeviriler henüz anadili konuşanlar tarafından gözden geçirilmedi. Romence, Korece, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Türkçe, Norveççe, Rusça, Ukraynaca ya da Macarca biliyorsan ve birkaç sayfaya göz atmak istersen yardımına çok seviniriz.
 
 NK Lens'in kodu Apache 2.0 lisansıyla [GitHub](https://github.com/lucadani7/NorthKoreaLens) üzerinde açık kaynak. Çeviriler orada basit dosyalarda duruyor, yani düzeltmeleri doğrudan da önerebilirsin.
 

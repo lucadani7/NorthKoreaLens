@@ -24,6 +24,9 @@ return [
         'pt' => 'Português',
         'tr' => 'Türkçe',
         'nb' => 'Norsk bokmål',
+        'ru' => 'Русский',
+        'uk' => 'Українська',
+        'hu' => 'Magyar',
     ],
 
     /*

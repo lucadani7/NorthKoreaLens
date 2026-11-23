@@ -12,7 +12,7 @@ Wenn eine Übersetzung falsch klingt, eine Kennzeichnung unfair wirkt oder einem
 
 ## Bei Übersetzungen helfen
 
-NK Lens gibt es in zehn Sprachen, und manche Übersetzungen wurden noch nicht von Muttersprachlerinnen oder Muttersprachlern geprüft. Wenn du Rumänisch, Koreanisch, Deutsch, Französisch, Spanisch, Italienisch, Portugiesisch, Türkisch oder Norwegisch sprichst und ein paar Seiten durchsehen möchtest, freuen wir uns über deine Hilfe.
+NK Lens gibt es in dreizehn Sprachen, und manche Übersetzungen wurden noch nicht von Muttersprachlerinnen oder Muttersprachlern geprüft. Wenn du Rumänisch, Koreanisch, Deutsch, Französisch, Spanisch, Italienisch, Portugiesisch, Türkisch, Norwegisch, Russisch, Ukrainisch oder Ungarisch sprichst und ein paar Seiten durchsehen möchtest, freuen wir uns über deine Hilfe.
 
 Der Code von NK Lens ist Open Source auf [GitHub](https://github.com/lucadani7/NorthKoreaLens), unter der Apache-2.0-Lizenz. Die Übersetzungen liegen dort in einfachen Dateien, sodass du Korrekturen auch direkt vorschlagen kannst.
 
