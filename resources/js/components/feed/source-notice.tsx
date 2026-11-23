@@ -17,13 +17,22 @@ export default function SourceNotice({ notice }: { notice: string }) {
                 aria-hidden="true"
                 className="mt-0.5 size-5 shrink-0 text-amber-800 dark:text-amber-300"
             />
-            <div>
-                <h3 className="mb-1 text-sm font-bold text-amber-950 dark:text-amber-100">
+            <div className="flex flex-col gap-2">
+                <h3 className="text-sm font-bold text-amber-950 dark:text-amber-100">
                     {t('About this source')}
                 </h3>
-                <p className="text-sm leading-relaxed text-amber-950 dark:text-amber-100">
-                    {notice}
-                </p>
+                {/* Paragraphs are separated by a blank line in lang/<locale>/source_notices.php. */}
+                {notice
+                    .split(/\n{2,}/)
+                    .filter((paragraph) => paragraph.trim() !== '')
+                    .map((paragraph, index) => (
+                        <p
+                            key={index}
+                            className="text-sm leading-relaxed text-amber-950 dark:text-amber-100"
+                        >
+                            {paragraph}
+                        </p>
+                    ))}
             </div>
         </aside>
     );
