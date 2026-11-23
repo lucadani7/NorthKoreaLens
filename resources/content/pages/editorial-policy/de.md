@@ -49,6 +49,19 @@ Ein Wort zur Sprache: Für die Kims verwenden wir manchmal das Wort „Führer�
 
 Bei jedem Beitrag kannst du einen KI-Assistenten deiner Wahl, etwa ChatGPT, Claude, Perplexity oder Gemini, bitten, die Meldung zu erklären. Der Assistent öffnet sich in deinem eigenen Konto mit der bereits geschriebenen Frage; NK Lens schickt ihm nichts und sieht nichts von der Unterhaltung. NK Lens selbst veröffentlicht keine von KI geschriebenen Texte. Manche Quellen, etwa die südkoreanische Nachrichtenagentur Yonhap, erlauben keine KI-Werkzeuge für ihre Inhalte; wir respektieren das, weisen bei ihren Beiträgen darauf hin und zeigen dort keine KI-Schaltflächen.
 
+### Warum NK Lens keine eigene KI hat
+
+Manche Nachrichtenseiten haben einen eigenen Chatbot gebaut. Wir haben uns aus vier Gründen dagegen entschieden:
+
+- **Deine Fragen bleiben deine.** Hätte NK Lens eine eigene KI, liefe jede deiner Fragen zu Nordkorea über unsere Server. Mit deinem eigenen Assistenten sehen wir weder die Fragen noch die Antworten.
+- **Eine Antwort in unserem Namen müsste geprüft werden.** Für alles, was wir veröffentlichen, nennen wir eine Quelle. Eine KI kann sich irren, Fakten erfinden oder dazu gebracht werden, Propaganda zu wiederholen – und eine „NK-Lens-KI“ würde all das als unsere Aussage darstellen. Mit deinem eigenen Assistenten ist klar, dass die Antwort von ihm kommt, nicht von unserem Team.
+- **Jede Antwort kostet Geld.** Wir verkaufen weder Werbung noch Daten über unsere Leserinnen und Leser und stecken das, was wir haben, lieber in unsere Inhalte.
+- **Du entscheidest, wem du vertraust.** Du nutzt den Assistenten, den du schon kennst, in deiner Sprache, und siehst genau, was wir ihn fragen: Die Frage steht da, bevor du sie abschickst.
+
+Wir schreiben nur die erste Frage, die du siehst, bevor du sie abschickst. Alles, was du danach fragst, und was der Assistent antwortet, ist eine Sache zwischen dir und dem Assistenten und liegt in deiner Verantwortung, nicht in der von NK Lens.
+
+Der Nachteil: Du verlässt NK Lens, um die Antwort zu lesen, und ihre Qualität hängt vom gewählten Assistenten ab. Wir halten das für einen fairen Preis für Datenschutz und Ehrlichkeit.
+
 ## Schutz von Menschen
 
 Manche Menschen, die über Nordkorea sprechen, bringen sich selbst oder ihre Familien in Gefahr. Wir veröffentlichen keine Angaben, durch die geflüchtete Menschen oder ihre Angehörigen ohne deren Zustimmung erkannt werden könnten. Profile auf NK Lens können ein Pseudonym verwenden, und wir zeigen nicht, wo sich Leserinnen und Leser befinden.
@@ -57,4 +70,4 @@ Manche Menschen, die über Nordkorea sprechen, bringen sich selbst oder ihre Fam
 
 Wenn wir einen Fehler machen, korrigieren wir ihn und sagen, was wir geändert haben. Wenn dir ein Fehler auffällt, sag es uns bitte; eine Kontaktadresse erscheint hier bald.
 
-_Zuletzt aktualisiert: 22. November 2026._
+_Zuletzt aktualisiert: 23. November 2026._

@@ -47,6 +47,19 @@ Las publicaciones escritas por el equipo de NK Lens están marcadas como nuestra
 
 En cada publicación puedes pedir a un asistente de IA de tu elección, como ChatGPT, Claude, Perplexity o Gemini, que te explique la noticia. El asistente se abre en tu propia cuenta con la pregunta ya escrita; NK Lens no le envía nada y no ve nada de la conversación. NK Lens no publica textos escritos por IA. Algunas fuentes, como la agencia de noticias surcoreana Yonhap, no permiten usar herramientas de IA con su contenido; lo respetamos, lo indicamos en sus publicaciones y no mostramos allí botones de IA.
 
+### Por qué NK Lens no tiene una IA propia
+
+Algunos sitios de noticias han creado su propio chatbot. Nosotros decidimos no hacerlo, por cuatro motivos:
+
+- **Tus preguntas siguen siendo tuyas.** Si NK Lens tuviera su propia IA, cada pregunta que hicieras sobre Corea del Norte pasaría por nuestros servidores. Con tu propio asistente, no vemos ni las preguntas ni las respuestas.
+- **Una respuesta en nuestro nombre tendría que comprobarse.** Respaldamos con una fuente todo lo que publicamos. Una IA puede equivocarse, inventar datos o ser engañada para repetir propaganda, y una «IA de NK Lens» presentaría todo eso como nuestro. Con tu propio asistente queda claro que la respuesta viene de él, no de nuestro equipo.
+- **Cada respuesta cuesta dinero.** No vendemos publicidad ni datos de nuestros lectores, y preferimos dedicar lo que tenemos al contenido.
+- **Tú eliges en quién confías.** Usas el asistente que ya conoces, en tu idioma, y ves exactamente qué le preguntamos: la pregunta está escrita antes de que la envíes.
+
+Nosotros solo escribimos la primera pregunta, la que ves antes de enviarla. Todo lo que preguntes después, y lo que responda el asistente, queda entre tú y el asistente, y es responsabilidad tuya, no de NK Lens.
+
+La desventaja: sales de NK Lens para leer la respuesta, y su calidad depende del asistente que elijas. Creemos que es un precio justo por la privacidad y la honestidad.
+
 ## Protección de las personas
 
 Algunas personas que hablan sobre Corea del Norte se ponen en peligro a sí mismas o a sus familias. No publicamos datos que puedan identificar a un desertor o a sus familiares sin su consentimiento. Los perfiles de NK Lens pueden usar un seudónimo, y no mostramos la ubicación de los lectores.
@@ -55,4 +68,4 @@ Algunas personas que hablan sobre Corea del Norte se ponen en peligro a sí mism
 
 Cuando nos equivocamos, lo corregimos y decimos qué hemos cambiado. Si ves un error, avísanos; pronto aparecerá aquí una dirección de contacto.
 
-_Última actualización: 22 de noviembre de 2026._
+_Última actualización: 23 de noviembre de 2026._

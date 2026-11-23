@@ -47,6 +47,19 @@ Innlegg skrevet av NK Lens-teamet er merket som våre. Vi sier hvor opplysningen
 
 På hvert innlegg kan du be en KI-assistent du velger selv, som ChatGPT, Claude, Perplexity eller Gemini, om å forklare saken. Assistenten åpnes i din egen konto med spørsmålet ferdig skrevet; NK Lens sender ingenting til den og ser ingenting av samtalen. NK Lens publiserer ikke tekster skrevet av KI. Noen kilder, som det sørkoreanske nyhetsbyrået Yonhap, tillater ikke at KI-verktøy brukes på innholdet deres; vi respekterer det, sier fra om det på innleggene deres og viser ingen KI-knapper der.
 
+### Hvorfor NK Lens ikke har sin egen KI
+
+Noen nyhetsnettsteder har laget sin egen chatbot. Vi har valgt å la være, av fire grunner:
+
+- **Spørsmålene dine forblir dine.** Hvis NK Lens hadde sin egen KI, ville alle spørsmål du stiller om Nord-Korea gått gjennom serverne våre. Med din egen assistent ser vi verken spørsmålene eller svarene.
+- **Et svar i vårt navn måtte vært kontrollert.** Vi oppgir en kilde for alt vi publiserer. En KI kan ta feil, finne på fakta eller bli lurt til å gjenta propaganda, og en «NK Lens-KI» ville framstilt alt dette som vårt. Med din egen assistent er det tydelig at svaret kommer fra den, ikke fra oss.
+- **Hvert svar koster penger.** Vi selger verken reklame eller data om leserne våre, og vil heller bruke det vi har på innholdet.
+- **Du velger hvem du stoler på.** Du bruker assistenten du allerede kjenner, på ditt språk, og ser nøyaktig hva vi spør den om: Spørsmålet står skrevet før du sender det.
+
+Vi skriver bare det første spørsmålet, det du ser før du sender det. Alt du spør om etterpå, og det assistenten svarer, er mellom deg og assistenten og ditt ansvar, ikke NK Lens' ansvar.
+
+Ulempen: Du forlater NK Lens for å lese svaret, og kvaliteten avhenger av assistenten du velger. Vi mener det er en rimelig pris for personvern og ærlighet.
+
 ## Beskyttelse av mennesker
 
 Noen av dem som snakker om Nord-Korea, setter seg selv eller familien sin i fare. Vi publiserer ikke opplysninger som kan identifisere en avhopper eller slektningene deres uten samtykke. Profiler på NK Lens kan bruke et pseudonym, og vi viser ikke hvor leserne befinner seg.
@@ -55,4 +68,4 @@ Noen av dem som snakker om Nord-Korea, setter seg selv eller familien sin i fare
 
 Når vi tar feil, retter vi det og sier hva vi har endret. Hvis du ser en feil, si fra til oss; en kontaktadresse kommer snart her.
 
-_Sist oppdatert: 22. november 2026._
+_Sist oppdatert: 23. november 2026._

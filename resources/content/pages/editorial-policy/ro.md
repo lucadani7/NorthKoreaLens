@@ -47,6 +47,19 @@ Postările scrise de echipa NK Lens sunt marcate ca fiind ale noastre. Spunem de
 
 La fiecare postare poți cere unui asistent AI ales de tine, precum ChatGPT, Claude, Perplexity sau Gemini, să-ți explice știrea. Asistentul se deschide în contul tău, cu întrebarea deja scrisă; NK Lens nu îi trimite nimic și nu vede nimic din conversație. NK Lens nu publică texte scrise de AI. Unele surse, precum agenția sud-coreeană de presă Yonhap, nu permit folosirea instrumentelor AI pe conținutul lor; respectăm acest lucru, o spunem pe postările lor și nu afișăm acolo butoane AI.
 
+### De ce NK Lens nu are un AI propriu
+
+Unele site-uri de știri și-au făcut propriul chatbot. Noi am ales să nu facem asta, din patru motive:
+
+- **Întrebările tale rămân ale tale.** Dacă NK Lens ar avea un AI propriu, fiecare întrebare despre Coreea de Nord ar trece prin serverele noastre. Cu asistentul tău, noi nu vedem nici întrebările, nici răspunsurile.
+- **Un răspuns în numele nostru ar trebui verificat.** Pentru tot ce publicăm avem o sursă. Un AI poate greși, poate inventa fapte sau poate fi păcălit să repete propaganda, iar un „NK Lens AI” ar prezenta toate astea ca venind de la noi. Cu asistentul tău e clar că răspunsul vine de la el, nu de la echipa noastră.
+- **Fiecare răspuns costă bani.** Nu vindem reclame și nici date despre cititori, așa că preferăm să cheltuim ce avem pe conținut.
+- **Tu alegi în cine ai încredere.** Folosești asistentul pe care îl cunoști deja, în limba ta, și vezi exact ce îl întrebăm: întrebarea e scrisă înainte să o trimiți.
+
+Noi scriem doar prima întrebare, cea pe care o vezi înainte să o trimiți. Tot ce întrebi după aceea, și ce îți răspunde asistentul, rămâne între tine și asistent și este responsabilitatea ta, nu a NK Lens.
+
+Dezavantajul: pleci de pe NK Lens ca să citești răspunsul, iar calitatea lui depinde de asistentul ales. Credem că e un preț corect pentru confidențialitate și onestitate.
+
 ## Protecția oamenilor
 
 Unii dintre cei care vorbesc despre Coreea de Nord se pun pe ei sau pe familiile lor în pericol. Nu publicăm detalii care ar putea identifica un dezertor sau rudele lui fără acordul lor. Profilurile de pe NK Lens pot folosi un pseudonim și nu afișăm locația cititorilor.
@@ -55,4 +68,4 @@ Unii dintre cei care vorbesc despre Coreea de Nord se pun pe ei sau pe familiile
 
 Când greșim, corectăm și spunem ce am schimbat. Dacă observi o greșeală, te rugăm să ne spui; o adresă de contact va apărea aici în curând.
 
-_Ultima actualizare: 22 noiembrie 2026._
+_Ultima actualizare: 23 noiembrie 2026._

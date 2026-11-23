@@ -47,6 +47,19 @@ NK Lens ekibinin yazdığı gönderiler bizim olarak işaretlenir. Bilgilerimizi
 
 Her gönderide, seçtiğin bir yapay zekâ asistanından, örneğin ChatGPT, Claude, Perplexity ya da Gemini’den, haberi açıklamasını isteyebilirsin. Asistan, soru önceden yazılmış olarak kendi hesabında açılır; NK Lens ona hiçbir şey göndermez ve konuşmadan hiçbir şey görmez. NK Lens yapay zekânın yazdığı metinleri yayımlamaz. Güney Kore haber ajansı Yonhap gibi bazı kaynaklar, içeriklerinde yapay zekâ araçlarının kullanılmasına izin vermiyor; buna saygı gösteriyor, gönderilerinde bunu belirtiyor ve orada yapay zekâ düğmeleri göstermiyoruz.
 
+### NK Lens neden kendi yapay zekâsını kullanmıyor?
+
+Bazı haber siteleri kendi sohbet robotlarını kurdu. Biz dört nedenle bunu yapmamayı seçtik:
+
+- **Soruların sana ait kalır.** NK Lens'in kendi yapay zekâsı olsaydı, Kuzey Kore hakkında sorduğun her soru bizim sunucularımızdan geçerdi. Kendi asistanını kullandığında ne soruları ne de yanıtları görürüz.
+- **Bizim adımıza verilen bir yanıtın doğrulanması gerekirdi.** Yayımladığımız her şeyin arkasında bir kaynak var. Bir yapay zekâ hata yapabilir, olgu uydurabilir ya da kandırılıp propagandayı tekrarlayabilir; bir “NK Lens yapay zekâsı” bütün bunları bizim sözümüzmüş gibi sunardı. Kendi asistanını kullandığında, yanıtın ekibimizden değil, o asistandan geldiği açıktır.
+- **Her yanıtın bir maliyeti var.** Reklam ya da okurlarımıza ait veri satmıyoruz; elimizdekini içeriğe harcamayı tercih ediyoruz.
+- **Kime güveneceğine sen karar verirsin.** Zaten tanıdığın asistanı kendi dilinde kullanır ve ona tam olarak ne sorduğumuzu görürsün: Soru, sen göndermeden önce yazılı olarak karşına çıkar.
+
+Biz yalnızca ilk soruyu, yani göndermeden önce gördüğün soruyu yazıyoruz. Ondan sonra sorduğun her şey ve asistanın verdiği yanıtlar seninle asistan arasındadır; sorumluluğu NK Lens'e değil, sana aittir.
+
+Dezavantajı: Yanıtı okumak için NK Lens'ten ayrılırsın ve yanıtın kalitesi seçtiğin asistana bağlıdır. Bunun gizlilik ve dürüstlük için makul bir bedel olduğunu düşünüyoruz.
+
 ## İnsanları korumak
 
 Kuzey Kore hakkında konuşan bazı insanlar kendilerini ya da ailelerini tehlikeye atıyor. Bir sığınmacıyı ya da yakınlarını, onların onayı olmadan tanınır kılabilecek ayrıntıları yayımlamıyoruz. NK Lens'teki profiller takma ad kullanabilir ve okurların konumunu göstermiyoruz.
@@ -55,4 +68,4 @@ Kuzey Kore hakkında konuşan bazı insanlar kendilerini ya da ailelerini tehlik
 
 Bir hata yaptığımızda düzeltir ve neyi değiştirdiğimizi söyleriz. Bir hata fark edersen lütfen bize bildir; yakında burada bir iletişim adresi olacak.
 
-_Son güncelleme: 22 Kasım 2026._
+_Son güncelleme: 23 Kasım 2026._
