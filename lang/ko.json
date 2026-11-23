@@ -190,5 +190,19 @@
     "Watch on YouTube": "YouTube에서 보기",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "한국 연합뉴스의 영어 유튜브 채널 KOREA NOW에 올라온 북한 관련 영상입니다. 매일 채널을 확인하며, 다른 주제의 영상은 싣지 않습니다.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "아직 북한 관련 영상이 없습니다. 매일 채널을 확인하며, 새 영상이 올라오면 이곳에 표시됩니다.",
-    "At the request of :source, we do not use AI tools on this content.": ":source의 요청에 따라 이 콘텐츠에는 AI 도구를 사용하지 않습니다."
+    "At the request of :source, we do not use AI tools on this content.": ":source의 요청에 따라 이 콘텐츠에는 AI 도구를 사용하지 않습니다.",
+    "Ask an AI assistant about this story": "이 기사에 대해 AI 어시스턴트에게 묻기",
+    "Copy the question": "질문 복사",
+    "Copied!": "복사했습니다!",
+    "Headline": "제목",
+    "Source": "출처",
+    "Date": "날짜",
+    "Excerpt": "발췌",
+    "NK Lens note": "NK Lens 노트",
+    "Link": "링크",
+    "Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "일반 독자를 위해 이 북한 관련 기사의 배경을 설명해 주세요. 누가 또는 무엇이 언급되는지, 왜 중요한지, 일반적으로 알려진 내용은 무엇인지 알려 주세요. 짧고 사실에 근거해 답하고, 불확실한 점은 분명히 밝혀 주세요. :language로 답해 주세요.",
+    "This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.": "이 제목은 북한 관영 매체에서 나온 것입니다. 정권이 이를 통해 전하려는 메시지, 사용된 선전 기법, 그리고 독립적인 출처들이 이 주제에 대해 일반적으로 보도하는 내용을 설명해 주세요. 그 주장을 사실로 다루지 마세요. :language로 답해 주세요.",
+    "The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.": "어시스턴트는 본인 계정에서 열립니다. NK Lens는 질문이나 답변을 볼 수 없습니다. Gemini나 다른 어시스턴트를 쓰려면 질문이 복사되니 그곳에 붙여 넣으세요.",
+    "Copies the question, then opens Gemini: paste it there.": "질문을 복사한 뒤 Gemini를 엽니다. 그곳에 붙여 넣으세요.",
+    "Ask AI": "AI에게 묻기"
 }

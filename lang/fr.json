@@ -190,5 +190,19 @@
     "Watch on YouTube": "Regarder sur YouTube",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Des vidéos sur la Corée du Nord issues de KOREA NOW, la chaîne YouTube en anglais de l’agence de presse sud-coréenne Yonhap. Nous consultons la chaîne chaque jour ; les vidéos sur d’autres sujets n’apparaissent pas ici.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Pas encore de vidéos sur la Corée du Nord. Nous consultons la chaîne chaque jour, et les nouvelles apparaîtront ici.",
-    "At the request of :source, we do not use AI tools on this content.": "À la demande de :source, nous n’utilisons pas d’outils d’IA sur ce contenu."
+    "At the request of :source, we do not use AI tools on this content.": "À la demande de :source, nous n’utilisons pas d’outils d’IA sur ce contenu.",
+    "Ask an AI assistant about this story": "Interroger un assistant IA sur cet article",
+    "Copy the question": "Copier la question",
+    "Copied!": "Copié !",
+    "Headline": "Titre",
+    "Source": "Source",
+    "Date": "Date",
+    "Excerpt": "Extrait",
+    "NK Lens note": "Note de NK Lens",
+    "Link": "Lien",
+    "Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Explique le contexte de cette information sur la Corée du Nord pour un lecteur non spécialiste : qui ou quoi est mentionné, pourquoi c’est important et ce que l’on sait en général du sujet. Réponds de façon brève et factuelle, et indique clairement ce qui est incertain. Réponds en :language.",
+    "This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.": "Ce titre provient des médias d’État nord-coréens. Explique quel message le régime veut faire passer, quelles techniques de propagande il utilise et ce que les sources indépendantes rapportent en général sur le sujet. Ne traite pas ses affirmations comme des faits. Réponds en :language.",
+    "The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.": "L’assistant s’ouvre dans votre propre compte. NK Lens ne voit ni vos questions ni les réponses. Pour Gemini ou tout autre assistant, la question est copiée : collez-la là-bas.",
+    "Copies the question, then opens Gemini: paste it there.": "Copie la question, puis ouvre Gemini : collez-la là-bas.",
+    "Ask AI": "Demander à l’IA"
 }

@@ -45,7 +45,7 @@ Las publicaciones escritas por el equipo de NK Lens están marcadas como nuestra
 
 ## Inteligencia artificial
 
-Tenemos previsto ofrecer breves explicaciones generadas con IA para algunas publicaciones. Cuando lo hagamos, estarán siempre claramente marcadas, nunca sustituirán al artículo original y podrás informar de cualquier error en ellas. Algunas fuentes, como la agencia de noticias surcoreana Yonhap, no permiten usar herramientas de IA con su contenido; lo respetamos, lo indicamos en sus publicaciones y no usamos ninguna función de IA con ellas.
+En cada publicación puedes pedir a un asistente de IA de tu elección, como ChatGPT, Claude, Perplexity o Gemini, que te explique la noticia. El asistente se abre en tu propia cuenta con la pregunta ya escrita; NK Lens no le envía nada y no ve nada de la conversación. NK Lens no publica textos escritos por IA. Algunas fuentes, como la agencia de noticias surcoreana Yonhap, no permiten usar herramientas de IA con su contenido; lo respetamos, lo indicamos en sus publicaciones y no mostramos allí botones de IA.
 
 ## Protección de las personas
 

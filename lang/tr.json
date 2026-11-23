@@ -190,5 +190,19 @@
     "Watch on YouTube": "YouTube'da izle",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Güney Kore haber ajansı Yonhap’ın İngilizce YouTube kanalı KOREA NOW’dan Kuzey Kore ile ilgili videolar. Kanalı her gün kontrol ediyoruz; başka konulardaki videolar burada yer almıyor.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Henüz Kuzey Kore ile ilgili video yok. Kanalı her gün kontrol ediyoruz; yenileri burada görünecek.",
-    "At the request of :source, we do not use AI tools on this content.": ":source’un isteği üzerine bu içerikte yapay zekâ araçları kullanmıyoruz."
+    "At the request of :source, we do not use AI tools on this content.": ":source’un isteği üzerine bu içerikte yapay zekâ araçları kullanmıyoruz.",
+    "Ask an AI assistant about this story": "Bu haber hakkında bir yapay zekâ asistanına sor",
+    "Copy the question": "Soruyu kopyala",
+    "Copied!": "Kopyalandı!",
+    "Headline": "Başlık",
+    "Source": "Kaynak",
+    "Date": "Tarih",
+    "Excerpt": "Alıntı",
+    "NK Lens note": "NK Lens notu",
+    "Link": "Bağlantı",
+    "Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Bu Kuzey Kore haberinin arka planını genel bir okur için açıkla: kim ya da ne anılıyor, neden önemli ve konu hakkında genel olarak neler biliniyor. Kısa ve olgulara dayalı yanıt ver, belirsiz olanı açıkça belirt. :language dilinde yanıt ver.",
+    "This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.": "Bu başlık Kuzey Kore devlet medyasından geliyor. Rejimin bununla hangi mesajı vermek istediğini, hangi propaganda tekniklerini kullandığını ve bağımsız kaynakların konu hakkında genel olarak neler aktardığını açıkla. İddialarını gerçek gibi ele alma. :language dilinde yanıt ver.",
+    "The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.": "Asistan kendi hesabında açılır. NK Lens sorularını ve yanıtları görmez. Gemini ya da başka bir asistan için soru kopyalanır: oraya yapıştır.",
+    "Copies the question, then opens Gemini: paste it there.": "Soruyu kopyalar, ardından Gemini’yi açar: oraya yapıştır.",
+    "Ask AI": "Yapay zekâya sor"
 }

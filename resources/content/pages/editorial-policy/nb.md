@@ -45,7 +45,7 @@ Innlegg skrevet av NK Lens-teamet er merket som våre. Vi sier hvor opplysningen
 
 ## Kunstig intelligens
 
-Vi planlegger å tilby korte KI-forklaringer til noen innlegg. Når vi gjør det, vil de alltid være tydelig merket, de vil aldri erstatte originalartikkelen, og du vil kunne melde fra om feil i dem. Noen kilder, som det sørkoreanske nyhetsbyrået Yonhap, tillater ikke at KI-verktøy brukes på innholdet deres; vi respekterer det, sier fra om det på innleggene deres og bruker ingen KI-funksjoner på dem.
+På hvert innlegg kan du be en KI-assistent du velger selv, som ChatGPT, Claude, Perplexity eller Gemini, om å forklare saken. Assistenten åpnes i din egen konto med spørsmålet ferdig skrevet; NK Lens sender ingenting til den og ser ingenting av samtalen. NK Lens publiserer ikke tekster skrevet av KI. Noen kilder, som det sørkoreanske nyhetsbyrået Yonhap, tillater ikke at KI-verktøy brukes på innholdet deres; vi respekterer det, sier fra om det på innleggene deres og viser ingen KI-knapper der.
 
 ## Beskyttelse av mennesker
 

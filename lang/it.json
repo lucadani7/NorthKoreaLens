@@ -190,5 +190,19 @@
     "Watch on YouTube": "Guarda su YouTube",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Video sulla Corea del Nord da KOREA NOW, il canale YouTube in inglese dell’agenzia di stampa sudcoreana Yonhap. Controlliamo il canale ogni giorno; i video su altri argomenti non compaiono qui.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Ancora nessun video sulla Corea del Nord. Controlliamo il canale ogni giorno e quelli nuovi compariranno qui.",
-    "At the request of :source, we do not use AI tools on this content.": "Su richiesta di :source, non usiamo strumenti di IA su questo contenuto."
+    "At the request of :source, we do not use AI tools on this content.": "Su richiesta di :source, non usiamo strumenti di IA su questo contenuto.",
+    "Ask an AI assistant about this story": "Chiedi a un assistente IA di questa notizia",
+    "Copy the question": "Copia la domanda",
+    "Copied!": "Copiato!",
+    "Headline": "Titolo",
+    "Source": "Fonte",
+    "Date": "Data",
+    "Excerpt": "Estratto",
+    "NK Lens note": "Nota di NK Lens",
+    "Link": "Link",
+    "Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Spiega il contesto di questa notizia sulla Corea del Nord per un lettore comune: chi o che cosa viene citato, perché è importante e che cosa si sa in generale sull’argomento. Rispondi in modo breve e fattuale e indica chiaramente ciò che è incerto. Rispondi in :language.",
+    "This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.": "Questo titolo viene dai media di Stato nordcoreani. Spiega quale messaggio il regime vuole trasmettere, quali tecniche di propaganda usa e che cosa riportano in generale le fonti indipendenti sull’argomento. Non trattare le sue affermazioni come fatti. Rispondi in :language.",
+    "The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.": "L’assistente si apre nel tuo account. NK Lens non vede né le tue domande né le risposte. Per Gemini o qualsiasi altro assistente, la domanda viene copiata: incollala lì.",
+    "Copies the question, then opens Gemini: paste it there.": "Copia la domanda, poi apre Gemini: incollala lì.",
+    "Ask AI": "Chiedi all’IA"
 }

@@ -45,7 +45,7 @@ Posts written by the NK Lens team are marked as ours. We say where our informati
 
 ## Artificial intelligence
 
-We plan to offer short AI explanations for some posts. When we do, they will always be clearly marked, they will never replace the original article, and you will be able to report a mistake in them. Some sources, such as the South Korean news agency Yonhap, do not allow AI tools to be used on their content; we respect that, say so on their posts and run no AI features on them.
+On every post you can ask an AI assistant of your choice, such as ChatGPT, Claude, Perplexity or Gemini, to explain the story. The assistant opens in your own account with the question already written; NK Lens sends nothing to it and sees nothing of the conversation. NK Lens itself does not publish texts written by AI. Some sources, such as the South Korean news agency Yonhap, do not allow AI tools to be used on their content; we respect that, say so on their posts and show no AI buttons there.
 
 ## Protecting people
 

@@ -190,5 +190,19 @@
     "Watch on YouTube": "Vezi pe YouTube",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Videoclipuri despre Coreea de Nord de pe KOREA NOW, canalul de YouTube în engleză al agenției sud-coreene de presă Yonhap. Verificăm canalul în fiecare zi; videoclipurile despre alte subiecte nu apar aici.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Încă nu sunt videoclipuri despre Coreea de Nord. Verificăm canalul în fiecare zi, iar cele noi vor apărea aici.",
-    "At the request of :source, we do not use AI tools on this content.": "La cererea :source, nu folosim instrumente AI pe acest conținut."
+    "At the request of :source, we do not use AI tools on this content.": "La cererea :source, nu folosim instrumente AI pe acest conținut.",
+    "Ask an AI assistant about this story": "Întreabă un asistent AI despre această știre",
+    "Copy the question": "Copiază întrebarea",
+    "Copied!": "Copiat!",
+    "Headline": "Titlu",
+    "Source": "Sursă",
+    "Date": "Data",
+    "Excerpt": "Fragment",
+    "NK Lens note": "Nota NK Lens",
+    "Link": "Link",
+    "Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Explică-mi contextul acestei știri despre Coreea de Nord, pentru un cititor obișnuit: cine sau ce este pomenit, de ce contează și ce se știe în general despre subiect. Răspunde scurt și la obiect și spune clar ce este nesigur. Răspunde în :language.",
+    "This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.": "Acest titlu vine din presa de stat nord-coreeană. Explică ce mesaj vrea regimul să transmită prin el, ce tehnici de propagandă folosește și ce raportează în general sursele independente despre subiect. Nu trata afirmațiile lui ca fapte. Răspunde în :language.",
+    "The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.": "Asistentul se deschide în contul tău. NK Lens nu vede întrebările și nici răspunsurile. Pentru Gemini sau orice alt asistent, întrebarea se copiază: lipește-o acolo.",
+    "Copies the question, then opens Gemini: paste it there.": "Copiază întrebarea, apoi deschide Gemini: lipește-o acolo.",
+    "Ask AI": "Întreabă AI"
 }

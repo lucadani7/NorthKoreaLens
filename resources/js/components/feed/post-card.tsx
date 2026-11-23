@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Sparkles } from 'lucide-react';
 import EditorialNote from '@/components/feed/editorial-note';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
@@ -108,19 +108,34 @@ export default function PostCard({ post, now }: Props) {
                 )
             )}
 
-            {post.originalUrl && (
-                <div className="border-t border-slate-100 px-3 py-2 dark:border-slate-800">
-                    <a
-                        href={post.originalUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex h-11 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:text-sky-300"
-                    >
-                        {post.youtubeId
-                            ? t('Watch on YouTube')
-                            : t('Read on :source', { source: author })}
-                        <ExternalLink aria-hidden="true" className="size-4" />
-                    </a>
+            {(post.originalUrl || !post.source?.forbidsAi) && (
+                <div className="flex flex-wrap items-center gap-1 border-t border-slate-100 px-3 py-2 dark:border-slate-800">
+                    {post.originalUrl && (
+                        <a
+                            href={post.originalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex h-11 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:text-sky-300"
+                        >
+                            {post.youtubeId
+                                ? t('Watch on YouTube')
+                                : t('Read on :source', { source: author })}
+                            <ExternalLink
+                                aria-hidden="true"
+                                className="size-4"
+                            />
+                        </a>
+                    )}
+                    {/* Opens the post at its "Ask an AI assistant" box; not for sources that forbid AI. */}
+                    {!post.source?.forbidsAi && (
+                        <Link
+                            href={`${show.url(post.id)}#ask-ai`}
+                            className="inline-flex h-11 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-violet-700 hover:bg-violet-100 dark:text-violet-300 dark:hover:bg-violet-900/40"
+                        >
+                            <Sparkles aria-hidden="true" className="size-4" />
+                            {t('Ask AI')}
+                        </Link>
+                    )}
                 </div>
             )}
             {post.source?.forbidsAi && (

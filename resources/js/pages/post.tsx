@@ -1,5 +1,6 @@
 import { Head, Link } from '@inertiajs/react';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+import AskAi from '@/components/ask-ai';
 import EditorialNote from '@/components/feed/editorial-note';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
@@ -115,6 +116,9 @@ export default function Post({ post, body, now }: Props) {
                         {post.editorialNote && (
                             <EditorialNote note={post.editorialNote} />
                         )}
+
+                        {/* Not on posts from sources that forbid AI tools (e.g. Yonhap). */}
+                        {!post.source?.forbidsAi && <AskAi post={post} />}
 
                         {post.originalUrl && (
                             <a
