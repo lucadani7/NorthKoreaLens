@@ -1,6 +1,7 @@
 import { Head, router } from '@inertiajs/react';
 import type { ReactNode } from 'react';
 import { useEffect, useRef } from 'react';
+import SectionsLayout from '@/components/sections-layout';
 import { useTranslation } from '@/hooks/use-translation';
 
 type Props = {
@@ -53,7 +54,7 @@ export default function MarkdownArticle({ page, children }: Props) {
                 )}
             </Head>
 
-            <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
+            <SectionsLayout className="max-w-3xl">
                 <article className="rounded-xl bg-white p-6 shadow-sm sm:p-10 dark:bg-slate-900">
                     {page.locale !== locale && (
                         <p className="mb-6 rounded-lg bg-amber-100 px-4 py-3 text-sm text-amber-950 dark:bg-amber-900/40 dark:text-amber-100">
@@ -80,7 +81,7 @@ export default function MarkdownArticle({ page, children }: Props) {
 
                     {children}
                 </article>
-            </main>
+            </SectionsLayout>
         </>
     );
 }

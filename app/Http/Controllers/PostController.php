@@ -30,6 +30,8 @@ class PostController extends Controller
             // Full text only exists for content written by the NK Lens team.
             'body' => $post->localized('body', $locale),
             'related' => PostData::collect($related),
+            // Highlighted in the sections column and the phone menu.
+            'activeCategory' => $post->category->slug,
             'now' => now()->toIso8601String(),
         ]);
     }

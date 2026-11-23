@@ -1,10 +1,11 @@
 import { Head, Link } from '@inertiajs/react';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import AskAi from '@/components/ask-ai';
 import EditorialNote from '@/components/feed/editorial-note';
 import SourceNotice from '@/components/feed/source-notice';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
+import SectionsLayout from '@/components/sections-layout';
 import { useTranslation } from '@/hooks/use-translation';
 import { timeAgo } from '@/lib/time';
 import { categoryBadge, isCuriosity } from '@/lib/category-colors';
@@ -38,15 +39,7 @@ export default function Post({ post, body, now, related }: Props) {
                 )}
             </Head>
 
-            <main className="mx-auto flex max-w-3xl flex-col gap-4 px-4 py-6 sm:px-6">
-                <Link
-                    href={home()}
-                    className="inline-flex h-11 w-fit items-center gap-2 rounded-lg px-2 text-sm font-semibold text-nk-blue hover:bg-nk-blue/10 dark:text-sky-300"
-                >
-                    <ArrowLeft aria-hidden="true" className="size-4" />
-                    {t('Back to the feed')}
-                </Link>
-
+            <SectionsLayout active={post.category.slug} className="max-w-3xl">
                 <article
                     className={cn(
                         'overflow-hidden rounded-xl bg-white shadow-sm dark:bg-slate-900',
@@ -238,7 +231,7 @@ export default function Post({ post, body, now, related }: Props) {
                         </ul>
                     </section>
                 )}
-            </main>
+            </SectionsLayout>
         </>
     );
 }
