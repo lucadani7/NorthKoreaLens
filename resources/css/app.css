@@ -20,6 +20,13 @@
     --font-display: var(--font-space-grotesk), var(--font-sans);
 }
 
+/* Space Grotesk has no Cyrillic, so Russian and Ukrainian headings fell back to its
+   metric-adjusted fallback font and looked cramped. Inter has Cyrillic. */
+:lang(ru),
+:lang(uk) {
+    --font-display: var(--font-sans);
+}
+
 @theme {
     /* Font families come from the fonts option in vite.config.ts (the @fonts directive). */
     --font-sans:
