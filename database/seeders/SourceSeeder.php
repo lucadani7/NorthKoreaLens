@@ -38,12 +38,16 @@ class SourceSeeder extends Seeder
                 'is_active' => false,
             ],
             [
-                // No public RSS feed: posts are added through KCNA Watch or by hand.
+                // No RSS feed: the headlines are read from the English home page once a day
+                // and wait as drafts, so the team can add "What the article doesn't say".
                 'name' => 'Rodong Sinmun',
                 'slug' => 'rodong-sinmun',
                 'type' => SourceType::StateMedia,
                 'website_url' => 'http://www.rodong.rep.kp',
-                'feed_url' => null,
+                'feed_url' => 'http://www.rodong.rep.kp/en/',
+                'feed_format' => 'rodong',
+                'fetch_every_hours' => 24,
+                'needs_review' => true,
             ],
         ];
 

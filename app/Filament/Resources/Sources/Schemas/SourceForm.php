@@ -43,6 +43,21 @@ class SourceForm
                 ->url()
                 ->maxLength(255)
                 ->helperText('Leave empty for sources without a feed; their posts are added by hand.'),
+            Select::make('feed_format')
+                ->label('Feed format')
+                ->options([
+                    'feed' => 'RSS or Atom feed (YouTube channels too)',
+                    'rodong' => 'Rodong Sinmun home page',
+                ])
+                ->default('feed')
+                ->required(),
+            TextInput::make('fetch_every_hours')
+                ->label('Fetch every (hours)')
+                ->numeric()
+                ->minValue(1)
+                ->maxValue(168)
+                ->default(1)
+                ->required(),
             Select::make('category_id')
                 ->label('Section')
                 ->options(fn () => Category::orderBy('sort_order')->get()->mapWithKeys(

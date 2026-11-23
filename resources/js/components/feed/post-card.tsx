@@ -126,7 +126,7 @@ export default function PostCard({ post, now }: Props) {
             {post.source?.forbidsAi && (
                 <p className="border-t border-slate-100 px-5 py-3 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400">
                     {t(
-                        ':source does not allow AI tools to be used on its content. NK Lens respects this and runs no AI features on it.',
+                        'At the request of :source, we do not use AI tools on this content.',
                         { source: post.source.name },
                     )}
                 </p>

@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Feeds\FeedImporter;
 use App\Feeds\FeedParser;
+use App\Feeds\RodongParser;
 use App\Models\Source;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
@@ -28,19 +29,27 @@ class FetchSourceFeed implements ShouldQueue
 
     public function __construct(public Source $source) {}
 
-    public function handle(FeedParser $parser, FeedImporter $importer): void
+    public function handle(FeedParser $parser, RodongParser $rodong, FeedImporter $importer): void
     {
         if (! $this->source->is_active || $this->source->feed_url === null) {
             return;
         }
 
-        $response = Http::timeout(20)
+        $isRodong = $this->source->feed_format === 'rodong';
+
+        // The Rodong Sinmun site is slow (its home page is several megabytes) and often down.
+        $response = Http::timeout($isRodong ? 300 : 20)
+            ->retry($isRodong ? 3 : 1, $isRodong ? 60_000 : 0, throw: false)
             ->withUserAgent(config('app.name').' feed reader (+'.config('app.url').')')
-            ->accept('application/rss+xml, application/atom+xml, application/xml, text/xml')
+            ->accept($isRodong ? 'text/html' : 'application/rss+xml, application/atom+xml, application/xml, text/xml')
             ->get($this->source->feed_url)
             ->throw();
 
-        foreach ($parser->parse($response->body()) as $item) {
+        $items = $isRodong
+            ? $rodong->parse($response->body(), $this->source->feed_url)
+            : $parser->parse($response->body());
+
+        foreach ($items as $item) {
             $importer->import($this->source, $item);
         }
 

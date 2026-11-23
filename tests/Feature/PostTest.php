@@ -68,8 +68,9 @@ class PostTest extends TestCase
 
         $this->assertSame(7, Category::count());
         $this->assertTrue(Source::where('slug', 'rodong-sinmun')->first()->type->isPropaganda());
-        // 38 North is seeded inactive, so NK News, Daily NK and KOREA NOW are fetched.
-        $this->assertSame(3, Source::fetchable()->count());
+        // 38 North is seeded inactive, so NK News, Daily NK, KOREA NOW and Rodong Sinmun are fetched.
+        $this->assertSame(4, Source::fetchable()->count());
+        $this->assertSame('rodong', Source::where('slug', 'rodong-sinmun')->value('feed_format'));
 
         $koreaNow = Source::where('slug', 'korea-now')->firstOrFail();
         $this->assertSame(Category::KOREA_NOW, $koreaNow->category?->slug);

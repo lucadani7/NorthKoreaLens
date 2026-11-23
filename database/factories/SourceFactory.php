@@ -22,6 +22,8 @@ class SourceFactory extends Factory
             'type' => SourceType::Independent,
             'website_url' => fake()->url(),
             'feed_url' => fake()->url().'/feed',
+            'feed_format' => 'feed',
+            'fetch_every_hours' => 1,
             'language' => 'en',
             'is_active' => true,
         ];

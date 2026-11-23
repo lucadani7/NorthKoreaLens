@@ -27,6 +27,18 @@ class FetchFeeds extends Command
             return self::FAILURE;
         }
 
+        // The hourly run skips sources read less often (Rodong Sinmun: once a day);
+        // naming a source fetches it now.
+        if (! $this->argument('source')) {
+            $sources = $sources->filter(fn (Source $source) => $source->isDue());
+
+            if ($sources->isEmpty()) {
+                $this->info('Nothing is due.');
+
+                return self::SUCCESS;
+            }
+        }
+
         $failed = 0;
 
         foreach ($sources as $source) {

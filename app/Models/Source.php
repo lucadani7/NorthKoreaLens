@@ -19,6 +19,8 @@ use Illuminate\Support\Carbon;
  * @property int|null $category_id Section for its posts; null means the default for the type
  * @property string $website_url
  * @property string|null $feed_url
+ * @property string $feed_format "feed" (RSS or Atom) or "rodong" (Rodong Sinmun home page)
+ * @property int $fetch_every_hours Hours between two fetches
  * @property list<string>|null $keywords Import only items that mention one of these
  * @property bool $needs_review Import as drafts, to be published by hand
  * @property bool $forbids_ai The source forbids AI tools on its content; no AI features on its posts
@@ -40,6 +42,8 @@ class Source extends Model
         'category_id',
         'website_url',
         'feed_url',
+        'feed_format',
+        'fetch_every_hours',
         'keywords',
         'needs_review',
         'forbids_ai',
@@ -53,6 +57,7 @@ class Source extends Model
         return [
             'type' => SourceType::class,
             'is_active' => 'boolean',
+            'fetch_every_hours' => 'integer',
             'keywords' => 'array',
             'needs_review' => 'boolean',
             'forbids_ai' => 'boolean',
@@ -106,6 +111,13 @@ class Source extends Model
         $id = $query['channel_id'] ?? null;
 
         return is_string($id) && preg_match('/\\AUC[A-Za-z0-9_-]{22}\\z/', $id) === 1 ? $id : null;
+    }
+
+    /** Whether the hourly run should fetch it now: never fetched, or its interval has passed. */
+    public function isDue(): bool
+    {
+        return $this->last_fetched_at === null
+            || $this->last_fetched_at->lte(now()->subHours(max(1, $this->fetch_every_hours))->addMinutes(5));
     }
 
     /** @return HasMany<Post, $this> */

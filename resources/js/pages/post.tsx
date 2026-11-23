@@ -136,7 +136,7 @@ export default function Post({ post, body, now }: Props) {
                         {post.source?.forbidsAi && (
                             <p className="text-xs text-slate-500 dark:text-slate-400">
                                 {t(
-                                    ':source does not allow AI tools to be used on its content. NK Lens respects this and runs no AI features on it.',
+                                    'At the request of :source, we do not use AI tools on this content.',
                                     { source: post.source.name },
                                 )}
                             </p>
