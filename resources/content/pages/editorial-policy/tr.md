@@ -14,18 +14,27 @@ Tam liste [Kaynaklar](/sources) sayfasında. Bir kaynağı ancak gerçek bir hab
 
 ## Başka sitelerden makaleler
 
-Başka sitelerden gelen makalelerde başlığı, kısa bir alıntıyı ve orijinalin bağlantısını gösteriyoruz. Makalelerin tamamını kopyalamıyor, anlamlarını değiştirmiyoruz. Haberin tamamını okumak için onu yayımlayan siteye gidersin.
+Başka sitelerden bir şey aldığımızda:
+
+- **Gösteriyoruz:** başlığı, kısa bir alıntıyı ve asıl habere giden bağlantıyı; videolarda ise YouTube'daki videonun kendisini.
+- **Kopyalamıyoruz:** makalelerin tamamını almıyor, anlamlarını değiştirmiyoruz.
+- **Çıkarıyoruz:** alıntılardan yalnızca reklamları ve Patreon ya da sosyal medya bağlantıları gibi kendi kendini tanıtma içeriklerini.
+- **Ekliyoruz:** zaman zaman bağlamı, her zaman ayrı olarak, “Makalenin söylemedikleri” notunda.
+
+Haberin tamamını, onu yayımlayan sitede okuyabilirsin.
 
 ## Propagandayı nasıl ele alıyoruz
 
-Kuzey Kore devlet medyası, rejimin nasıl görünmek istediğine dair önemli bir kaynaktır, ama bir bilgi kaynağı değildir. Bu yüzden:
+Kuzey Kore devlet medyası gerçekte neler olduğunu değil, rejimin nasıl görünmek istediğini gösterir. Bu yüzden onu yalnızca şöyle yayımlıyoruz:
 
-- devlet medyasından gelen her gönderi **Propaganda** bölümünde yer alır ve nerede görünürse görünsün kırmızı bir etiket taşır;
-- yalnızca başlığı ve kısa bir alıntıyı gösteririz, asla makalenin tamamını değil;
-- mümkün olduğunda, orijinalin dışarıda bıraktığı bağlamı veren kısa bir not ekleriz: **"Makalenin söylemedikleri"**;
-- Kuzey Kore devlet medyasının paylaşılmasının yasayla kısıtlandığı Güney Kore'de bu sitelere bağlantı vermeyiz.
+- **Ayrı:** Devlet medyasından gelen her gönderi, nerede görünürse görünsün Propaganda bölümünde yer alır ve kırmızı çerçeve ile etiket taşır.
+- **Denetlenmiş:** Rodong Sinmun başlıkları taslak olarak gelir ve ancak ekip onları gördükten sonra sitede yer alır.
+- **Kısa:** Yalnızca başlığı ve bir alıntıyı gösteririz, hiçbir zaman makalenin tamamını değil.
+- **Bağlamla:** Mümkün olduğunda “Makalenin söylemedikleri” notu, asıl metnin atladıklarını ekler.
+- **Yapay zekâya başka bir soruyla:** Asistanından mesajı ve propaganda tekniklerini açıklaması istenir; bunları gerçek olarak kabul etmesi değil.
+- **Güney Kore'de bağlantısız:** Ayrıntılar aşağıda, “Güney Kore'deki okurlar için” bölümünde.
 
-Propagandayı göstermek ona katılmak anlamına gelmez. Okurlar onu olduğu gibi görebilsin diye gösteriyoruz.
+Propagandayı etiketiyle birlikte yayımlıyoruz: başka yerlerde de tanıyabilesin diye.
 
 ## Güney Kore'deki okurlar için
 

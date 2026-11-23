@@ -14,18 +14,27 @@ La lista completa está en la página [Fuentes](/sources). Solo añadimos una fu
 
 ## Artículos de otros sitios
 
-De los artículos de otros sitios mostramos el título, un breve fragmento y un enlace al original. No copiamos artículos completos ni cambiamos su sentido. Para leer la noticia completa, vas al sitio que la publicó.
+Cuando tomamos algo de otros sitios:
+
+- **Mostramos** el titular, un breve fragmento y el enlace al original; en los vídeos, el propio vídeo de YouTube.
+- **No copiamos** artículos completos ni cambiamos su sentido.
+- **Quitamos** de los fragmentos solo la publicidad y la autopromoción, como los enlaces a Patreon o a redes sociales.
+- **Añadimos** a veces contexto, siempre por separado, en la nota «Lo que el artículo no dice».
+
+La noticia completa la lees en el sitio que la publicó.
 
 ## Cómo tratamos la propaganda
 
-Los medios estatales norcoreanos son una fuente importante sobre cómo quiere ser visto el régimen, pero no son una fuente de hechos. Por eso:
+Los medios estatales norcoreanos muestran cómo quiere ser visto el régimen, no lo que de verdad ocurre. Por eso solo los publicamos así:
 
-- toda publicación de medios estatales está en la sección **Propaganda** y lleva una etiqueta roja, aparezca donde aparezca;
-- mostramos solo el titular y un breve fragmento, nunca artículos completos;
-- cuando podemos, añadimos una nota breve, **«Lo que el artículo no dice»**, con el contexto que el original omite;
-- en Corea del Sur, donde la ley restringe la difusión de los medios estatales norcoreanos, no enlazamos a esos sitios.
+- **Por separado:** toda publicación de los medios estatales está en la sección Propaganda y lleva un marco y una etiqueta rojos, aparezca donde aparezca.
+- **Revisado:** los titulares del Rodong Sinmun entran como borradores y solo aparecen en el sitio después de que los vea el equipo.
+- **En breve:** mostramos solo el titular y un fragmento, nunca artículos completos.
+- **Con contexto:** cuando podemos, la nota «Lo que el artículo no dice» añade lo que el original omite.
+- **Con otra pregunta para la IA:** a tu asistente se le pide que explique el mensaje y las técnicas de propaganda, no que los tome por hechos.
+- **Sin enlaces en Corea del Sur:** los detalles están más abajo, en «Para los lectores en Corea del Sur».
 
-Mostrar la propaganda no significa estar de acuerdo con ella. La mostramos para que los lectores la vean como lo que es.
+Publicamos la propaganda con su etiqueta: para que la reconozcas también en otros lugares.
 
 ## Para los lectores en Corea del Sur
 

@@ -14,18 +14,27 @@ Die vollständige Liste steht auf der Seite [Quellen](/sources). Eine Quelle neh
 
 ## Artikel von anderen Websites
 
-Bei Artikeln von anderen Websites zeigen wir den Titel, einen kurzen Auszug und einen Link zum Original. Wir kopieren keine ganzen Artikel und verändern ihren Sinn nicht. Den vollständigen Text liest du auf der Website, die ihn veröffentlicht hat.
+Wenn wir etwas von anderen Websites übernehmen:
+
+- **Wir zeigen** die Überschrift, einen kurzen Auszug und den Link zum Original; bei Videos das Video selbst, von YouTube.
+- **Wir kopieren** keine ganzen Artikel und verändern ihren Sinn nicht.
+- **Wir entfernen** aus Auszügen nur Werbung und Eigenwerbung, etwa Links zu Patreon oder sozialen Netzwerken.
+- **Wir ergänzen** manchmal Kontext, immer getrennt, in der Notiz „Was der Artikel verschweigt“.
+
+Die ganze Meldung liest du auf der Website, die sie veröffentlicht hat.
 
 ## Wie wir mit Propaganda umgehen
 
-Nordkoreanische Staatsmedien sind eine wichtige Quelle dafür, wie das Regime gesehen werden will, aber keine Quelle für Fakten. Deshalb gilt:
+Nordkoreas Staatsmedien zeigen, wie das Regime gesehen werden will, nicht, was wirklich geschieht. Darum veröffentlichen wir sie nur so:
 
-- Jeder Beitrag aus Staatsmedien steht in der Rubrik **Propaganda** und trägt überall, wo er erscheint, eine rote Kennzeichnung;
-- wir zeigen nur die Schlagzeile und einen kurzen Auszug, nie ganze Artikel;
-- wo es möglich ist, fügen wir eine kurze Notiz hinzu, **„Was der Artikel nicht sagt“**, mit dem Kontext, den das Original weglässt;
-- in Südkorea, wo das Verbreiten nordkoreanischer Staatsmedien gesetzlich eingeschränkt ist, verlinken wir nicht auf diese Websites.
+- **Getrennt:** Jeder Beitrag aus den Staatsmedien steht in der Rubrik Propaganda und hat einen roten Rahmen und ein rotes Etikett, wo immer er erscheint.
+- **Geprüft:** Schlagzeilen von Rodong Sinmun kommen als Entwürfe herein und erscheinen erst auf der Website, wenn das Team sie gesehen hat.
+- **Kurz:** Wir zeigen nur die Überschrift und einen Auszug, nie ganze Artikel.
+- **Mit Kontext:** Wenn möglich, ergänzt die Notiz „Was der Artikel verschweigt“, was das Original auslässt.
+- **Mit einer anderen Frage an die KI:** Dein Assistent wird gebeten, die Botschaft und die Propagandatechniken zu erklären, statt sie als Tatsachen zu nehmen.
+- **Ohne Links in Südkorea:** Die Einzelheiten stehen unten unter „Für Leserinnen und Leser in Südkorea“.
 
-Propaganda zu zeigen heißt nicht, ihr zuzustimmen. Wir zeigen sie, damit Leserinnen und Leser sie als das erkennen, was sie ist.
+Propaganda veröffentlichen wir mit dem Etikett darauf: damit du sie auch anderswo erkennst.
 
 ## Für Leserinnen und Leser in Südkorea
 

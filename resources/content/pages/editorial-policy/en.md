@@ -14,18 +14,27 @@ The full list is on the [sources](/sources) page. We add a source only after che
 
 ## Articles from other sites
 
-For articles from other sites we show the title, a short excerpt and a link to the original. We do not copy whole articles, and we do not change their meaning. To read the full story, you go to the site that published it.
+When we take something from another site:
+
+- **We show** the headline, a short excerpt and the link to the original; for videos, the video itself, from YouTube.
+- **We do not copy** whole articles or change their meaning.
+- **We remove** from excerpts only advertising and self-promotion, such as links to Patreon or social media.
+- **We sometimes add** context, always kept separate, in the note “What the article doesn't say”.
+
+You can read the full story on the site that published it.
 
 ## How we handle propaganda
 
-North Korean state media are an important source on how the regime wants to be seen, but they are not a source of facts. So:
+North Korean state media show how the regime wants to be seen, not what is really happening. That is why we publish them only like this:
 
-- every post from state media sits in the **Propaganda** section and carries a red label, wherever it appears;
-- we show only the headline and a short excerpt, never whole articles;
-- where we can, we add a short note, **"What the article doesn't say"**, with the context that the original leaves out;
-- in South Korea, where sharing North Korean state media is restricted by law, we do not link to those sites.
+- **Separately:** every post from state media sits in the Propaganda section and has a red border and label, wherever it appears.
+- **Checked:** headlines from Rodong Sinmun come in as drafts and appear on the site only after the team has seen them.
+- **Briefly:** we show only the headline and an excerpt, never whole articles.
+- **With context:** when we can, the note “What the article doesn't say” adds what the original leaves out.
+- **With a different question for AI:** your assistant is asked to explain the message and the propaganda techniques, not to take them as facts.
+- **Without links in South Korea:** the details are below, under “For readers in South Korea”.
 
-Showing propaganda is not the same as agreeing with it. We show it so readers can see it for what it is.
+We publish propaganda with the label on it, so that you can recognise it elsewhere too.
 
 ## For readers in South Korea
 

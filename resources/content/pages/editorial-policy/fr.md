@@ -14,18 +14,27 @@ La liste complète figure sur la page [Sources](/sources). Nous n’ajoutons une
 
 ## Les articles d’autres sites
 
-Pour les articles d’autres sites, nous montrons le titre, un court extrait et un lien vers l’original. Nous ne copions pas d’articles entiers et nous n’en changeons pas le sens. Pour lire l’article complet, vous allez sur le site qui l’a publié.
+Quand nous reprenons un contenu d’un autre site :
+
+- **Nous montrons** le titre, un court extrait et le lien vers l’original ; pour les vidéos, la vidéo elle-même, depuis YouTube.
+- **Nous ne copions pas** d’articles entiers et n’en changeons pas le sens.
+- **Nous retirons** des extraits uniquement la publicité et l’autopromotion, comme les liens vers Patreon ou les réseaux sociaux.
+- **Nous ajoutons** parfois du contexte, toujours séparé, dans la note « Ce que l’article ne dit pas ».
+
+Vous pouvez lire l’article complet sur le site qui l’a publié.
 
 ## Comment nous traitons la propagande
 
-Les médias d’État nord-coréens sont une source importante sur la façon dont le régime veut être perçu, mais pas une source de faits. C’est pourquoi :
+Les médias d’État nord-coréens montrent comment le régime veut être vu, pas ce qui se passe réellement. C’est pourquoi nous ne les publions que de cette façon :
 
-- toute publication issue des médias d’État se trouve dans la rubrique **Propagande** et porte une étiquette rouge, où qu’elle apparaisse ;
-- nous ne montrons que le titre et un court extrait, jamais d’articles entiers ;
-- quand c’est possible, nous ajoutons une courte note, **« Ce que l’article ne dit pas »**, avec le contexte que l’original passe sous silence ;
-- en Corée du Sud, où le partage des médias d’État nord-coréens est restreint par la loi, nous ne mettons pas de liens vers ces sites.
+- **À part :** toute publication issue des médias d’État figure dans la rubrique Propagande et porte un cadre et une étiquette rouges, où qu’elle apparaisse.
+- **Vérifié :** les titres du Rodong Sinmun arrivent comme brouillons et n’apparaissent sur le site qu’après avoir été vus par l’équipe.
+- **En bref :** nous ne montrons que le titre et un extrait, jamais d’articles entiers.
+- **Avec du contexte :** quand c’est possible, la note « Ce que l’article ne dit pas » ajoute ce que l’original omet.
+- **Avec une autre question pour l’IA :** votre assistant est invité à expliquer le message et les techniques de propagande, pas à les prendre pour des faits.
+- **Sans liens en Corée du Sud :** les détails figurent plus bas, dans « Pour les lecteurs en Corée du Sud ».
 
-Montrer la propagande ne veut pas dire l’approuver. Nous la montrons pour que les lecteurs la voient pour ce qu’elle est.
+Nous publions la propagande avec son étiquette : pour que vous sachiez la reconnaître ailleurs aussi.
 
 ## Pour les lecteurs en Corée du Sud
 

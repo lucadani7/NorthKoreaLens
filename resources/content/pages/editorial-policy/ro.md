@@ -14,18 +14,27 @@ Lista completă e pe pagina [Surse](/sources). Adăugăm o sursă doar după ce 
 
 ## Articolele de pe alte site-uri
 
-Pentru articolele de pe alte site-uri arătăm titlul, un scurt fragment și linkul către original. Nu copiem articole întregi și nu le schimbăm sensul. Ca să citești toată știrea, mergi pe site-ul care a publicat-o.
+Când preluăm ceva de pe alte site-uri:
+
+- **Arătăm** titlul, un fragment scurt și linkul spre original; la clipuri, clipul de pe YouTube.
+- **Nu copiem** articole întregi și nu le schimbăm sensul.
+- **Scoatem** din fragmente doar reclamele și autopromovarea, de exemplu linkurile spre Patreon sau rețelele sociale.
+- **Adăugăm** uneori context, mereu separat, în nota „Ce nu spune articolul”.
+
+Știrea completă o citești pe site-ul care a publicat-o.
 
 ## Cum tratăm propaganda
 
-Presa de stat nord-coreeană e o sursă importantă despre felul în care regimul vrea să fie văzut, dar nu e o sursă de fapte. De aceea:
+Presa de stat nord-coreeană arată cum vrea regimul să fie văzut, nu ce se întâmplă de fapt. De aceea o publicăm doar așa:
 
-- orice postare din presa de stat stă în rubrica **Propagandă** și are o etichetă roșie, oriunde ar apărea;
-- arătăm doar titlul și un scurt fragment, niciodată articole întregi;
-- când putem, adăugăm o notă scurtă, **„Ce nu spune articolul”**, cu contextul pe care originalul îl omite;
-- în Coreea de Sud, unde distribuirea presei de stat nord-coreene este restricționată prin lege, nu punem linkuri către acele site-uri.
+- **Separat:** orice postare din presa de stat stă în rubrica Propagandă și are chenar și etichetă roșie, oriunde ar apărea.
+- **Verificat:** titlurile de la Rodong Sinmun intră ca ciorne și apar pe site doar după ce le vede echipa.
+- **Pe scurt:** arătăm doar titlul și un fragment, niciodată articole întregi.
+- **Cu context:** când putem, nota „Ce nu spune articolul” adaugă ce omite originalul.
+- **Cu altă întrebare pentru AI:** asistentul tău e rugat să explice mesajul și tehnicile de propagandă, nu să le ia drept fapte.
+- **Fără linkuri în Coreea de Sud:** detaliile sunt mai jos, la „Pentru cititorii din Coreea de Sud”.
 
-A arăta propaganda nu înseamnă a fi de acord cu ea. O arătăm ca cititorii să o vadă așa cum este.
+Propaganda o publicăm cu eticheta pe ea: ca s-o recunoști și în alte părți.
 
 ## Pentru cititorii din Coreea de Sud
 

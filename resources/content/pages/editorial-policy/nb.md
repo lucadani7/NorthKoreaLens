@@ -14,18 +14,27 @@ Hele listen står på siden [Kilder](/sources). Vi legger bare til en kilde ette
 
 ## Artikler fra andre nettsteder
 
-For artikler fra andre nettsteder viser vi tittelen, et kort utdrag og en lenke til originalen. Vi kopierer ikke hele artikler, og vi endrer ikke meningen i dem. For å lese hele saken går du til nettstedet som publiserte den.
+Når vi henter noe fra andre nettsteder:
+
+- **Vi viser** overskriften, et kort utdrag og lenken til originalen; for videoer selve videoen, fra YouTube.
+- **Vi kopierer ikke** hele artikler og endrer ikke meningen deres.
+- **Vi fjerner** fra utdragene bare reklame og selvpromotering, som lenker til Patreon eller sosiale medier.
+- **Vi legger** noen ganger til kontekst, alltid adskilt, i notatet «Det artikkelen ikke sier».
+
+Hele saken leser du på nettstedet som publiserte den.
 
 ## Slik håndterer vi propaganda
 
-Nordkoreanske statsmedier er en viktig kilde til hvordan regimet vil bli sett, men de er ikke en kilde til fakta. Derfor:
+Nordkoreanske statsmedier viser hvordan regimet vil bli sett, ikke hva som faktisk skjer. Derfor publiserer vi dem bare slik:
 
-- ligger alle innlegg fra statsmedier i seksjonen **Propaganda** og har en rød merkelapp, uansett hvor de vises;
-- viser vi bare overskriften og et kort utdrag, aldri hele artikler;
-- legger vi, der vi kan, til en kort merknad, **«Det artikkelen ikke sier»**, med konteksten originalen utelater;
-- lenker vi ikke til disse nettstedene i Sør-Korea, der loven begrenser deling av nordkoreanske statsmedier.
+- **Adskilt:** Alle innlegg fra statsmedier står i seksjonen Propaganda og har rød ramme og rød merkelapp, uansett hvor de vises.
+- **Kontrollert:** Overskrifter fra Rodong Sinmun kommer inn som utkast og vises på nettstedet først når teamet har sett dem.
+- **Kort:** Vi viser bare overskriften og et utdrag, aldri hele artikler.
+- **Med kontekst:** Når vi kan, legger notatet «Det artikkelen ikke sier» til det originalen utelater.
+- **Med et annet spørsmål til KI:** Assistenten din blir bedt om å forklare budskapet og propagandateknikkene, ikke om å ta dem som fakta.
+- **Uten lenker i Sør-Korea:** Detaljene står lenger ned, under «For lesere i Sør-Korea».
 
-Å vise propaganda er ikke det samme som å være enig i den. Vi viser den slik at leserne kan se den for det den er.
+Vi publiserer propaganda med merkelappen på: så du kjenner den igjen andre steder også.
 
 ## For lesere i Sør-Korea
 
