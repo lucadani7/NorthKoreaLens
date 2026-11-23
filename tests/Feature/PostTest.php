@@ -68,8 +68,15 @@ class PostTest extends TestCase
 
         $this->assertSame(7, Category::count());
         $this->assertTrue(Source::where('slug', 'rodong-sinmun')->first()->type->isPropaganda());
-        // 38 North is seeded inactive, so NK News, Daily NK, KOREA NOW and Rodong Sinmun are fetched.
-        $this->assertSame(4, Source::fetchable()->count());
+        // 38 North is seeded inactive, so NK News, Daily NK, KOREA NOW, Rodong Sinmun, the SCMP
+        // and Charles North Korea are fetched.
+        $this->assertSame(6, Source::fetchable()->count());
+
+        $charles = Source::where('slug', 'charles-north-korea')->firstOrFail();
+        $this->assertSame('human-rights', $charles->importCategory()->slug);
+        $this->assertTrue($charles->needs_review);
+        $this->assertTrue($charles->skip_shorts);
+        $this->assertNotNull($charles->youtubeChannelId());
         $this->assertSame('rodong', Source::where('slug', 'rodong-sinmun')->value('feed_format'));
 
         $koreaNow = Source::where('slug', 'korea-now')->firstOrFail();
@@ -77,6 +84,11 @@ class PostTest extends TestCase
         $this->assertTrue($koreaNow->needs_review);
         $this->assertTrue($koreaNow->forbids_ai);
         $this->assertNotEmpty($koreaNow->keywords);
+
+        // The SCMP covers all of Asia, so only North Korea stories are kept.
+        $scmp = Source::where('slug', 'scmp')->firstOrFail();
+        $this->assertTrue($scmp->wants('Kim Jong Un inspects a new missile'));
+        $this->assertFalse($scmp->wants('Beijing urges peaceful unification with Taiwan'));
     }
 
     public function test_category_names_are_translated(): void

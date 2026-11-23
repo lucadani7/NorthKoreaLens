@@ -2,12 +2,15 @@ import { Head, Link } from '@inertiajs/react';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import AskAi from '@/components/ask-ai';
 import EditorialNote from '@/components/feed/editorial-note';
+import SourceNotice from '@/components/feed/source-notice';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { timeAgo } from '@/lib/time';
+import { categoryBadge, isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
 import { editorialPolicy, home } from '@/routes';
+import { show } from '@/routes/posts';
 
 type Props = {
     post: App.Data.PostData;
@@ -15,9 +18,11 @@ type Props = {
     body: string | null;
     /** Server time as ISO 8601. */
     now: string;
+    /** Up to three other posts that share a topic. */
+    related: App.Data.PostData[];
 };
 
-export default function Post({ post, body, now }: Props) {
+export default function Post({ post, body, now, related }: Props) {
     const { t, locale } = useTranslation();
     const author = post.source?.name ?? 'NK Lens';
     // Plain text only: paragraphs are separated by blank lines, nothing is rendered as HTML.
@@ -46,6 +51,8 @@ export default function Post({ post, body, now }: Props) {
                     className={cn(
                         'overflow-hidden rounded-xl bg-white shadow-sm dark:bg-slate-900',
                         post.isPropaganda && 'border-2 border-nk-red-dark',
+                        isCuriosity(post.category.slug) &&
+                            'border-t-4 border-nk-green',
                     )}
                 >
                     {post.isPropaganda && <PropagandaBanner />}
@@ -65,13 +72,30 @@ export default function Post({ post, body, now }: Props) {
                                 </time>
                             )}
                             {!post.isPropaganda && (
-                                <span className="rounded-full bg-nk-blue/10 px-2.5 py-1 text-xs font-semibold text-nk-blue-dark dark:bg-nk-blue/30 dark:text-white">
+                                <span
+                                    className={cn(
+                                        'rounded-full px-2.5 py-1 text-xs font-semibold',
+                                        categoryBadge(post.category.slug),
+                                    )}
+                                >
                                     {post.category.name}
                                 </span>
                             )}
                         </div>
 
-                        <h1 className="font-display text-3xl leading-tight font-bold sm:text-4xl">
+                        {/* Team posts not yet translated into the reader's language. */}
+                        {!post.source && post.contentLocale !== locale && (
+                            <p className="rounded-lg bg-amber-100 px-4 py-3 text-sm text-amber-950 dark:bg-amber-900/40 dark:text-amber-100">
+                                {t(
+                                    'This post is not yet available in your language, so you are reading it in English.',
+                                )}
+                            </p>
+                        )}
+
+                        <h1
+                            lang={post.contentLocale}
+                            className="font-display text-3xl leading-tight font-bold sm:text-4xl"
+                        >
                             {post.title}
                         </h1>
 
@@ -95,7 +119,10 @@ export default function Post({ post, body, now }: Props) {
                         )}
 
                         {paragraphs.length > 0 ? (
-                            <div className="flex flex-col gap-4 text-[17px] leading-relaxed text-slate-800 dark:text-slate-200">
+                            <div
+                                lang={post.contentLocale}
+                                className="flex flex-col gap-4 text-[17px] leading-relaxed text-slate-800 dark:text-slate-200"
+                            >
                                 {paragraphs.map((paragraph, index) => (
                                     <p
                                         key={index}
@@ -111,6 +138,10 @@ export default function Post({ post, body, now }: Props) {
                                     {post.excerpt}
                                 </p>
                             )
+                        )}
+
+                        {post.source?.notice && (
+                            <SourceNotice notice={post.source.notice} />
                         )}
 
                         {post.editorialNote && (
@@ -161,6 +192,52 @@ export default function Post({ post, body, now }: Props) {
                         )}
                     </div>
                 </article>
+
+                {post.topics.length > 0 && (
+                    <nav
+                        aria-label={t('Topics')}
+                        className="flex flex-wrap gap-2"
+                    >
+                        {post.topics.map((topic) => (
+                            <Link
+                                key={topic.id}
+                                href={home({
+                                    query: {
+                                        category: post.category.slug,
+                                        topic: topic.slug,
+                                    },
+                                })}
+                                className="flex min-h-9 items-center rounded-full border border-slate-300 bg-white px-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                            >
+                                {topic.name}
+                            </Link>
+                        ))}
+                    </nav>
+                )}
+
+                {related.length > 0 && (
+                    <section
+                        aria-label={t('More on this topic')}
+                        className="rounded-xl bg-white p-5 shadow-sm dark:bg-slate-900"
+                    >
+                        <h2 className="font-display text-lg font-bold">
+                            {t('More on this topic')}
+                        </h2>
+                        <ul className="mt-3 flex flex-col divide-y divide-slate-100 dark:divide-slate-800">
+                            {related.map((item) => (
+                                <li key={item.id}>
+                                    <Link
+                                        href={show(item.id)}
+                                        lang={item.contentLocale}
+                                        className="block py-3 font-semibold text-nk-blue hover:underline dark:text-sky-300"
+                                    >
+                                        {item.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                )}
             </main>
         </>
     );

@@ -1,0 +1,329 @@
+{
+    "posts": [
+        {
+            "key": "seoul-first-capital",
+            "category": "curiosities",
+            "topics": ["history"],
+            "en": {
+                "title": "Seoul was North Korea's first official capital",
+                "excerpt": "From 1948 to 1972, North Korea's constitution named Seoul, not Pyongyang, as the capital.",
+                "body": "When the Democratic People's Republic of Korea was founded in September 1948, its first constitution did not name Pyongyang as the capital. Article 103 named Seoul, a city held by the Republic of Korea in the south.\n\nThe government still worked from Pyongyang, which became the capital in practice. Naming Seoul was a political claim: the North presented itself as the only legitimate government of the whole peninsula and expected to move to Seoul after reunification.\n\nThis changed with the Socialist Constitution of 27 December 1972, which named Pyongyang as the capital. A revised constitution made public in 2026 went further and describes the territory of the North as bordered by the Republic of Korea to the south, treating the South as a separate state.",
+                "editorial_note": "Sources:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "ro": {
+                "title": "Seulul a fost prima capitală oficială a Coreei de Nord",
+                "excerpt": "Între 1948 și 1972, constituția nord-coreeană a numit capitală Seulul, nu Phenianul.",
+                "body": "Când a fost fondată Republica Populară Democrată Coreeană, în septembrie 1948, prima ei constituție nu a numit Phenianul drept capitală. Articolul 103 numea Seulul, un oraș aflat în sud, sub controlul Republicii Coreea.\n\nGuvernul lucra totuși de la Phenian, care a devenit capitala de facto. Alegerea Seulului era o revendicare politică: Nordul se prezenta drept singurul guvern legitim al întregii peninsule și se aștepta să se mute la Seul după reunificare.\n\nLucrurile s-au schimbat odată cu Constituția socialistă din 27 decembrie 1972, care a numit Phenianul capitală. O constituție revizuită, făcută publică în 2026, merge mai departe: descrie teritoriul Nordului ca fiind mărginit la sud de Republica Coreea, tratând Sudul ca pe un stat separat.",
+                "editorial_note": "Surse:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "ko": {
+                "title": "북한의 첫 공식 수도는 서울이었다",
+                "excerpt": "1948년부터 1972년까지 북한 헌법은 평양이 아니라 서울을 수도로 규정했다.",
+                "body": "1948년 9월 조선민주주의인민공화국이 수립될 때, 첫 헌법은 평양을 수도로 정하지 않았다. 제103조는 남쪽의 대한민국이 관할하던 서울을 수도로 규정했다.\n\n그럼에도 정부는 평양에서 일했고, 평양은 사실상의 수도가 되었다. 서울을 수도로 명시한 것은 정치적 주장이었다. 북한은 자신을 한반도 전체의 유일한 합법 정부로 내세웠고, 통일 후 서울로 옮길 것을 상정했다.\n\n이는 1972년 12월 27일 사회주의헌법이 평양을 수도로 규정하면서 바뀌었다. 2026년에 공개된 개정 헌법은 한 걸음 더 나아가 북한의 영토가 남쪽으로 대한민국과 접한다고 서술해, 남한을 별개의 국가로 다룬다.",
+                "editorial_note": "출처:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "de": {
+                "title": "Seoul war Nordkoreas erste offizielle Hauptstadt",
+                "excerpt": "Von 1948 bis 1972 nannte die Verfassung Nordkoreas nicht Pjöngjang, sondern Seoul als Hauptstadt.",
+                "body": "Als die Demokratische Volksrepublik Korea im September 1948 gegründet wurde, nannte ihre erste Verfassung nicht Pjöngjang als Hauptstadt. Artikel 103 nannte Seoul, eine Stadt im Süden unter der Kontrolle der Republik Korea.\n\nDie Regierung arbeitete trotzdem in Pjöngjang, das zur faktischen Hauptstadt wurde. Seoul zu nennen war ein politischer Anspruch: Der Norden sah sich als einzige legitime Regierung der ganzen Halbinsel und rechnete damit, nach der Wiedervereinigung nach Seoul umzuziehen.\n\nDas änderte sich mit der Sozialistischen Verfassung vom 27. Dezember 1972, die Pjöngjang zur Hauptstadt erklärte. Eine 2026 veröffentlichte geänderte Verfassung geht noch weiter: Sie beschreibt das Gebiet des Nordens als im Süden an die Republik Korea grenzend und behandelt den Süden damit als eigenen Staat.",
+                "editorial_note": "Quellen:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "fr": {
+                "title": "Séoul a été la première capitale officielle de la Corée du Nord",
+                "excerpt": "De 1948 à 1972, la constitution nord-coréenne désignait Séoul, et non Pyongyang, comme capitale.",
+                "body": "Lors de la fondation de la République populaire démocratique de Corée, en septembre 1948, sa première constitution ne désignait pas Pyongyang comme capitale. L'article 103 désignait Séoul, une ville du Sud contrôlée par la République de Corée.\n\nLe gouvernement siégeait pourtant à Pyongyang, devenue capitale de fait. Désigner Séoul était une revendication politique : le Nord se présentait comme le seul gouvernement légitime de toute la péninsule et comptait s'installer à Séoul après la réunification.\n\nCela a changé avec la Constitution socialiste du 27 décembre 1972, qui a fait de Pyongyang la capitale. Une constitution révisée rendue publique en 2026 va plus loin : elle décrit le territoire du Nord comme bordé au sud par la République de Corée, traitant ainsi le Sud comme un État distinct.",
+                "editorial_note": "Sources :\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "es": {
+                "title": "Seúl fue la primera capital oficial de Corea del Norte",
+                "excerpt": "De 1948 a 1972, la constitución norcoreana designaba como capital a Seúl, no a Pionyang.",
+                "body": "Cuando se fundó la República Popular Democrática de Corea, en septiembre de 1948, su primera constitución no designó a Pionyang como capital. El artículo 103 designaba a Seúl, una ciudad del sur controlada por la República de Corea.\n\nAun así, el gobierno trabajaba desde Pionyang, que se convirtió en la capital de hecho. Designar a Seúl era una reivindicación política: el Norte se presentaba como el único gobierno legítimo de toda la península y contaba con trasladarse a Seúl tras la reunificación.\n\nEsto cambió con la Constitución socialista del 27 de diciembre de 1972, que designó a Pionyang como capital. Una constitución revisada que se hizo pública en 2026 va más allá: describe el territorio del Norte como limítrofe al sur con la República de Corea, con lo que trata al Sur como un Estado aparte.",
+                "editorial_note": "Fuentes:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "it": {
+                "title": "Seul fu la prima capitale ufficiale della Corea del Nord",
+                "excerpt": "Dal 1948 al 1972 la costituzione nordcoreana indicava come capitale Seul, non Pyongyang.",
+                "body": "Quando nel settembre 1948 fu fondata la Repubblica Popolare Democratica di Corea, la sua prima costituzione non indicava Pyongyang come capitale. L'articolo 103 indicava Seul, una città del sud controllata dalla Repubblica di Corea.\n\nIl governo lavorava comunque da Pyongyang, che divenne la capitale di fatto. Indicare Seul era una rivendicazione politica: il Nord si presentava come l'unico governo legittimo di tutta la penisola e contava di trasferirsi a Seul dopo la riunificazione.\n\nLe cose cambiarono con la Costituzione socialista del 27 dicembre 1972, che indicò Pyongyang come capitale. Una costituzione rivista resa pubblica nel 2026 va oltre: descrive il territorio del Nord come confinante a sud con la Repubblica di Corea, trattando il Sud come uno Stato separato.",
+                "editorial_note": "Fonti:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "pt": {
+                "title": "Seul foi a primeira capital oficial da Coreia do Norte",
+                "excerpt": "De 1948 a 1972, a constituição norte-coreana designava Seul, e não Pyongyang, como capital.",
+                "body": "Quando a República Popular Democrática da Coreia foi fundada, em setembro de 1948, a sua primeira constituição não designou Pyongyang como capital. O artigo 103 designava Seul, uma cidade do sul controlada pela República da Coreia.\n\nAinda assim, o governo trabalhava a partir de Pyongyang, que se tornou a capital de facto. Designar Seul era uma reivindicação política: o Norte apresentava-se como o único governo legítimo de toda a península e contava mudar-se para Seul após a reunificação.\n\nIsso mudou com a Constituição Socialista de 27 de dezembro de 1972, que designou Pyongyang como capital. Uma constituição revista tornada pública em 2026 vai mais longe: descreve o território do Norte como fazendo fronteira, a sul, com a República da Coreia, tratando o Sul como um Estado separado.",
+                "editorial_note": "Fontes:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "tr": {
+                "title": "Kuzey Kore'nin ilk resmî başkenti Seul'dü",
+                "excerpt": "1948'den 1972'ye kadar Kuzey Kore anayasası başkent olarak Pyongyang'ı değil, Seul'ü gösteriyordu.",
+                "body": "Kore Demokratik Halk Cumhuriyeti Eylül 1948'de kurulduğunda, ilk anayasası başkent olarak Pyongyang'ı göstermedi. 103. madde, güneyde Kore Cumhuriyeti'nin denetimindeki Seul'ü başkent olarak belirliyordu.\n\nYine de hükümet Pyongyang'dan çalışıyordu ve şehir fiilî başkent hâline geldi. Seul'ü başkent göstermek siyasi bir iddiaydı: Kuzey kendini tüm yarımadanın tek meşru hükümeti olarak sunuyor ve yeniden birleşmeden sonra Seul'e taşınmayı bekliyordu.\n\nBu durum, Pyongyang'ı başkent olarak belirleyen 27 Aralık 1972 tarihli Sosyalist Anayasa ile değişti. 2026'da kamuoyuna açıklanan revize anayasa daha da ileri gidiyor: Kuzey'in topraklarını güneyde Kore Cumhuriyeti ile sınırlanmış olarak tanımlıyor ve Güney'i ayrı bir devlet olarak ele alıyor.",
+                "editorial_note": "Kaynaklar:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            },
+            "nb": {
+                "title": "Seoul var Nord-Koreas første offisielle hovedstad",
+                "excerpt": "Fra 1948 til 1972 oppga Nord-Koreas grunnlov Seoul, ikke Pyongyang, som hovedstad.",
+                "body": "Da Den demokratiske folkerepublikken Korea ble grunnlagt i september 1948, oppga den første grunnloven ikke Pyongyang som hovedstad. Artikkel 103 oppga Seoul, en by i sør under Republikken Koreas kontroll.\n\nRegjeringen arbeidet likevel fra Pyongyang, som ble hovedstad i praksis. Å oppgi Seoul var et politisk krav: Nord presenterte seg som den eneste legitime regjeringen for hele halvøya og regnet med å flytte til Seoul etter en gjenforening.\n\nDette endret seg med den sosialistiske grunnloven av 27. desember 1972, som gjorde Pyongyang til hovedstad. En revidert grunnlov som ble offentliggjort i 2026, går lenger: Den beskriver Nords territorium som avgrenset av Republikken Korea i sør, og behandler dermed Sør som en egen stat.",
+                "editorial_note": "Kilder:\n- Korea JoongAng Daily, “Pyongyang's revised constitution signals a tougher stance toward Seoul” (2026): https://www.koreajoongangdaily.com/opinion/pyongyangs-revised-constitution-signals-a-tougher-stance-toward-seoul/12973558\n- Columbia Law School, Korean Legal Studies, “1972: The Socialist Constitution and the Presidency”: https://kls.law.columbia.edu/content/1972-socialist-constitution-and-presidency"
+            }
+        },
+        {
+            "key": "kim-song-ju",
+            "category": "curiosities",
+            "topics": ["leaders", "language"],
+            "en": {
+                "title": "Kim Il Sung was born Kim Song Ju",
+                "excerpt": "North Korea's founder did not start life with the name the world knows.",
+                "body": "North Korea's founder was born on 15 April 1912 in Mangyongdae, near Pyongyang, as Kim Song Ju (김성주).\n\nIn the 1930s, while fighting in the guerrilla resistance against Japanese rule, he took the name Kim Il Sung, which had already belonged to an earlier, legendary resistance fighter. The alias stayed with him and became his official name.\n\nHis birthday, 15 April, is still the biggest public holiday in North Korea.",
+                "editorial_note": "Sources:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "ro": {
+                "title": "Kim Il Sung s-a născut Kim Song Ju",
+                "excerpt": "Fondatorul Coreei de Nord nu a primit la naștere numele pe care îl știe lumea.",
+                "body": "Fondatorul Coreei de Nord s-a născut pe 15 aprilie 1912 la Mangyongdae, lângă Phenian, sub numele Kim Song Ju (김성주).\n\nÎn anii '30, când lupta în rezistența de gherilă împotriva ocupației japoneze, a luat numele Kim Il Sung, purtat înaintea lui de un luptător legendar al rezistenței. Pseudonimul i-a rămas și a devenit numele lui oficial.\n\nZiua lui de naștere, 15 aprilie, este și astăzi cea mai mare sărbătoare publică din Coreea de Nord.",
+                "editorial_note": "Surse:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "ko": {
+                "title": "김일성의 본명은 김성주였다",
+                "excerpt": "북한의 창건자는 세상이 아는 이름으로 태어나지 않았다.",
+                "body": "북한의 창건자는 1912년 4월 15일 평양 근처 만경대에서 김성주라는 이름으로 태어났다.\n\n1930년대 일제에 맞선 항일 유격 활동을 하던 중, 그는 앞서 전설적인 항일 투사가 쓰던 이름인 김일성을 쓰기 시작했다. 이 이름이 굳어져 그의 공식 이름이 되었다.\n\n그의 생일인 4월 15일은 지금도 북한의 가장 큰 명절이다.",
+                "editorial_note": "출처:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "de": {
+                "title": "Kim Il Sung hieß bei seiner Geburt Kim Song Ju",
+                "excerpt": "Nordkoreas Gründer kam nicht mit dem Namen zur Welt, den alle kennen.",
+                "body": "Nordkoreas Gründer wurde am 15. April 1912 in Mangyongdae bei Pjöngjang als Kim Song Ju (김성주) geboren.\n\nIn den 1930er-Jahren, als er im Guerillawiderstand gegen die japanische Herrschaft kämpfte, nahm er den Namen Kim Il Sung an, den vor ihm bereits ein legendärer Widerstandskämpfer getragen hatte. Der Deckname blieb und wurde zu seinem offiziellen Namen.\n\nSein Geburtstag, der 15. April, ist bis heute der größte Feiertag Nordkoreas.",
+                "editorial_note": "Quellen:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "fr": {
+                "title": "Kim Il Sung est né Kim Song Ju",
+                "excerpt": "Le fondateur de la Corée du Nord n'est pas né sous le nom que le monde connaît.",
+                "body": "Le fondateur de la Corée du Nord est né le 15 avril 1912 à Mangyongdae, près de Pyongyang, sous le nom de Kim Song Ju (김성주).\n\nDans les années 1930, alors qu'il combattait dans la guérilla contre la domination japonaise, il a pris le nom de Kim Il Sung, déjà porté avant lui par un résistant légendaire. Ce pseudonyme lui est resté et est devenu son nom officiel.\n\nSon anniversaire, le 15 avril, reste la plus grande fête publique de la Corée du Nord.",
+                "editorial_note": "Sources :\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "es": {
+                "title": "Kim Il Sung nació como Kim Song Ju",
+                "excerpt": "El fundador de Corea del Norte no nació con el nombre que conoce el mundo.",
+                "body": "El fundador de Corea del Norte nació el 15 de abril de 1912 en Mangyongdae, cerca de Pionyang, con el nombre de Kim Song Ju (김성주).\n\nEn los años treinta, mientras combatía en la guerrilla contra el dominio japonés, adoptó el nombre de Kim Il Sung, que antes había llevado un legendario combatiente de la resistencia. El seudónimo se le quedó y se convirtió en su nombre oficial.\n\nSu cumpleaños, el 15 de abril, sigue siendo la mayor fiesta pública de Corea del Norte.",
+                "editorial_note": "Fuentes:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "it": {
+                "title": "Kim Il Sung nacque come Kim Song Ju",
+                "excerpt": "Il fondatore della Corea del Nord non nacque con il nome che il mondo conosce.",
+                "body": "Il fondatore della Corea del Nord nacque il 15 aprile 1912 a Mangyongdae, vicino a Pyongyang, con il nome di Kim Song Ju (김성주).\n\nNegli anni Trenta, mentre combatteva nella guerriglia contro il dominio giapponese, prese il nome di Kim Il Sung, già portato prima di lui da un leggendario combattente della resistenza. Lo pseudonimo gli rimase e divenne il suo nome ufficiale.\n\nIl suo compleanno, il 15 aprile, è ancora oggi la più grande festa pubblica della Corea del Nord.",
+                "editorial_note": "Fonti:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "pt": {
+                "title": "Kim Il Sung nasceu Kim Song Ju",
+                "excerpt": "O fundador da Coreia do Norte não nasceu com o nome que o mundo conhece.",
+                "body": "O fundador da Coreia do Norte nasceu a 15 de abril de 1912 em Mangyongdae, perto de Pyongyang, com o nome de Kim Song Ju (김성주).\n\nNos anos 1930, enquanto combatia na guerrilha contra o domínio japonês, adotou o nome Kim Il Sung, que antes dele tinha pertencido a um lendário combatente da resistência. O pseudónimo ficou e tornou-se o seu nome oficial.\n\nO seu aniversário, 15 de abril, continua a ser o maior feriado público da Coreia do Norte.",
+                "editorial_note": "Fontes:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "tr": {
+                "title": "Kim Il Sung'un doğum adı Kim Song Ju'ydu",
+                "excerpt": "Kuzey Kore'nin kurucusu, dünyanın bildiği adla doğmadı.",
+                "body": "Kuzey Kore'nin kurucusu 15 Nisan 1912'de Pyongyang yakınlarındaki Mangyongdae'de Kim Song Ju (김성주) adıyla doğdu.\n\n1930'larda Japon yönetimine karşı gerilla direnişinde savaşırken, kendisinden önce efsanevi bir direniş savaşçısının taşıdığı Kim Il Sung adını aldı. Bu takma ad kalıcı oldu ve resmî adı hâline geldi.\n\nDoğum günü olan 15 Nisan, bugün hâlâ Kuzey Kore'nin en büyük resmî bayramıdır.",
+                "editorial_note": "Kaynaklar:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            },
+            "nb": {
+                "title": "Kim Il Sung het Kim Song Ju da han ble født",
+                "excerpt": "Nord-Koreas grunnlegger ble ikke født med navnet verden kjenner.",
+                "body": "Nord-Koreas grunnlegger ble født 15. april 1912 i Mangyongdae ved Pyongyang, med navnet Kim Song Ju (김성주).\n\nPå 1930-tallet, da han kjempet i geriljamotstanden mot japansk styre, tok han navnet Kim Il Sung, som før ham hadde tilhørt en legendarisk motstandskjemper. Dekknavnet ble hengende ved ham og ble hans offisielle navn.\n\nBursdagen hans, 15. april, er fortsatt Nord-Koreas største offentlige høytid.",
+                "editorial_note": "Kilder:\n- Encyclopaedia Britannica, “Kim Il-Sung”: https://www.britannica.com/biography/Kim-Il-Sung\n- Korea Daily, “The myth of Kim Il-sung”: https://en.koreadaily.com/?p=40539"
+            }
+        },
+        {
+            "key": "kim-ir-sen-phenian",
+            "category": "curiosities",
+            "topics": ["language", "romania"],
+            "en": {
+                "title": "Why Romanians say “Kim Ir Sen” and “Phenian”",
+                "excerpt": "Romanian took Korean names through Russian, and some of those spellings stuck.",
+                "body": "In Romanian, North Korea's founder is often called Kim Ir Sen and its capital Phenian. Neither spelling comes from Korean directly.\n\nAfter 1950, the Romanian press took Korean names from Russian and other Slavic languages. Russian writes the capital as Пхеньян, which became Phenian, and the leader as Ким Ир Сен, which became Kim Ir Sen, usually in three capitalised syllables.\n\nAccording to the linguist Liviu Groza, Phenian (and the spoken variant Fenian) is in fact closer to the Korean pronunciation than Pyongyang. Newer Romanian texts increasingly use Kim Il Sung, which follows the McCune–Reischauer romanisation. Other languages of the former Eastern Bloc kept similar forms too: Lithuanian, for example, also writes Kim Ir Sen.",
+                "editorial_note": "Sources:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "ro": {
+                "title": "De ce spunem în română „Kim Ir Sen” și „Phenian”",
+                "excerpt": "Româna a preluat numele coreene prin rusă, iar unele dintre aceste grafii au rămas.",
+                "body": "În română, fondatorul Coreei de Nord este numit adesea Kim Ir Sen, iar capitala, Phenian. Niciuna dintre aceste forme nu vine direct din coreeană.\n\nDupă 1950, presa românească a preluat numele coreene din rusă și din alte limbi slave. În rusă, capitala se scrie Пхеньян, de unde Phenian, iar liderul, Ким Ир Сен, de unde Kim Ir Sen, scris de obicei în trei silabe cu majusculă.\n\nDupă lingvistul Liviu Groza, Phenian (și varianta orală Fenian) este de fapt mai aproape de pronunția coreeană decât Pyongyang. Textele mai noi folosesc tot mai des Kim Il Sung, după romanizarea McCune–Reischauer. Și alte limbi din fostul bloc estic au păstrat forme asemănătoare: lituaniana, de exemplu, scrie tot Kim Ir Sen.",
+                "editorial_note": "Surse:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "ko": {
+                "title": "루마니아어에서는 왜 ‘킴 이르 센’, ‘페니안’이라고 할까",
+                "excerpt": "루마니아어는 한국어 이름을 러시아어를 거쳐 받아들였고, 그 표기 일부가 그대로 남았다.",
+                "body": "루마니아어에서는 북한의 창건자를 흔히 Kim Ir Sen, 수도를 Phenian이라고 쓴다. 두 표기 모두 한국어에서 직접 온 것이 아니다.\n\n1950년 이후 루마니아 언론은 한국어 이름을 러시아어 등 슬라브어에서 받아들였다. 러시아어로 수도는 Пхеньян이라 쓰는데 여기서 Phenian이, 지도자는 Ким Ир Сен이라 쓰는데 여기서 Kim Ir Sen이 나왔다. 보통 대문자로 시작하는 세 음절로 적는다.\n\n언어학자 리비우 그로자에 따르면, Phenian(구어 변이형 Fenian)은 오히려 Pyongyang보다 한국어 발음에 더 가깝다. 최근 루마니아어 글에서는 매큔-라이샤워 표기법을 따른 Kim Il Sung이 점점 더 많이 쓰인다. 옛 동구권의 다른 언어들도 비슷한 형태를 유지했다. 예를 들어 리투아니아어도 Kim Ir Sen이라고 쓴다.",
+                "editorial_note": "출처:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "de": {
+                "title": "Warum man auf Rumänisch „Kim Ir Sen“ und „Phenian“ sagt",
+                "excerpt": "Das Rumänische übernahm koreanische Namen über das Russische, und manche Schreibweisen blieben.",
+                "body": "Auf Rumänisch heißt Nordkoreas Gründer oft Kim Ir Sen und die Hauptstadt Phenian. Keine der beiden Formen stammt direkt aus dem Koreanischen.\n\nNach 1950 übernahm die rumänische Presse koreanische Namen aus dem Russischen und anderen slawischen Sprachen. Russisch schreibt die Hauptstadt Пхеньян, daraus wurde Phenian, und den Staatschef Ким Ир Сен, daraus wurde Kim Ir Sen, meist in drei großgeschriebenen Silben.\n\nLaut dem Linguisten Liviu Groza liegt Phenian (und die gesprochene Variante Fenian) sogar näher an der koreanischen Aussprache als Pyongyang. Neuere rumänische Texte verwenden immer öfter Kim Il Sung nach der McCune-Reischauer-Umschrift. Auch andere Sprachen des einstigen Ostblocks behielten ähnliche Formen: Das Litauische etwa schreibt ebenfalls Kim Ir Sen.",
+                "editorial_note": "Quellen:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "fr": {
+                "title": "Pourquoi le roumain dit « Kim Ir Sen » et « Phenian »",
+                "excerpt": "Le roumain a reçu les noms coréens par le russe, et certaines graphies sont restées.",
+                "body": "En roumain, le fondateur de la Corée du Nord est souvent appelé Kim Ir Sen et sa capitale Phenian. Aucune de ces formes ne vient directement du coréen.\n\nAprès 1950, la presse roumaine a repris les noms coréens du russe et d'autres langues slaves. Le russe écrit la capitale Пхеньян, d'où Phenian, et le dirigeant Ким Ир Сен, d'où Kim Ir Sen, généralement en trois syllabes avec majuscule.\n\nSelon le linguiste Liviu Groza, Phenian (et la variante orale Fenian) est même plus proche de la prononciation coréenne que Pyongyang. Les textes roumains récents emploient de plus en plus Kim Il Sung, selon la romanisation McCune-Reischauer. D'autres langues de l'ancien bloc de l'Est ont gardé des formes semblables : le lituanien, par exemple, écrit lui aussi Kim Ir Sen.",
+                "editorial_note": "Sources :\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "es": {
+                "title": "Por qué en rumano se dice «Kim Ir Sen» y «Phenian»",
+                "excerpt": "El rumano tomó los nombres coreanos a través del ruso, y algunas grafías se quedaron.",
+                "body": "En rumano, al fundador de Corea del Norte se le llama a menudo Kim Ir Sen y a su capital, Phenian. Ninguna de las dos formas viene directamente del coreano.\n\nA partir de 1950, la prensa rumana tomó los nombres coreanos del ruso y de otras lenguas eslavas. El ruso escribe la capital Пхеньян, de donde salió Phenian, y al líder Ким Ир Сен, de donde salió Kim Ir Sen, normalmente en tres sílabas con mayúscula.\n\nSegún el lingüista Liviu Groza, Phenian (y la variante oral Fenian) está de hecho más cerca de la pronunciación coreana que Pyongyang. Los textos rumanos recientes usan cada vez más Kim Il Sung, según la romanización McCune-Reischauer. Otras lenguas del antiguo bloque del Este conservaron formas parecidas: el lituano, por ejemplo, también escribe Kim Ir Sen.",
+                "editorial_note": "Fuentes:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "it": {
+                "title": "Perché in rumeno si dice «Kim Ir Sen» e «Phenian»",
+                "excerpt": "Il rumeno ha preso i nomi coreani attraverso il russo, e alcune grafie sono rimaste.",
+                "body": "In rumeno il fondatore della Corea del Nord è chiamato spesso Kim Ir Sen e la capitale Phenian. Nessuna delle due forme viene direttamente dal coreano.\n\nDopo il 1950 la stampa rumena prese i nomi coreani dal russo e da altre lingue slave. Il russo scrive la capitale Пхеньян, da cui Phenian, e il leader Ким Ир Сен, da cui Kim Ir Sen, di solito in tre sillabe con la maiuscola.\n\nSecondo il linguista Liviu Groza, Phenian (e la variante orale Fenian) è anzi più vicino alla pronuncia coreana di Pyongyang. I testi rumeni più recenti usano sempre più spesso Kim Il Sung, secondo la romanizzazione McCune-Reischauer. Anche altre lingue dell'ex blocco orientale hanno conservato forme simili: il lituano, per esempio, scrive anch'esso Kim Ir Sen.",
+                "editorial_note": "Fonti:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "pt": {
+                "title": "Porque é que em romeno se diz «Kim Ir Sen» e «Phenian»",
+                "excerpt": "O romeno recebeu os nomes coreanos através do russo, e algumas grafias ficaram.",
+                "body": "Em romeno, o fundador da Coreia do Norte é muitas vezes chamado Kim Ir Sen e a capital, Phenian. Nenhuma das formas vem diretamente do coreano.\n\nDepois de 1950, a imprensa romena tomou os nomes coreanos do russo e de outras línguas eslavas. O russo escreve a capital Пхеньян, de onde veio Phenian, e o líder Ким Ир Сен, de onde veio Kim Ir Sen, normalmente em três sílabas com maiúscula.\n\nSegundo o linguista Liviu Groza, Phenian (e a variante oral Fenian) está até mais perto da pronúncia coreana do que Pyongyang. Os textos romenos mais recentes usam cada vez mais Kim Il Sung, segundo a romanização McCune-Reischauer. Outras línguas do antigo bloco de Leste mantiveram formas semelhantes: o lituano, por exemplo, também escreve Kim Ir Sen.",
+                "editorial_note": "Fontes:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "tr": {
+                "title": "Romencede neden “Kim Ir Sen” ve “Phenian” deniyor",
+                "excerpt": "Romence Korece adları Rusça üzerinden aldı ve bu yazımların bazıları kaldı.",
+                "body": "Romencede Kuzey Kore'nin kurucusuna çoğu zaman Kim Ir Sen, başkentine ise Phenian denir. Bu biçimlerin hiçbiri doğrudan Koreceden gelmez.\n\n1950'den sonra Romen basını Korece adları Rusça ve diğer Slav dillerinden aldı. Rusça başkenti Пхеньян diye yazar, Phenian buradan gelir; lideri ise Ким Ир Сен diye yazar, Kim Ir Sen de buradan gelir ve genellikle büyük harfle başlayan üç hece olarak yazılır.\n\nDilbilimci Liviu Groza'ya göre Phenian (ve konuşma dilindeki Fenian) aslında Korece söylenişe Pyongyang'dan daha yakındır. Yeni Romence metinlerde McCune-Reischauer yazımına uyan Kim Il Sung giderek daha sık kullanılıyor. Eski Doğu Bloku'nun başka dilleri de benzer biçimleri korudu: örneğin Litvanca da Kim Ir Sen yazar.",
+                "editorial_note": "Kaynaklar:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            },
+            "nb": {
+                "title": "Hvorfor rumensk sier «Kim Ir Sen» og «Phenian»",
+                "excerpt": "Rumensk fikk koreanske navn via russisk, og noen av skrivemåtene ble værende.",
+                "body": "På rumensk kalles Nord-Koreas grunnlegger ofte Kim Ir Sen og hovedstaden Phenian. Ingen av formene kommer direkte fra koreansk.\n\nEtter 1950 hentet rumensk presse koreanske navn fra russisk og andre slaviske språk. Russisk skriver hovedstaden Пхеньян, som ble til Phenian, og lederen Ким Ир Сен, som ble til Kim Ir Sen, vanligvis i tre stavelser med stor forbokstav.\n\nIfølge lingvisten Liviu Groza ligger Phenian (og den muntlige varianten Fenian) faktisk nærmere den koreanske uttalen enn Pyongyang. Nyere rumenske tekster bruker stadig oftere Kim Il Sung, etter McCune–Reischauer-romaniseringen. Andre språk i den tidligere østblokken beholdt lignende former: Litauisk skriver for eksempel også Kim Ir Sen.",
+                "editorial_note": "Kilder:\n- Liviu Groza, „Observaţii referitoare la folosirea cuvintelor coreene în limba română” (Editura Academiei, 2013), pp. 454–459: https://www.diacronia.ro/indexing/details/A464"
+            }
+        },
+        {
+            "key": "juche-calendar",
+            "category": "curiosities",
+            "topics": ["history", "daily-life"],
+            "en": {
+                "title": "North Korea counted years from Kim Il Sung's birth, until 2024",
+                "excerpt": "For 27 years, 1912 was “Juche 1”. Then the Juche year quietly disappeared.",
+                "body": "In 1997, three years after Kim Il Sung's death, North Korea adopted the Juche calendar. The decree came on 8 July 1997, the anniversary of his death, and made his birth year, 1912, “Juche 1”. So 1997 was Juche 86, and 2024 was Juche 113.\n\nThe Juche year appeared in newspapers and documents, usually next to the Gregorian year. Years before 1912 kept their usual numbers.\n\nIn October 2024 the Rodong Sinmun stopped printing the Juche year, and the official calendars for 2025 no longer showed it. Observers read this as a step to put Kim Jong Un's own image ahead of his predecessors'.\n\nA coincidence: Taiwan's Minguo calendar also starts in 1912, the year the Republic of China was founded, so its year numbers match the old Juche years.",
+                "editorial_note": "Sources:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "ro": {
+                "title": "Coreea de Nord număra anii de la nașterea lui Kim Il Sung, până în 2024",
+                "excerpt": "Timp de 27 de ani, 1912 a fost „anul Juche 1”. Apoi anul Juche a dispărut discret.",
+                "body": "În 1997, la trei ani după moartea lui Kim Il Sung, Coreea de Nord a adoptat calendarul Juche. Decretul a fost dat pe 8 iulie 1997, la aniversarea morții lui, și a făcut din anul nașterii sale, 1912, „Juche 1”. Astfel, 1997 a fost Juche 86, iar 2024, Juche 113.\n\nAnul Juche apărea în ziare și în documente, de obicei alături de anul gregorian. Anii de dinainte de 1912 și-au păstrat numerotarea obișnuită.\n\nÎn octombrie 2024, Rodong Sinmun a încetat să mai tipărească anul Juche, iar calendarele oficiale pe 2025 nu l-au mai afișat. Observatorii au văzut în asta un pas spre a pune imaginea lui Kim Jong Un înaintea celei a predecesorilor lui.\n\nO coincidență: calendarul Minguo din Taiwan începe tot în 1912, anul fondării Republicii Chineze, așa că anii lui coincid cu vechii ani Juche.",
+                "editorial_note": "Surse:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "ko": {
+                "title": "북한은 2024년까지 김일성 출생 연도부터 해를 셌다",
+                "excerpt": "27년 동안 1912년은 ‘주체 1년’이었다. 그러다 주체 연호가 조용히 사라졌다.",
+                "body": "김일성 사망 3년 뒤인 1997년, 북한은 주체 연호를 채택했다. 결정은 그의 기일인 1997년 7월 8일에 나왔고, 그가 태어난 1912년을 ‘주체 1년’으로 정했다. 그래서 1997년은 주체 86년, 2024년은 주체 113년이었다.\n\n주체 연호는 신문과 문서에 보통 서기 연도와 함께 표기되었다. 1912년 이전의 해는 원래 숫자를 그대로 썼다.\n\n2024년 10월 로동신문은 주체 연호 표기를 중단했고, 2025년 공식 달력에도 더는 나오지 않았다. 관찰자들은 이를 김정은의 위상을 선대보다 앞세우려는 조치로 보았다.\n\n우연의 일치로, 대만의 민국 기년도 중화민국이 수립된 1912년에 시작하므로 그 연도 숫자가 옛 주체 연호와 같다.",
+                "editorial_note": "출처:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "de": {
+                "title": "Nordkorea zählte die Jahre ab Kim Il Sungs Geburt, bis 2024",
+                "excerpt": "27 Jahre lang war 1912 „Juche 1“. Dann verschwand das Juche-Jahr stillschweigend.",
+                "body": "1997, drei Jahre nach Kim Il Sungs Tod, führte Nordkorea den Juche-Kalender ein. Das Dekret kam am 8. Juli 1997, seinem Todestag, und machte sein Geburtsjahr 1912 zu „Juche 1“. 1997 war also Juche 86 und 2024 Juche 113.\n\nDas Juche-Jahr stand in Zeitungen und Dokumenten, meist neben dem gregorianischen Jahr. Jahre vor 1912 behielten ihre übliche Zählung.\n\nIm Oktober 2024 hörte die Rodong Sinmun auf, das Juche-Jahr zu drucken, und die offiziellen Kalender für 2025 zeigten es nicht mehr. Beobachter sahen darin einen Schritt, Kim Jong Un über seine Vorgänger zu stellen.\n\nEin Zufall: Taiwans Minguo-Kalender beginnt ebenfalls 1912, im Gründungsjahr der Republik China, daher stimmen seine Jahreszahlen mit den alten Juche-Jahren überein.",
+                "editorial_note": "Quellen:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "fr": {
+                "title": "La Corée du Nord comptait les années depuis la naissance de Kim Il Sung, jusqu'en 2024",
+                "excerpt": "Pendant 27 ans, 1912 a été « Juche 1 ». Puis l'année Juche a discrètement disparu.",
+                "body": "En 1997, trois ans après la mort de Kim Il Sung, la Corée du Nord a adopté le calendrier Juche. Le décret, pris le 8 juillet 1997, jour anniversaire de sa mort, faisait de son année de naissance, 1912, « Juche 1 ». Ainsi, 1997 était Juche 86 et 2024, Juche 113.\n\nL'année Juche figurait dans les journaux et les documents, en général à côté de l'année grégorienne. Les années antérieures à 1912 gardaient leur numérotation habituelle.\n\nEn octobre 2024, le Rodong Sinmun a cessé d'imprimer l'année Juche, et les calendriers officiels de 2025 ne l'affichaient plus. Les observateurs y ont vu une manière de placer Kim Jong Un devant ses prédécesseurs.\n\nUne coïncidence : le calendrier Minguo de Taïwan commence lui aussi en 1912, année de fondation de la République de Chine, si bien que ses années correspondent aux anciennes années Juche.",
+                "editorial_note": "Sources :\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "es": {
+                "title": "Corea del Norte contaba los años desde el nacimiento de Kim Il Sung, hasta 2024",
+                "excerpt": "Durante 27 años, 1912 fue «Juche 1». Después, el año Juche desapareció sin ruido.",
+                "body": "En 1997, tres años después de la muerte de Kim Il Sung, Corea del Norte adoptó el calendario Juche. El decreto llegó el 8 de julio de 1997, aniversario de su muerte, e hizo de su año de nacimiento, 1912, el «Juche 1». Así, 1997 fue Juche 86 y 2024, Juche 113.\n\nEl año Juche aparecía en periódicos y documentos, normalmente junto al año gregoriano. Los años anteriores a 1912 mantuvieron su numeración habitual.\n\nEn octubre de 2024, el Rodong Sinmun dejó de imprimir el año Juche, y los calendarios oficiales de 2025 ya no lo mostraban. Los observadores lo interpretaron como un paso para situar a Kim Jong Un por delante de sus predecesores.\n\nUna coincidencia: el calendario Minguo de Taiwán también empieza en 1912, año de la fundación de la República de China, así que sus años coinciden con los antiguos años Juche.",
+                "editorial_note": "Fuentes:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "it": {
+                "title": "La Corea del Nord contava gli anni dalla nascita di Kim Il Sung, fino al 2024",
+                "excerpt": "Per 27 anni il 1912 è stato «Juche 1». Poi l'anno Juche è sparito in silenzio.",
+                "body": "Nel 1997, tre anni dopo la morte di Kim Il Sung, la Corea del Nord adottò il calendario Juche. Il decreto arrivò l'8 luglio 1997, anniversario della sua morte, e fece del suo anno di nascita, il 1912, il «Juche 1». Così il 1997 fu Juche 86 e il 2024 Juche 113.\n\nL'anno Juche compariva su giornali e documenti, di solito accanto all'anno gregoriano. Gli anni precedenti al 1912 mantennero la numerazione consueta.\n\nNell'ottobre 2024 il Rodong Sinmun smise di stampare l'anno Juche, e i calendari ufficiali del 2025 non lo riportavano più. Gli osservatori lo hanno letto come un passo per mettere Kim Jong Un davanti ai suoi predecessori.\n\nUna coincidenza: anche il calendario Minguo di Taiwan parte dal 1912, anno di fondazione della Repubblica di Cina, quindi i suoi anni coincidono con i vecchi anni Juche.",
+                "editorial_note": "Fonti:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "pt": {
+                "title": "A Coreia do Norte contava os anos desde o nascimento de Kim Il Sung, até 2024",
+                "excerpt": "Durante 27 anos, 1912 foi «Juche 1». Depois, o ano Juche desapareceu discretamente.",
+                "body": "Em 1997, três anos depois da morte de Kim Il Sung, a Coreia do Norte adotou o calendário Juche. O decreto saiu a 8 de julho de 1997, aniversário da sua morte, e fez do seu ano de nascimento, 1912, o «Juche 1». Assim, 1997 foi Juche 86 e 2024, Juche 113.\n\nO ano Juche aparecia em jornais e documentos, normalmente ao lado do ano gregoriano. Os anos anteriores a 1912 mantiveram a numeração habitual.\n\nEm outubro de 2024, o Rodong Sinmun deixou de imprimir o ano Juche, e os calendários oficiais de 2025 já não o mostravam. Os observadores viram nisto um passo para colocar Kim Jong Un à frente dos seus antecessores.\n\nUma coincidência: o calendário Minguo de Taiwan também começa em 1912, ano da fundação da República da China, por isso os seus anos coincidem com os antigos anos Juche.",
+                "editorial_note": "Fontes:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "tr": {
+                "title": "Kuzey Kore, 2024'e kadar yılları Kim Il Sung'un doğumundan sayıyordu",
+                "excerpt": "27 yıl boyunca 1912 “Juche 1” oldu. Sonra Juche yılı sessizce ortadan kalktı.",
+                "body": "Kim Il Sung'un ölümünden üç yıl sonra, 1997'de Kuzey Kore Juche takvimini benimsedi. Ölüm yıl dönümü olan 8 Temmuz 1997'de çıkan kararname, doğum yılı olan 1912'yi “Juche 1” yaptı. Böylece 1997 Juche 86, 2024 ise Juche 113 oldu.\n\nJuche yılı gazetelerde ve belgelerde, genellikle Miladi yılın yanında yer aldı. 1912'den önceki yıllar olağan numaralarını korudu.\n\nEkim 2024'te Rodong Sinmun Juche yılını basmayı bıraktı ve 2025'in resmî takvimlerinde de artık yer almadı. Gözlemciler bunu Kim Jong Un'u seleflerinin önüne koyma adımı olarak yorumladı.\n\nBir tesadüf: Tayvan'ın Minguo takvimi de Çin Cumhuriyeti'nin kurulduğu 1912'de başlar, bu yüzden yıl numaraları eski Juche yıllarıyla aynıdır.",
+                "editorial_note": "Kaynaklar:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            },
+            "nb": {
+                "title": "Nord-Korea talte årene fra Kim Il Sungs fødsel, fram til 2024",
+                "excerpt": "I 27 år var 1912 «Juche 1». Så forsvant Juche-året i stillhet.",
+                "body": "I 1997, tre år etter Kim Il Sungs død, innførte Nord-Korea Juche-kalenderen. Dekretet kom 8. juli 1997, på årsdagen for hans død, og gjorde fødselsåret hans, 1912, til «Juche 1». Dermed var 1997 Juche 86 og 2024 Juche 113.\n\nJuche-året sto i aviser og dokumenter, som regel ved siden av det gregorianske året. År før 1912 beholdt sin vanlige nummerering.\n\nI oktober 2024 sluttet Rodong Sinmun å trykke Juche-året, og de offisielle kalenderne for 2025 viste det ikke lenger. Observatører tolket dette som et skritt for å sette Kim Jong Un foran forgjengerne hans.\n\nEt sammentreff: Taiwans Minguo-kalender begynner også i 1912, året Republikken Kina ble grunnlagt, så årstallene stemmer med de gamle Juche-årene.",
+                "editorial_note": "Kilder:\n- NK News, “North Korea drops Juche calendar in apparent bid to elevate Kim Jong Un's legacy”: https://nknews.org/?p=948507\n- Radio Free Asia, “North Korea's sparkling new 2025 calendars drop ‘juche’ year”: https://rfa.org/english/korea/2024/12/25/north-korea-juche-year-calendar/\n- Koryo Group, “The End of the Juche Era”: https://koryogroup.com/blog/the-end-of-the-juche-era"
+            }
+        },
+        {
+            "key": "kim-il-sung-languages",
+            "category": "curiosities",
+            "topics": ["leaders", "language"],
+            "en": {
+                "title": "Before 1945, Kim Il Sung had spent most of his life outside Korea",
+                "excerpt": "North Korea's founder spoke Chinese as well as Korean, and came home on a Soviet ship.",
+                "body": "Kim Il Sung was born near Pyongyang in 1912, but around 1920 his family moved to Manchuria, in China, like many Korean families of the time. He was about eight.\n\nHe went to school in Manchuria and in Korea, and grew up fluent in both Chinese and Korean. He could also read and write classical Chinese and had some command of Russian. In the 1930s he fought with the anti-Japanese guerrillas in Manchuria, and in 1940 he crossed into the Soviet Union, where he served as a commander in the Red Army's 88th Brigade near Khabarovsk. His son Kim Jong Il was born there.\n\nHe came back to Korea only on 19 September 1945, landing at Wonsan with about 40 members of the brigade. He was 33, and had lived some 25 of those years outside Korea.\n\nYou may read that he “did not speak Korean” in 1945. That is not true: he spoke it, but he was a returnee whom most Koreans did not know.",
+                "editorial_note": "Sources:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "ro": {
+                "title": "Până în 1945, Kim Il Sung trăise mai mult în afara Coreei",
+                "excerpt": "Fondatorul Coreei de Nord vorbea chineza la fel de bine ca coreeana și s-a întors acasă pe o navă sovietică.",
+                "body": "Kim Il Sung s-a născut lângă Phenian în 1912, dar pe la 1920 familia lui s-a mutat în Manciuria, în China, ca multe familii coreene din acea vreme. Avea în jur de opt ani.\n\nA mers la școală în Manciuria și în Coreea și a crescut vorbind fluent atât chineza, cât și coreeana. Știa să citească și să scrie chineză clasică și avea oarecare cunoștințe de rusă. În anii '30 a luptat alături de gherilele antijaponeze din Manciuria, iar în 1940 a trecut în Uniunea Sovietică, unde a fost comandant în Brigada 88 a Armatei Roșii, lângă Habarovsk. Acolo s-a născut fiul lui, Kim Jong Il.\n\nS-a întors în Coreea abia pe 19 septembrie 1945, debarcând la Wonsan cu vreo 40 de membri ai brigăzii. Avea 33 de ani și trăise aproximativ 25 dintre ei în afara Coreei.\n\nPoate ați citit că „nu știa coreeană” în 1945. Nu e adevărat: o vorbea, dar era un om întors din străinătate, pe care majoritatea coreenilor nu-l cunoșteau.",
+                "editorial_note": "Surse:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "ko": {
+                "title": "1945년 이전, 김일성은 생애 대부분을 한반도 밖에서 보냈다",
+                "excerpt": "북한의 창건자는 중국어를 한국어만큼 잘했고, 소련 배를 타고 돌아왔다.",
+                "body": "김일성은 1912년 평양 근처에서 태어났지만, 1920년 무렵 당시 많은 조선인 가족처럼 그의 가족도 중국 만주로 이주했다. 그는 여덟 살쯤이었다.\n\n그는 만주와 조선에서 학교를 다녔고, 중국어와 한국어를 모두 유창하게 구사하며 자랐다. 한문을 읽고 쓸 줄 알았고 러시아어도 어느 정도 했다. 1930년대에는 만주에서 항일 유격대와 함께 싸웠고, 1940년 소련으로 넘어가 하바롭스크 근처 붉은 군대 제88여단에서 지휘관으로 복무했다. 아들 김정일도 그곳에서 태어났다.\n\n그가 조선에 돌아온 것은 1945년 9월 19일, 여단원 약 40명과 함께 원산에 상륙했을 때였다. 그는 33세였고, 그중 약 25년을 한반도 밖에서 살았다.\n\n그가 1945년에 ‘한국어를 못했다’는 말을 볼 수도 있다. 사실이 아니다. 그는 한국어를 했지만, 대부분의 조선 사람들이 모르는 귀국자였다.",
+                "editorial_note": "출처:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "de": {
+                "title": "Vor 1945 hatte Kim Il Sung den Großteil seines Lebens außerhalb Koreas verbracht",
+                "excerpt": "Nordkoreas Gründer sprach Chinesisch so gut wie Koreanisch und kam auf einem sowjetischen Schiff nach Hause.",
+                "body": "Kim Il Sung wurde 1912 bei Pjöngjang geboren, doch um 1920 zog seine Familie wie viele koreanische Familien jener Zeit in die Mandschurei, nach China. Er war etwa acht Jahre alt.\n\nEr ging in der Mandschurei und in Korea zur Schule und wuchs fließend zweisprachig mit Chinesisch und Koreanisch auf. Er konnte klassisches Chinesisch lesen und schreiben und sprach etwas Russisch. In den 1930er-Jahren kämpfte er mit der antijapanischen Guerilla in der Mandschurei, und 1940 ging er in die Sowjetunion, wo er Kommandeur in der 88. Brigade der Roten Armee bei Chabarowsk war. Dort wurde sein Sohn Kim Jong Il geboren.\n\nNach Korea kehrte er erst am 19. September 1945 zurück, als er mit rund 40 Mitgliedern der Brigade in Wonsan an Land ging. Er war 33 und hatte etwa 25 dieser Jahre außerhalb Koreas gelebt.\n\nMan liest manchmal, er habe 1945 „kein Koreanisch gesprochen“. Das stimmt nicht: Er sprach es, war aber ein Heimkehrer, den die meisten Koreaner nicht kannten.",
+                "editorial_note": "Quellen:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "fr": {
+                "title": "Avant 1945, Kim Il Sung avait passé la plus grande partie de sa vie hors de Corée",
+                "excerpt": "Le fondateur de la Corée du Nord parlait le chinois aussi bien que le coréen, et il est rentré sur un navire soviétique.",
+                "body": "Kim Il Sung est né près de Pyongyang en 1912, mais vers 1920 sa famille s'est installée en Mandchourie, en Chine, comme beaucoup de familles coréennes de l'époque. Il avait environ huit ans.\n\nIl a été scolarisé en Mandchourie et en Corée et a grandi en parlant couramment le chinois et le coréen. Il savait lire et écrire le chinois classique et avait quelques notions de russe. Dans les années 1930, il a combattu avec la guérilla antijaponaise en Mandchourie, puis en 1940 il est passé en Union soviétique, où il a été commandant dans la 88e brigade de l'Armée rouge, près de Khabarovsk. Son fils Kim Jong Il y est né.\n\nIl n'est revenu en Corée que le 19 septembre 1945, en débarquant à Wonsan avec une quarantaine de membres de la brigade. Il avait 33 ans, dont environ 25 passés hors de Corée.\n\nOn lit parfois qu'il « ne parlait pas coréen » en 1945. C'est faux : il le parlait, mais c'était un revenant de l'étranger que la plupart des Coréens ne connaissaient pas.",
+                "editorial_note": "Sources :\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "es": {
+                "title": "Antes de 1945, Kim Il Sung había pasado la mayor parte de su vida fuera de Corea",
+                "excerpt": "El fundador de Corea del Norte hablaba chino tan bien como coreano, y volvió a casa en un barco soviético.",
+                "body": "Kim Il Sung nació cerca de Pionyang en 1912, pero hacia 1920 su familia se trasladó a Manchuria, en China, como muchas familias coreanas de la época. Tenía unos ocho años.\n\nEstudió en Manchuria y en Corea y creció hablando con fluidez chino y coreano. Sabía leer y escribir chino clásico y tenía algunos conocimientos de ruso. En los años treinta combatió con la guerrilla antijaponesa en Manchuria, y en 1940 pasó a la Unión Soviética, donde fue comandante en la 88.ª Brigada del Ejército Rojo, cerca de Jabárovsk. Allí nació su hijo Kim Jong Il.\n\nNo volvió a Corea hasta el 19 de septiembre de 1945, cuando desembarcó en Wonsan con unos 40 miembros de la brigada. Tenía 33 años y había vivido unos 25 de ellos fuera de Corea.\n\nA veces se lee que en 1945 «no hablaba coreano». No es cierto: lo hablaba, pero era alguien que volvía del extranjero y al que la mayoría de los coreanos no conocía.",
+                "editorial_note": "Fuentes:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "it": {
+                "title": "Prima del 1945 Kim Il Sung aveva passato la maggior parte della vita fuori dalla Corea",
+                "excerpt": "Il fondatore della Corea del Nord parlava il cinese bene quanto il coreano, e tornò a casa su una nave sovietica.",
+                "body": "Kim Il Sung nacque vicino a Pyongyang nel 1912, ma verso il 1920 la sua famiglia si trasferì in Manciuria, in Cina, come molte famiglie coreane dell'epoca. Aveva circa otto anni.\n\nAndò a scuola in Manciuria e in Corea e crebbe parlando correntemente sia il cinese sia il coreano. Sapeva leggere e scrivere il cinese classico e conosceva un po' di russo. Negli anni Trenta combatté con la guerriglia antigiapponese in Manciuria, e nel 1940 passò in Unione Sovietica, dove fu comandante nell'88ª Brigata dell'Armata Rossa, vicino a Chabarovsk. Lì nacque suo figlio Kim Jong Il.\n\nTornò in Corea solo il 19 settembre 1945, sbarcando a Wonsan con una quarantina di membri della brigata. Aveva 33 anni e ne aveva vissuti circa 25 fuori dalla Corea.\n\nCapita di leggere che nel 1945 «non parlava coreano». Non è vero: lo parlava, ma era uno tornato dall'estero che la maggior parte dei coreani non conosceva.",
+                "editorial_note": "Fonti:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "pt": {
+                "title": "Antes de 1945, Kim Il Sung tinha passado a maior parte da vida fora da Coreia",
+                "excerpt": "O fundador da Coreia do Norte falava chinês tão bem como coreano, e voltou para casa num navio soviético.",
+                "body": "Kim Il Sung nasceu perto de Pyongyang em 1912, mas por volta de 1920 a família mudou-se para a Manchúria, na China, como muitas famílias coreanas da época. Tinha cerca de oito anos.\n\nEstudou na Manchúria e na Coreia e cresceu a falar fluentemente chinês e coreano. Sabia ler e escrever chinês clássico e tinha alguns conhecimentos de russo. Nos anos 1930 combateu com a guerrilha antijaponesa na Manchúria e, em 1940, passou para a União Soviética, onde foi comandante na 88.ª Brigada do Exército Vermelho, perto de Khabarovsk. Foi lá que nasceu o filho, Kim Jong Il.\n\nSó voltou à Coreia a 19 de setembro de 1945, ao desembarcar em Wonsan com cerca de 40 membros da brigada. Tinha 33 anos e vivera uns 25 deles fora da Coreia.\n\nÀs vezes lê-se que, em 1945, «não falava coreano». Não é verdade: falava, mas era alguém regressado do estrangeiro que a maioria dos coreanos não conhecia.",
+                "editorial_note": "Fontes:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "tr": {
+                "title": "1945'ten önce Kim Il Sung hayatının çoğunu Kore dışında geçirmişti",
+                "excerpt": "Kuzey Kore'nin kurucusu Çinceyi Korece kadar iyi konuşuyordu ve ülkesine bir Sovyet gemisiyle döndü.",
+                "body": "Kim Il Sung 1912'de Pyongyang yakınlarında doğdu, ancak 1920 civarında ailesi, o dönemin pek çok Koreli ailesi gibi Çin'deki Mançurya'ya taşındı. Yaklaşık sekiz yaşındaydı.\n\nMançurya'da ve Kore'de okula gitti; hem Çinceyi hem Koreceyi akıcı konuşarak büyüdü. Klasik Çinceyi okuyup yazabiliyordu ve biraz Rusça biliyordu. 1930'larda Mançurya'da Japon karşıtı gerillalarla savaştı, 1940'ta Sovyetler Birliği'ne geçti ve Habarovsk yakınlarındaki Kızıl Ordu'nun 88. Tugayı'nda komutan olarak görev yaptı. Oğlu Kim Jong Il orada doğdu.\n\nKore'ye ancak 19 Eylül 1945'te, tugayın yaklaşık 40 üyesiyle Wonsan'da karaya çıkarak döndü. 33 yaşındaydı ve bu yılların yaklaşık 25'ini Kore dışında geçirmişti.\n\n1945'te “Korece bilmediği” yazıldığını görebilirsiniz. Bu doğru değil: Koreceyi konuşuyordu, ama Korelilerin çoğunun tanımadığı, yurt dışından dönen biriydi.",
+                "editorial_note": "Kaynaklar:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            },
+            "nb": {
+                "title": "Før 1945 hadde Kim Il Sung levd mesteparten av livet utenfor Korea",
+                "excerpt": "Nord-Koreas grunnlegger snakket kinesisk like godt som koreansk, og kom hjem med et sovjetisk skip.",
+                "body": "Kim Il Sung ble født ved Pyongyang i 1912, men rundt 1920 flyttet familien hans til Mandsjuria i Kina, slik mange koreanske familier gjorde den gangen. Han var omtrent åtte år.\n\nHan gikk på skole i Mandsjuria og i Korea og vokste opp med flytende kinesisk og koreansk. Han kunne lese og skrive klassisk kinesisk og kunne noe russisk. På 1930-tallet kjempet han med den antijapanske geriljaen i Mandsjuria, og i 1940 gikk han over til Sovjetunionen, der han var kommandør i Den røde armés 88. brigade ved Khabarovsk. Sønnen Kim Jong Il ble født der.\n\nHan kom først tilbake til Korea 19. september 1945, da han gikk i land i Wonsan med rundt 40 medlemmer av brigaden. Han var 33 år og hadde levd omtrent 25 av dem utenfor Korea.\n\nDu kan lese at han «ikke snakket koreansk» i 1945. Det stemmer ikke: Han snakket språket, men var en hjemvendt som de fleste koreanere ikke kjente.",
+                "editorial_note": "Kilder:\n- Andrei Lankov, “Kim Il-sung: disastrous founder of communist N. Korea”, The Korea Times (2011): https://www.koreatimes.co.kr/lifestyle/people-events/20110817/kim-il-sung-disastrous-founder-of-communist-n-korea\n- Korea Daily, on Kim Il Sung's return through Wonsan in 1945: https://en.koreadaily.com/?p=40640"
+            }
+        }
+    ]
+}

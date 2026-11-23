@@ -1,9 +1,11 @@
 import { Link } from '@inertiajs/react';
 import { ExternalLink, Sparkles } from 'lucide-react';
 import EditorialNote from '@/components/feed/editorial-note';
+import SourceNotice from '@/components/feed/source-notice';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
+import { categoryBadge, isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
 import { timeAgo } from '@/lib/time';
 import { editorialPolicy } from '@/routes';
@@ -33,6 +35,7 @@ export default function PostCard({ post, now }: Props) {
             className={cn(
                 'overflow-hidden rounded-xl bg-white shadow-sm dark:bg-slate-900',
                 post.isPropaganda && 'border-2 border-nk-red-dark',
+                isCuriosity(post.category.slug) && 'border-t-4 border-nk-green',
             )}
         >
             {post.isPropaganda && <PropagandaBanner />}
@@ -44,7 +47,9 @@ export default function PostCard({ post, now }: Props) {
                         'flex size-11 shrink-0 items-center justify-center rounded-lg text-sm font-bold',
                         post.isPropaganda
                             ? 'bg-red-50 text-nk-red-dark dark:bg-red-950 dark:text-red-200'
-                            : 'bg-nk-blue/10 text-nk-blue dark:bg-nk-blue/30 dark:text-white',
+                            : isCuriosity(post.category.slug)
+                              ? 'bg-nk-green/10 text-nk-green-dark dark:bg-nk-green/30 dark:text-white'
+                              : 'bg-nk-blue/10 text-nk-blue dark:bg-nk-blue/30 dark:text-white',
                     )}
                 >
                     {initials(author)}
@@ -63,7 +68,12 @@ export default function PostCard({ post, now }: Props) {
                     )}
                 </div>
                 {!post.isPropaganda && (
-                    <span className="rounded-full bg-nk-blue/10 px-2.5 py-1 text-xs font-semibold text-nk-blue-dark dark:bg-nk-blue/30 dark:text-white">
+                    <span
+                        className={cn(
+                            'rounded-full px-2.5 py-1 text-xs font-semibold',
+                            categoryBadge(post.category.slug),
+                        )}
+                    >
                         {post.category.name}
                     </span>
                 )}
@@ -82,6 +92,11 @@ export default function PostCard({ post, now }: Props) {
                     <p className="mt-2 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
                         {post.excerpt}
                     </p>
+                )}
+                {post.source?.notice && (
+                    <div className="mt-4">
+                        <SourceNotice notice={post.source.notice} />
+                    </div>
                 )}
                 {post.editorialNote && (
                     <div className="mt-4">

@@ -3,7 +3,9 @@
 namespace App\Filament\Resources\Posts\Schemas;
 
 use App\Models\Category;
+use App\Models\Topic;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -32,6 +34,33 @@ class PostForm
                         ->rows(4)
                         ->helperText('Editorial context with independent sources. Shown in a box under the post, above all on propaganda.'),
                 ]),
+            Section::make('Translations')
+                ->description('The same post in other languages. Empty fields fall back to the text above.')
+                ->columnSpanFull()
+                ->collapsible()
+                ->schema([
+                    Repeater::make('translations')
+                        ->hiddenLabel()
+                        ->relationship()
+                        ->itemLabel(fn (array $state): ?string => config('locales.supported.'.($state['locale'] ?? ''), $state['locale'] ?? null))
+                        ->collapsed()
+                        ->addActionLabel('Add a language')
+                        ->schema([
+                            Select::make('locale')
+                                ->label('Language')
+                                ->options(config('locales.supported'))
+                                ->required()
+                                ->distinct(),
+                            TextInput::make('title')
+                                ->required()
+                                ->maxLength(255),
+                            Textarea::make('excerpt')->rows(3),
+                            Textarea::make('body')->rows(12),
+                            Textarea::make('editorial_note')
+                                ->label('What the article doesn\'t say')
+                                ->rows(4),
+                        ]),
+                ]),
             Section::make('Classification')
                 ->columns(2)
                 ->columnSpanFull()
@@ -41,6 +70,13 @@ class PostForm
                         ->relationship('category', 'sort_order', fn ($query) => $query->orderBy('sort_order'))
                         ->getOptionLabelFromRecordUsing(fn (Category $record) => $record->name())
                         ->required(),
+                    Select::make('topics')
+                        ->label('Topics')
+                        ->relationship('topics', 'sort_order', fn ($query) => $query->orderBy('sort_order'))
+                        ->getOptionLabelFromRecordUsing(fn (Topic $record) => $record->name())
+                        ->multiple()
+                        ->preload()
+                        ->helperText('Shown as filters inside the section, e.g. Curiosities → History.'),
                     Select::make('source_id')
                         ->label('Source')
                         ->relationship('source', 'name')

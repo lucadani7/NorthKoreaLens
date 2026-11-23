@@ -71,6 +71,36 @@ class SourceSeeder extends Seeder
             'forbids_ai' => true,
         ];
 
+        // The South China Morning Post's North Korea topic feed (checked on 2026-11-23). It also
+        // tags China and Russia stories that only mention the North in passing, so only articles
+        // that name North Korea or its leaders are kept. The list is stricter than the KOREA NOW
+        // one: words like "unification" or "defector" also appear in China stories.
+        $sources[] = [
+            'name' => 'South China Morning Post',
+            'slug' => 'scmp',
+            'type' => SourceType::Independent,
+            'website_url' => 'https://www.scmp.com/topics/north-korea',
+            'feed_url' => 'https://www.scmp.com/rss/33318/feed',
+            'keywords' => [
+                'North Korea', 'North Korean', 'N. Korea', 'N.Korea', 'DPRK', 'Pyongyang',
+                'Kim Jong Un', 'Kim Jong-un', 'Kim Yo Jong', 'Kim Yo-jong', 'Kim Ju Ae', 'Kim Ju-ae',
+                'inter-Korean', 'Panmunjom',
+            ],
+        ];
+
+        // Charles Ryu, a North Korean escapee in the US, on YouTube. His videos wait as drafts so
+        // the team picks the testimonies worth showing (not the reactions or street interviews).
+        // Readers see the notice in lang/<locale>/source_notices.php on every post.
+        $sources[] = [
+            'name' => 'Charles North Korea (Charles Ryu)',
+            'slug' => 'charles-north-korea',
+            'type' => SourceType::Testimony,
+            'website_url' => 'https://www.youtube.com/@charlesnorthkorea',
+            'feed_url' => 'https://www.youtube.com/feeds/videos.xml?channel_id=UCv_zJYPJndI4JH4P_p-eY5w',
+            'needs_review' => true,
+            'skip_shorts' => true,
+        ];
+
         foreach ($sources as $source) {
             Source::updateOrCreate(['slug' => $source['slug']], $source);
         }

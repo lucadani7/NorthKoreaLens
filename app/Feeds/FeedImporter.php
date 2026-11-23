@@ -4,12 +4,14 @@ namespace App\Feeds;
 
 use App\Models\Post;
 use App\Models\Source;
+use App\Support\YouTube;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
 /**
  * Stores feed items as posts of a source: only the ones that match its keywords,
- * in its section, and as drafts when the source needs review.
+ * in its section, and as drafts when the source needs review. Shorts are skipped when the
+ * source asks for regular videos only.
  */
 class FeedImporter
 {
@@ -17,6 +19,10 @@ class FeedImporter
     public function import(Source $source, FeedItem $item): bool
     {
         if (! $source->wants($item->title.' '.$item->description)) {
+            return false;
+        }
+
+        if ($source->skip_shorts && YouTube::isShort($item->link)) {
             return false;
         }
 
@@ -43,6 +49,27 @@ class FeedImporter
     }
 
     /**
+     * A YouTuber's description without the calls to support, follow or email them and without
+     * links: NK Lens does not promote anyone's Patreon, Instagram, TikTok, books or podcasts.
+     */
+    private static function withoutPromotion(string $text): string
+    {
+        return preg_replace([
+            '~https?://\\S+~iu',
+            '/[\\w.+-]+@[\\w-]+\\.[\\w.]+/u',
+            '/Help me (?:be )?a voice for voiceless North Koreans[^.!?]*?Patreon[!.]?/iu',
+            '/Want (?:Charles|us) to answer[^?]*\\?/iu',
+            '/Email (?:him|us|me) at:?/iu',
+            '/(?:Find|Follow) (?:her|him|me|us) on \\w+:?/iu',
+            '/Check out [^:]{0,80}:/iu',
+            '/[^.!?:]{0,80}\\bhere:/iu',
+            '/To listen to the full conversation,? please visit/iu',
+            '/Full episode available at[^.!?]*/iu',
+            '/Here\'s the podcast I promised!?/iu',
+        ], ' ', $text) ?? $text;
+    }
+
+    /**
      * The excerpt without the notices some channels put in every description, such as
      * Yonhap's "You can watch this video at … Copyright(C) Unauthorized use …" and hashtags.
      * Null when nothing else is left: the title then speaks for itself.
@@ -56,6 +83,11 @@ class FeedImporter
             '/(?:Copyright\\s*\\(C\\)|ⓒ|©).*$/isu',
             '/(?:^|\\s)#[\\p{L}\\p{N}_]+/u',
         ], ' ', $text) ?? $text;
+
+        // After the channel notices above, which need their links to be recognised.
+        if (YouTube::videoId($item->link) !== null) {
+            $text = self::withoutPromotion($text);
+        }
 
         $text = (string) preg_replace(['/\\s+/u', '/^[\\s\\-–—|·]+|[\\s\\-–—|·]+$/u'], [' ', ''], $text);
 

@@ -18,6 +18,8 @@ class SourceData extends Data
         public ?string $websiteUrl,
         /** The source forbids AI tools on its content, which readers are told. */
         public bool $forbidsAi,
+        /** Shown on every post from this source, in the reader's language (see Source::notice). */
+        public ?string $notice,
     ) {}
 
     public static function fromModel(Source $source): self
@@ -29,6 +31,7 @@ class SourceData extends Data
             type: $source->type,
             websiteUrl: VisitorRegion::current()->allows($source->website_url) ? $source->website_url : null,
             forbidsAi: $source->forbids_ai,
+            notice: $source->notice(),
         );
     }
 }

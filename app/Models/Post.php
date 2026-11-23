@@ -5,9 +5,12 @@ namespace App\Models;
 use App\Enums\SourceType;
 use Database\Factories\PostFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 
@@ -32,6 +35,8 @@ use Illuminate\Support\Carbon;
  * @property-read Source|null $source
  * @property-read Category $category
  * @property-read User|null $author
+ * @property-read Collection<int, PostTranslation> $translations
+ * @property-read Collection<int, Topic> $topics
  */
 class Post extends Model
 {
@@ -82,6 +87,48 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    /** @return HasMany<PostTranslation, $this> */
+    public function translations(): HasMany
+    {
+        return $this->hasMany(PostTranslation::class);
+    }
+
+    /** @return BelongsToMany<Topic, $this> */
+    public function topics(): BelongsToMany
+    {
+        return $this->belongsToMany(Topic::class);
+    }
+
+    /** The translation into this language, if there is one (uses the loaded relation when present). */
+    public function translationFor(string $locale): ?PostTranslation
+    {
+        if ($locale === $this->language) {
+            return null;
+        }
+
+        return $this->relationLoaded('translations')
+            ? $this->translations->firstWhere('locale', $locale)
+            : $this->translations()->where('locale', $locale)->first();
+    }
+
+    /** The language the reader gets: theirs when translated (or written in it), otherwise the post's own. */
+    public function contentLocale(string $locale): string
+    {
+        return $locale === $this->language || $this->translationFor($locale) !== null ? $locale : $this->language;
+    }
+
+    /**
+     * A text field in the reader's language, falling back to the post's own text.
+     *
+     * @param  'title'|'excerpt'|'body'|'editorial_note'  $field
+     */
+    public function localized(string $field, string $locale): ?string
+    {
+        $translated = $this->translationFor($locale)?->{$field};
+
+        return filled($translated) ? $translated : $this->{$field};
+    }
+
     /**
      * Posts that are published, newest first.
      *
@@ -117,7 +164,6 @@ class Post extends Model
             || ($this->source?->type->isPropaganda() ?? false);
     }
 
-    /** Visible to the public: it has a publication date and that date has come. */
     /** Makes a draft public, with the date the source gave it (or now, when there is none). */
     public function publish(): void
     {
@@ -129,6 +175,7 @@ class Post extends Model
         $this->save();
     }
 
+    /** Visible to the public: it has a publication date and that date has come. */
     public function isPublished(): bool
     {
         return $this->published_at !== null && $this->published_at->lte(now());

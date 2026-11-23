@@ -33,6 +33,8 @@ hasBody: boolean,
 linkWithheld: boolean,
 youtubeId: string | null,
 category: App.Data.CategoryData,
+topics: App.Data.TopicData[],
+contentLocale: string,
 source: App.Data.SourceData | null,
 };
 export type SourceData = {
@@ -42,6 +44,7 @@ slug: string,
 type: App.Enums.SourceType,
 websiteUrl: string | null,
 forbidsAi: boolean,
+notice: string | null,
 };
 export type SourceListingData = {
 id: number,
@@ -49,9 +52,14 @@ name: string,
 type: App.Enums.SourceType,
 websiteUrl: string | null,
 };
+export type TopicData = {
+id: number,
+slug: string,
+name: string,
+};
 }
 namespace Enums {
-export type SourceType = 'independent' | 'analysis' | 'state_media';
+export type SourceType = 'independent' | 'analysis' | 'testimony' | 'state_media';
 }
 }
 declare namespace Illuminate {

@@ -194,6 +194,7 @@ class KoreaNowVideosTest extends TestCase
         $this->assertSame('AAAAAAAAAAA', YouTube::videoId('https://www.youtube.com/watch?v=AAAAAAAAAAA&t=10s'));
         $this->assertSame('AAAAAAAAAAA', YouTube::videoId('https://youtu.be/AAAAAAAAAAA'));
         $this->assertSame('AAAAAAAAAAA', YouTube::videoId('https://www.youtube.com/shorts/AAAAAAAAAAA'));
+        $this->assertSame('AAAAAAAAAAA', YouTube::videoId('https://www.youtube.com/live/AAAAAAAAAAA?si=x'));
         $this->assertNull(YouTube::videoId('https://www.nknews.org/watch?v=AAAAAAAAAAA'));
         $this->assertNull(YouTube::videoId('https://www.youtube.com/watch?v=bad"id'));
         $this->assertNull(YouTube::videoId(null));

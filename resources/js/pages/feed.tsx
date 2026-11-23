@@ -1,6 +1,7 @@
 import { Head, Link } from '@inertiajs/react';
 import CategoryNav from '@/components/feed/category-nav';
 import PostCard from '@/components/feed/post-card';
+import TopicFilter from '@/components/feed/topic-filter';
 import { useTranslation } from '@/hooks/use-translation';
 
 type Props = {
@@ -8,6 +9,9 @@ type Props = {
     pagination: App.Data.PaginationData;
     categories: App.Data.CategoryData[];
     activeCategory: string | null;
+    /** Topics with published posts in this section; empty outside a section. */
+    topics: App.Data.TopicData[];
+    activeTopic: string | null;
     /** Server time as ISO 8601. */
     now: string;
 };
@@ -32,6 +36,8 @@ export default function Feed({
     pagination,
     categories,
     activeCategory,
+    topics,
+    activeTopic,
     now: serverNow,
 }: Props) {
     // The server's clock keeps relative times identical in the SSR HTML and after hydration.
@@ -73,6 +79,14 @@ export default function Feed({
                         <p className="rounded-xl border-l-4 border-nk-blue bg-white px-5 py-4 text-[15px] leading-relaxed text-slate-700 dark:bg-slate-900 dark:text-slate-300">
                             {t(sectionNote)}
                         </p>
+                    )}
+
+                    {activeCategory && topics.length > 0 && (
+                        <TopicFilter
+                            category={activeCategory}
+                            topics={topics}
+                            active={activeTopic}
+                        />
                     )}
 
                     {posts.length === 0 ? (

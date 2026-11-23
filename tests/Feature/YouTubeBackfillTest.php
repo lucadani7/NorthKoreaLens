@@ -102,15 +102,41 @@ class YouTubeBackfillTest extends TestCase
         $this->assertSame(1, $source->posts()->count());
     }
 
-    public function test_it_needs_a_youtube_channel_and_keywords(): void
+    public function test_it_needs_a_youtube_channel_and_keywords_unless_it_imports_drafts(): void
     {
         Http::fake();
         Source::factory()->create(['slug' => 'nk-news', 'feed_url' => 'https://www.nknews.org/feed/']);
-        $this->koreaNow()->update(['keywords' => null]);
+        $this->koreaNow()->update(['keywords' => null, 'needs_review' => false]);
 
         $this->artisan('youtube:backfill', ['source' => 'nk-news'])->assertFailed();
         $this->artisan('youtube:backfill', ['source' => 'korea-now'])->assertFailed();
 
         Http::assertNothingSent();
+    }
+
+    public function test_a_channel_without_keywords_or_shorts_is_imported_whole_as_drafts(): void
+    {
+        Http::fake(['www.googleapis.com/*' => Http::sequence()
+            ->push(['items' => [$this->searchResult('DDDDDDDDDDD', 'How I escaped twice')]])
+            ->push(['items' => [$this->searchResult('EEEEEEEEEEE', 'A long interview')]]),
+        ]);
+        $source = $this->koreaNow();
+        $source->update(['slug' => 'charles-north-korea', 'keywords' => null, 'skip_shorts' => true]);
+
+        $this->artisan('youtube:backfill', ['source' => 'charles-north-korea'])
+            ->expectsOutputToContain('2 videos found, 2 new drafts')
+            ->assertSuccessful();
+
+        $this->assertSame(2, $source->posts()->whereNull('published_at')->count());
+
+        // No search words, and only videos of 4 minutes or more: Shorts are never that long.
+        $sent = [];
+        Http::assertSent(function (Request $request) use (&$sent): bool {
+            parse_str((string) parse_url($request->url(), PHP_URL_QUERY), $query);
+            $sent[] = $query['videoDuration'] ?? null;
+
+            return ! isset($query['q']);
+        });
+        $this->assertSame(['medium', 'long'], $sent);
     }
 }

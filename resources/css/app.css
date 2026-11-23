@@ -8,12 +8,14 @@
 @custom-variant dark (&:is(.dark *));
 
 /* NK Lens palette. Use nk-red (flag red) only for decoration: white text on it fails WCAG AA,
-   so labels with text use nk-red-dark. */
+   so labels with text use nk-red-dark. Green marks curiosities. */
 @theme {
     --color-nk-blue: #024fa2;
     --color-nk-blue-dark: #013a78;
     --color-nk-red: #ed1c27;
     --color-nk-red-dark: #b5141d;
+    --color-nk-green: #15803d;
+    --color-nk-green-dark: #166534;
 
     --font-display: var(--font-space-grotesk), var(--font-sans);
 }

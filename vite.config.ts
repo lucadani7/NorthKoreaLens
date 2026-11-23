@@ -16,9 +16,12 @@ export default defineConfig({
             // so visitors' browsers never contact a font CDN (GDPR). Google rather than
             // Bunny because it sends only WOFF2 and splits Noto Sans KR into small slices.
             fonts: [
+                // Cyrillic for Russian names and sources in posts (e.g. Пхеньян). Without it
+                // those letters fall back to Noto Sans KR, whose Cyrillic looks too large.
+                // Its files load only on pages that contain Cyrillic.
                 google('Inter', {
                     weights: [400, 500, 600, 700],
-                    subsets: ['latin', 'latin-ext'],
+                    subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
                     preload: [{ weight: 400 }],
                 }),
                 google('Space Grotesk', {

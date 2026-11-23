@@ -1,5 +1,6 @@
 import { Link } from '@inertiajs/react';
 import { useTranslation } from '@/hooks/use-translation';
+import { isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
 import { home } from '@/routes';
 
@@ -15,12 +16,14 @@ function NavLink({
     href,
     active,
     propaganda,
+    curiosity,
     onNavigate,
     children,
 }: {
     href: ReturnType<typeof home>;
     active: boolean;
     propaganda?: boolean;
+    curiosity?: boolean;
     onNavigate?: () => void;
     children: string;
 }) {
@@ -40,7 +43,11 @@ function NavLink({
                 aria-hidden="true"
                 className={cn(
                     'size-2.5 shrink-0 rounded-full',
-                    propaganda ? 'bg-nk-red-dark' : 'bg-nk-blue',
+                    propaganda
+                        ? 'bg-nk-red-dark'
+                        : curiosity
+                          ? 'bg-nk-green'
+                          : 'bg-nk-blue',
                 )}
             />
             {children}
@@ -75,6 +82,7 @@ export default function CategoryNav({
                     href={home({ query: { category: category.slug } })}
                     active={active === category.slug}
                     propaganda={category.isPropaganda}
+                    curiosity={isCuriosity(category.slug)}
                     onNavigate={onNavigate}
                 >
                     {category.name}

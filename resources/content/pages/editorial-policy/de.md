@@ -43,6 +43,8 @@ Seit dem 30. Dezember 2025 kann die gedruckte Rodong Sinmun in Südkorea ohne be
 
 Beiträge des NK-Lens-Teams sind als unsere gekennzeichnet. Wir sagen, woher unsere Informationen stammen, und wenn etwas unsicher oder unbestätigt ist, sagen wir das klar.
 
+Ein Wort zur Sprache: Für die Kims verwenden wir manchmal das Wort „Führer“. Es ist korrekt, aber viele denken dabei an Adolf Hitler. Mit ihm hat es in unseren Texten nichts zu tun; gemeint ist nur die Staatsführung Nordkoreas. Deshalb heißt das entsprechende Thema bei uns „Staatsführung“.
+
 ## Künstliche Intelligenz
 
 Bei jedem Beitrag kannst du einen KI-Assistenten deiner Wahl, etwa ChatGPT, Claude, Perplexity oder Gemini, bitten, die Meldung zu erklären. Der Assistent öffnet sich in deinem eigenen Konto mit der bereits geschriebenen Frage; NK Lens schickt ihm nichts und sieht nichts von der Unterhaltung. NK Lens selbst veröffentlicht keine von KI geschriebenen Texte. Manche Quellen, etwa die südkoreanische Nachrichtenagentur Yonhap, erlauben keine KI-Werkzeuge für ihre Inhalte; wir respektieren das, weisen bei ihren Beiträgen darauf hin und zeigen dort keine KI-Schaltflächen.

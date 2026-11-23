@@ -3,6 +3,7 @@
 namespace App\Data;
 
 use App\Models\Post;
+use App\Models\Topic;
 use App\Support\VisitorRegion;
 use App\Support\YouTube;
 use Spatie\LaravelData\Data;
@@ -32,6 +33,10 @@ class PostData extends Data
         /** Set when the original is a YouTube video, so it can be played on the page. */
         public ?string $youtubeId,
         public CategoryData $category,
+        /** @var list<TopicData> */
+        public array $topics,
+        /** The language of title, excerpt and note: the reader's, or the post's own when not translated. */
+        public string $contentLocale,
         public ?SourceData $source,
     ) {}
 
@@ -39,20 +44,23 @@ class PostData extends Data
     {
         $region = VisitorRegion::current();
         $linkAllowed = $region->allows($post->original_url);
+        $locale = app()->getLocale();
 
         return new self(
             id: $post->id,
-            title: $post->title,
-            excerpt: $post->excerpt,
+            title: (string) $post->localized('title', $locale),
+            excerpt: $post->localized('excerpt', $locale),
             originalUrl: $linkAllowed ? $post->original_url : null,
             imageUrl: $region->allows($post->image_url) ? $post->image_url : null,
             publishedAt: $post->published_at?->toIso8601String(),
             isPropaganda: $post->isPropaganda(),
-            editorialNote: $post->editorial_note,
+            editorialNote: $post->localized('editorial_note', $locale),
             hasBody: filled($post->body),
             linkWithheld: ! $linkAllowed,
             youtubeId: $linkAllowed ? YouTube::videoId($post->original_url) : null,
             category: CategoryData::fromModel($post->category),
+            topics: array_values($post->topics->sortBy('sort_order')->map(fn (Topic $topic) => TopicData::fromModel($topic))->all()),
+            contentLocale: $post->contentLocale($locale),
             source: $post->source ? SourceData::fromModel($post->source) : null,
         );
     }

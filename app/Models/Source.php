@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Lang;
 
 /**
  * @property int $id
@@ -24,6 +25,7 @@ use Illuminate\Support\Carbon;
  * @property list<string>|null $keywords Import only items that mention one of these
  * @property bool $needs_review Import as drafts, to be published by hand
  * @property bool $forbids_ai The source forbids AI tools on its content; no AI features on its posts
+ * @property bool $skip_shorts YouTube channels: import regular videos only, no Shorts
  * @property string $language
  * @property bool $is_active
  * @property Carbon|null $last_fetched_at
@@ -47,6 +49,7 @@ class Source extends Model
         'keywords',
         'needs_review',
         'forbids_ai',
+        'skip_shorts',
         'language',
         'is_active',
         'last_fetched_at',
@@ -61,6 +64,7 @@ class Source extends Model
             'keywords' => 'array',
             'needs_review' => 'boolean',
             'forbids_ai' => 'boolean',
+            'skip_shorts' => 'boolean',
             'last_fetched_at' => 'datetime',
         ];
     }
@@ -111,6 +115,17 @@ class Source extends Model
         $id = $query['channel_id'] ?? null;
 
         return is_string($id) && preg_match('/\\AUC[A-Za-z0-9_-]{22}\\z/', $id) === 1 ? $id : null;
+    }
+
+    /**
+     * A notice readers see on every post from this source, in their language, e.g. who a
+     * YouTuber is and what is known about them. Written in lang/<locale>/source_notices.php.
+     */
+    public function notice(): ?string
+    {
+        $key = "source_notices.{$this->slug}";
+
+        return Lang::has($key) ? __($key) : null;
     }
 
     /** Whether the hourly run should fetch it now: never fetched, or its interval has passed. */

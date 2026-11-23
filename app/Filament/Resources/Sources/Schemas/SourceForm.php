@@ -75,6 +75,9 @@ class SourceForm
                 ->label('The source forbids AI tools on its content')
                 ->helperText('Readers see a notice on its posts, and NK Lens runs no AI features on them.')
                 ->default(false),
+            Toggle::make('skip_shorts')
+                ->label('YouTube: regular videos only, no Shorts')
+                ->default(false),
             Toggle::make('is_active')
                 ->label('Fetch this source every hour')
                 ->default(true),
@@ -87,6 +90,7 @@ class SourceForm
         return [
             SourceType::Independent->value => 'Independent newsroom',
             SourceType::Analysis->value => 'Analysis / think tank',
+            SourceType::Testimony->value => 'Escapee testimony (e.g. a YouTube channel)',
             SourceType::StateMedia->value => 'North Korean state media (propaganda)',
         ];
     }

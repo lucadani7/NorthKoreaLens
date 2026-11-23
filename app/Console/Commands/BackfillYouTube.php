@@ -15,6 +15,12 @@ class BackfillYouTube extends Command
 
     protected $description = "Import older videos from a YouTube channel's archive that match the source's keywords";
 
+    /**
+     * The API cannot tell Shorts apart, only the length. Shorts last at most 3 minutes, so
+     * sources without Shorts ask for videos of 4 minutes or more (regular ones under 4 are lost).
+     */
+    private const DURATIONS_WITHOUT_SHORTS = ['medium', 'long'];
+
     public function handle(YouTubeSearch $search, FeedImporter $importer): int
     {
         $source = Source::where('slug', $this->argument('source'))->first();
@@ -26,13 +32,19 @@ class BackfillYouTube extends Command
             return self::FAILURE;
         }
 
-        if (blank($source->keywords)) {
-            $this->error("{$source->name} has no keywords, so the whole channel would be imported.");
+        // Without keywords the whole channel comes in, which is only safe as drafts to review.
+        if (blank($source->keywords) && ! $source->needs_review) {
+            $this->error("{$source->name} has no keywords and publishes directly, so the whole channel would go online.");
 
             return self::FAILURE;
         }
 
-        $videos = $search->channelVideos($channelId, $source->keywords ?? [], max(1, (int) $this->option('pages')));
+        $pages = max(1, (int) $this->option('pages'));
+        $videos = [];
+
+        foreach ($source->skip_shorts ? self::DURATIONS_WITHOUT_SHORTS : [null] as $duration) {
+            array_push($videos, ...$search->channelVideos($channelId, $source->keywords ?? [], $pages, $duration));
+        }
         $imported = 0;
 
         foreach ($videos as $video) {
