@@ -1,8 +1,8 @@
-import { Link, usePage } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
 import { useTranslation } from '@/hooks/use-translation';
 import { isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
-import { about, home } from '@/routes';
+import { home } from '@/routes';
 
 /** The section the home page shows (Category::DEFAULT). */
 export const DEFAULT_SECTION = 'news';
@@ -20,7 +20,6 @@ function NavLink({
     active,
     propaganda,
     curiosity,
-    neutral,
     onNavigate,
     children,
 }: {
@@ -28,8 +27,6 @@ function NavLink({
     active: boolean;
     propaganda?: boolean;
     curiosity?: boolean;
-    /** A page about NK Lens rather than a section of the feed: grey dot. */
-    neutral?: boolean;
     onNavigate?: () => void;
     children: string;
 }) {
@@ -53,9 +50,7 @@ function NavLink({
                         ? 'bg-nk-red-dark'
                         : curiosity
                           ? 'bg-nk-green'
-                          : neutral
-                            ? 'bg-slate-400'
-                            : 'bg-nk-blue',
+                          : 'bg-nk-blue',
                 )}
             />
             {children}
@@ -71,21 +66,12 @@ export default function CategoryNav({
     className,
 }: Props) {
     const { t } = useTranslation();
-    const path = usePage().url.split(/[?#]/)[0];
 
     return (
         <nav
             aria-label={t('Sections')}
             className={cn('flex flex-col gap-1', className)}
         >
-            <NavLink
-                href={about()}
-                active={path === about().url}
-                neutral
-                onNavigate={onNavigate}
-            >
-                {t('Who we are')}
-            </NavLink>
             {categories.map((category) => (
                 <NavLink
                     key={category.id}
