@@ -16,6 +16,7 @@ import {
 import type { Appearance } from '@/hooks/use-appearance';
 import { useAppearance } from '@/hooks/use-appearance';
 import { useTranslation } from '@/hooks/use-translation';
+import { SITE_LINKS } from '@/lib/site-links';
 import { cn } from '@/lib/utils';
 import { dashboard, home, login, register } from '@/routes';
 
@@ -29,6 +30,11 @@ function FlagStripe() {
             <div className="h-0.5 bg-nk-blue" />
         </div>
     );
+}
+
+/** The path of the current page, without the query string. */
+function useCurrentPath(): string {
+    return usePage().url.split(/[?#]/)[0];
 }
 
 /** Dashboard for members; log in and sign up for visitors. */
@@ -89,6 +95,7 @@ function MobileMenu() {
         activeCategory?: string | null;
     }>().props;
     const [open, setOpen] = useState(false);
+    const path = useCurrentPath();
 
     return (
         <Sheet open={open} onOpenChange={setOpen}>
@@ -122,6 +129,30 @@ function MobileMenu() {
                     onNavigate={() => setOpen(false)}
                     className="px-2 pb-4"
                 />
+
+                <nav
+                    aria-label={t('About NK Lens')}
+                    className="grid gap-1 border-t border-border px-2 py-3"
+                >
+                    {SITE_LINKS.map(({ title, href }) => (
+                        <Link
+                            key={title}
+                            href={href}
+                            onClick={() => setOpen(false)}
+                            aria-current={
+                                path === href.url ? 'page' : undefined
+                            }
+                            className={cn(
+                                'flex min-h-11 items-center rounded-lg px-3 text-[15px]',
+                                path === href.url
+                                    ? 'bg-nk-blue/10 font-bold text-nk-blue-dark dark:bg-nk-blue/30 dark:text-white'
+                                    : 'font-medium text-foreground hover:bg-muted',
+                            )}
+                        >
+                            {t(title)}
+                        </Link>
+                    ))}
+                </nav>
 
                 <div className="grid gap-2 border-t border-border px-5 py-4 text-sm">
                     <AccountLinks stacked onNavigate={() => setOpen(false)} />
@@ -179,6 +210,8 @@ function MobileMenu() {
  */
 export default function SiteHeader() {
     const { name } = usePage().props;
+    const { t } = useTranslation();
+    const path = useCurrentPath();
 
     return (
         <header className="bg-nk-blue text-white">
@@ -205,6 +238,27 @@ export default function SiteHeader() {
                     <MobileMenu />
                 </div>
             </div>
+            {/* From 1024 px: the pages about NK Lens, on a second row. On phones they are in the menu. */}
+            <nav
+                aria-label={t('About NK Lens')}
+                className="mx-auto hidden max-w-7xl gap-1 px-4 pb-2 md:px-6 lg:flex"
+            >
+                {SITE_LINKS.map(({ title, href }) => (
+                    <Link
+                        key={title}
+                        href={href}
+                        aria-current={path === href.url ? 'page' : undefined}
+                        className={cn(
+                            'flex h-9 items-center rounded-full px-3 text-sm font-semibold',
+                            path === href.url
+                                ? 'bg-white text-nk-blue'
+                                : 'text-white/90 hover:bg-white/15 hover:text-white',
+                        )}
+                    >
+                        {t(title)}
+                    </Link>
+                ))}
+            </nav>
             <FlagStripe />
         </header>
     );
