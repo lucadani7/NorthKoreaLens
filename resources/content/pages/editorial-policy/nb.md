@@ -45,7 +45,17 @@ Innlegg skrevet av NK Lens-teamet er merket som våre. Vi sier hvor opplysningen
 
 ## Kunstig intelligens
 
-På hvert innlegg kan du be en KI-assistent du velger selv, som ChatGPT, Claude, Perplexity eller Gemini, om å forklare saken. Assistenten åpnes i din egen konto med spørsmålet ferdig skrevet; NK Lens sender ingenting til den og ser ingenting av samtalen. NK Lens publiserer ikke tekster skrevet av KI. Noen kilder, som det sørkoreanske nyhetsbyrået Yonhap, tillater ikke at KI-verktøy brukes på innholdet deres; vi respekterer det, sier fra om det på innleggene deres og viser ingen KI-knapper der.
+### Slik bruker vi KI
+
+Tekstene våre om Nord-Korea, som kuriositetene og oversettelsene av dem, skrives med hjelp fra en KI-assistent (Claude), ut fra kilder vi leser. Et menneske kontrollerer hver tekst før den publiseres, og kildene står under den.
+
+Noen kilder, som det sørkoreanske nyhetsbyrået Yonhap, tillater ikke at KI-verktøy brukes på innholdet deres; vi respekterer det og sier fra om det på innleggene deres.
+
+### Spør din egen KI-assistent
+
+På hvert innlegg kan du be en KI-assistent du velger selv, som ChatGPT, Claude, Perplexity eller Gemini, om å forklare saken. Assistenten åpnes i din egen konto med spørsmålet ferdig skrevet; NK Lens sender ingenting til den og ser ingenting av samtalen. På innlegg fra Yonhap viser vi ikke disse knappene.
+
+Vi skriver bare det første spørsmålet, det du ser før du sender det. Alt du spør om etterpå, og det assistenten svarer, er mellom deg og assistenten og ditt ansvar, ikke NK Lens' ansvar.
 
 ### Hvorfor NK Lens ikke har sin egen KI
 
@@ -55,8 +65,6 @@ Noen nyhetsnettsteder har laget sin egen chatbot. Vi har valgt å la være, av f
 - **Et svar i vårt navn måtte vært kontrollert.** Vi oppgir en kilde for alt vi publiserer. En KI kan ta feil, finne på fakta eller bli lurt til å gjenta propaganda, og en «NK Lens-KI» ville framstilt alt dette som vårt. Med din egen assistent er det tydelig at svaret kommer fra den, ikke fra oss.
 - **Hvert svar koster penger.** Vi selger verken reklame eller data om leserne våre, og vil heller bruke det vi har på innholdet.
 - **Du velger hvem du stoler på.** Du bruker assistenten du allerede kjenner, på ditt språk, og ser nøyaktig hva vi spør den om: Spørsmålet står skrevet før du sender det.
-
-Vi skriver bare det første spørsmålet, det du ser før du sender det. Alt du spør om etterpå, og det assistenten svarer, er mellom deg og assistenten og ditt ansvar, ikke NK Lens' ansvar.
 
 Ulempen: Du forlater NK Lens for å lese svaret, og kvaliteten avhenger av assistenten du velger. Vi mener det er en rimelig pris for personvern og ærlighet.
 

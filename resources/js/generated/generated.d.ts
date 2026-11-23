@@ -52,6 +52,14 @@ name: string,
 type: App.Enums.SourceType,
 websiteUrl: string | null,
 };
+export type TeamMemberData = {
+key: string,
+name: string,
+country: string | null,
+profession: string | null,
+roles: string | null,
+notes: string | null,
+};
 export type TopicData = {
 id: number,
 slug: string,

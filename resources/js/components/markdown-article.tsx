@@ -10,12 +10,18 @@ type Props = {
     page: App.Data.PageData;
     /** Shown under the text, inside the same card (e.g. the list of sources). */
     children?: ReactNode;
+    /** Shown after the introduction, before the first heading (e.g. the team members). */
+    afterIntro?: ReactNode;
 };
 
 /** A page the team wrote in Markdown, rendered on the server. */
-export default function MarkdownArticle({ page, children }: Props) {
+export default function MarkdownArticle({ page, children, afterIntro }: Props) {
     const { t, locale } = useTranslation();
     const bodyRef = useRef<HTMLDivElement>(null);
+    // With afterIntro, the page is split at its first heading so the block sits in between.
+    const split = afterIntro ? page.html.indexOf('<h2') : -1;
+    const intro = split > 0 ? page.html.slice(0, split) : page.html;
+    const rest = split > 0 ? page.html.slice(split) : '';
 
     // Links between our own pages ("/sources") go through Inertia, so the page does not reload.
     useEffect(() => {
@@ -78,13 +84,20 @@ export default function MarkdownArticle({ page, children }: Props) {
                         {page.title}
                     </h1>
 
-                    <div
-                        ref={bodyRef}
-                        lang={page.locale}
-                        className="nk-prose mt-6"
-                        // Our own Markdown, rendered by the server with raw HTML stripped.
-                        dangerouslySetInnerHTML={{ __html: page.html }}
-                    />
+                    <div ref={bodyRef} lang={page.locale}>
+                        <div
+                            className="nk-prose mt-6"
+                            // Our own Markdown, rendered by the server with raw HTML stripped.
+                            dangerouslySetInnerHTML={{ __html: intro }}
+                        />
+                        {afterIntro}
+                        {rest && (
+                            <div
+                                className="nk-prose mt-6"
+                                dangerouslySetInnerHTML={{ __html: rest }}
+                            />
+                        )}
+                    </div>
 
                     {children}
                 </article>

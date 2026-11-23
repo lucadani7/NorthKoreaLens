@@ -19,6 +19,7 @@ void createInertiaApp({
             case name === 'post':
             case name === 'page':
             case name === 'sources':
+            case name === 'team':
                 return PublicLayout;
             case name.startsWith('auth/'):
                 return AuthLayout;

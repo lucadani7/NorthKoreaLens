@@ -4,6 +4,7 @@ namespace App\Data;
 
 use Illuminate\Support\Str;
 use League\CommonMark\Extension\ExternalLink\ExternalLinkExtension;
+use League\CommonMark\Extension\Table\TableExtension;
 use Spatie\LaravelData\Data;
 
 /**
@@ -22,6 +23,26 @@ class PageData extends Data
         /** The language the page is written in: the visitor's, or English when there is no translation yet. */
         public string $locale,
     ) {}
+
+    /**
+     * How our own Markdown is rendered: raw HTML is stripped, and links to other sites open in
+     * a new tab while links between our pages stay in the same one.
+     *
+     * @return array<string, mixed>
+     */
+    public static function markdownOptions(): array
+    {
+        return [
+            'html_input' => 'strip',
+            'allow_unsafe_links' => false,
+            'external_link' => [
+                'internal_hosts' => [(string) parse_url((string) config('app.url'), PHP_URL_HOST)],
+                'open_in_new_window' => true,
+                'noopener' => 'external',
+                'noreferrer' => 'external',
+            ],
+        ];
+    }
 
     /** The page in the given language, falling back to English; null when the page does not exist. */
     public static function load(string $slug, string $locale): ?self
@@ -50,17 +71,7 @@ class PageData extends Data
             $markdown = substr($markdown, strlen($match[0]));
         }
 
-        $html = Str::markdown($markdown, [
-            'html_input' => 'strip',
-            'allow_unsafe_links' => false,
-            // Links to other sites open in a new tab; links between our pages stay in the same one.
-            'external_link' => [
-                'internal_hosts' => [(string) parse_url((string) config('app.url'), PHP_URL_HOST)],
-                'open_in_new_window' => true,
-                'noopener' => 'external',
-                'noreferrer' => 'external',
-            ],
-        ], [new ExternalLinkExtension]);
+        $html = Str::markdown($markdown, self::markdownOptions(), [new ExternalLinkExtension, new TableExtension]);
 
         $description = null;
 

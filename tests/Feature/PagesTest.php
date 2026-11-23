@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Data\PageData;
+use App\Data\TeamMemberData;
 use App\Enums\SourceType;
 use App\Models\Source;
 use Database\Seeders\CategorySeeder;
@@ -29,7 +30,6 @@ class PagesTest extends TestCase
         return [
             'about' => ['about', 'About NK Lens'],
             'editorial policy' => ['editorial-policy', 'Editorial policy'],
-            'team' => ['team', 'The team'],
             'how to help' => ['how-to-help', 'How you can help'],
         ];
     }
@@ -46,6 +46,41 @@ class PagesTest extends TestCase
                 ->whereType('page.description', 'string')
                 ->where('page.html', fn (string $html) => str_contains($html, '<h2>'))
             );
+    }
+
+    public function test_the_team_page_shows_a_card_for_each_member(): void
+    {
+        $this->withCookie('locale', 'ro')
+            ->get(route('team'))
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('team')
+                ->where('page.title', 'Echipa')
+                ->has('members', count(config('team.members')))
+                ->where('members.0.name', 'Luca Daniel Ionescu')
+                ->where('members.0.country', 'România')
+                ->whereType('members.0.profession', 'string')
+                ->whereType('members.0.roles', 'string')
+                // Notes can link elsewhere; such links open in a new tab.
+                ->where('members.0.notesHtml', fn (string $html) => str_contains($html, 'href="https://www.youtube.com/@haihuin2"')
+                    && str_contains($html, 'target="_blank"')
+                    && ! str_contains($html, '<p>'))
+            );
+    }
+
+    public function test_every_team_member_is_described_in_every_language(): void
+    {
+        /** @var list<string> $locales */
+        $locales = array_keys(config('locales.supported'));
+
+        foreach ($locales as $locale) {
+            app()->setLocale($locale);
+
+            foreach (TeamMemberData::fromConfig() as $member) {
+                $this->assertNotNull($member->country, "{$member->key} in {$locale}");
+                $this->assertNotNull($member->roles, "{$member->key} in {$locale}");
+            }
+        }
     }
 
     public function test_pages_are_shown_in_the_visitor_language(): void
@@ -92,7 +127,7 @@ class PagesTest extends TestCase
         $html = PageData::load('team', 'en')?->html ?? '';
 
         // The attributes can come in any order, so look at the whole <a> tag.
-        $this->assertSame(1, preg_match('/<a [^>]*href="https:\/\/www\.youtube\.com\/@haihuin2"[^>]*>/', $html, $link));
+        $this->assertSame(1, preg_match('/<a [^>]*href="https:\/\/github\.com\/lucadani7\/NorthKoreaLens"[^>]*>/', $html, $link));
         $this->assertStringContainsString('target="_blank"', $link[0]);
         $this->assertStringContainsString('rel="noopener noreferrer"', $link[0]);
 

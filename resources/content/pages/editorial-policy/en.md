@@ -45,7 +45,17 @@ Posts written by the NK Lens team are marked as ours. We say where our informati
 
 ## Artificial intelligence
 
-On every post you can ask an AI assistant of your choice, such as ChatGPT, Claude, Perplexity or Gemini, to explain the story. The assistant opens in your own account with the question already written; NK Lens sends nothing to it and sees nothing of the conversation. NK Lens itself does not publish texts written by AI. Some sources, such as the South Korean news agency Yonhap, do not allow AI tools to be used on their content; we respect that, say so on their posts and show no AI buttons there.
+### How we use AI
+
+Our texts about North Korea, such as the curiosities and their translations, are drafted with the help of an AI assistant (Claude), based on sources we read. A person checks every text before it is published, and the sources are listed under it.
+
+Some sources, such as the South Korean news agency Yonhap, do not allow AI tools to be used on their content; we respect that and say so on their posts.
+
+### Ask your own AI assistant
+
+On every post you can ask an AI assistant of your choice, such as ChatGPT, Claude, Perplexity or Gemini, to explain the story. The assistant opens in your own account with the question already written; NK Lens sends nothing to it and sees nothing of the conversation. We do not show these buttons on Yonhap posts.
+
+We write only the first question, the one you see before you send it. Everything you ask after that, and what the assistant answers, is between you and the assistant, and is your responsibility, not NK Lens's.
 
 ### Why NK Lens has no AI of its own
 
@@ -55,8 +65,6 @@ Some news sites have built their own chatbot. We chose not to, for four reasons:
 - **An answer in our name would have to be checked.** We put a source behind everything we publish. An AI can make mistakes, invent facts or be tricked into repeating propaganda, and an “NK Lens AI” would present all of that as ours. With your own assistant, it is clear that the answer comes from it, not from our team.
 - **Every answer costs money.** We do not sell advertising or data about our readers, and we would rather spend what we have on our content.
 - **You choose whom you trust.** You use the assistant you already know, in your language, and you see exactly what we ask it: the question is written out before you send it.
-
-We write only the first question, the one you see before you send it. Everything you ask after that, and what the assistant answers, is between you and the assistant, and is your responsibility, not NK Lens's.
 
 The downside: you leave NK Lens to read the answer, and its quality depends on the assistant you choose. We think that is a fair price for privacy and honesty.
 

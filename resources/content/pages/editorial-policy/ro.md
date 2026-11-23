@@ -45,7 +45,17 @@ Postările scrise de echipa NK Lens sunt marcate ca fiind ale noastre. Spunem de
 
 ## Inteligența artificială
 
-La fiecare postare poți cere unui asistent AI ales de tine, precum ChatGPT, Claude, Perplexity sau Gemini, să-ți explice știrea. Asistentul se deschide în contul tău, cu întrebarea deja scrisă; NK Lens nu îi trimite nimic și nu vede nimic din conversație. NK Lens nu publică texte scrise de AI. Unele surse, precum agenția sud-coreeană de presă Yonhap, nu permit folosirea instrumentelor AI pe conținutul lor; respectăm acest lucru, o spunem pe postările lor și nu afișăm acolo butoane AI.
+### Cum folosim noi AI-ul
+
+Textele noastre despre Coreea de Nord, precum curiozitățile și traducerile lor, sunt redactate cu ajutorul unui asistent AI (Claude), pe baza unor surse pe care le citim. Fiecare text e verificat de un om înainte de publicare, iar sursele sunt trecute sub el.
+
+Unele surse, precum agenția sud-coreeană de presă Yonhap, nu permit folosirea instrumentelor AI pe conținutul lor; respectăm acest lucru și o spunem pe postările lor.
+
+### Întreabă propriul tău asistent AI
+
+La fiecare postare poți cere unui asistent AI ales de tine, precum ChatGPT, Claude, Perplexity sau Gemini, să-ți explice știrea. Asistentul se deschide în contul tău, cu întrebarea deja scrisă; NK Lens nu îi trimite nimic și nu vede nimic din conversație. La postările Yonhap nu afișăm aceste butoane.
+
+Noi scriem doar prima întrebare, cea pe care o vezi înainte să o trimiți. Tot ce întrebi după aceea, și ce îți răspunde asistentul, rămâne între tine și asistent și este responsabilitatea ta, nu a NK Lens.
 
 ### De ce NK Lens nu are un AI propriu
 
@@ -55,8 +65,6 @@ Unele site-uri de știri și-au făcut propriul chatbot. Noi am ales să nu face
 - **Un răspuns în numele nostru ar trebui verificat.** Pentru tot ce publicăm avem o sursă. Un AI poate greși, poate inventa fapte sau poate fi păcălit să repete propaganda, iar un „NK Lens AI” ar prezenta toate astea ca venind de la noi. Cu asistentul tău e clar că răspunsul vine de la el, nu de la echipa noastră.
 - **Fiecare răspuns costă bani.** Nu vindem reclame și nici date despre cititori, așa că preferăm să cheltuim ce avem pe conținut.
 - **Tu alegi în cine ai încredere.** Folosești asistentul pe care îl cunoști deja, în limba ta, și vezi exact ce îl întrebăm: întrebarea e scrisă înainte să o trimiți.
-
-Noi scriem doar prima întrebare, cea pe care o vezi înainte să o trimiți. Tot ce întrebi după aceea, și ce îți răspunde asistentul, rămâne între tine și asistent și este responsabilitatea ta, nu a NK Lens.
 
 Dezavantajul: pleci de pe NK Lens ca să citești răspunsul, iar calitatea lui depinde de asistentul ales. Credem că e un preț corect pentru confidențialitate și onestitate.
 
