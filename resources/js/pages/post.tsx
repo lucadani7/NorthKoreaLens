@@ -10,6 +10,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { timeAgo } from '@/lib/time';
 import { categoryBadge, isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
+import { warningBox } from '@/lib/warning-colors';
 import { editorialPolicy, home } from '@/routes';
 import { show } from '@/routes/posts';
 
@@ -78,7 +79,12 @@ export default function Post({ post, body, now, related }: Props) {
 
                         {/* Team posts not yet translated into the reader's language. */}
                         {!post.source && post.contentLocale !== locale && (
-                            <p className="rounded-lg bg-amber-100 px-4 py-3 text-sm text-amber-950 dark:bg-amber-900/40 dark:text-amber-100">
+                            <p
+                                className={cn(
+                                    'rounded-lg border-2 px-4 py-3 text-sm',
+                                    warningBox,
+                                )}
+                            >
                                 {t(
                                     'This post is not yet available in your language, so you are reading it in English.',
                                 )}
