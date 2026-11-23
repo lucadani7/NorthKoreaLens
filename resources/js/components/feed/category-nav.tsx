@@ -1,8 +1,8 @@
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import { useTranslation } from '@/hooks/use-translation';
 import { isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
-import { home } from '@/routes';
+import { about, home } from '@/routes';
 
 type Props = {
     categories: App.Data.CategoryData[];
@@ -17,6 +17,7 @@ function NavLink({
     active,
     propaganda,
     curiosity,
+    neutral,
     onNavigate,
     children,
 }: {
@@ -24,6 +25,8 @@ function NavLink({
     active: boolean;
     propaganda?: boolean;
     curiosity?: boolean;
+    /** A page about NK Lens rather than a section of the feed: grey dot. */
+    neutral?: boolean;
     onNavigate?: () => void;
     children: string;
 }) {
@@ -47,7 +50,9 @@ function NavLink({
                         ? 'bg-nk-red-dark'
                         : curiosity
                           ? 'bg-nk-green'
-                          : 'bg-nk-blue',
+                          : neutral
+                            ? 'bg-slate-400'
+                            : 'bg-nk-blue',
                 )}
             />
             {children}
@@ -63,6 +68,9 @@ export default function CategoryNav({
     className,
 }: Props) {
     const { t } = useTranslation();
+    const path = usePage().url.split(/[?#]/)[0];
+    // "All" is the feed itself, not every page without a section (e.g. the About page).
+    const onFeed = path === home().url;
 
     return (
         <nav
@@ -70,8 +78,16 @@ export default function CategoryNav({
             className={cn('flex flex-col gap-1', className)}
         >
             <NavLink
+                href={about()}
+                active={path === about().url}
+                neutral
+                onNavigate={onNavigate}
+            >
+                {t('Who we are')}
+            </NavLink>
+            <NavLink
                 href={home()}
-                active={active === null}
+                active={onFeed && active === null}
                 onNavigate={onNavigate}
             >
                 {t('All')}

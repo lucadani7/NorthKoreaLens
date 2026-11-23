@@ -4,10 +4,9 @@ import { useEffect } from 'react';
 import DisclaimerBanner from '@/components/disclaimer-banner';
 import SiteHeader from '@/components/site-header';
 import { useTranslation } from '@/hooks/use-translation';
-import { about, editorialPolicy, howToHelp, sources, team } from '@/routes';
+import { editorialPolicy, howToHelp, sources, team } from '@/routes';
 
 const FOOTER_LINKS = [
-    { title: 'About us', href: about() },
     { title: 'Team', href: team() },
     { title: 'Editorial policy', href: editorialPolicy() },
     { title: 'Sources', href: sources() },
