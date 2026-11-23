@@ -124,8 +124,10 @@ class Source extends Model
     public function notice(): ?string
     {
         $key = "source_notices.{$this->slug}";
+        $notice = Lang::has($key) ? __($key) : null;
 
-        return Lang::has($key) ? __($key) : null;
+        // __() gives an array for a key that names a group of translations, not one text.
+        return is_string($notice) ? $notice : null;
     }
 
     /** Whether the hourly run should fetch it now: never fetched, or its interval has passed. */
