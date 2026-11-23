@@ -201,4 +201,29 @@ class YouTubeImportTest extends TestCase
         $this->artisan('youtube:prune', ['source' => 'charles-north-korea', 'keep' => $file])->assertFailed();
         $this->assertNotSoftDeleted($keep);
     }
+
+    public function test_patreon_merch_and_social_links_never_reach_the_page(): void
+    {
+        $source = $this->charles();
+        $post = $source->posts()->create([
+            'category_id' => $source->importCategory()->id, 'guid' => 'yt:video:DDDDDDDDDDD', 'title' => 'Published one',
+            'original_url' => 'https://www.youtube.com/watch?v=DDDDDDDDDDD', 'language' => 'en', 'published_at' => now(),
+            'excerpt' => 'Help me be a voice for voiceless North Koreans and get access to fun bonus content by supporting me on Patreon! https://www.patreon.com/c/CharlesRyu/posts Pick up some of my awesome merch here: https://www.charlesnorthkorea.org https://instagram.com/charlesnorthkorea…',
+        ]);
+
+        $this->artisan('posts:clean-excerpts', ['source' => 'charles-north-korea'])
+            ->expectsOutputToContain('Cleaned 1 excerpts')
+            ->assertSuccessful();
+
+        $this->assertNull($post->fresh()?->excerpt);
+
+        $this->assertSame(
+            'How I escaped.',
+            FeedImporter::excerpt(new FeedItem(
+                guid: 'yt:video:EEEEEEEEEEE', title: 'x', link: 'https://www.youtube.com/watch?v=EEEEEEEEEEE',
+                excerpt: null, imageUrl: null, publishedAt: null,
+                description: 'How I escaped. Pick up some of my awesome merch: https://www.charlesnorthkorea.org',
+            )),
+        );
+    }
 }

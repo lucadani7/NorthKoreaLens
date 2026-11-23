@@ -59,6 +59,7 @@ class ImportYouTubeVideos extends Command
 
             $this->line(match (true) {
                 $importer->import($source, $item) => "Imported: {$item->title}",
+                YouTube::isLivestreamTitle($item->title) => "Skipped, a live broadcast: {$item->title}",
                 $source->wants($item->title.' '.$item->description) => "Already imported or deleted: {$item->title}",
                 default => "Skipped, does not match the source's keywords: {$item->title}",
             });

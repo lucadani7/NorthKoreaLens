@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Feeds\YouTubeSearch;
 use App\Models\Source;
+use App\Support\YouTube;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,7 +44,8 @@ class YouTubeCatalog extends Command
         $videos = [];
 
         foreach ($search->videos($ids) as $video) {
-            if ($video['channelId'] !== $channelId || ($video['seconds'] ?? 0) <= self::SHORTS_MAX_SECONDS) {
+            if ($video['channelId'] !== $channelId || ($video['seconds'] ?? 0) <= self::SHORTS_MAX_SECONDS
+                || YouTube::isLivestreamTitle($video['item']->title)) {
                 continue;
             }
 

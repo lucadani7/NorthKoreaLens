@@ -35,6 +35,17 @@ final class YouTube
             && str_starts_with((string) parse_url((string) $url, PHP_URL_PATH), '/shorts/');
     }
 
+    /**
+     * Whether a video title marks a live broadcast: "live show", "livestream" or "live stream"
+     * in any case, or "LIVE" as a word in capitals. A lower-case "live" alone ("live-fire
+     * drills", "where they live") does not count.
+     */
+    public static function isLivestreamTitle(string $title): bool
+    {
+        return preg_match('/\\blive\\s*-?\\s*(?:show|stream)/iu', $title) === 1
+            || preg_match('/(?<![\\p{L}\\p{N}])LIVE(?![\\p{L}\\p{N}])/u', $title) === 1;
+    }
+
     private static function query(string $url, string $key): ?string
     {
         parse_str((string) parse_url($url, PHP_URL_QUERY), $query);

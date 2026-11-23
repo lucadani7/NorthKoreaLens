@@ -110,4 +110,40 @@ class CharlesNorthKoreaTest extends TestCase
     {
         $this->assertNull(Source::factory()->create(['slug' => 'nk-news'])->notice());
     }
+
+    public function test_live_broadcasts_are_recognised_by_their_title(): void
+    {
+        foreach ([
+            'Welcome to our live show!',
+            'Rubberducking Livestream | Season 3 Ep. 3',
+            'Rubber Ducking Podcast Nov. 15 Episode | LIVE',
+            'Rubber Ducking Podcast Special Episode LIVE!',
+            'Q&A live stream with a defector',
+        ] as $title) {
+            $this->assertTrue(YouTube::isLivestreamTitle($title), $title);
+        }
+
+        foreach ([
+            'North Korea says it launched rockets at live-fire demo',
+            'Where do North Korean elites live?',
+            'Life of a North Korean Special Forces Soldier',
+            'OLIVER visits Pyongyang',
+        ] as $title) {
+            $this->assertFalse(YouTube::isLivestreamTitle($title), $title);
+        }
+    }
+
+    public function test_live_broadcasts_are_not_imported(): void
+    {
+        Http::fake(['www.youtube.com/*' => Http::response(str_replace(
+            'How I escaped North Korea twice',
+            'Welcome to our live show!',
+            self::FEED,
+        ))]);
+        $source = $this->charles();
+
+        FetchSourceFeed::dispatchSync($source);
+
+        $this->assertSame(0, $source->posts()->count());
+    }
 }

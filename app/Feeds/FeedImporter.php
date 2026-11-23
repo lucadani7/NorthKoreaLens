@@ -26,6 +26,11 @@ class FeedImporter
             return false;
         }
 
+        // Live broadcasts (podcast streams, Q&A shows) are never imported from YouTube.
+        if (YouTube::videoId($item->link) !== null && YouTube::isLivestreamTitle($item->title)) {
+            return false;
+        }
+
         $publishedAt = $item->publishedAt ? Carbon::instance($item->publishedAt) : Carbon::now();
 
         // withTrashed: a post we deleted (or a draft we rejected) is not imported again.
@@ -58,6 +63,7 @@ class FeedImporter
             '~https?://\\S+~iu',
             '/[\\w.+-]+@[\\w-]+\\.[\\w.]+/u',
             '/Help me (?:be )?a voice for voiceless North Koreans[^.!?]*?Patreon[!.]?/iu',
+            '/Pick up (?:some of )?(?:my|our|his|her) [^.!?:]{0,40}merch[^.!?:]*:?/iu',
             '/Want (?:Charles|us) to answer[^?]*\\?/iu',
             '/Email (?:him|us|me) at:?/iu',
             '/(?:Find|Follow) (?:her|him|me|us) on \\w+:?/iu',
