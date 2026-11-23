@@ -58,7 +58,7 @@ name: string,
 country: string | null,
 profession: string | null,
 roles: string | null,
-notes: string | null,
+notesHtml: string | null,
 };
 export type TopicData = {
 id: number,
