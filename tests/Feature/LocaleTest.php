@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use Database\Seeders\CategorySeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Inertia\Testing\AssertableInertia as Assert;
 use Tests\TestCase;
@@ -10,6 +11,14 @@ use Tests\TestCase;
 class LocaleTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // The home page is the News section, so the sections must exist.
+        $this->seed(CategorySeeder::class);
+    }
 
     public function test_english_is_the_default(): void
     {

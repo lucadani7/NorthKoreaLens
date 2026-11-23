@@ -74,7 +74,7 @@ class SouthKoreaRuleTest extends TestCase
         $this->rodongPost();
 
         $this->withHeader('CF-IPCountry', 'KR')
-            ->get(route('home'))
+            ->get(route('home', ['category' => 'propaganda']))
             ->assertInertia(fn (Assert $page) => $page
                 ->where('posts.0.originalUrl', null)
                 ->where('posts.0.linkWithheld', true)

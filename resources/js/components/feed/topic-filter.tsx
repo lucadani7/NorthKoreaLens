@@ -2,6 +2,7 @@ import { Link } from '@inertiajs/react';
 import { useTranslation } from '@/hooks/use-translation';
 import { isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
+import { DEFAULT_SECTION } from '@/components/feed/category-nav';
 import { home } from '@/routes';
 
 type Props = {
@@ -30,7 +31,11 @@ export default function TopicFilter({ category, topics, active }: Props) {
     return (
         <nav aria-label={t('Topics')} className="flex flex-wrap gap-2">
             <Link
-                href={home({ query: { category } })}
+                href={
+                    category === DEFAULT_SECTION
+                        ? home()
+                        : home({ query: { category } })
+                }
                 aria-current={active === null ? 'page' : undefined}
                 preserveScroll
                 className={style(active === null)}
@@ -40,7 +45,12 @@ export default function TopicFilter({ category, topics, active }: Props) {
             {topics.map((topic) => (
                 <Link
                     key={topic.id}
-                    href={home({ query: { category, topic: topic.slug } })}
+                    href={home({
+                        query:
+                            category === DEFAULT_SECTION
+                                ? { topic: topic.slug }
+                                : { category, topic: topic.slug },
+                    })}
                     aria-current={active === topic.slug ? 'page' : undefined}
                     preserveScroll
                     className={style(active === topic.slug)}

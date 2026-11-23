@@ -4,6 +4,9 @@ import { isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
 import { about, home } from '@/routes';
 
+/** The section the home page shows (Category::DEFAULT). */
+export const DEFAULT_SECTION = 'news';
+
 type Props = {
     categories: App.Data.CategoryData[];
     active: string | null;
@@ -69,8 +72,6 @@ export default function CategoryNav({
 }: Props) {
     const { t } = useTranslation();
     const path = usePage().url.split(/[?#]/)[0];
-    // "All" is the feed itself, not every page without a section (e.g. the About page).
-    const onFeed = path === home().url;
 
     return (
         <nav
@@ -85,17 +86,15 @@ export default function CategoryNav({
             >
                 {t('Who we are')}
             </NavLink>
-            <NavLink
-                href={home()}
-                active={onFeed && active === null}
-                onNavigate={onNavigate}
-            >
-                {t('All')}
-            </NavLink>
             {categories.map((category) => (
                 <NavLink
                     key={category.id}
-                    href={home({ query: { category: category.slug } })}
+                    href={
+                        // The home page is the News section: no "All" view.
+                        category.slug === DEFAULT_SECTION
+                            ? home()
+                            : home({ query: { category: category.slug } })
+                    }
                     active={active === category.slug}
                     propaganda={category.isPropaganda}
                     curiosity={isCuriosity(category.slug)}

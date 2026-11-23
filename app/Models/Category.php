@@ -22,6 +22,9 @@ class Category extends Model
 
     public const PROPAGANDA = 'propaganda';
 
+    /** The section the home page shows: there is no "All" view. */
+    public const DEFAULT = 'news';
+
     /** Videos from Yonhap's KOREA NOW channel about North Korea. */
     public const KOREA_NOW = 'korea-now';
 

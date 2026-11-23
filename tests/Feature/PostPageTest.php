@@ -68,7 +68,7 @@ class PostPageTest extends TestCase
                 ->where('post.editorialNote', 'Independent sources report food shortages in the region.')
             );
 
-        $this->get(route('home'))
+        $this->get(route('home', ['category' => 'propaganda']))
             ->assertInertia(fn (Assert $page) => $page
                 ->where('posts.0.editorialNote', 'Independent sources report food shortages in the region.')
             );

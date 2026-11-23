@@ -58,7 +58,7 @@ export default function Feed({
             <SectionsLayout active={activeCategory}>
                 {/* On phones the sections are in the header menu; the current one is named here. */}
                 <h1 className="font-display text-2xl font-bold lg:hidden">
-                    {current?.name ?? t('All')}
+                    {current?.name}
                 </h1>
 
                 <section

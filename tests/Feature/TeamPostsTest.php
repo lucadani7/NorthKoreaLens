@@ -66,7 +66,7 @@ class TeamPostsTest extends TestCase
         $post->translations()->create(['locale' => 'ko', 'title' => '서울은 첫 수도였다']);
 
         $this->withCookie('locale', 'ko')
-            ->get(route('home'))
+            ->get(route('home', ['category' => 'curiosities']))
             ->assertInertia(fn (Assert $page) => $page->where('posts.0.title', '서울은 첫 수도였다'));
     }
 

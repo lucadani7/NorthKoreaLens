@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use Database\Seeders\CategorySeeder;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -13,6 +14,14 @@ use Tests\TestCase;
 class UserLocaleTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // The home page is the News section, so the sections must exist.
+        $this->seed(CategorySeeder::class);
+    }
 
     public function test_new_accounts_keep_the_language_of_the_sign_up_page(): void
     {

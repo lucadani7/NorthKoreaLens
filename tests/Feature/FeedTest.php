@@ -54,8 +54,25 @@ class FeedTest extends TestCase
                 ->where('posts.0.category.slug', 'news')
                 ->where('posts.0.source.name', $post->source->name)
                 ->has('categories', 7)
-                ->where('activeCategory', null)
+                ->where('activeCategory', 'news')
             );
+    }
+
+    public function test_the_home_page_is_the_news_section(): void
+    {
+        $news = Post::factory()->for($this->category('news'))->create();
+        Post::factory()->for($this->category('curiosities'))->create();
+
+        $this->get(route('home'))
+            ->assertInertia(fn (Assert $page) => $page
+                ->has('posts', 1)
+                ->where('posts.0.id', $news->id)
+                ->where('activeCategory', 'news')
+            );
+
+        // One address for the News section.
+        $this->get(route('home', ['category' => 'news', 'page' => 2]))
+            ->assertRedirect(route('home', ['page' => 2]));
     }
 
     public function test_the_feed_is_paginated(): void
