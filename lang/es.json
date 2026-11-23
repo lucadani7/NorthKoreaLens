@@ -193,7 +193,6 @@
     "At the request of :source, we do not use AI tools on this content.": "A petición de :source, no usamos herramientas de IA con este contenido.",
     "Ask an AI assistant about this story": "Pregunta a un asistente de IA sobre esta noticia",
     "Copy the question": "Copiar la pregunta",
-    "Copied!": "¡Copiado!",
     "Headline": "Titular",
     "Source": "Fuente",
     "Date": "Fecha",
@@ -202,7 +201,11 @@
     "Link": "Enlace",
     "Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Explica el contexto de esta noticia sobre Corea del Norte para un lector general: quién o qué se menciona, por qué es importante y qué se sabe en general sobre el tema. Responde de forma breve y objetiva, y di claramente qué es incierto. Responde en :language.",
     "This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.": "Este titular procede de los medios estatales norcoreanos. Explica qué mensaje quiere transmitir el régimen con él, qué técnicas de propaganda usa y qué informan en general las fuentes independientes sobre el tema. No trates sus afirmaciones como hechos. Responde en :language.",
-    "The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.": "El asistente se abre en tu propia cuenta. NK Lens no ve tus preguntas ni las respuestas. Para Gemini u otro asistente, la pregunta se copia: pégala allí.",
-    "Copies the question, then opens Gemini: paste it there.": "Copia la pregunta y luego abre Gemini: pégala allí.",
-    "Ask AI": "Preguntar a la IA"
+    "Ask AI": "Preguntar a la IA",
+    "These open with the question already written. Just press send:": "Estos se abren con la pregunta ya escrita. Solo tienes que pulsar Enviar:",
+    "Using Gemini, Copilot, DeepSeek or another assistant? Copy the question and paste it into its chat:": "¿Usas Gemini, Copilot, DeepSeek u otro asistente? Copia la pregunta y pégala en su chat:",
+    "Copy and open Gemini": "Copiar y abrir Gemini",
+    "Copied. Now open your assistant and paste the question into the chat (on a phone: touch and hold, then Paste).": "Copiado. Ahora abre tu asistente y pega la pregunta en el chat (en el móvil: mantén pulsado y elige Pegar).",
+    "See the question": "Ver la pregunta",
+    "The assistant opens in your own account. NK Lens does not see your questions or the answers.": "El asistente se abre en tu propia cuenta. NK Lens no ve tus preguntas ni las respuestas."
 }

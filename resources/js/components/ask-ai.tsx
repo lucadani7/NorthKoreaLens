@@ -62,7 +62,6 @@ export default function AskAi({ post }: Props) {
         try {
             await navigator.clipboard.writeText(question);
             setCopied(true);
-            setTimeout(() => setCopied(false), 2500);
 
             return true;
         } catch {
@@ -81,7 +80,16 @@ export default function AskAi({ post }: Props) {
                 {t('Ask an AI assistant about this story')}
             </h2>
 
-            <div className="mt-3 flex flex-wrap gap-2">
+            {/* 1. Assistants that open with the question already typed in. */}
+            <p className="mt-3 text-sm text-slate-700 dark:text-slate-300">
+                <span className="mr-1.5 inline-flex size-5 items-center justify-center rounded-full bg-violet-700 text-xs font-bold text-white">
+                    1
+                </span>
+                {t(
+                    'These open with the question already written. Just press send:',
+                )}
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
                 {ASSISTANTS.map(({ name, url }) => (
                     <a
                         key={name}
@@ -94,19 +102,18 @@ export default function AskAi({ post }: Props) {
                         <ExternalLink aria-hidden="true" className="size-3.5" />
                     </a>
                 ))}
-                <a
-                    href={GEMINI_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => void copy()}
-                    className={link}
-                    title={t(
-                        'Copies the question, then opens Gemini: paste it there.',
-                    )}
-                >
-                    Gemini
-                    <ExternalLink aria-hidden="true" className="size-3.5" />
-                </a>
+            </div>
+
+            {/* 2. Any other assistant: copy the question, then paste it there. */}
+            <p className="mt-4 text-sm text-slate-700 dark:text-slate-300">
+                <span className="mr-1.5 inline-flex size-5 items-center justify-center rounded-full bg-violet-700 text-xs font-bold text-white">
+                    2
+                </span>
+                {t(
+                    'Using Gemini, Copilot, DeepSeek or another assistant? Copy the question and paste it into its chat:',
+                )}
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
                 <button
                     type="button"
                     onClick={() => void copy()}
@@ -117,15 +124,41 @@ export default function AskAi({ post }: Props) {
                     ) : (
                         <Copy aria-hidden="true" className="size-4" />
                     )}
-                    <span aria-live="polite">
-                        {copied ? t('Copied!') : t('Copy the question')}
-                    </span>
+                    {t('Copy the question')}
                 </button>
+                <a
+                    href={GEMINI_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => void copy()}
+                    className={link}
+                >
+                    {t('Copy and open Gemini')}
+                    <ExternalLink aria-hidden="true" className="size-3.5" />
+                </a>
             </div>
+            <p
+                aria-live="polite"
+                className="mt-2 min-h-5 text-sm font-semibold text-violet-800 dark:text-violet-200"
+            >
+                {copied &&
+                    t(
+                        'Copied. Now open your assistant and paste the question into the chat (on a phone: touch and hold, then Paste).',
+                    )}
+            </p>
+
+            <details className="mt-1 text-sm">
+                <summary className="cursor-pointer text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100">
+                    {t('See the question')}
+                </summary>
+                <pre className="mt-2 rounded-lg bg-white p-3 font-sans text-xs leading-relaxed whitespace-pre-wrap text-slate-700 dark:bg-slate-900 dark:text-slate-300">
+                    {question}
+                </pre>
+            </details>
 
             <p className="mt-3 text-xs text-slate-600 dark:text-slate-400">
                 {t(
-                    'The assistant opens in your own account. NK Lens does not see your questions or the answers. For Gemini or any other assistant, the question is copied: paste it there.',
+                    'The assistant opens in your own account. NK Lens does not see your questions or the answers.',
                 )}
             </p>
         </section>
