@@ -34,7 +34,7 @@ class FeedTest extends TestCase
         $this->get(route('posts.show', $post))
             ->assertInertia(fn (Assert $page) => $page
                 ->component('post')
-                ->has('sections', 7)
+                ->has('sections', 9)
                 ->where('sections.0.slug', 'news')
             );
     }
@@ -53,7 +53,7 @@ class FeedTest extends TestCase
                 ->where('posts.0.isPropaganda', false)
                 ->where('posts.0.category.slug', 'news')
                 ->where('posts.0.source.name', $post->source->name)
-                ->has('categories', 7)
+                ->has('categories', 9)
                 ->where('activeCategory', 'news')
             );
     }

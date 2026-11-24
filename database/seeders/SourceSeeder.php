@@ -101,6 +101,23 @@ class SourceSeeder extends Seeder
             'skip_shorts' => true,
         ];
 
+        // HaiHui în doi, the Romanian travel channel that inspired NK Lens. It covers many
+        // countries, so only videos that mention North Korea are imported, as drafts the team
+        // picks from. The channel id was read from the channel page on 2026-11-24.
+        $sources[] = [
+            'name' => 'HaiHui în doi',
+            'slug' => 'haihui-in-doi',
+            'type' => SourceType::TravelVlog,
+            'website_url' => 'https://www.youtube.com/@haihuin2',
+            'feed_url' => 'https://www.youtube.com/feeds/videos.xml?channel_id=UCAE8fRq0xXh6gZ6d2EHYipQ',
+            'keywords' => [
+                'Coreea de Nord', 'Coreei de Nord', 'nord-core', 'Phenian', 'Rason',
+                'North Korea', 'Pyongyang', 'Kim Jong Un', 'Kim Jong-un',
+            ],
+            'needs_review' => true,
+            'skip_shorts' => true,
+        ];
+
         foreach ($sources as $source) {
             Source::updateOrCreate(['slug' => $source['slug']], $source);
         }

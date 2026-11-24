@@ -66,11 +66,11 @@ class PostTest extends TestCase
     {
         $this->seed([CategorySeeder::class, SourceSeeder::class]);
 
-        $this->assertSame(7, Category::count());
+        $this->assertSame(9, Category::count());
         $this->assertTrue(Source::where('slug', 'rodong-sinmun')->first()->type->isPropaganda());
-        // 38 North is seeded inactive, so NK News, Daily NK, KOREA NOW, Rodong Sinmun, the SCMP
-        // and Charles North Korea are fetched.
-        $this->assertSame(6, Source::fetchable()->count());
+        // 38 North is seeded inactive, so NK News, Daily NK, KOREA NOW, Rodong Sinmun, the SCMP,
+        // Charles North Korea and HaiHui în doi are fetched.
+        $this->assertSame(7, Source::fetchable()->count());
 
         $charles = Source::where('slug', 'charles-north-korea')->firstOrFail();
         $this->assertSame('human-rights', $charles->importCategory()->slug);
@@ -78,6 +78,16 @@ class PostTest extends TestCase
         $this->assertTrue($charles->skip_shorts);
         $this->assertNotNull($charles->youtubeChannelId());
         $this->assertSame('rodong', Source::where('slug', 'rodong-sinmun')->value('feed_format'));
+
+        // A travel channel that covers many countries: only its North Korea videos, as drafts.
+        $haihui = Source::where('slug', 'haihui-in-doi')->firstOrFail();
+        $this->assertSame('travel-vlogs', $haihui->importCategory()->slug);
+        $this->assertTrue($haihui->needs_review);
+        $this->assertTrue($haihui->skip_shorts);
+        $this->assertTrue($haihui->wants('O zi în Phenian'));
+        $this->assertTrue($haihui->wants('Am intrat în Coreea de Nord'));
+        $this->assertTrue($haihui->wants('Cum trăiesc nord-coreenii'));
+        $this->assertFalse($haihui->wants('O săptămână în Japonia'));
 
         $koreaNow = Source::where('slug', 'korea-now')->firstOrFail();
         $this->assertSame(Category::KOREA_NOW, $koreaNow->category?->slug);

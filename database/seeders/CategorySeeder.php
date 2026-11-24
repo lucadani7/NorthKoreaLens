@@ -13,6 +13,8 @@ class CategorySeeder extends Seeder
         'analysis',
         'human-rights',
         'curiosities',
+        'travel-vlogs',
+        'documentaries',
         Category::KOREA_NOW,
         Category::PROPAGANDA,
         'discussions',

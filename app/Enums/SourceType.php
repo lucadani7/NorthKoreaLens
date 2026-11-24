@@ -16,6 +16,9 @@ enum SourceType: string
     /** A North Korean escapee telling their own story, e.g. a YouTube channel. */
     case Testimony = 'testimony';
 
+    /** A travel channel that has visited North Korea on an organised tour, e.g. on YouTube. */
+    case TravelVlog = 'travel_vlog';
+
     /** North Korean state media (e.g. Rodong Sinmun, KCNA). Always shown as propaganda. */
     case StateMedia = 'state_media';
 
@@ -31,6 +34,7 @@ enum SourceType: string
             self::Independent => 'news',
             self::Analysis => 'analysis',
             self::Testimony => 'human-rights',
+            self::TravelVlog => 'travel-vlogs',
             self::StateMedia => 'propaganda',
         };
     }

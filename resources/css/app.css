@@ -17,13 +17,8 @@
     --color-nk-green: #15803d;
     --color-nk-green-dark: #166534;
 
-    --font-display: var(--font-space-grotesk), var(--font-sans);
-}
-
-/* Space Grotesk has no Cyrillic, so Russian and Ukrainian headings fell back to its
-   metric-adjusted fallback font and looked cramped. Inter has Cyrillic. */
-:lang(ru),
-:lang(uk) {
+    /* Headings use Inter too: in Space Grotesk, capital I and lower-case l are the same
+       stroke, so names like "Daniel Ionescu" were hard to read. */
     --font-display: var(--font-sans);
 }
 
@@ -160,6 +155,11 @@
 
     body {
         @apply bg-background text-foreground;
+        /* Inter's capital I, lower-case l and 1 look almost alike, which matters for names
+           (Ionuț, Kim Il Sung) and numbers. cv08 gives I serifs, cv05 gives l a tail. */
+        font-feature-settings:
+            'cv05' 1,
+            'cv08' 1;
     }
 
     /* Body text of the pages written in Markdown (About us, editorial policy…). */

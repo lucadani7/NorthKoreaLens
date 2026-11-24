@@ -4,7 +4,7 @@ import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
-import { google } from 'laravel-vite-plugin/fonts';
+import { google, local } from 'laravel-vite-plugin/fonts';
 import { defineConfig, lazyPlugins } from 'vite-plus';
 
 export default defineConfig({
@@ -16,18 +16,18 @@ export default defineConfig({
             // so visitors' browsers never contact a font CDN (GDPR). Google rather than
             // Bunny because it sends only WOFF2 and splits Noto Sans KR into small slices.
             fonts: [
-                // Cyrillic for Russian names and sources in posts (e.g. Пхеньян). Without it
-                // those letters fall back to Noto Sans KR, whose Cyrillic looks too large.
-                // Its files load only on pages that contain Cyrillic.
-                google('Inter', {
-                    weights: [400, 500, 600, 700],
-                    subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
-                    preload: [{ weight: 400 }],
-                }),
-                google('Space Grotesk', {
-                    weights: [700],
-                    subsets: ['latin', 'latin-ext'],
-                    preload: false,
+                // The official Inter from the inter-ui package, not Google's: Google strips the
+                // optional letter forms, and we need cv05/cv08 (see app.css) so that I, l and 1
+                // look different. One variable file with every weight and Cyrillic; it is
+                // larger than Google's slices but cached after the first visit.
+                local('Inter', {
+                    variants: [
+                        {
+                            src: 'node_modules/inter-ui/variable/InterVariable.woff2',
+                            weight: '100 900',
+                            style: 'normal',
+                        },
+                    ],
                 }),
                 // About 100 slices per weight; browsers fetch only the slices whose
                 // characters appear on the page.

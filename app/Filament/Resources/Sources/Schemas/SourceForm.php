@@ -91,6 +91,7 @@ class SourceForm
             SourceType::Independent->value => 'Independent newsroom',
             SourceType::Analysis->value => 'Analysis / think tank',
             SourceType::Testimony->value => 'Escapee testimony (e.g. a YouTube channel)',
+            SourceType::TravelVlog->value => 'Travel vlog (a channel that has visited North Korea)',
             SourceType::StateMedia->value => 'North Korean state media (propaganda)',
         ];
     }

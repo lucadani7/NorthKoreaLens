@@ -6,6 +6,6 @@ return [
         'country' => 'Romania',
         'profession' => 'Selvlært utvikler',
         'roles' => 'Grunnlegger, redaktør',
-        'notes' => 'Ble interessert i Nord-Korea i mars 2026, etter å ha sett reisevloggen til [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea og Ion), en rumensk YouTube-kanal.',
+        'notes' => 'Ble interessert i Nord-Korea i mars 2026, etter å ha sett reisevloggen til [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreia og Ionuț), en rumensk YouTube-kanal.',
     ],
 ];

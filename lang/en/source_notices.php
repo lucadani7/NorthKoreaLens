@@ -7,4 +7,7 @@ return [
     'charles-north-korea' => 'Charles Ryu is a North Korean escapee who lives in the United States. What Charles Ryu and, where applicable, his guests say in the videos are personal accounts and cannot be independently verified.
 
 In 2019, Spanish media and NK News reported that he may have links to Free Joseon, the group accused of breaking into North Korea\'s embassy in Madrid that year. The embassy has since closed, in 2023. We have found no information that he was formally charged or convicted. NK Lens considers him innocent until proven guilty.',
+    'haihui-in-doi' => 'HaiHui în doi is a Romanian YouTube channel about travel. The idea for NK Lens started with it.
+
+In North Korea, tourists do not go around on their own: Andreia and Ionuț travelled through an accredited agency, accompanied by official guides. What you see in the videos is what they were allowed to see.',
 ];

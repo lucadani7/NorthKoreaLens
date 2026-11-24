@@ -6,6 +6,6 @@ return [
         'country' => 'Romênia',
         'profession' => 'Desenvolvedor autodidata',
         'roles' => 'Criador, editor',
-        'notes' => 'Começou a se interessar pela Coreia do Norte em março de 2026, depois de assistir ao vlog de viagem de [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea e Ion), um canal romeno do YouTube.',
+        'notes' => 'Começou a se interessar pela Coreia do Norte em março de 2026, depois de assistir ao vlog de viagem de [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreia e Ionuț), um canal romeno do YouTube.',
     ],
 ];

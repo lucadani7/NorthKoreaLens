@@ -67,7 +67,7 @@ name: string,
 };
 }
 namespace Enums {
-export type SourceType = 'independent' | 'analysis' | 'testimony' | 'state_media';
+export type SourceType = 'independent' | 'analysis' | 'testimony' | 'travel_vlog' | 'state_media';
 }
 }
 declare namespace Illuminate {

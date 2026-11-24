@@ -7,4 +7,7 @@ return [
     'charles-north-korea' => 'Charles Ryu, Amerika Birleşik Devletleri\'nde yaşayan Kuzey Koreli bir sığınmacıdır. Charles Ryu\'nun ve varsa konuklarının videolarda anlattıkları kişisel tanıklıklardır ve bağımsız olarak doğrulanamaz.
 
 2019\'da İspanyol basını ve NK News, Ryu\'nun, o yıl Madrid\'deki Kuzey Kore büyükelçiliğine zorla girmekle suçlanan Free Joseon grubuyla bağlantısı olabileceğini bildirdi. Büyükelçilik o tarihten sonra, 2023\'te kapandı. Resmi olarak suçlandığına veya mahkûm edildiğine dair hiçbir bilgiye ulaşmadık. NK Lens, aksi kanıtlanana kadar onu masum kabul eder.',
+    'haihui-in-doi' => 'HaiHui în doi, seyahat üzerine bir Romen YouTube kanalıdır. NK Lens fikri bu kanaldan doğdu.
+
+Kuzey Kore\'de turistler kendi başlarına dolaşamaz: Andreia ve Ionuț, resmî rehberler eşliğinde yetkili bir acente aracılığıyla seyahat etti. Videolarda gördüğün, görmelerine izin verilenlerdir.',
 ];

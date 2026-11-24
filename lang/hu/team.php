@@ -7,6 +7,6 @@ return [
         'country' => 'Románia',
         'profession' => 'Autodidakta programozó',
         'roles' => 'Alapító, szerkesztő',
-        'notes' => '2026 márciusában kezdett érdeklődni Észak-Korea iránt, miután megnézte a [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreea és Ion) román YouTube-csatorna észak-koreai úti vlogját.',
+        'notes' => '2026 márciusában kezdett érdeklődni Észak-Korea iránt, miután megnézte a [HaiHui în doi](https://www.youtube.com/@haihuin2) (Andreia és Ionuț) román YouTube-csatorna észak-koreai úti vlogját.',
     ],
 ];

@@ -12,6 +12,7 @@ const GROUPS: { type: App.Enums.SourceType; title: string }[] = [
     { type: 'independent', title: 'Independent newsrooms' },
     { type: 'analysis', title: 'Analysis and research' },
     { type: 'testimony', title: 'Escapee testimonies' },
+    { type: 'travel_vlog', title: 'Travel vloggers' },
     { type: 'state_media', title: 'North Korean state media' },
 ];
 

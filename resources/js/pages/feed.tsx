@@ -3,6 +3,8 @@ import PostCard from '@/components/feed/post-card';
 import TopicFilter from '@/components/feed/topic-filter';
 import SectionsLayout from '@/components/sections-layout';
 import { useTranslation } from '@/hooks/use-translation';
+import { cn } from '@/lib/utils';
+import { warningBox } from '@/lib/warning-colors';
 
 type Props = {
     posts: App.Data.PostData[];
@@ -16,16 +18,35 @@ type Props = {
     now: string;
 };
 
+type SectionNote = {
+    /** One string per paragraph. */
+    paragraphs: string[];
+    /** Shown in the warning yellow instead of the plain blue note. */
+    warning?: boolean;
+};
+
 /** A short note at the top of a section, saying what it holds and how often it changes. */
-const SECTION_NOTES: Record<string, string> = {
-    'korea-now':
-        'Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.',
+const SECTION_NOTES: Record<string, SectionNote> = {
+    'korea-now': {
+        paragraphs: [
+            'Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.',
+        ],
+    },
+    'travel-vlogs': {
+        paragraphs: [
+            'Governments generally advise you to avoid travel to North Korea altogether. Some YouTubers have visited the country, and this section collects their videos, but that does not mean you should go too. Remember that tourists see only what they are shown: an official guide accompanies them at all times.',
+            'A small story of our own: in August 2026, the creator of NK Lens searched Booking for hotels in Pyongyang, just for fun. Booking offered only hotels in Seoul.',
+        ],
+        warning: true,
+    },
 };
 
 /** What an empty section says, when it has something more useful to say than the default. */
 const EMPTY_NOTES: Record<string, string> = {
     'korea-now':
         'No videos about North Korea yet. We check the channel every day, and new ones will appear here.',
+    'travel-vlogs': 'No videos here yet.',
+    documentaries: 'No videos here yet.',
 };
 
 const pagerLink =
@@ -66,9 +87,19 @@ export default function Feed({
                     className="flex max-w-2xl min-w-0 flex-1 flex-col gap-4"
                 >
                     {sectionNote && (
-                        <p className="rounded-xl border-l-4 border-nk-blue bg-white px-5 py-4 text-[15px] leading-relaxed text-slate-700 dark:bg-slate-900 dark:text-slate-300">
-                            {t(sectionNote)}
-                        </p>
+                        <div
+                            role={sectionNote.warning ? 'note' : undefined}
+                            className={cn(
+                                'flex flex-col gap-2 rounded-xl px-5 py-4 text-[15px] leading-relaxed',
+                                sectionNote.warning
+                                    ? cn('border-2', warningBox)
+                                    : 'border-l-4 border-nk-blue bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-300',
+                            )}
+                        >
+                            {sectionNote.paragraphs.map((paragraph) => (
+                                <p key={paragraph}>{t(paragraph)}</p>
+                            ))}
+                        </div>
                     )}
 
                     {activeCategory && topics.length > 0 && (
