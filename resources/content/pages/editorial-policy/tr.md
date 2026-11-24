@@ -52,6 +52,11 @@ Bulunduğun ülkeyi yalnızca internet bağlantından öğreniriz; bu bize ülke
 
 NK Lens ekibinin yazdığı gönderiler bizim olarak işaretlenir. Bilgilerimizin nereden geldiğini söyler, bir şey belirsiz ya da doğrulanmamışsa bunu açıkça belirtiriz.
 
+Almanca hakkında: NK Lens'i Almanca okursan şu iki kelimeyi hiçbir yerde bulamazsın:
+
+- **“Führer”**, çünkü Nazi diktatörü Adolf Hitler'i hatırlatıyor. Kim ailesi için onun yerine “Machthaber” (“iktidarı elinde tutanlar”) kelimesini kullanıyoruz; Liderler konusu ise “Staatsführung” (“devlet yönetimi”) adını taşıyor.
+- **“Anschluss”**, çünkü 1938'de Nazi Almanyası'nın Avusturya'yı ilhakını hatırlatıyor. Japonya'nın Kore'yi ilhakı için “Annexion” yazıyoruz.
+
 ## Yapay zekâ
 
 ### Yapay zekâyı nasıl kullanıyoruz
@@ -86,4 +91,4 @@ Kuzey Kore hakkında konuşan bazı insanlar kendilerini ya da ailelerini tehlik
 
 Bir hata yaptığımızda düzeltir ve neyi değiştirdiğimizi söyleriz. Bir hata fark edersen lütfen bize bildir; yakında burada bir iletişim adresi olacak.
 
-_Son güncelleme: 23 Kasım 2026._
+_Son güncelleme: 24 Kasım 2026._

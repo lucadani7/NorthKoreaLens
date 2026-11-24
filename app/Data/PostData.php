@@ -21,11 +21,15 @@ class PostData extends Data
         /** Null when there is no original, or when it may not be linked for this visitor. */
         public ?string $originalUrl,
         public ?string $imageUrl,
+        /** Author and licence of the image, e.g. "Photo: …, CC BY-SA 4.0, via Wikimedia Commons". */
+        public ?string $imageCredit,
         /** ISO 8601 date, e.g. 2026-11-22T14:30:00+00:00 */
         public ?string $publishedAt,
         public bool $isPropaganda,
         /** The team's context ("What the article doesn't say"). */
         public ?string $editorialNote,
+        /** A short verse or quote shown centred above the text, the same in every language. */
+        public ?string $epigraph,
         /** True for team posts with full text, shown on the post page. */
         public bool $hasBody,
         /** True when the original exists but is not linked for this visitor (South Korea). */
@@ -52,9 +56,11 @@ class PostData extends Data
             excerpt: $post->localized('excerpt', $locale),
             originalUrl: $linkAllowed ? $post->original_url : null,
             imageUrl: $region->allows($post->image_url) ? $post->image_url : null,
+            imageCredit: $region->allows($post->image_url) ? $post->image_credit : null,
             publishedAt: $post->published_at?->toIso8601String(),
             isPropaganda: $post->isPropaganda(),
             editorialNote: $post->localized('editorial_note', $locale),
+            epigraph: $post->epigraph,
             hasBody: filled($post->body),
             linkWithheld: ! $linkAllowed,
             youtubeId: $linkAllowed ? YouTube::videoId($post->original_url) : null,

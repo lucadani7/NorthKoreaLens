@@ -29,16 +29,6 @@ return [
         'hu' => 'Magyar',
     ],
 
-    /*
-    | Browser language codes that should get one of the languages above.
-    | Norwegian browsers often send "no" (Norwegian) or "nn" (Nynorsk), and
-    | Bokmål is what most Norwegian readers use.
-    */
-    'aliases' => [
-        'no' => 'nb',
-        'nn' => 'nb',
-    ],
-
     /** Name of the cookie that remembers the visitor's choice. */
     'cookie' => 'locale',
 

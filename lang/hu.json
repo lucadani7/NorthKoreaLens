@@ -220,5 +220,11 @@
     "No videos here yet.": "Itt még nincsenek videók.",
     "Governments generally advise you to avoid travel to North Korea altogether. Some YouTubers have visited the country, and this section collects their videos, but that does not mean you should go too. Remember that tourists see only what they are shown: an official guide accompanies them at all times.": "A kormányok általában minden észak-koreai utazást ellenjavallnak. Néhány youtuber ennek ellenére járt ott, és ebben a rovatban az ő videóikat gyűjtjük össze, ez azonban nem jelenti azt, hogy neked is el kellene menned. Ne feledd: a turisták csak azt látják, amit meg akarnak mutatni nekik, és egy hivatalos idegenvezető végig velük van.",
     "A small story of our own: in August 2026, the creator of NK Lens searched Booking for hotels in Pyongyang, just for fun. Booking offered only hotels in Seoul.": "Egy kis történet: 2026 augusztusában az NK Lens alkotója viccből phenjani szállodákat keresett a Bookingon. Az oldal csak szöuli szállodákat mutatott neki.",
-    "Travel vloggers": "Utazási vloggerek"
+    "Travel vloggers": "Utazási vloggerek",
+    "Ask an AI assistant about this article": "Kérdezz egy MI-asszisztenst erről a cikkről",
+    "Ask an AI assistant about this video": "Kérdezz egy MI-asszisztenst erről a videóról",
+    "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Magyarázd el egy átlagos olvasónak ennek az Észak-Koreáról szóló cikknek a hátterét: ki vagy mi szerepel benne, miért fontos, és mit tudni róla általában. Légy rövid és tárgyszerű, és mondd meg világosan, mi bizonytalan. Ezen a nyelven válaszolj: :language.",
+    "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Magyarázd el egy átlagos nézőnek ennek az Észak-Koreáról szóló videónak a hátterét: ki vagy mi látható benne, miért fontos, és mit tudni róla általában. Légy rövid és tárgyszerű, és mondd meg világosan, mi bizonytalan. Ezen a nyelven válaszolj: :language.",
+    "Title": "Cím",
+    "Photo:": "Fotó:"
 }

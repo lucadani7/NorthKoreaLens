@@ -142,4 +142,65 @@ class TeamPostsTest extends TestCase
 
         unlink($file);
     }
+
+    public function test_imported_posts_can_have_an_epigraph_in_every_language(): void
+    {
+        $file = tempnam(sys_get_temp_dir(), 'posts');
+        file_put_contents($file, json_encode(['posts' => [[
+            'key' => 'wake-up-call',
+            'category' => 'curiosities',
+            'epigraph' => "Frère Kim, frère Kim,\nDormez-vous ?",
+            'en' => ['title' => 'Wake-up call', 'body' => 'English text.'],
+            'ro' => ['title' => 'Trezirea', 'body' => 'Text în română.'],
+        ]]]));
+
+        $this->artisan('posts:import', ['file' => $file])->assertSuccessful();
+
+        $post = Post::where('guid', 'nklens:wake-up-call')->firstOrFail();
+        $post->publish();
+
+        foreach (['en', 'ro'] as $locale) {
+            $this->withCookie('locale', $locale)
+                ->get(route('posts.show', $post))
+                ->assertInertia(fn (Assert $page) => $page->where('post.epigraph', "Frère Kim, frère Kim,\nDormez-vous ?"));
+        }
+
+        unlink($file);
+    }
+
+    public function test_imported_posts_can_have_a_credited_image(): void
+    {
+        $file = tempnam(sys_get_temp_dir(), 'posts');
+        $entry = [
+            'key' => 'juche-tower',
+            'category' => 'curiosities',
+            'image' => ['src' => '/images/curiosities/juche-tower.jpg', 'credit' => 'Photo: A. Person, CC BY-SA 4.0, via Wikimedia Commons'],
+            'en' => ['title' => 'The Juche Tower', 'body' => 'English text.'],
+        ];
+        file_put_contents($file, json_encode(['posts' => [$entry]]));
+
+        $this->artisan('posts:import', ['file' => $file])->assertSuccessful();
+
+        $post = Post::where('guid', 'nklens:juche-tower')->firstOrFail();
+        $post->publish();
+        $this->get(route('posts.show', $post))
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('post.imageUrl', '/images/curiosities/juche-tower.jpg')
+                ->where('post.imageCredit', 'Photo: A. Person, CC BY-SA 4.0, via Wikimedia Commons')
+            );
+
+        // Without an "image" key the image stays; with "image": null it is removed.
+        unset($entry['image']);
+        file_put_contents($file, json_encode(['posts' => [$entry]]));
+        $this->artisan('posts:import', ['file' => $file])->assertSuccessful();
+        $this->assertSame('/images/curiosities/juche-tower.jpg', $post->fresh()?->image_url);
+
+        $entry['image'] = null;
+        file_put_contents($file, json_encode(['posts' => [$entry]]));
+        $this->artisan('posts:import', ['file' => $file])->assertSuccessful();
+        $this->assertNull($post->fresh()?->image_url);
+        $this->assertNull($post->fresh()?->image_credit);
+
+        unlink($file);
+    }
 }

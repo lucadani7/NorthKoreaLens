@@ -220,5 +220,11 @@
     "No videos here yet.": "Тут поки немає відео.",
     "Governments generally advise you to avoid travel to North Korea altogether. Some YouTubers have visited the country, and this section collects their videos, but that does not mean you should go too. Remember that tourists see only what they are shown: an official guide accompanies them at all times.": "Уряди, як правило, не рекомендують жодних поїздок до Північної Кореї. Попри це, деякі ютубери там побували, і в цьому розділі ми збираємо їхні відео, але це не означає, що вам теж варто туди їхати. Пам’ятайте: туристи бачать лише те, що їм хочуть показати, і офіційний гід супроводжує їх усюди.",
     "A small story of our own: in August 2026, the creator of NK Lens searched Booking for hotels in Pyongyang, just for fun. Booking offered only hotels in Seoul.": "Невелика історія: у серпні 2026 року творець NK Lens заради жарту пошукав на Booking готелі в Пхеньяні. Сайт показав йому лише готелі в Сеулі.",
-    "Travel vloggers": "Тревел-блогери"
+    "Travel vloggers": "Тревел-блогери",
+    "Ask an AI assistant about this article": "Запитати ШІ-асистента про цю статтю",
+    "Ask an AI assistant about this video": "Запитати ШІ-асистента про це відео",
+    "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Поясни контекст цієї статті про Північну Корею для звичайного читача: хто або що в ній згадується, чому це важливо і що про це загалом відомо. Пиши коротко й за фактами та чітко позначай, що не встановлено. Відповідай мовою: :language.",
+    "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Поясни контекст цього відео про Північну Корею для звичайного глядача: хто або що в ньому показано, чому це важливо і що про це загалом відомо. Пиши коротко й за фактами та чітко позначай, що не встановлено. Відповідай мовою: :language.",
+    "Title": "Назва",
+    "Photo:": "Фото:"
 }

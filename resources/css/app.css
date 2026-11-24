@@ -155,6 +155,8 @@
 
     body {
         @apply bg-background text-foreground;
+        /* Words are never split into syllables at the end of a line. */
+        hyphens: none;
         /* Inter's capital I, lower-case l and 1 look almost alike, which matters for names
            (Ionuț, Kim Il Sung) and numbers. cv08 gives I serifs, cv05 gives l a tail. */
         font-feature-settings:

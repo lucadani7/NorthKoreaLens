@@ -220,5 +220,11 @@
     "No videos here yet.": "아직 영상이 없습니다.",
     "Governments generally advise you to avoid travel to North Korea altogether. Some YouTubers have visited the country, and this section collects their videos, but that does not mean you should go too. Remember that tourists see only what they are shown: an official guide accompanies them at all times.": "각국 정부는 대체로 북한 여행을 아예 하지 말라고 권고합니다. 그럼에도 북한을 다녀온 유튜버들이 있으며, 이 섹션에서는 그들의 영상을 모아 소개합니다. 하지만 그렇다고 해서 여러분도 가야 한다는 뜻은 아닙니다. 관광객은 보여 주는 것만 볼 수 있으며, 공식 안내원이 늘 동행한다는 점을 기억하세요.",
     "A small story of our own: in August 2026, the creator of NK Lens searched Booking for hotels in Pyongyang, just for fun. Booking offered only hotels in Seoul.": "작은 에피소드 하나: 2026년 8월, NK Lens 제작자가 재미 삼아 Booking에서 평양 호텔을 검색해 보았는데, 서울 호텔만 나왔습니다.",
-    "Travel vloggers": "여행 브이로거"
+    "Travel vloggers": "여행 브이로거",
+    "Ask an AI assistant about this article": "이 글에 대해 AI 어시스턴트에게 묻기",
+    "Ask an AI assistant about this video": "이 영상에 대해 AI 어시스턴트에게 묻기",
+    "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "일반 독자를 위해 이 북한 관련 글의 배경을 설명해 주세요. 누가 또는 무엇이 언급되는지, 왜 중요한지, 일반적으로 알려진 내용은 무엇인지 알려 주세요. 짧고 사실에 근거해 답하고, 불확실한 점은 분명히 밝혀 주세요. :language로 답해 주세요.",
+    "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "일반 독자를 위해 이 북한 관련 영상의 배경을 설명해 주세요. 영상에 누가 또는 무엇이 나오는지, 왜 중요한지, 일반적으로 알려진 내용은 무엇인지 알려 주세요. 짧고 사실에 근거해 답하고, 불확실한 점은 분명히 밝혀 주세요. :language로 답해 주세요.",
+    "Title": "제목",
+    "Photo:": "사진:"
 }

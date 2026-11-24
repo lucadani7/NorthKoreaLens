@@ -52,6 +52,11 @@ Din 30 decembrie 2025, ediția tipărită a Rodong Sinmun poate fi citită în C
 
 Postările scrise de echipa NK Lens sunt marcate ca fiind ale noastre. Spunem de unde vin informațiile și, când ceva e nesigur sau neconfirmat, o spunem deschis.
 
+Despre versiunea în germană: dacă citești NK Lens în germană, nu vei găsi nicăieri două cuvinte:
+
+- **„Führer”**, pentru că amintește de Adolf Hitler, dictatorul nazist. Pentru familia Kim folosim în schimb „Machthaber” („cei care dețin puterea”), iar tema Lideri se numește „Staatsführung” („conducerea statului”).
+- **„Anschluss”**, pentru că amintește de anexarea Austriei de către Germania nazistă, în 1938. Pentru anexarea Coreei de către Japonia scriem „Annexion”.
+
 ## Inteligența artificială
 
 ### Cum folosim noi AI-ul
@@ -86,4 +91,4 @@ Unii dintre cei care vorbesc despre Coreea de Nord se pun pe ei sau pe familiile
 
 Când greșim, corectăm și spunem ce am schimbat. Dacă observi o greșeală, te rugăm să ne spui; o adresă de contact va apărea aici în curând.
 
-_Ultima actualizare: 23 noiembrie 2026._
+_Ultima actualizare: 24 noiembrie 2026._

@@ -20,55 +20,31 @@ class LocaleTest extends TestCase
         $this->seed(CategorySeeder::class);
     }
 
-    public function test_english_is_the_default(): void
+    /** The tests run in English (phpunit.xml), so this checks the shipped default instead. */
+    public function test_romanian_is_the_default_language(): void
     {
-        $this->get(route('home'))
-            ->assertInertia(fn (Assert $page) => $page
-                ->where('locale', 'en')
-                ->has('locales', count(config('locales.supported')))
-                ->where('locales.0', ['code' => 'en', 'name' => 'English'])
-            );
+        $this->assertStringContainsString('APP_LOCALE=ro', file_get_contents(base_path('.env.example')));
+        $this->assertStringContainsString("env('APP_LOCALE', 'ro')", file_get_contents(config_path('app.php')));
     }
 
-    public function test_the_browser_language_is_used_when_supported(): void
+    public function test_new_visitors_get_the_default_language_whatever_their_browser(): void
     {
-        $this->withHeader('Accept-Language', 'ro-RO,ro;q=0.9,en;q=0.8')
-            ->get(route('home'))
-            ->assertInertia(fn (Assert $page) => $page
-                ->where('locale', 'ro')
-                ->where('translations.Sections', 'Rubrici')
-            );
-    }
+        config(['app.locale' => 'ro']);
 
-    public function test_norwegian_browsers_get_bokmal(): void
-    {
-        foreach (['nb-NO,nb;q=0.9', 'no,en;q=0.8', 'nn-NO,nn;q=0.9,en;q=0.5'] as $header) {
+        foreach (['en-US,en;q=0.9', 'de-DE,de;q=0.9', 'ja-JP,ja;q=0.9'] as $header) {
             $this->withHeader('Accept-Language', $header)
                 ->get(route('home'))
                 ->assertInertia(fn (Assert $page) => $page
-                    ->where('locale', 'nb')
-                    ->where('translations.Sections', 'Seksjoner')
+                    ->where('locale', 'ro')
+                    ->where('translations.Sections', 'Rubrici')
+                    ->has('locales', count(config('locales.supported')))
                 );
         }
     }
 
-    public function test_the_first_supported_browser_language_wins(): void
+    public function test_the_saved_choice_wins_over_the_default(): void
     {
-        $this->withHeader('Accept-Language', 'ja-JP,ja;q=0.9,de;q=0.8,en;q=0.7')
-            ->get(route('home'))
-            ->assertInertia(fn (Assert $page) => $page->where('locale', 'de'));
-    }
-
-    public function test_an_unsupported_browser_language_falls_back_to_english(): void
-    {
-        $this->withHeader('Accept-Language', 'ja-JP,ja;q=0.9')
-            ->get(route('home'))
-            ->assertInertia(fn (Assert $page) => $page->where('locale', 'en'));
-    }
-
-    public function test_the_saved_choice_wins_over_the_browser_language(): void
-    {
-        $this->withHeader('Accept-Language', 'ro-RO')
+        $this->withHeader('Accept-Language', 'en-US')
             ->withCookie('locale', 'ko')
             ->get(route('home'))
             ->assertInertia(fn (Assert $page) => $page

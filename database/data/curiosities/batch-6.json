@@ -87,6 +87,10 @@
             "key": "unpaid-volvos",
             "category": "curiosities",
             "topics": ["history", "daily-life"],
+            "image": {
+                "src": "/images/curiosities/unpaid-volvos.jpg",
+                "credit": "Two hundred percent, CC BY-SA 3.0, via Wikimedia Commons"
+            },
             "en": {
                 "title": "North Korea still hasn't paid for 1,000 Volvos it bought in 1974",
                 "excerpt": "Sweden sends a reminder twice a year. Some of the cars still run as taxis.",
@@ -273,9 +277,9 @@
             },
             "de": {
                 "title": "Honecker und Kim Il Sung: drei Besuche und ein Vertrag",
-                "excerpt": "Der DDR-Staatschef und der nordkoreanische Führer trafen sich 1977, 1984 und 1986. Später bot Pjöngjang Honecker sogar Asyl an.",
+                "excerpt": "Der DDR-Staatschef und der nordkoreanische Machthaber trafen sich 1977, 1984 und 1986. Später bot Pjöngjang Honecker sogar Asyl an.",
                 "body": "Erich Honecker und Kim Il Sung trafen sich dreimal als Staatschefs. Im Dezember 1977 reiste Honecker zu einem offiziellen Besuch nach Pjöngjang, dem ersten eines DDR-Spitzenpolitikers seit Kims eigener Reise in die DDR 1956. Die beiden sprachen vor 20.000 Menschen auf einer Freundschaftskundgebung, und Honecker schlug einen Freundschaftsvertrag vor, dem Kim zustimmte.\n\nDer Vertrag wurde am 1. Juni 1984 in Ost-Berlin unterzeichnet, während Kim Il Sungs Besuch in der DDR vom 29. Mai bis 4. Juni, Teil einer langen Reise durch die Sowjetunion und Osteuropa. Im Oktober 1986 kam Honecker erneut nach Pjöngjang. Kim sagte ihm, sie seien seit 1977 beide älter geworden, und Honecker antwortete, ihre Idee sei noch lebendig. Die Gesprächsprotokolle sind in deutschen Archiven erhalten.\n\nDie Freundschaft überlebte die DDR. 1991, nach der Wiedervereinigung, bot Nordkorea Honecker Asyl an. Er flüchtete stattdessen in die chilenische Botschaft in Moskau, von wo er 1992 nach Deutschland zurückgebracht wurde, um vor Gericht gestellt zu werden.",
-                "editorial_note": "Hinweis zur Sprache: Wenn wir die Kims hier „Führer“ nennen, meinen wir einfach die Machthaber Nordkoreas. Das Wort ist korrekt, aber viele denken dabei an Adolf Hitler; mit ihm hat diese Bezeichnung nichts zu tun.\n\nQuellen:\n- Wilson Center Digital Archive, “Report on the Official Friendship Visit to the DPRK by the Party and State Delegation of the GDR, led by Comrade Erich Honecker” (13 December 1977): https://digitalarchive.wilsoncenter.org/document/88747\n- Wilson Center Digital Archive, “Memorandum of Conversation between Erich Honecker and Kim Il Sung” (1 June 1984): https://digitalarchive.wilsoncenter.org/document/113199\n- Wilson Center Digital Archive, “Transcript of Official Negotiations between Comrade Erich Honecker and Comrade Kim Il Sung” (19 October 1986): https://digitalarchive.wilsoncenter.org/document/110143\n- Wikipedia, “Germany–North Korea relations” (on the 1991 asylum offer): https://en.wikipedia.org/wiki/Germany%E2%80%93North_Korea_relations"
+                "editorial_note": "Quellen:\n- Wilson Center Digital Archive, “Report on the Official Friendship Visit to the DPRK by the Party and State Delegation of the GDR, led by Comrade Erich Honecker” (13 December 1977): https://digitalarchive.wilsoncenter.org/document/88747\n- Wilson Center Digital Archive, “Memorandum of Conversation between Erich Honecker and Kim Il Sung” (1 June 1984): https://digitalarchive.wilsoncenter.org/document/113199\n- Wilson Center Digital Archive, “Transcript of Official Negotiations between Comrade Erich Honecker and Comrade Kim Il Sung” (19 October 1986): https://digitalarchive.wilsoncenter.org/document/110143\n- Wikipedia, “Germany–North Korea relations” (on the 1991 asylum offer): https://en.wikipedia.org/wiki/Germany%E2%80%93North_Korea_relations"
             },
             "fr": {
                 "title": "Honecker et Kim Il Sung : trois visites et un traité",

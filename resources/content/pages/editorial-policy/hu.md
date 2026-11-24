@@ -52,6 +52,11 @@ Az országodat csak az internetkapcsolatodból ismerjük: ez az országot mondja
 
 Az NK Lens csapata által írt bejegyzéseket a sajátunkként jelöljük. Megmondjuk, honnan származik az információ, és ha valami bizonytalan vagy nincs megerősítve, ezt egyenesen kimondjuk.
 
+A német változatról: ha németül olvasod az NK Lenst, két szót sehol sem találsz:
+
+- **„Führer”**, mert Adolf Hitlerre, a náci diktátorra emlékeztet. A Kimekre helyette a „Machthaber” („akiknél a hatalom van”) szót használjuk, az Államvezetés téma pedig németül „Staatsführung” („államvezetés”).
+- **„Anschluss”**, mert Ausztria 1938-as bekebelezésére emlékeztet a náci Németország által. Korea japán annektálására az „Annexion” szót használjuk.
+
 ## Mesterséges intelligencia
 
 ### Hogyan használjuk az MI-t
@@ -86,4 +91,4 @@ Az Észak-Koreáról beszélők közül néhányan önmagukat vagy a családjuka
 
 Ha hibázunk, kijavítjuk, és megírjuk, mit változtattunk. Ha hibát veszel észre, kérjük, szólj nekünk; az elérhetőségünk hamarosan itt lesz.
 
-_Utolsó frissítés: 2026. november 23._
+_Utolsó frissítés: 2026. november 24._

@@ -56,9 +56,20 @@ class UserLocaleTest extends TestCase
         $user = User::factory()->create(['locale' => null]);
 
         $this->actingAs($user)
-            ->withHeader('Accept-Language', 'fr-FR')
+            ->withCookie('locale', 'fr')
             ->get(route('home'))
             ->assertInertia(fn (Assert $page) => $page->where('locale', 'fr'));
+    }
+
+    public function test_users_without_any_choice_get_the_default_language_not_the_browser_one(): void
+    {
+        config(['app.locale' => 'ro']);
+        $user = User::factory()->create(['locale' => null]);
+
+        $this->actingAs($user)
+            ->withHeader('Accept-Language', 'fr-FR')
+            ->get(route('home'))
+            ->assertInertia(fn (Assert $page) => $page->where('locale', 'ro'));
     }
 
     public function test_picking_a_language_while_signed_in_saves_it_in_the_account(): void

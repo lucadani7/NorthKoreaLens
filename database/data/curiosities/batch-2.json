@@ -87,6 +87,10 @@
             "key": "ryugyong-hotel",
             "category": "curiosities",
             "topics": ["places"],
+            "image": {
+                "src": "/images/curiosities/ryugyong-hotel.jpg",
+                "credit": "Joseph Ferris III, CC BY 2.0, via Wikimedia Commons"
+            },
             "en": {
                 "title": "North Korea's tallest building is a hotel that has never had a guest",
                 "excerpt": "The 105-floor Ryugyong Hotel has dominated Pyongyang's skyline since 1992, still unfinished.",
@@ -607,8 +611,8 @@
             "de": {
                 "title": "Die Reise nach Pjöngjang 1971, die Rumänien veränderte",
                 "excerpt": "Nach seiner Tour durch China und Nordkorea lenkte Ceaușescu Rumänien in Richtung Personenkult.",
-                "body": "Im Juni 1971 bereiste Nicolae Ceaușescu China, Nordkorea, die Mongolei und Nordvietnam. In Peking und Pjöngjang empfingen ihn riesige, perfekt choreografierte Menschenmengen, und er sah Massenvorführungen, die einen einzigen Führer feierten.\n\nAm 25. Juni berichtete er der Parteiführung in Bukarest von seinen Eindrücken. Am 6. Juli hielt er die Rede, die heute als Juli-Thesen bekannt ist, und forderte mehr politische Erziehung und Parteikontrolle über die Kultur. Damit endete die relative kulturelle Freiheit, die Rumänien in den 1960er-Jahren genossen hatte.\n\nHistoriker streiten noch darüber, wie viel die Reise selbst zum Kurswechsel beitrug, verweisen aber auf die auffällige Ähnlichkeit zwischen dem, was in Rumänien folgte, und den asiatischen Vorbildern, die Ceaușescu gerade bewundert hatte. Sein eigener Personenkult wuchs von da an.",
-                "editorial_note": "Hinweis zur Sprache: Wenn wir die Kims hier „Führer“ nennen, meinen wir einfach die Machthaber Nordkoreas. Das Wort ist korrekt, aber viele denken dabei an Adolf Hitler; mit ihm hat diese Bezeichnung nichts zu tun.\n\nQuellen:\n- Wilson Center Digital Archive, “Minutes of the Romanian Politburo Meeting Concerning Nicolae Ceauşescu's Visit to China, North Korea, Mongolia, and Vietnam”, 25 June 1971: https://digitalarchive.wilsoncenter.org/document/112058\n- Cambridge University Press, The Historical Journal, “The end of liberalization in communist Romania”: https://doi.org/10.1017/S0018246X13000228"
+                "body": "Im Juni 1971 bereiste Nicolae Ceaușescu China, Nordkorea, die Mongolei und Nordvietnam. In Peking und Pjöngjang empfingen ihn riesige, perfekt choreografierte Menschenmengen, und er sah Massenvorführungen, die einen einzigen Machthaber feierten.\n\nAm 25. Juni berichtete er der Parteiführung in Bukarest von seinen Eindrücken. Am 6. Juli hielt er die Rede, die heute als Juli-Thesen bekannt ist, und forderte mehr politische Erziehung und Parteikontrolle über die Kultur. Damit endete die relative kulturelle Freiheit, die Rumänien in den 1960er-Jahren genossen hatte.\n\nHistoriker streiten noch darüber, wie viel die Reise selbst zum Kurswechsel beitrug, verweisen aber auf die auffällige Ähnlichkeit zwischen dem, was in Rumänien folgte, und den asiatischen Vorbildern, die Ceaușescu gerade bewundert hatte. Sein eigener Personenkult wuchs von da an.",
+                "editorial_note": "Quellen:\n- Wilson Center Digital Archive, “Minutes of the Romanian Politburo Meeting Concerning Nicolae Ceauşescu's Visit to China, North Korea, Mongolia, and Vietnam”, 25 June 1971: https://digitalarchive.wilsoncenter.org/document/112058\n- Cambridge University Press, The Historical Journal, “The end of liberalization in communist Romania”: https://doi.org/10.1017/S0018246X13000228"
             },
             "fr": {
                 "title": "Le voyage de 1971 à Pyongyang qui a changé la Roumanie",

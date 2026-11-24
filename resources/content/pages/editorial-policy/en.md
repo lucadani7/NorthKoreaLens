@@ -52,6 +52,11 @@ Since 30 December 2025 the printed Rodong Sinmun can be read in South Korea with
 
 Posts written by the NK Lens team are marked as ours. We say where our information comes from and, when something is uncertain or unconfirmed, we say so plainly.
 
+A note on German: if you read NK Lens in German, there are two words you will not find anywhere:
+
+- **“Führer”**, because it calls to mind Adolf Hitler, the Nazi dictator. For the Kims we use “Machthaber” (“those who hold power”) instead, and the Leaders topic is called “Staatsführung” (“state leadership”).
+- **“Anschluss”**, because it recalls the annexation of Austria by Nazi Germany in 1938. For Japan's annexation of Korea we write “Annexion”.
+
 ## Artificial intelligence
 
 ### How we use AI
@@ -86,4 +91,4 @@ Some of the people who speak about North Korea put themselves or their families 
 
 When we get something wrong, we correct it and say what we changed. If you spot a mistake, please tell us; a contact address will appear here soon.
 
-_Last updated: 23 November 2026._
+_Last updated: 24 November 2026._

@@ -23,9 +23,11 @@ use Illuminate\Support\Carbon;
  * @property string|null $excerpt
  * @property string|null $body
  * @property string|null $editorial_note
+ * @property string|null $epigraph A short verse or quote shown above the text, in every language
  * @property string|null $original_url
  * @property string|null $guid
  * @property string|null $image_url
+ * @property string|null $image_credit Author and licence of the image, shown under it
  * @property string $language
  * @property Carbon|null $published_at
  * @property Carbon|null $source_published_at When the source published it; drafts keep it until published
@@ -53,9 +55,11 @@ class Post extends Model
         'excerpt',
         'body',
         'editorial_note',
+        'epigraph',
         'original_url',
         'guid',
         'image_url',
+        'image_credit',
         'language',
         'published_at',
         'source_published_at',
@@ -138,7 +142,11 @@ class Post extends Model
     {
         $query->whereNotNull('published_at')
             ->where('published_at', '<=', now())
-            ->latest('published_at');
+            ->latest('published_at')
+            // Posts often share a publication time (a batch published at once, a feed that
+            // rounds to the minute). Without a tiebreaker their order is not stable, so the
+            // same post could show up on two pages.
+            ->latest('id');
     }
 
     /**

@@ -1,3 +1,4 @@
+import KeepHyphenated from '@/components/keep-hyphenated';
 import { Link } from '@inertiajs/react';
 import { ExternalLink, Sparkles } from 'lucide-react';
 import EditorialNote from '@/components/feed/editorial-note';
@@ -85,12 +86,12 @@ export default function PostCard({ post, now }: Props) {
                         href={show(post.id)}
                         className="hover:text-nk-blue hover:underline dark:hover:text-sky-300"
                     >
-                        {post.title}
+                        <KeepHyphenated text={post.title} />
                     </Link>
                 </h2>
                 {post.excerpt && (
                     <p className="mt-2 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
-                        {post.excerpt}
+                        <KeepHyphenated text={post.excerpt} />
                     </p>
                 )}
                 {post.source?.notice && (
@@ -113,13 +114,20 @@ export default function PostCard({ post, now }: Props) {
                 />
             ) : (
                 post.imageUrl && (
-                    <img
-                        src={post.imageUrl}
-                        alt=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                        className="aspect-video w-full bg-slate-200 object-cover dark:bg-slate-800"
-                    />
+                    <figure>
+                        <img
+                            src={post.imageUrl}
+                            alt=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                            className="aspect-video w-full bg-slate-200 object-cover dark:bg-slate-800"
+                        />
+                        {post.imageCredit && (
+                            <figcaption className="px-5 pt-1.5 text-xs text-slate-600 dark:text-slate-400">
+                                {t('Photo:')} {post.imageCredit}
+                            </figcaption>
+                        )}
+                    </figure>
                 )
             )}
 

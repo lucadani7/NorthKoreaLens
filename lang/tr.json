@@ -220,5 +220,11 @@
     "No videos here yet.": "Burada henüz video yok.",
     "Governments generally advise you to avoid travel to North Korea altogether. Some YouTubers have visited the country, and this section collects their videos, but that does not mean you should go too. Remember that tourists see only what they are shown: an official guide accompanies them at all times.": "Hükümetler genellikle Kuzey Kore'ye hiç seyahat edilmemesini tavsiye eder. Yine de oraya giden YouTuber'lar oldu; bu bölümde onların videolarını topluyoruz, ama bu senin de gitmen gerektiği anlamına gelmiyor. Unutma: turistler yalnızca onlara gösterilmek isteneni görür ve resmî bir rehber her an yanlarındadır.",
     "A small story of our own: in August 2026, the creator of NK Lens searched Booking for hotels in Pyongyang, just for fun. Booking offered only hotels in Seoul.": "Küçük bir anekdot: Ağustos 2026'da NK Lens'in kurucusu şakasına Booking'de Pyongyang'daki otellere baktı. Site ona yalnızca Seul'deki otelleri gösterdi.",
-    "Travel vloggers": "Seyahat vlogger'ları"
+    "Travel vloggers": "Seyahat vlogger'ları",
+    "Ask an AI assistant about this article": "Bu yazı hakkında bir yapay zekâ asistanına sor",
+    "Ask an AI assistant about this video": "Bu video hakkında bir yapay zekâ asistanına sor",
+    "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Bu Kuzey Kore yazısının arka planını genel bir okur için açıkla: kim ya da ne anılıyor, neden önemli ve konu hakkında genel olarak neler biliniyor. Kısa ve olgulara dayalı yanıt ver, belirsiz olanı açıkça belirt. :language dilinde yanıt ver.",
+    "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Bu Kuzey Kore videosunun arka planını genel bir izleyici için açıkla: videoda kim ya da ne görünüyor, neden önemli ve konu hakkında genel olarak neler biliniyor. Kısa ve olgulara dayalı yanıt ver, belirsiz olanı açıkça belirt. :language dilinde yanıt ver.",
+    "Title": "Başlık",
+    "Photo:": "Fotoğraf:"
 }

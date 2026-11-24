@@ -4,6 +4,10 @@
             "key": "pyongyang-metro",
             "category": "curiosities",
             "topics": ["places", "daily-life", "gdr"],
+            "image": {
+                "src": "/images/curiosities/pyongyang-metro.jpg",
+                "credit": "Kristoferb, CC BY-SA 3.0, via Wikimedia Commons"
+            },
             "en": {
                 "title": "Pyongyang's metro runs on old Berlin trains",
                 "excerpt": "Since the late 1990s, the carriages come from the Berlin U-Bahn, some still with German graffiti on the windows.",
@@ -336,6 +340,10 @@
             "key": "uss-pueblo",
             "category": "curiosities",
             "topics": ["history", "places"],
+            "image": {
+                "src": "/images/curiosities/uss-pueblo.jpg",
+                "credit": "U.S. Navy (1967), Public Domain Mark 1.0, via Wikimedia Commons"
+            },
             "en": {
                 "title": "A US Navy ship is still “in service”, moored in Pyongyang",
                 "excerpt": "The spy ship USS Pueblo was captured in 1968 and is now a museum in North Korea's capital.",

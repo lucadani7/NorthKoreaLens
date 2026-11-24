@@ -32,18 +32,36 @@ export default function AskAi({ post }: Props) {
     const language =
         locales.find((item) => item.code === locale)?.name ?? 'English';
 
+    // What the post is, so the box and the question name it right: a curiosity is an
+    // article, not a news story, and a YouTube post is a video.
+    const kind = post.isPropaganda
+        ? 'propaganda'
+        : post.youtubeId || /youtu\.?be/.test(post.originalUrl ?? '')
+          ? 'video'
+          : post.source && post.category.slug === 'news'
+            ? 'news'
+            : 'article';
+
+    const instruction = {
+        propaganda:
+            'This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.',
+        news: 'Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.',
+        article:
+            'Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.',
+        video: 'Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.',
+    }[kind];
+
+    const heading = {
+        propaganda: 'Ask an AI assistant about this story',
+        news: 'Ask an AI assistant about this story',
+        article: 'Ask an AI assistant about this article',
+        video: 'Ask an AI assistant about this video',
+    }[kind];
+
     const lines = [
-        post.isPropaganda
-            ? t(
-                  'This headline comes from North Korean state media. Explain what message the regime wants to send with it, which propaganda techniques it uses, and what independent sources generally report about the subject. Do not treat its claims as facts. Answer in :language.',
-                  { language },
-              )
-            : t(
-                  'Explain the background of this news story about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.',
-                  { language },
-              ),
+        t(instruction, { language }),
         '',
-        `${t('Headline')}: ${post.title}`,
+        `${kind === 'propaganda' || kind === 'news' ? t('Headline') : t('Title')}: ${post.title}`,
         `${t('Source')}: ${post.source?.name ?? 'NK Lens'}`,
         post.publishedAt
             ? `${t('Date')}: ${post.publishedAt.slice(0, 10)}`
@@ -72,12 +90,12 @@ export default function AskAi({ post }: Props) {
     return (
         <section
             id="ask-ai"
-            aria-label={t('Ask an AI assistant about this story')}
+            aria-label={t(heading)}
             className="rounded-xl border border-violet-200 bg-violet-50 p-4 dark:border-violet-900 dark:bg-violet-950/40"
         >
             <h2 className="flex items-center gap-2 text-sm font-bold text-violet-900 dark:text-violet-200">
                 <Sparkles aria-hidden="true" className="size-4" />
-                {t('Ask an AI assistant about this story')}
+                {t(heading)}
             </h2>
 
             {/* 1. Assistants that open with the question already typed in. */}

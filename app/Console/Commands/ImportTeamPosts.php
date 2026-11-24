@@ -14,6 +14,7 @@ use JsonException;
  * New posts are drafts; running it again updates their text but never publishes or unpublishes.
  *
  * {"posts": [{"key": "seoul-first-capital", "category": "curiosities", "topics": ["history"], "original_url": null,
+ *   "image": {"src": "/images/curiosities/seoul.jpg", "credit": "Photo: …, CC BY-SA 4.0, via Wikimedia Commons"},
  *   "en": {"title": "…", "excerpt": "…", "body": "…", "editorial_note": "Sources: …"},
  *   "ro": {"title": "…", …}, …}]}
  */
@@ -67,10 +68,22 @@ class ImportTeamPosts extends Command
                     'excerpt' => $english['excerpt'] ?? null,
                     'body' => $english['body'] ?? null,
                     'editorial_note' => $english['editorial_note'] ?? null,
+                    // A verse or quote shown above the text, the same in every language.
+                    'epigraph' => $entry['epigraph'] ?? null,
                     'language' => 'en',
                     // A YouTube link here is played on the post page.
                     'original_url' => $entry['original_url'] ?? null,
-                ])->save();
+                ]);
+
+                // Only freely licensed photos, stored under public/images and credited under them.
+                // An entry without "image" leaves the post's image as it is; "image": null removes it.
+                if (array_key_exists('image', $entry)) {
+                    $image = is_array($entry['image']) ? $entry['image'] : [];
+                    $post->image_url = is_string($image['src'] ?? null) ? $image['src'] : null;
+                    $post->image_credit = is_string($image['credit'] ?? null) ? $image['credit'] : null;
+                }
+
+                $post->save();
 
                 $topics = Topic::whereIn('slug', (array) ($entry['topics'] ?? []))->pluck('id');
                 $post->topics()->sync($topics);

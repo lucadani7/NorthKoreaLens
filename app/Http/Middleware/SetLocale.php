@@ -9,7 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Picks the interface language: the signed-in user's language first, then the visitor's
- * saved choice, then their browser's preferred languages, then the app default.
+ * saved choice, then the app default (Romanian). The browser's language is ignored on
+ * purpose: many readers keep their browser in English and would never notice that
+ * NK Lens speaks other languages.
  */
 class SetLocale
 {
@@ -37,19 +39,6 @@ class SetLocale
 
         if (is_string($saved) && in_array($saved, $supported, true)) {
             return $saved;
-        }
-
-        /** @var array<string, string> $aliases */
-        $aliases = config('locales.aliases', []);
-
-        // The browser's languages, most preferred first: "ro-RO" counts as "ro", "no" as "nb".
-        foreach ($request->getLanguages() as $language) {
-            $code = strtolower(explode('_', str_replace('-', '_', $language))[0]);
-            $code = $aliases[$code] ?? $code;
-
-            if (in_array($code, $supported, true)) {
-                return $code;
-            }
         }
 
         return config('app.locale');

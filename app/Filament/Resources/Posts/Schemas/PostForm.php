@@ -99,10 +99,20 @@ class PostForm
                         ->label('Original article')
                         ->url()
                         ->maxLength(2048),
+                    // Not ->url(): team posts use our own copies, e.g. /images/curiosities/juche-tower.jpg.
                     TextInput::make('image_url')
                         ->label('Image')
-                        ->url()
+                        ->helperText('A full URL, or a path under public/ such as /images/curiosities/….jpg.')
                         ->maxLength(2048),
+                    TextInput::make('image_credit')
+                        ->label('Image credit')
+                        ->helperText('Author and licence, e.g. "Photo: …, CC BY-SA 4.0, via Wikimedia Commons".')
+                        ->maxLength(500),
+                    Textarea::make('epigraph')
+                        ->label('Epigraph')
+                        ->helperText('Optional verse or quote, shown centred in bold italics above the text. One line per row; the same in every language.')
+                        ->rows(5)
+                        ->columnSpanFull(),
                 ]),
         ]);
     }

@@ -1,3 +1,4 @@
+import KeepHyphenated from '@/components/keep-hyphenated';
 import { Head, Link } from '@inertiajs/react';
 import { ExternalLink } from 'lucide-react';
 import AskAi from '@/components/ask-ai';
@@ -95,7 +96,7 @@ export default function Post({ post, body, now, related }: Props) {
                             lang={post.contentLocale}
                             className="font-display text-3xl leading-tight font-bold sm:text-4xl"
                         >
-                            {post.title}
+                            <KeepHyphenated text={post.title} />
                         </h1>
 
                         {post.youtubeId ? (
@@ -108,12 +109,20 @@ export default function Post({ post, body, now, related }: Props) {
                             </div>
                         ) : (
                             post.imageUrl && (
-                                <img
-                                    src={post.imageUrl}
-                                    alt=""
-                                    referrerPolicy="no-referrer"
-                                    className="aspect-video w-full rounded-lg bg-slate-200 object-cover dark:bg-slate-800"
-                                />
+                                <figure className="flex flex-col gap-1.5">
+                                    <img
+                                        src={post.imageUrl}
+                                        alt=""
+                                        referrerPolicy="no-referrer"
+                                        className="aspect-video w-full rounded-lg bg-slate-200 object-cover dark:bg-slate-800"
+                                    />
+                                    {/* Free licences (e.g. CC BY-SA) require the author and licence next to the photo. */}
+                                    {post.imageCredit && (
+                                        <figcaption className="text-xs text-slate-600 dark:text-slate-400">
+                                            {t('Photo:')} {post.imageCredit}
+                                        </figcaption>
+                                    )}
+                                </figure>
                             )
                         )}
 
@@ -122,19 +131,24 @@ export default function Post({ post, body, now, related }: Props) {
                                 lang={post.contentLocale}
                                 className="flex flex-col gap-4 text-[17px] leading-relaxed text-slate-800 dark:text-slate-200"
                             >
+                                {post.epigraph && (
+                                    <p className="py-2 text-center font-bold whitespace-pre-line italic">
+                                        {post.epigraph}
+                                    </p>
+                                )}
                                 {paragraphs.map((paragraph, index) => (
                                     <p
                                         key={index}
                                         className="whitespace-pre-line"
                                     >
-                                        {paragraph}
+                                        <KeepHyphenated text={paragraph} />
                                     </p>
                                 ))}
                             </div>
                         ) : (
                             post.excerpt && (
                                 <p className="text-[17px] leading-relaxed text-slate-800 dark:text-slate-200">
-                                    {post.excerpt}
+                                    <KeepHyphenated text={post.excerpt} />
                                 </p>
                             )
                         )}

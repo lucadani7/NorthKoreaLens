@@ -142,4 +142,21 @@ class FeedTest extends TestCase
             ->get(route('home'))
             ->assertInertia(fn (Assert $page) => $page->where('categories.0.name', 'Știri'));
     }
+
+    public function test_posts_published_at_the_same_time_never_appear_on_two_pages(): void
+    {
+        Post::factory()->count(FeedController::PER_PAGE + 5)
+            ->for($this->category('news'))
+            ->create(['published_at' => now()->subHour()->startOfMinute()]);
+
+        $ids = fn (int $page) => collect($this->get(route('home', ['page' => $page]))
+            ->viewData('page')['props']['posts'])->pluck('id');
+
+        $first = $ids(1);
+        $second = $ids(2);
+
+        $this->assertCount(FeedController::PER_PAGE, $first);
+        $this->assertCount(5, $second);
+        $this->assertEmpty($first->intersect($second));
+    }
 }

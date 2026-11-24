@@ -52,7 +52,10 @@ Seit dem 30. Dezember 2025 kann die gedruckte Rodong Sinmun in Südkorea ohne be
 
 Beiträge des NK-Lens-Teams sind als unsere gekennzeichnet. Wir sagen, woher unsere Informationen stammen, und wenn etwas unsicher oder unbestätigt ist, sagen wir das klar.
 
-Ein Wort zur Sprache: Für die Kims verwenden wir manchmal das Wort „Führer“. Es ist korrekt, aber viele denken dabei an Adolf Hitler. Mit ihm hat es in unseren Texten nichts zu tun; gemeint ist nur die Staatsführung Nordkoreas. Deshalb heißt das entsprechende Thema bei uns „Staatsführung“.
+Ein Wort zur Sprache: Zwei Wörter kommen auf NK Lens nirgends vor:
+
+- **„Führer“**, weil es an Adolf Hitler erinnert, den nationalsozialistischen Diktator. Für die Kims schreiben wir stattdessen „Machthaber“, und das Thema zu Nordkoreas Spitze heißt bei uns „Staatsführung“.
+- **„Anschluss“**, weil es an die Angliederung Österreichs an das nationalsozialistische Deutschland 1938 erinnert. Für Japans Übernahme Koreas schreiben wir „Annexion“.
 
 ## Künstliche Intelligenz
 
@@ -88,4 +91,4 @@ Manche Menschen, die über Nordkorea sprechen, bringen sich selbst oder ihre Fam
 
 Wenn wir einen Fehler machen, korrigieren wir ihn und sagen, was wir geändert haben. Wenn dir ein Fehler auffällt, sag es uns bitte; eine Kontaktadresse erscheint hier bald.
 
-_Zuletzt aktualisiert: 23. November 2026._
+_Zuletzt aktualisiert: 24. November 2026._

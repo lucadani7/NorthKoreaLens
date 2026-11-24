@@ -52,6 +52,11 @@ Depuis le 30 décembre 2025, l’édition papier du Rodong Sinmun peut être lue
 
 Les publications écrites par l’équipe de NK Lens sont signalées comme telles. Nous indiquons d’où viennent nos informations et, quand quelque chose est incertain ou non confirmé, nous le disons clairement.
 
+À propos de l'allemand : si vous lisez NK Lens en allemand, il y a deux mots que vous ne trouverez nulle part :
+
+- **« Führer »**, car il rappelle Adolf Hitler, le dictateur nazi. Pour les Kim, nous utilisons à la place « Machthaber » (« ceux qui détiennent le pouvoir »), et le thème Dirigeants s'appelle « Staatsführung » (« direction de l'État »).
+- **« Anschluss »**, car il rappelle l'annexion de l'Autriche par l'Allemagne nazie en 1938. Pour l'annexion de la Corée par le Japon, nous écrivons « Annexion ».
+
 ## Intelligence artificielle
 
 ### Comment nous utilisons l’IA
@@ -86,4 +91,4 @@ Certaines personnes qui parlent de la Corée du Nord se mettent en danger, elles
 
 Quand nous nous trompons, nous corrigeons et indiquons ce que nous avons changé. Si vous repérez une erreur, dites-le-nous ; une adresse de contact sera bientôt indiquée ici.
 
-_Dernière mise à jour : 23 novembre 2026._
+_Dernière mise à jour : 24 novembre 2026._
