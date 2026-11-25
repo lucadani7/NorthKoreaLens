@@ -4,9 +4,13 @@ NK Lens est un site d’information et une communauté consacrés à la Corée d
 
 ## Pourquoi nous l’avons créé
 
-La Corée du Nord est l’un des pays les plus fermés au monde. Ses habitants ne peuvent pas lire la presse étrangère, et de l’extérieur on ne voit le plus souvent que la propagande officielle ou des titres épars. Le bon journalisme existe, mais il est dispersé sur de nombreux sites, surtout en anglais ou en coréen.
+La Corée du Nord est l’un des pays les plus fermés au monde. L’accès à une information indépendante à l’intérieur du pays est sévèrement restreint, tandis qu’à l’extérieur, on se heurte souvent à la propagande officielle ou à des gros titres épars. Un journalisme indépendant existe, mais il est dispersé sur de nombreux sites et généralement publié en anglais ou en coréen.
 
-NK Lens le rassemble en un seul endroit, en treize langues, et place les médias d’État à côté du journalisme indépendant, avec des étiquettes claires. Voir les deux côte à côte est souvent le moyen le plus rapide de comprendre ce qui se passe vraiment.
+Nous aurions pu créer un projet sur n’importe quel pays, mais pour la plupart, cela aurait été superflu : l’actualité locale est plus accessible et il est relativement facile d’y voyager. En Corée du Nord, l’accès à l’information et la possibilité de voyager sont bien plus restreints. De nombreux gouvernements déconseillent à leurs citoyens de se rendre en Corée du Nord. NK Lens donne le même conseil.
+
+NK Lens rassemble ces contenus en un seul endroit et en treize langues. La plateforme place les médias d’État nord-coréens aux côtés du journalisme indépendant, avec des étiquettes claires indiquant qui a publié chaque contenu et de quel type de source il s’agit.
+
+Mettre ces récits côte à côte permet de comparer plus facilement ce qui est dit, de repérer ce qui est omis et de comprendre ce qui est avéré, contesté ou encore incertain.
 
 ## Ce que vous trouverez ici
 

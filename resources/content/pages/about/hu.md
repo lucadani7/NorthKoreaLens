@@ -4,9 +4,13 @@ Az NK Lens Észak-Koreáról szóló híroldal és közösség. Egy helyre gyűj
 
 ## Miért hoztuk létre
 
-Észak-Korea a világ egyik legzártabb országa. Polgárai nem olvashatnak külföldi híreket, a kívülállók pedig többnyire vagy a hivatalos propagandát, vagy szétszórt főcímeket látnak. Jó újságírás létezik, de sok oldalon szétszórva, és főleg angolul vagy koreaiul.
+Észak-Korea a világ egyik legzártabb országa. Az országon belül szigorúan korlátozott a hozzáférés a független információkhoz, míg a külvilág gyakran csak hivatalos propagandával vagy elszórt szalagcímekkel találkozik. Létezik független újságírás, de számos oldalon szétszórva található meg, és többnyire angol vagy koreai nyelven jelenik meg.
 
-Az NK Lens egy helyre gyűjti, tizenhárom nyelven, és világos jelölésekkel az állami médiát a független újságírás mellé teszi. Ha a kettőt egymás mellett látod, az gyakran a leggyorsabb út ahhoz, hogy megértsd, mi történik valójában.
+Bármelyik országról készíthettünk volna projektet, de a legtöbb esetben erre nincs szükség: a helyi hírek könnyebben elérhetők, és viszonylag egyszerűen lehet oda utazni. Észak-Koreában az információhoz való hozzáférés és az utazás lehetősége sokkal korlátozottabb. Sok kormány azt tanácsolja állampolgárainak, hogy ne utazzanak Észak-Koreába. Az NK Lens is ugyanezt tanácsolja.
+
+Az NK Lens egyetlen helyen és tizenhárom nyelven gyűjti össze ezeket a beszámolókat. Az észak-koreai állami médiát a független újságírás mellé helyezi, egyértelmű címkékkel jelölve, hogy ki tette közzé az adott anyagot, és milyen típusú forrásról van szó.
+
+Ha ezeket a beszámolókat egymás mellett látjuk, könnyebb összehasonlítani az elhangzottakat, észrevenni, mi maradt ki, és megérteni, mi az, ami biztosan tudható, mi vitatott, és mi az, ami továbbra is bizonytalan.
 
 ## Mit találsz itt
 

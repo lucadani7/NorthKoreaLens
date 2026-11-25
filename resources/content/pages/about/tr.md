@@ -4,9 +4,13 @@ NK Lens, Kuzey Kore hakkında bir haber sitesi ve topluluktur. Bağımsız haber
 
 ## Neden kurduk
 
-Kuzey Kore dünyanın en kapalı ülkelerinden biridir. Vatandaşları yabancı haberleri okuyamaz, dışarıdan bakanlar ise çoğunlukla ya resmî propagandayı ya da dağınık başlıkları görür. İyi gazetecilik var, ama pek çok siteye dağılmış durumda ve çoğunlukla İngilizce ya da Korece.
+Kuzey Kore, dünyanın en kapalı ülkelerinden biridir. Ülke içinde bağımsız bilgiye erişim ciddi şekilde kısıtlıdır; ülke dışındakiler ise çoğunlukla resmi propaganda veya dağınık manşetlerle karşılaşır. Bağımsız gazetecilik mevcuttur ancak pek çok siteye dağılmış durumdadır ve genellikle İngilizce veya Korece yayımlanır.
 
-NK Lens bunları on üç dilde tek bir yerde topluyor ve devlet medyasını bağımsız gazeteciliğin yanına, açık etiketlerle koyuyor. İkisini yan yana görmek, gerçekte ne olduğunu anlamanın çoğu zaman en hızlı yoludur.
+Herhangi bir ülke hakkında bir proje yapabilirdik ancak çoğu ülke için bu gereksiz olurdu: yerel haberlere erişim daha kolaydır ve insanlar oralara nispeten rahat seyahat edebilir. Kuzey Kore’de ise bilgiye erişim ve seyahat imkânı çok daha kısıtlıdır. Pek çok hükümet vatandaşlarına Kuzey Kore’ye seyahat etmemelerini tavsiye etmektedir. NK Lens de aynı tavsiyede bulunur.
+
+NK Lens bu haberleri tek bir yerde ve on üç dilde bir araya getirir. Her içeriğin kimin tarafından yayımlandığını ve ne tür bir kaynak olduğunu gösteren net etiketlerle Kuzey Kore devlet medyasını bağımsız gazetecilikle yan yana sunar.
+
+Bu aktarımları yan yana görmek; söylenenleri karşılaştırmayı, nelerin dışarıda bırakıldığını fark etmeyi ve neyin bilindiğini, neyin tartışmalı olduğunu ve neyin hâlâ belirsiz kaldığını anlamayı kolaylaştırır.
 
 ## Burada neler bulacaksın
 

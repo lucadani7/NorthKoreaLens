@@ -4,9 +4,13 @@ NK Lens er et nettsted for nyheter og et fellesskap om Nord-Korea. Vi samler rep
 
 ## Hvorfor vi laget det
 
-Nord-Korea er et av verdens mest lukkede land. Innbyggerne kan ikke lese utenlandske nyheter, og utenfra ser man stort sett enten offisiell propaganda eller spredte overskrifter. God journalistikk finnes, men den er spredt over mange nettsteder og skrevet mest på engelsk eller koreansk.
+Nord-Korea er et av verdens mest lukkede land. Tilgangen til uavhengig informasjon inne i landet er strengt begrenset, mens folk utenfor ofte møter offisiell propaganda eller spredte overskrifter. Uavhengig journalistikk finnes, men den er spredt over mange nettsteder og publiseres vanligvis på engelsk eller koreansk.
 
-NK Lens samler den på ett sted, på tretten språk, og setter statsmedier ved siden av uavhengig journalistikk, med tydelige merkelapper. Å se begge side om side er ofte den raskeste måten å forstå hva som egentlig skjer.
+Vi kunne ha laget et prosjekt om hvilket som helst land, men for de fleste ville det vært unødvendig: lokale nyheter er lettere tilgjengelige, og folk kan reise dit relativt enkelt. I Nord-Korea er tilgangen til informasjon og muligheten til å reise langt mer begrenset. Mange myndigheter fraråder sine borgere å reise til Nord-Korea. NK Lens gir det samme rådet.
+
+NK Lens samler denne dekningen på ett sted og på tretten språk. Tjenesten presenterer nordkoreanske statsmedier side om side med uavhengig journalistikk, med tydelige merkelapper som viser hvem som har publisert hvert innlegg og hva slags kilde det er.
+
+Å se disse fremstillingene side om side gjør det lettere å sammenligne det som blir sagt, legge merke til hva som utelates, og forstå hva som er kjent, omstridt eller fortsatt usikkert.
 
 ## Hva du finner her
 
