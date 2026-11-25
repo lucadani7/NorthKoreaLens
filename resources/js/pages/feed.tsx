@@ -82,6 +82,31 @@ export default function Feed({
                     {current?.name}
                 </h1>
 
+                {!activeCategory && (
+                    <div className="flex max-w-3xl flex-col gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 text-[15px] leading-relaxed text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                        <p>
+                            {t(
+                                'North Korea is one of the world’s most closed countries. Access to independent information inside the country is severely restricted, while people outside it often encounter official propaganda or scattered headlines. Independent reporting exists, but it is spread across many sites and is usually published in English or Korean.',
+                            )}
+                        </p>
+                        <p>
+                            {t(
+                                'We could have built a project about any country, but for most it would be unnecessary: local news is more accessible, and people can travel there relatively easily. In North Korea, access to information and the ability to travel are far more restricted. Many governments advise their citizens not to travel to North Korea. NK Lens gives the same advice.',
+                            )}
+                        </p>
+                        <p>
+                            {t(
+                                'NK Lens brings this reporting together in one place and in thirteen languages. It presents North Korean state media alongside independent journalism, with clear labels that show who published each item and what kind of source it is.',
+                            )}
+                        </p>
+                        <p>
+                            {t(
+                                'Seeing these accounts side by side makes it easier to compare what is said, notice what is left out, and understand what is known, disputed, or still uncertain.',
+                            )}
+                        </p>
+                    </div>
+                )}
+
                 <section
                     aria-label={t('Feed')}
                     className="flex max-w-2xl min-w-0 flex-1 flex-col gap-4"
