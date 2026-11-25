@@ -23,6 +23,8 @@ Amikor más oldalról veszünk át valamit:
 
 A teljes hírt azon az oldalon olvashatod el, amely közzétette.
 
+Egyes szerzők nem engedik, hogy a videóikat más weboldalakon lejátsszák. Ilyenkor a videó nálunk nem indul el: ezt jelezzük, és megmutatjuk a „Megnézem a YouTube-on” gombot, amely a YouTube-on nyitja meg.
+
 ## Hogyan kezeljük a propagandát
 
 Az észak-koreai állami média azt mutatja meg, hogyan szeretne látszani a rezsim, nem azt, ami valójában történik. Ezért csak így tesszük közzé:

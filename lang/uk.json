@@ -184,7 +184,7 @@
     "Learn more": "Докладніше",
     "The language of the site and of the emails we send you.": "Мова сайту та листів, які ми вам надсилаємо.",
     "Play video: :title": "Дивитися відео: :title",
-    "The video is played from YouTube, which may set cookies.": "Відео відтворюється з YouTube, який може зберігати файли cookie.",
+    "The video plays from YouTube.": "Відео відтворюється з YouTube.",
     "Watch on YouTube": "Дивитися на YouTube",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Відео про Північну Корею з KOREA NOW, англомовного YouTube-каналу південнокорейського інформаційного агентства Yonhap. Ми перевіряємо канал щодня; відео на інші теми не публікуємо.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Відео про Північну Корею поки немає. Ми перевіряємо канал щодня, і нові відео з’являться тут.",
@@ -226,5 +226,6 @@
     "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Поясни контекст цієї статті про Північну Корею для звичайного читача: хто або що в ній згадується, чому це важливо і що про це загалом відомо. Пиши коротко й за фактами та чітко позначай, що не встановлено. Відповідай мовою: :language.",
     "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Поясни контекст цього відео про Північну Корею для звичайного глядача: хто або що в ньому показано, чому це важливо і що про це загалом відомо. Пиши коротко й за фактами та чітко позначай, що не встановлено. Відповідай мовою: :language.",
     "Title": "Назва",
-    "Photo:": "Фото:"
+    "Photo:": "Фото:",
+    "The author of this video does not allow it to be played on other websites. You can watch it on YouTube.": "Автор цього відео не дозволяє відтворювати його на інших сайтах. Ви можете переглянути його на YouTube."
 }

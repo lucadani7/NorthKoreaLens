@@ -29,6 +29,7 @@ export default function Post({ post, body, now, related }: Props) {
     const { t, locale } = useTranslation();
     const author = post.source?.name ?? 'NK Lens';
     // Plain text only: paragraphs are separated by blank lines, nothing is rendered as HTML.
+    // A paragraph that starts with "## " is shown as a section heading.
     const paragraphs = (body ?? '')
         .split(/\n{2,}/)
         .filter((paragraph) => paragraph.trim() !== '');
@@ -133,17 +134,28 @@ export default function Post({ post, body, now, related }: Props) {
                             >
                                 {post.epigraph && (
                                     <p className="py-2 text-center font-bold whitespace-pre-line italic">
-                                        {post.epigraph}
+                                        <KeepHyphenated text={post.epigraph} />
                                     </p>
                                 )}
-                                {paragraphs.map((paragraph, index) => (
-                                    <p
-                                        key={index}
-                                        className="whitespace-pre-line"
-                                    >
-                                        <KeepHyphenated text={paragraph} />
-                                    </p>
-                                ))}
+                                {paragraphs.map((paragraph, index) =>
+                                    paragraph.startsWith('## ') ? (
+                                        <h2
+                                            key={index}
+                                            className="pt-3 text-xl font-bold text-slate-900 dark:text-slate-100"
+                                        >
+                                            <KeepHyphenated
+                                                text={paragraph.slice(3).trim()}
+                                            />
+                                        </h2>
+                                    ) : (
+                                        <p
+                                            key={index}
+                                            className="whitespace-pre-line"
+                                        >
+                                            <KeepHyphenated text={paragraph} />
+                                        </p>
+                                    ),
+                                )}
                             </div>
                         ) : (
                             post.excerpt && (

@@ -23,6 +23,8 @@ Quand nous reprenons un contenu d’un autre site :
 
 Vous pouvez lire l’article complet sur le site qui l’a publié.
 
+Certains auteurs n'autorisent pas la lecture de leurs vidéos sur d'autres sites. Dans ce cas, la vidéo ne démarre pas chez nous : nous vous le signalons et vous montrons le bouton « Regarder sur YouTube », qui l'ouvre sur YouTube.
+
 ## Comment nous traitons la propagande
 
 Les médias d’État nord-coréens montrent comment le régime veut être vu, pas ce qui se passe réellement. C’est pourquoi nous ne les publions que de cette façon :

@@ -23,6 +23,8 @@ Başka sitelerden bir şey aldığımızda:
 
 Haberin tamamını, onu yayımlayan sitede okuyabilirsin.
 
+Bazı içerik sahipleri videolarının başka web sitelerinde oynatılmasına izin vermiyor. Bu durumda video bizde başlamaz: bunu sana söyler ve videoyu YouTube'da açan “YouTube'da izle” düğmesini gösteririz.
+
 ## Propagandayı nasıl ele alıyoruz
 
 Kuzey Kore devlet medyası gerçekte neler olduğunu değil, rejimin nasıl görünmek istediğini gösterir. Bu yüzden onu yalnızca şöyle yayımlıyoruz:

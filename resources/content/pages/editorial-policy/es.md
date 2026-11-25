@@ -23,6 +23,8 @@ Cuando tomamos algo de otros sitios:
 
 La noticia completa la lees en el sitio que la publicó.
 
+Algunos autores no permiten que sus vídeos se reproduzcan en otros sitios web. En ese caso, el vídeo no se inicia aquí: te lo decimos y te mostramos el botón «Ver en YouTube», que lo abre en YouTube.
+
 ## Cómo tratamos la propaganda
 
 Los medios estatales norcoreanos muestran cómo quiere ser visto el régimen, no lo que de verdad ocurre. Por eso solo los publicamos así:

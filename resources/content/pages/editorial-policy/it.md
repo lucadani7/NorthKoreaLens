@@ -23,6 +23,8 @@ Quando riprendiamo qualcosa da altri siti:
 
 La notizia completa la leggi sul sito che l’ha pubblicata.
 
+Alcuni autori non consentono la riproduzione dei loro video su altri siti. In quel caso il video non parte da noi: te lo diciamo e ti mostriamo il pulsante «Guarda su YouTube», che lo apre su YouTube.
+
 ## Come trattiamo la propaganda
 
 I media di Stato nordcoreani mostrano come il regime vuole essere visto, non che cosa accade davvero. Per questo li pubblichiamo solo così:

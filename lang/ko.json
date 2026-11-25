@@ -184,7 +184,7 @@
     "Learn more": "자세히 보기",
     "The language of the site and of the emails we send you.": "사이트와 우리가 보내는 이메일의 언어입니다.",
     "Play video: :title": "영상 재생: :title",
-    "The video is played from YouTube, which may set cookies.": "영상은 YouTube에서 재생되며, YouTube가 쿠키를 설정할 수 있습니다.",
+    "The video plays from YouTube.": "영상은 YouTube에서 재생됩니다.",
     "Watch on YouTube": "YouTube에서 보기",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "한국 연합뉴스의 영어 유튜브 채널 KOREA NOW에 올라온 북한 관련 영상입니다. 매일 채널을 확인하며, 다른 주제의 영상은 싣지 않습니다.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "아직 북한 관련 영상이 없습니다. 매일 채널을 확인하며, 새 영상이 올라오면 이곳에 표시됩니다.",
@@ -226,5 +226,6 @@
     "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "일반 독자를 위해 이 북한 관련 글의 배경을 설명해 주세요. 누가 또는 무엇이 언급되는지, 왜 중요한지, 일반적으로 알려진 내용은 무엇인지 알려 주세요. 짧고 사실에 근거해 답하고, 불확실한 점은 분명히 밝혀 주세요. :language로 답해 주세요.",
     "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "일반 독자를 위해 이 북한 관련 영상의 배경을 설명해 주세요. 영상에 누가 또는 무엇이 나오는지, 왜 중요한지, 일반적으로 알려진 내용은 무엇인지 알려 주세요. 짧고 사실에 근거해 답하고, 불확실한 점은 분명히 밝혀 주세요. :language로 답해 주세요.",
     "Title": "제목",
-    "Photo:": "사진:"
+    "Photo:": "사진:",
+    "The author of this video does not allow it to be played on other websites. You can watch it on YouTube.": "이 영상의 게시자는 다른 웹사이트에서 재생하는 것을 허용하지 않습니다. YouTube에서 시청할 수 있습니다."
 }

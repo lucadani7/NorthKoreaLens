@@ -23,6 +23,8 @@ Wenn wir etwas von anderen Websites übernehmen:
 
 Die ganze Meldung liest du auf der Website, die sie veröffentlicht hat.
 
+Manche Urheber erlauben nicht, dass ihre Videos auf anderen Websites abgespielt werden. Dann startet das Video bei uns nicht: Wir sagen dir das und zeigen dir die Schaltfläche „Auf YouTube ansehen“, die es auf YouTube öffnet.
+
 ## Wie wir mit Propaganda umgehen
 
 Nordkoreas Staatsmedien zeigen, wie das Regime gesehen werden will, nicht, was wirklich geschieht. Darum veröffentlichen wir sie nur so:

@@ -23,6 +23,8 @@ Når vi henter noe fra andre nettsteder:
 
 Hele saken leser du på nettstedet som publiserte den.
 
+Noen opphavspersoner tillater ikke at videoene deres spilles av på andre nettsteder. Da starter ikke videoen hos oss: Vi sier fra og viser deg knappen «Se på YouTube», som åpner den på YouTube.
+
 ## Slik håndterer vi propaganda
 
 Nordkoreanske statsmedier viser hvordan regimet vil bli sett, ikke hva som faktisk skjer. Derfor publiserer vi dem bare slik:

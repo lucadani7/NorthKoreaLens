@@ -184,7 +184,7 @@
     "Learn more": "Scopri di più",
     "The language of the site and of the emails we send you.": "La lingua del sito e delle email che ti inviamo.",
     "Play video: :title": "Riproduci il video: :title",
-    "The video is played from YouTube, which may set cookies.": "Il video viene riprodotto da YouTube, che può impostare cookie.",
+    "The video plays from YouTube.": "Il video viene riprodotto da YouTube.",
     "Watch on YouTube": "Guarda su YouTube",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Video sulla Corea del Nord da KOREA NOW, il canale YouTube in inglese dell’agenzia di stampa sudcoreana Yonhap. Controlliamo il canale ogni giorno; i video su altri argomenti non compaiono qui.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Ancora nessun video sulla Corea del Nord. Controlliamo il canale ogni giorno e quelli nuovi compariranno qui.",
@@ -226,5 +226,6 @@
     "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Spiega il contesto di questo articolo sulla Corea del Nord per un lettore comune: chi o che cosa viene citato, perché è importante e che cosa si sa in generale sull’argomento. Rispondi in modo breve e fattuale e indica chiaramente ciò che è incerto. Rispondi in :language.",
     "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Spiega il contesto di questo video sulla Corea del Nord per uno spettatore comune: chi o che cosa mostra, perché è importante e che cosa si sa in generale sull’argomento. Rispondi in modo breve e fattuale e indica chiaramente ciò che è incerto. Rispondi in :language.",
     "Title": "Titolo",
-    "Photo:": "Foto:"
+    "Photo:": "Foto:",
+    "The author of this video does not allow it to be played on other websites. You can watch it on YouTube.": "L'autore di questo video non ne consente la riproduzione su altri siti. Puoi guardarlo su YouTube."
 }

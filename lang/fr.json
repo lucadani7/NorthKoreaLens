@@ -184,7 +184,7 @@
     "Learn more": "En savoir plus",
     "The language of the site and of the emails we send you.": "La langue du site et des e-mails que nous vous envoyons.",
     "Play video: :title": "Lire la vidéo : :title",
-    "The video is played from YouTube, which may set cookies.": "La vidéo est lue depuis YouTube, qui peut déposer des cookies.",
+    "The video plays from YouTube.": "La vidéo est lue depuis YouTube.",
     "Watch on YouTube": "Regarder sur YouTube",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Des vidéos sur la Corée du Nord issues de KOREA NOW, la chaîne YouTube en anglais de l’agence de presse sud-coréenne Yonhap. Nous consultons la chaîne chaque jour ; les vidéos sur d’autres sujets n’apparaissent pas ici.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Pas encore de vidéos sur la Corée du Nord. Nous consultons la chaîne chaque jour, et les nouvelles apparaîtront ici.",
@@ -226,5 +226,6 @@
     "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Explique le contexte de cet article sur la Corée du Nord pour un lecteur non spécialiste : qui ou quoi est mentionné, pourquoi c’est important et ce que l’on sait en général du sujet. Réponds de façon brève et factuelle, et indique clairement ce qui est incertain. Réponds en :language.",
     "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Explique le contexte de cette vidéo sur la Corée du Nord pour un spectateur non spécialiste : qui ou quoi elle montre, pourquoi c’est important et ce que l’on sait en général du sujet. Réponds de façon brève et factuelle, et indique clairement ce qui est incertain. Réponds en :language.",
     "Title": "Titre",
-    "Photo:": "Photo :"
+    "Photo:": "Photo :",
+    "The author of this video does not allow it to be played on other websites. You can watch it on YouTube.": "L'auteur de cette vidéo n'autorise pas sa lecture sur d'autres sites. Vous pouvez la regarder sur YouTube."
 }

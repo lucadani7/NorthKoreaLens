@@ -184,7 +184,7 @@
     "Learn more": "Bővebben",
     "The language of the site and of the emails we send you.": "Az oldal és a neked küldött e-mailek nyelve.",
     "Play video: :title": "Videó lejátszása: :title",
-    "The video is played from YouTube, which may set cookies.": "A videót a YouTube-ról játsszuk le, amely sütiket helyezhet el.",
+    "The video plays from YouTube.": "A videó a YouTube-ról játszódik le.",
     "Watch on YouTube": "Megnézem a YouTube-on",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Észak-koreai videók a KOREA NOW-tól, a dél-koreai Yonhap hírügynökség angol nyelvű YouTube-csatornájáról. A csatornát naponta ellenőrizzük; a más témájú videókat kihagyjuk.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Még nincs videó Észak-Koreáról. A csatornát naponta ellenőrizzük, és az újak itt jelennek meg.",
@@ -226,5 +226,6 @@
     "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Magyarázd el egy átlagos olvasónak ennek az Észak-Koreáról szóló cikknek a hátterét: ki vagy mi szerepel benne, miért fontos, és mit tudni róla általában. Légy rövid és tárgyszerű, és mondd meg világosan, mi bizonytalan. Ezen a nyelven válaszolj: :language.",
     "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Magyarázd el egy átlagos nézőnek ennek az Észak-Koreáról szóló videónak a hátterét: ki vagy mi látható benne, miért fontos, és mit tudni róla általában. Légy rövid és tárgyszerű, és mondd meg világosan, mi bizonytalan. Ezen a nyelven válaszolj: :language.",
     "Title": "Cím",
-    "Photo:": "Fotó:"
+    "Photo:": "Fotó:",
+    "The author of this video does not allow it to be played on other websites. You can watch it on YouTube.": "A videó szerzője nem engedi, hogy más weboldalakon lejátsszák. Megnézheted a YouTube-on."
 }

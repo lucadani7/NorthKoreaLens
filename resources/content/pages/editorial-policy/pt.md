@@ -23,6 +23,8 @@ Quando trazemos algo de outros sites:
 
 A notícia completa você lê no site que a publicou.
 
+Alguns autores não permitem que seus vídeos sejam reproduzidos em outros sites. Nesse caso, o vídeo não começa aqui: avisamos você e mostramos o botão “Assistir no YouTube”, que o abre no YouTube.
+
 ## Como tratamos a propaganda
 
 A mídia estatal norte-coreana mostra como o regime quer ser visto, não o que realmente acontece. Por isso, só a publicamos assim:

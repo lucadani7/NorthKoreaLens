@@ -23,6 +23,8 @@ Când preluăm ceva de pe alte site-uri:
 
 Știrea completă o citești pe site-ul care a publicat-o.
 
+Unii autori nu permit redarea clipurilor lor pe alte site-uri. În cazul ăsta, clipul nu pornește la noi: îți spunem asta și îți arătăm butonul „Vezi pe YouTube”, care îl deschide pe YouTube.
+
 ## Cum tratăm propaganda
 
 Presa de stat nord-coreeană arată cum vrea regimul să fie văzut, nu ce se întâmplă de fapt. De aceea o publicăm doar așa:

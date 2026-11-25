@@ -23,6 +23,8 @@ When we take something from another site:
 
 You can read the full story on the site that published it.
 
+Some authors don't allow their videos to be played on other websites. In that case the video won't start here: we tell you so and show you the “Watch on YouTube” button, which opens it on YouTube.
+
 ## How we handle propaganda
 
 North Korean state media show how the regime wants to be seen, not what is really happening. That is why we publish them only like this:

@@ -184,7 +184,7 @@
     "Learn more": "Daha fazla bilgi",
     "The language of the site and of the emails we send you.": "Sitenin ve sana gönderdiğimiz e-postaların dili.",
     "Play video: :title": "Videoyu oynat: :title",
-    "The video is played from YouTube, which may set cookies.": "Video YouTube üzerinden oynatılır; YouTube çerez kullanabilir.",
+    "The video plays from YouTube.": "Video YouTube üzerinden oynatılır.",
     "Watch on YouTube": "YouTube'da izle",
     "Videos about North Korea from KOREA NOW, the English YouTube channel of the South Korean news agency Yonhap. We check the channel every day; videos about other subjects are left out.": "Güney Kore haber ajansı Yonhap’ın İngilizce YouTube kanalı KOREA NOW’dan Kuzey Kore ile ilgili videolar. Kanalı her gün kontrol ediyoruz; başka konulardaki videolar burada yer almıyor.",
     "No videos about North Korea yet. We check the channel every day, and new ones will appear here.": "Henüz Kuzey Kore ile ilgili video yok. Kanalı her gün kontrol ediyoruz; yenileri burada görünecek.",
@@ -226,5 +226,6 @@
     "Explain the background of this article about North Korea for a general reader: who or what is mentioned, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Bu Kuzey Kore yazısının arka planını genel bir okur için açıkla: kim ya da ne anılıyor, neden önemli ve konu hakkında genel olarak neler biliniyor. Kısa ve olgulara dayalı yanıt ver, belirsiz olanı açıkça belirt. :language dilinde yanıt ver.",
     "Explain the background of this video about North Korea for a general reader: who or what it shows, why it matters and what is generally known about it. Keep it short and factual, and say clearly what is uncertain. Answer in :language.": "Bu Kuzey Kore videosunun arka planını genel bir izleyici için açıkla: videoda kim ya da ne görünüyor, neden önemli ve konu hakkında genel olarak neler biliniyor. Kısa ve olgulara dayalı yanıt ver, belirsiz olanı açıkça belirt. :language dilinde yanıt ver.",
     "Title": "Başlık",
-    "Photo:": "Fotoğraf:"
+    "Photo:": "Fotoğraf:",
+    "The author of this video does not allow it to be played on other websites. You can watch it on YouTube.": "Bu videonun sahibi, videonun başka web sitelerinde oynatılmasına izin vermiyor. Videoyu YouTube'da izleyebilirsin."
 }
