@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
+use Laravel\Scout\Searchable;
 
 /**
  * @property int $id
@@ -45,6 +46,7 @@ class Post extends Model
     /** @use HasFactory<PostFactory> */
     use HasFactory;
 
+    use Searchable;
     use SoftDeletes;
 
     protected $fillable = [
@@ -71,6 +73,58 @@ class Post extends Model
             'published_at' => 'datetime',
             'source_published_at' => 'datetime',
         ];
+    }
+
+    /** @return array<string, mixed> */
+    public function toSearchableArray(): array
+    {
+        // Keep generated fields and embeddings out of the index, including for sources that forbid AI.
+        $searchable = [
+            'title' => $this->title,
+            'excerpt' => $this->excerpt,
+            'body' => $this->body,
+            'editorial_note' => $this->editorial_note,
+            'epigraph' => $this->epigraph,
+            'language' => $this->language,
+        ];
+
+        if (config('scout.driver') !== 'meilisearch') {
+            return $searchable;
+        }
+
+        $filterDate = $this->source_id === null
+            ? $this->published_at
+            : ($this->source_published_at ?? $this->published_at);
+
+        return [
+            ...$searchable,
+            'available_languages' => $this->translations
+                ->pluck('locale')
+                ->push($this->language)
+                ->unique()
+                ->values()
+                ->all(),
+            'category_id' => $this->category_id,
+            'source_type' => $this->source?->type->value,
+            'search_date' => $filterDate?->getTimestamp(),
+        ];
+    }
+
+    /**
+     * @param  Builder<Post>  $query
+     * @return Builder<Post>
+     */
+    public function makeAllSearchableUsing(Builder $query): Builder
+    {
+        return $query->with([
+            'source:id,type',
+            'translations:id,post_id,locale',
+        ]);
+    }
+
+    public function shouldBeSearchable(): bool
+    {
+        return $this->isPublished();
     }
 
     /** @return BelongsTo<Source, $this> */

@@ -59,6 +59,10 @@ Om tysk: Leser du NK Lens på tysk, er det to ord du ikke finner noe sted:
 - **«Führer»**, fordi det minner om Adolf Hitler, den nazistiske diktatoren. Om Kim-familien bruker vi i stedet «Machthaber» («de som har makten»), og temaet Ledere heter «Staatsführung» («statsledelse»).
 - **«Anschluss»**, fordi det minner om Nazi-Tysklands anneksjon av Østerrike i 1938. Om Japans annektering av Korea skriver vi «Annexion».
 
+## Søk
+
+Søkefeltet finner publiserte artikler og innlegg i NK Lens-arkivet. Det søker i faktisk innhold fra arkivet, ikke chatbot-svar. NK Lens genererer ikke svar eller annen tekst på egne vegne gjennom søket. Vi lagrer verken søk eller søkehistorikk i databasen.
+
 ## Kunstig intelligens
 
 ### Slik bruker vi KI
@@ -93,4 +97,4 @@ Noen av dem som snakker om Nord-Korea, setter seg selv eller familien sin i fare
 
 Når vi tar feil, retter vi det og sier hva vi har endret. Hvis du ser en feil, si fra til oss; en kontaktadresse kommer snart her.
 
-_Sist oppdatert: 24. november 2026._
+_Sist oppdatert: 26. november 2026._

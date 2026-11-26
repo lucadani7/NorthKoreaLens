@@ -59,6 +59,10 @@ Despre versiunea în germană: dacă citești NK Lens în germană, nu vei găsi
 - **„Führer”**, pentru că amintește de Adolf Hitler, dictatorul nazist. Pentru familia Kim folosim în schimb „Machthaber” („cei care dețin puterea”), iar tema Lideri se numește „Staatsführung” („conducerea statului”).
 - **„Anschluss”**, pentru că amintește de anexarea Austriei de către Germania nazistă, în 1938. Pentru anexarea Coreei de către Japonia scriem „Annexion”.
 
+## Căutare
+
+Bara de căutare găsește articole și postări publicate în arhiva NK Lens. Caută în conținut real din arhivă, nu răspunsuri de chatbot. Prin căutare, NK Lens nu generează răspunsuri sau alte texte în numele său. Nu salvăm interogările și istoricul căutărilor în baza noastră de date.
+
 ## Inteligența artificială
 
 ### Cum folosim noi AI-ul
@@ -93,4 +97,4 @@ Unii dintre cei care vorbesc despre Coreea de Nord se pun pe ei sau pe familiile
 
 Când greșim, corectăm și spunem ce am schimbat. Dacă observi o greșeală, te rugăm să ne spui; o adresă de contact va apărea aici în curând.
 
-_Ultima actualizare: 24 noiembrie 2026._
+_Ultima actualizare: 26 noiembrie 2026._

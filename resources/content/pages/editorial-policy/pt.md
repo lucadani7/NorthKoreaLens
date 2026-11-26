@@ -59,6 +59,10 @@ Sobre o alemão: se você ler o NK Lens em alemão, há duas palavras que não v
 - **“Führer”**, porque lembra Adolf Hitler, o ditador nazista. Para os Kim usamos no lugar “Machthaber” (“os que detêm o poder”), e o tema Líderes se chama “Staatsführung” (“liderança do Estado”).
 - **“Anschluss”**, porque lembra a anexação da Áustria pela Alemanha nazista em 1938. Para a anexação da Coreia pelo Japão escrevemos “Annexion”.
 
+## Pesquisa
+
+A barra de pesquisa encontra artigos e publicações já disponíveis no arquivo do NK Lens. Ela busca conteúdo real do arquivo, não respostas de chatbot. O NK Lens não gera respostas nem outros textos em seu nome por meio da pesquisa. Não guardamos as consultas nem o histórico de pesquisa na nossa base de dados.
+
 ## Inteligência artificial
 
 ### Como usamos a IA
@@ -93,4 +97,4 @@ Algumas pessoas que falam sobre a Coreia do Norte colocam a si mesmas ou suas fa
 
 Quando erramos, corrigimos e dizemos o que mudamos. Se você notar um erro, nos avise; em breve um endereço de contato aparecerá aqui.
 
-_Última atualização: 24 de novembro de 2026._
+_Última atualização: 26 de novembro de 2026._

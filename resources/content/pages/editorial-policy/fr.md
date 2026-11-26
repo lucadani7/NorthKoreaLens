@@ -59,6 +59,10 @@ Les publications écrites par l’équipe de NK Lens sont signalées comme telle
 - **« Führer »**, car il rappelle Adolf Hitler, le dictateur nazi. Pour les Kim, nous utilisons à la place « Machthaber » (« ceux qui détiennent le pouvoir »), et le thème Dirigeants s'appelle « Staatsführung » (« direction de l'État »).
 - **« Anschluss »**, car il rappelle l'annexion de l'Autriche par l'Allemagne nazie en 1938. Pour l'annexion de la Corée par le Japon, nous écrivons « Annexion ».
 
+## Recherche
+
+La barre de recherche retrouve les articles et publications parus dans les archives de NK Lens. Elle recherche des contenus réels de nos archives : ce n'est pas un chatbot. La recherche ne génère ni réponses ni autres textes au nom de NK Lens. Nous n'enregistrons pas les requêtes ni l'historique de recherche dans notre base de données.
+
 ## Intelligence artificielle
 
 ### Comment nous utilisons l’IA
@@ -93,4 +97,4 @@ Certaines personnes qui parlent de la Corée du Nord se mettent en danger, elles
 
 Quand nous nous trompons, nous corrigeons et indiquons ce que nous avons changé. Si vous repérez une erreur, dites-le-nous ; une adresse de contact sera bientôt indiquée ici.
 
-_Dernière mise à jour : 24 novembre 2026._
+_Dernière mise à jour : 26 novembre 2026._

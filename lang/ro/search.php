@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filtre',
+    'category' => 'Rubrică',
+    'all_categories' => 'Toate rubricile',
+    'source_type' => 'Tipul sursei',
+    'all_source_types' => 'Toate tipurile de surse',
+    'period' => 'Perioadă',
+    'any_time' => 'Oricând',
+    'last_7_days' => 'Ultimele 7 zile',
+    'last_30_days' => 'Ultimele 30 de zile',
+    'last_90_days' => 'Ultimele 90 de zile',
+    'last_year' => 'Ultimul an',
+    'custom_range' => 'Interval personalizat',
+    'from' => 'De la',
+    'to' => 'Până la',
+    'language' => 'Limba',
+    'all_languages' => 'Toate limbile',
+    'clear_filters' => 'Șterge filtrele',
+    'matching_results' => 'Rezultate care corespund filtrelor',
+    'no_matching_results' => 'Niciun rezultat nu corespunde filtrelor.',
+    'source_types' => [
+        'independent' => 'Redacții independente',
+        'analysis' => 'Analize și cercetare',
+        'testimony' => 'Mărturii ale transfugilor',
+        'travel_vlog' => 'Vloggeri de călătorie',
+        'state_media' => 'Presa de stat nord-coreeană',
+    ],
+];

@@ -16,6 +16,15 @@ type Props = {
     post: App.Data.PostData;
     /** Fixed "now" from the page, so server and browser print the same relative times. */
     now: Date;
+    showSourceTypeLabel?: boolean;
+};
+
+const SOURCE_TYPE_LABELS: Record<App.Enums.SourceType, string> = {
+    independent: 'Independent newsrooms',
+    analysis: 'Analysis and research',
+    testimony: 'Escapee testimonies',
+    travel_vlog: 'Travel vloggers',
+    state_media: 'North Korean state media',
 };
 
 function initials(name: string): string {
@@ -27,7 +36,11 @@ function initials(name: string): string {
         .toUpperCase();
 }
 
-export default function PostCard({ post, now }: Props) {
+export default function PostCard({
+    post,
+    now,
+    showSourceTypeLabel = false,
+}: Props) {
     const { t, locale } = useTranslation();
     const author = post.source?.name ?? 'NK Lens';
 
@@ -59,6 +72,11 @@ export default function PostCard({ post, now }: Props) {
                     <div className="truncate text-[15px] font-semibold">
                         {author}
                     </div>
+                    {showSourceTypeLabel && post.source && (
+                        <div className="text-xs text-slate-600 dark:text-slate-400">
+                            {t(SOURCE_TYPE_LABELS[post.source.type])}
+                        </div>
+                    )}
                     {post.publishedAt && (
                         <time
                             dateTime={post.publishedAt}

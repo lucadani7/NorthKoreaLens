@@ -17,6 +17,7 @@ void createInertiaApp({
                 return null;
             case name === 'feed':
             case name === 'post':
+            case name === 'search':
             case name === 'page':
             case name === 'sources':
             case name === 'team':

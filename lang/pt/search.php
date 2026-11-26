@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filtros',
+    'category' => 'Secção',
+    'all_categories' => 'Todas as secções',
+    'source_type' => 'Tipo de fonte',
+    'all_source_types' => 'Todos os tipos de fonte',
+    'period' => 'Período',
+    'any_time' => 'Qualquer data',
+    'last_7_days' => 'Últimos 7 dias',
+    'last_30_days' => 'Últimos 30 dias',
+    'last_90_days' => 'Últimos 90 dias',
+    'last_year' => 'Último ano',
+    'custom_range' => 'Intervalo personalizado',
+    'from' => 'De',
+    'to' => 'Até',
+    'language' => 'Idioma',
+    'all_languages' => 'Todos os idiomas',
+    'clear_filters' => 'Limpar filtros',
+    'matching_results' => 'Resultados correspondentes aos filtros',
+    'no_matching_results' => 'Nenhum resultado corresponde aos filtros.',
+    'source_types' => [
+        'independent' => 'Redações independentes',
+        'analysis' => 'Análise e pesquisa',
+        'testimony' => 'Testemunhos de desertores',
+        'travel_vlog' => 'Vlogueiros de viagem',
+        'state_media' => 'Meios de comunicação estatais norte-coreanos',
+    ],
+];

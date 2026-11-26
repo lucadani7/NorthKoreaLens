@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filtreler',
+    'category' => 'Bölüm',
+    'all_categories' => 'Tüm bölümler',
+    'source_type' => 'Kaynak türü',
+    'all_source_types' => 'Tüm kaynak türleri',
+    'period' => 'Dönem',
+    'any_time' => 'Tüm zamanlar',
+    'last_7_days' => 'Son 7 gün',
+    'last_30_days' => 'Son 30 gün',
+    'last_90_days' => 'Son 90 gün',
+    'last_year' => 'Son yıl',
+    'custom_range' => 'Özel tarih aralığı',
+    'from' => 'Başlangıç',
+    'to' => 'Bitiş',
+    'language' => 'Dil',
+    'all_languages' => 'Tüm diller',
+    'clear_filters' => 'Filtreleri temizle',
+    'matching_results' => 'Filtrelerle eşleşen sonuçlar',
+    'no_matching_results' => 'Filtrelerle eşleşen sonuç bulunamadı.',
+    'source_types' => [
+        'independent' => 'Bağımsız haber kuruluşları',
+        'analysis' => 'Analiz ve araştırma',
+        'testimony' => 'Kuzey Kore’den kaçanların tanıklıkları',
+        'travel_vlog' => 'Seyahat vlogger’ları',
+        'state_media' => 'Kuzey Kore devlet medyası',
+    ],
+];

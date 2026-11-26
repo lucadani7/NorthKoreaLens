@@ -52,6 +52,40 @@ class PostTest extends TestCase
         $this->assertSame([$newer->id, $older->id], Post::feed()->pluck('id')->all());
     }
 
+    public function test_only_published_posts_are_searchable(): void
+    {
+        $published = Post::factory()->create();
+        $draft = Post::factory()->unpublished()->create();
+        $scheduled = Post::factory()->create(['published_at' => now()->addDay()]);
+
+        $this->assertTrue($published->shouldBeSearchable());
+        $this->assertFalse($draft->shouldBeSearchable());
+        $this->assertFalse($scheduled->shouldBeSearchable());
+    }
+
+    public function test_searchable_fields_are_allowlisted_for_sources_that_forbid_ai(): void
+    {
+        $post = Post::factory()
+            ->for(Source::factory()->state(['forbids_ai' => true]))
+            ->create([
+                'title' => 'Yonhap title',
+                'excerpt' => 'Short excerpt',
+                'body' => null,
+                'editorial_note' => 'Human editorial context',
+                'epigraph' => null,
+                'language' => 'en',
+            ]);
+
+        $this->assertSame([
+            'title' => 'Yonhap title',
+            'excerpt' => 'Short excerpt',
+            'body' => null,
+            'editorial_note' => 'Human editorial context',
+            'epigraph' => null,
+            'language' => 'en',
+        ], $post->toSearchableArray());
+    }
+
     public function test_the_same_feed_item_cannot_be_imported_twice(): void
     {
         $source = Source::factory()->create();

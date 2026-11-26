@@ -59,6 +59,10 @@ Sobre el alemán: si lees NK Lens en alemán, hay dos palabras que no encontrar�
 - **«Führer»**, porque recuerda a Adolf Hitler, el dictador nazi. Para los Kim usamos en su lugar «Machthaber» («quienes tienen el poder»), y el tema Líderes se llama «Staatsführung» («dirección del Estado»).
 - **«Anschluss»**, porque recuerda la anexión de Austria por la Alemania nazi en 1938. Para la anexión de Corea por Japón escribimos «Annexion».
 
+## Búsqueda
+
+La barra de búsqueda encuentra artículos y publicaciones ya publicados en el archivo de NK Lens. Busca contenido real del archivo; no es un chatbot. NK Lens no genera respuestas ni otros textos en su nombre mediante la búsqueda. No guardamos las consultas ni el historial de búsqueda en nuestra base de datos.
+
 ## Inteligencia artificial
 
 ### Cómo usamos la IA
@@ -93,4 +97,4 @@ Algunas personas que hablan sobre Corea del Norte se ponen en peligro a sí mism
 
 Cuando nos equivocamos, lo corregimos y decimos qué hemos cambiado. Si ves un error, avísanos; pronto aparecerá aquí una dirección de contacto.
 
-_Última actualización: 24 de noviembre de 2026._
+_Última actualización: 26 de noviembre de 2026._

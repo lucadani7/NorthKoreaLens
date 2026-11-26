@@ -1,7 +1,14 @@
 import { Link, usePage } from '@inertiajs/react';
 import CategoryNav from '@/components/feed/category-nav';
 import type { LucideIcon } from 'lucide-react';
-import { Check, Menu, Monitor, Moon, Sun } from 'lucide-react';
+import {
+    Check,
+    Menu,
+    Monitor,
+    Moon,
+    Search as SearchIcon,
+    Sun,
+} from 'lucide-react';
 import { useState } from 'react';
 import LanguagePicker from '@/components/language-picker';
 import NkLensLogo from '@/components/nk-lens-logo';
@@ -18,7 +25,7 @@ import { useAppearance } from '@/hooks/use-appearance';
 import { useTranslation } from '@/hooks/use-translation';
 import { SITE_LINKS } from '@/lib/site-links';
 import { cn } from '@/lib/utils';
-import { dashboard, home, login, register } from '@/routes';
+import { dashboard, home, login, register, search } from '@/routes';
 
 /** Thin stripe that recalls the flag without copying it. */
 function FlagStripe() {
@@ -78,6 +85,52 @@ function AccountLinks({
                 {t('Join NK Lens')}
             </Link>
         </>
+    );
+}
+
+function SearchAction({
+    currentPath,
+    stacked = false,
+    onNavigate,
+}: {
+    currentPath: string;
+    stacked?: boolean;
+    onNavigate?: () => void;
+}) {
+    const { t } = useTranslation();
+    const isSearchPage = currentPath === search().url;
+    const className = stacked
+        ? cn(
+              'flex min-h-11 items-center gap-2 rounded-lg px-3 text-[15px]',
+              isSearchPage
+                  ? 'bg-nk-blue font-bold text-white'
+                  : 'font-medium text-foreground hover:bg-muted',
+          )
+        : 'ml-12 inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-nk-blue hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
+    const content = (
+        <>
+            <SearchIcon aria-hidden="true" className="size-4" />
+            {t('Search')}
+        </>
+    );
+
+    if (isSearchPage) {
+        return (
+            <button
+                type="submit"
+                form="archive-search-form"
+                onClick={onNavigate}
+                className={className}
+            >
+                {content}
+            </button>
+        );
+    }
+
+    return (
+        <Link href={search()} onClick={onNavigate} className={className}>
+            {content}
+        </Link>
     );
 }
 
@@ -152,6 +205,11 @@ function MobileMenu() {
                             {t(title)}
                         </Link>
                     ))}
+                    <SearchAction
+                        currentPath={path}
+                        stacked
+                        onNavigate={() => setOpen(false)}
+                    />
                 </nav>
 
                 <div className="grid gap-2 border-t border-border px-5 py-4 text-sm">
@@ -258,6 +316,7 @@ export default function SiteHeader() {
                         {t(title)}
                     </Link>
                 ))}
+                <SearchAction currentPath={path} />
             </nav>
             <FlagStripe />
         </header>

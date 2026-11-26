@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Szűrők',
+    'category' => 'Rovat',
+    'all_categories' => 'Minden rovat',
+    'source_type' => 'Forrás típusa',
+    'all_source_types' => 'Minden forrástípus',
+    'period' => 'Időszak',
+    'any_time' => 'Bármikor',
+    'last_7_days' => 'Elmúlt 7 nap',
+    'last_30_days' => 'Elmúlt 30 nap',
+    'last_90_days' => 'Elmúlt 90 nap',
+    'last_year' => 'Elmúlt év',
+    'custom_range' => 'Egyéni időszak',
+    'from' => 'Kezdete',
+    'to' => 'Vége',
+    'language' => 'Nyelv',
+    'all_languages' => 'Minden nyelv',
+    'clear_filters' => 'Szűrők törlése',
+    'matching_results' => 'A szűrőknek megfelelő találatok',
+    'no_matching_results' => 'Nincs a szűrőknek megfelelő találat.',
+    'source_types' => [
+        'independent' => 'Független szerkesztőségek',
+        'analysis' => 'Elemzések és kutatások',
+        'testimony' => 'Szökevények beszámolói',
+        'travel_vlog' => 'Utazási vloggerek',
+        'state_media' => 'Észak-koreai állami média',
+    ],
+];

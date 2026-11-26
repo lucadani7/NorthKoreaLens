@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filtre',
+    'category' => 'Seksjon',
+    'all_categories' => 'Alle seksjoner',
+    'source_type' => 'Kildetype',
+    'all_source_types' => 'Alle kildetyper',
+    'period' => 'Tidsperiode',
+    'any_time' => 'Når som helst',
+    'last_7_days' => 'Siste 7 dager',
+    'last_30_days' => 'Siste 30 dager',
+    'last_90_days' => 'Siste 90 dager',
+    'last_year' => 'Siste år',
+    'custom_range' => 'Egendefinert tidsrom',
+    'from' => 'Fra',
+    'to' => 'Til',
+    'language' => 'Språk',
+    'all_languages' => 'Alle språk',
+    'clear_filters' => 'Nullstill filtre',
+    'matching_results' => 'Resultater som samsvarer med filtrene',
+    'no_matching_results' => 'Ingen resultater samsvarer med filtrene.',
+    'source_types' => [
+        'independent' => 'Uavhengige redaksjoner',
+        'analysis' => 'Analyse og forskning',
+        'testimony' => 'Vitnesbyrd fra avhoppere',
+        'travel_vlog' => 'Reisevloggere',
+        'state_media' => 'Nordkoreanske statsmedier',
+    ],
+];

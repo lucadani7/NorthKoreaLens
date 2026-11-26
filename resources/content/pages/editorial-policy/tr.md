@@ -59,6 +59,10 @@ Almanca hakkında: NK Lens'i Almanca okursan şu iki kelimeyi hiçbir yerde bula
 - **“Führer”**, çünkü Nazi diktatörü Adolf Hitler'i hatırlatıyor. Kim ailesi için onun yerine “Machthaber” (“iktidarı elinde tutanlar”) kelimesini kullanıyoruz; Liderler konusu ise “Staatsführung” (“devlet yönetimi”) adını taşıyor.
 - **“Anschluss”**, çünkü 1938'de Nazi Almanyası'nın Avusturya'yı ilhakını hatırlatıyor. Japonya'nın Kore'yi ilhakı için “Annexion” yazıyoruz.
 
+## Arama
+
+Arama çubuğu, NK Lens arşivinde yayımlanmış makale ve gönderileri bulur. Arşivdeki gerçek içerikleri arar; sohbet robotu değildir. NK Lens arama yoluyla kendi adına yanıt ya da başka metinler üretmez. Arama sorgularını veya geçmişini veritabanımıza kaydetmeyiz.
+
 ## Yapay zekâ
 
 ### Yapay zekâyı nasıl kullanıyoruz
@@ -93,4 +97,4 @@ Kuzey Kore hakkında konuşan bazı insanlar kendilerini ya da ailelerini tehlik
 
 Bir hata yaptığımızda düzeltir ve neyi değiştirdiğimizi söyleriz. Bir hata fark edersen lütfen bize bildir; yakında burada bir iletişim adresi olacak.
 
-_Son güncelleme: 24 Kasım 2026._
+_Son güncelleme: 26 Kasım 2026._

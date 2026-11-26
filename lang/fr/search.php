@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filtres',
+    'category' => 'Rubrique',
+    'all_categories' => 'Toutes les rubriques',
+    'source_type' => 'Type de source',
+    'all_source_types' => 'Tous les types de source',
+    'period' => 'Période',
+    'any_time' => 'Toutes les dates',
+    'last_7_days' => '7 derniers jours',
+    'last_30_days' => '30 derniers jours',
+    'last_90_days' => '90 derniers jours',
+    'last_year' => 'Dernière année',
+    'custom_range' => 'Période personnalisée',
+    'from' => 'Du',
+    'to' => 'Au',
+    'language' => 'Langue',
+    'all_languages' => 'Toutes les langues',
+    'clear_filters' => 'Effacer les filtres',
+    'matching_results' => 'Résultats correspondant aux filtres',
+    'no_matching_results' => 'Aucun résultat ne correspond aux filtres.',
+    'source_types' => [
+        'independent' => 'Rédactions indépendantes',
+        'analysis' => 'Analyse et recherche',
+        'testimony' => 'Témoignages de transfuges',
+        'travel_vlog' => 'Vlogueurs de voyage',
+        'state_media' => 'Médias d’État nord-coréens',
+    ],
+];

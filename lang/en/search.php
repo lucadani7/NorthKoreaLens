@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filters',
+    'category' => 'Category',
+    'all_categories' => 'All categories',
+    'source_type' => 'Source type',
+    'all_source_types' => 'All source types',
+    'period' => 'Period',
+    'any_time' => 'Any time',
+    'last_7_days' => 'Last 7 days',
+    'last_30_days' => 'Last 30 days',
+    'last_90_days' => 'Last 90 days',
+    'last_year' => 'Last year',
+    'custom_range' => 'Custom range',
+    'from' => 'From',
+    'to' => 'To',
+    'language' => 'Language',
+    'all_languages' => 'All languages',
+    'clear_filters' => 'Clear filters',
+    'matching_results' => 'Results matching your filters',
+    'no_matching_results' => 'No results match your filters.',
+    'source_types' => [
+        'independent' => 'Independent newsrooms',
+        'analysis' => 'Analysis and research',
+        'testimony' => 'Escapee testimonies',
+        'travel_vlog' => 'Travel vloggers',
+        'state_media' => 'North Korean state media',
+    ],
+];

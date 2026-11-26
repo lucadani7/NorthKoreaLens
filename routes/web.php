@@ -4,11 +4,13 @@ use App\Http\Controllers\FeedController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SourcesController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', FeedController::class)->name('home');
+Route::get('search', SearchController::class)->name('search');
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 Route::post('locale', LocaleController::class)->name('locale.update');
 

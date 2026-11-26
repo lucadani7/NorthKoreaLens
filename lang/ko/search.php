@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => '필터',
+    'category' => '섹션',
+    'all_categories' => '모든 섹션',
+    'source_type' => '출처 유형',
+    'all_source_types' => '모든 출처 유형',
+    'period' => '기간',
+    'any_time' => '전체 기간',
+    'last_7_days' => '최근 7일',
+    'last_30_days' => '최근 30일',
+    'last_90_days' => '최근 90일',
+    'last_year' => '최근 1년',
+    'custom_range' => '기간 직접 설정',
+    'from' => '시작일',
+    'to' => '종료일',
+    'language' => '언어',
+    'all_languages' => '모든 언어',
+    'clear_filters' => '필터 지우기',
+    'matching_results' => '필터에 맞는 결과',
+    'no_matching_results' => '필터에 맞는 결과가 없습니다.',
+    'source_types' => [
+        'independent' => '독립 언론사',
+        'analysis' => '분석 및 연구',
+        'testimony' => '탈북민 증언',
+        'travel_vlog' => '여행 브이로거',
+        'state_media' => '북한 관영 매체',
+    ],
+];

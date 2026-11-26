@@ -11,6 +11,8 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
+        config(['scout.driver' => 'null']);
+
         // Tests check what the server sends, not the built JS/CSS, so they must not depend
         // on a Vite manifest that may be stale or missing (for example in CI).
         $this->withoutVite();

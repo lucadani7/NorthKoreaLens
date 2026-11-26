@@ -59,6 +59,10 @@ Ein Wort zur Sprache: Zwei Wörter kommen auf NK Lens nirgends vor:
 - **„Führer“**, weil es an Adolf Hitler erinnert, den nationalsozialistischen Diktator. Für die Kims schreiben wir stattdessen „Machthaber“, und das Thema zu Nordkoreas Spitze heißt bei uns „Staatsführung“.
 - **„Anschluss“**, weil es an die Angliederung Österreichs an das nationalsozialistische Deutschland 1938 erinnert. Für Japans Übernahme Koreas schreiben wir „Annexion“.
 
+## Suche
+
+Über die Suchleiste findest du veröffentlichte Artikel und Beiträge im Archiv von NK Lens. Sie durchsucht echte Inhalte aus dem Archiv, keine Chatbot-Antworten. Über die Suche erzeugt NK Lens keine Antworten oder anderen Texte im eigenen Namen. Suchanfragen und den Suchverlauf speichern wir nicht in unserer Datenbank.
+
 ## Künstliche Intelligenz
 
 ### Wie wir KI nutzen
@@ -93,4 +97,4 @@ Manche Menschen, die über Nordkorea sprechen, bringen sich selbst oder ihre Fam
 
 Wenn wir einen Fehler machen, korrigieren wir ihn und sagen, was wir geändert haben. Wenn dir ein Fehler auffällt, sag es uns bitte; eine Kontaktadresse erscheint hier bald.
 
-_Zuletzt aktualisiert: 24. November 2026._
+_Zuletzt aktualisiert: 26. November 2026._

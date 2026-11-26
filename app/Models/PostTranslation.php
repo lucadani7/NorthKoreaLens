@@ -23,6 +23,12 @@ class PostTranslation extends Model
 {
     protected $fillable = ['post_id', 'locale', 'title', 'excerpt', 'body', 'editorial_note'];
 
+    protected static function booted(): void
+    {
+        static::saved(fn (PostTranslation $translation) => $translation->post?->searchable());
+        static::deleted(fn (PostTranslation $translation) => $translation->post?->searchable());
+    }
+
     /** @return BelongsTo<Post, $this> */
     public function post(): BelongsTo
     {

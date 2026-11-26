@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'filters' => 'Filter',
+    'category' => 'Rubrik',
+    'all_categories' => 'Alle Rubriken',
+    'source_type' => 'Quellentyp',
+    'all_source_types' => 'Alle Quellentypen',
+    'period' => 'Zeitraum',
+    'any_time' => 'Jederzeit',
+    'last_7_days' => 'Letzte 7 Tage',
+    'last_30_days' => 'Letzte 30 Tage',
+    'last_90_days' => 'Letzte 90 Tage',
+    'last_year' => 'Letztes Jahr',
+    'custom_range' => 'Benutzerdefinierter Zeitraum',
+    'from' => 'Von',
+    'to' => 'Bis',
+    'language' => 'Sprache',
+    'all_languages' => 'Alle Sprachen',
+    'clear_filters' => 'Filter löschen',
+    'matching_results' => 'Ergebnisse passend zu den Filtern',
+    'no_matching_results' => 'Keine Ergebnisse entsprechen den Filtern.',
+    'source_types' => [
+        'independent' => 'Unabhängige Redaktionen',
+        'analysis' => 'Analyse und Forschung',
+        'testimony' => 'Berichte von Geflüchteten',
+        'travel_vlog' => 'Reise-Vlogger',
+        'state_media' => 'Nordkoreanische Staatsmedien',
+    ],
+];

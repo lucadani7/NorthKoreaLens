@@ -37,6 +37,20 @@ class Source extends Model
     /** @use HasFactory<SourceFactory> */
     use HasFactory;
 
+    protected static function booted(): void
+    {
+        static::saved(function (Source $source): void {
+            if ($source->wasChanged('type')) {
+                Post::where('source_id', $source->getKey())
+                    ->chunkById((int) config('scout.chunk.searchable', 500), function ($posts): void {
+                        foreach ($posts as $post) {
+                            $post->searchable();
+                        }
+                    });
+            }
+        });
+    }
+
     protected $fillable = [
         'name',
         'slug',
