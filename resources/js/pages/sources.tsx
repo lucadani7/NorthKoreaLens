@@ -53,15 +53,25 @@ export default function Sources({ page, sources }: Props) {
                                         className="flex min-h-14 items-center justify-between gap-4 px-4 py-3"
                                     >
                                         <span className="flex items-center gap-3 font-semibold">
-                                            <span
-                                                aria-hidden="true"
-                                                className={cn(
-                                                    'size-2.5 shrink-0 rounded-full',
-                                                    propaganda
-                                                        ? 'bg-nk-red-dark'
-                                                        : 'bg-nk-blue',
-                                                )}
-                                            />
+                                            {source.logoUrl ? (
+                                                <img
+                                                    src={source.logoUrl}
+                                                    alt=""
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    className="size-10 shrink-0 rounded-lg border border-slate-200 bg-white object-contain p-1 dark:border-slate-700"
+                                                />
+                                            ) : (
+                                                <span
+                                                    aria-hidden="true"
+                                                    className={cn(
+                                                        'size-2.5 shrink-0 rounded-full',
+                                                        propaganda
+                                                            ? 'bg-nk-red-dark'
+                                                            : 'bg-nk-blue',
+                                                    )}
+                                                />
+                                            )}
                                             {source.name}
                                         </span>
 

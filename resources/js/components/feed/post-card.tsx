@@ -2,13 +2,14 @@ import KeepHyphenated from '@/components/keep-hyphenated';
 import { Link } from '@inertiajs/react';
 import { ExternalLink, Sparkles } from 'lucide-react';
 import EditorialNote from '@/components/feed/editorial-note';
+import NkLensLogo from '@/components/nk-lens-logo';
+import PublishedAt from '@/components/published-at';
 import SourceNotice from '@/components/feed/source-notice';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import { useTranslation } from '@/hooks/use-translation';
 import { categoryBadge, isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
-import { timeAgo } from '@/lib/time';
 import { editorialPolicy } from '@/routes';
 import { show } from '@/routes/posts';
 
@@ -55,19 +56,43 @@ export default function PostCard({
             {post.isPropaganda && <PropagandaBanner />}
 
             <div className="flex items-center gap-3 px-5 pt-4">
-                <div
-                    aria-hidden="true"
-                    className={cn(
-                        'flex size-11 shrink-0 items-center justify-center rounded-lg text-sm font-bold',
-                        post.isPropaganda
-                            ? 'bg-red-50 text-nk-red-dark dark:bg-red-950 dark:text-red-200'
-                            : isCuriosity(post.category.slug)
-                              ? 'bg-nk-green/10 text-nk-green-dark dark:bg-nk-green/30 dark:text-white'
-                              : 'bg-nk-blue/10 text-nk-blue dark:bg-nk-blue/30 dark:text-white',
-                    )}
-                >
-                    {initials(author)}
-                </div>
+                {post.source?.logoUrl ? (
+                    <img
+                        src={post.source.logoUrl}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        className="size-11 shrink-0 rounded-lg border border-slate-200 bg-white object-contain p-1 dark:border-slate-700"
+                    />
+                ) : !post.source ? (
+                    <div
+                        aria-hidden="true"
+                        className={cn(
+                            'flex size-11 shrink-0 items-center justify-center rounded-lg',
+                            post.isPropaganda
+                                ? 'bg-red-50 dark:bg-red-950'
+                                : isCuriosity(post.category.slug)
+                                  ? 'bg-nk-green/10 dark:bg-nk-green/30'
+                                  : 'bg-nk-blue/10 dark:bg-nk-blue/30',
+                        )}
+                    >
+                        <NkLensLogo className="size-8 text-nk-blue dark:text-sky-300" />
+                    </div>
+                ) : (
+                    <div
+                        aria-hidden="true"
+                        className={cn(
+                            'flex size-11 shrink-0 items-center justify-center rounded-lg text-sm font-bold',
+                            post.isPropaganda
+                                ? 'bg-red-50 text-nk-red-dark dark:bg-red-950 dark:text-red-200'
+                                : isCuriosity(post.category.slug)
+                                  ? 'bg-nk-green/10 text-nk-green-dark dark:bg-nk-green/30 dark:text-white'
+                                  : 'bg-nk-blue/10 text-nk-blue dark:bg-nk-blue/30 dark:text-white',
+                        )}
+                    >
+                        {initials(author)}
+                    </div>
+                )}
                 <div className="min-w-0 flex-1">
                     <div className="truncate text-[15px] font-semibold">
                         {author}
@@ -78,12 +103,12 @@ export default function PostCard({
                         </div>
                     )}
                     {post.publishedAt && (
-                        <time
-                            dateTime={post.publishedAt}
+                        <PublishedAt
+                            publishedAt={post.publishedAt}
+                            locale={locale}
+                            now={now}
                             className="text-[13px] text-slate-600 dark:text-slate-400"
-                        >
-                            {timeAgo(post.publishedAt, locale, now)}
-                        </time>
+                        />
                     )}
                 </div>
                 {!post.isPropaganda && (

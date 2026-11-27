@@ -44,7 +44,9 @@ class AdminPanelTest extends TestCase
 
         $this->get('/admin')->assertOk();
         $this->get(SourceResource::getUrl('index'))->assertOk()->assertSee('Daily NK');
-        $this->get(SourceResource::getUrl('edit', ['record' => $source]))->assertOk();
+        $this->get(SourceResource::getUrl('edit', ['record' => $source]))
+            ->assertOk()
+            ->assertSee('Logo');
         $this->get(PostResource::getUrl('index'))->assertOk()->assertSee('Police officers clash at Hyesan Station');
         $this->get(PostResource::getUrl('create'))->assertOk();
         $this->get(PostResource::getUrl('edit', ['record' => $post]))->assertOk();

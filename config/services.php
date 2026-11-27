@@ -40,4 +40,24 @@ return [
         'key' => env('YOUTUBE_API_KEY'),
     ],
 
+    'google_tts' => [
+        'credentials' => env('GOOGLE_APPLICATION_CREDENTIALS'),
+        'disk' => env('GOOGLE_TTS_DISK', 'public'),
+        'voices' => [
+            'en' => ['language_code' => 'en-US', 'name' => 'en-US-Neural2-F'],
+            'ro' => ['language_code' => 'ro-RO', 'name' => 'ro-RO-Wavenet-A'],
+            'ko' => ['language_code' => 'ko-KR', 'name' => 'ko-KR-Neural2-A'],
+            'de' => ['language_code' => 'de-DE', 'name' => 'de-DE-Neural2-F'],
+            'fr' => ['language_code' => 'fr-FR', 'name' => 'fr-FR-Neural2-A'],
+            'es' => ['language_code' => 'es-ES', 'name' => 'es-ES-Neural2-A'],
+            'it' => ['language_code' => 'it-IT', 'name' => 'it-IT-Neural2-A'],
+            'pt' => ['language_code' => 'pt-BR', 'name' => 'pt-BR-Neural2-A'],
+            'tr' => ['language_code' => 'tr-TR', 'name' => 'tr-TR-Wavenet-A'],
+            'nb' => ['language_code' => 'nb-NO', 'name' => 'nb-NO-Wavenet-A'],
+            'ru' => ['language_code' => 'ru-RU', 'name' => 'ru-RU-Wavenet-A'],
+            'uk' => ['language_code' => 'uk-UA', 'name' => 'uk-UA-Wavenet-A'],
+            'hu' => ['language_code' => 'hu-HU', 'name' => 'hu-HU-Wavenet-A'],
+        ],
+    ],
+
 ];

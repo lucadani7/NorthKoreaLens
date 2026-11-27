@@ -3,12 +3,14 @@ import { Head, Link } from '@inertiajs/react';
 import { ExternalLink } from 'lucide-react';
 import AskAi from '@/components/ask-ai';
 import EditorialNote from '@/components/feed/editorial-note';
+import NkLensLogo from '@/components/nk-lens-logo';
+import PostAudioPlayer from '@/components/post-audio-player';
+import PublishedAt from '@/components/published-at';
 import SourceNotice from '@/components/feed/source-notice';
 import YouTubeEmbed from '@/components/youtube-embed';
 import PropagandaBanner from '@/components/feed/propaganda-banner';
 import SectionsLayout from '@/components/sections-layout';
 import { useTranslation } from '@/hooks/use-translation';
-import { timeAgo } from '@/lib/time';
 import { categoryBadge, isCuriosity } from '@/lib/category-colors';
 import { cn } from '@/lib/utils';
 import { warningBox } from '@/lib/warning-colors';
@@ -19,13 +21,15 @@ type Props = {
     post: App.Data.PostData;
     /** Full text of a team post; null for articles from other sources. */
     body: string | null;
+    /** Public MP3 URL only when this original article has current generated audio. */
+    audioUrl: string | null;
     /** Server time as ISO 8601. */
     now: string;
     /** Up to three other posts that share a topic. */
     related: App.Data.PostData[];
 };
 
-export default function Post({ post, body, now, related }: Props) {
+export default function Post({ post, body, audioUrl, now, related }: Props) {
     const { t, locale } = useTranslation();
     const author = post.source?.name ?? 'NK Lens';
     // Plain text only: paragraphs are separated by blank lines, nothing is rendered as HTML.
@@ -55,17 +59,32 @@ export default function Post({ post, body, now, related }: Props) {
 
                     <div className="flex flex-col gap-5 p-6 sm:p-8">
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600 dark:text-slate-400">
+                            {post.source?.logoUrl && (
+                                <img
+                                    src={post.source.logoUrl}
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="size-8 rounded-md border border-slate-200 bg-white object-contain p-0.5 dark:border-slate-700"
+                                />
+                            )}
+                            {!post.source && (
+                                <span
+                                    aria-hidden="true"
+                                    className="flex size-8 items-center justify-center rounded-md bg-nk-blue/10 dark:bg-nk-blue/30"
+                                >
+                                    <NkLensLogo className="size-6 text-nk-blue dark:text-sky-300" />
+                                </span>
+                            )}
                             <span className="font-semibold text-slate-900 dark:text-slate-100">
                                 {author}
                             </span>
                             {post.publishedAt && (
-                                <time dateTime={post.publishedAt}>
-                                    {timeAgo(
-                                        post.publishedAt,
-                                        locale,
-                                        new Date(now),
-                                    )}
-                                </time>
+                                <PublishedAt
+                                    publishedAt={post.publishedAt}
+                                    locale={locale}
+                                    now={new Date(now)}
+                                />
                             )}
                             {!post.isPropaganda && (
                                 <span
@@ -99,6 +118,17 @@ export default function Post({ post, body, now, related }: Props) {
                         >
                             <KeepHyphenated text={post.title} />
                         </h1>
+
+                        {audioUrl && (
+                            <PostAudioPlayer
+                                postId={post.id}
+                                audioUrl={audioUrl}
+                                title={post.title}
+                                category={post.category.name}
+                                imageUrl={post.imageUrl}
+                                label={t('Automated voice narration')}
+                            />
+                        )}
 
                         {post.youtubeId ? (
                             <div className="overflow-hidden rounded-lg">

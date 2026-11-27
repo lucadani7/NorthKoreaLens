@@ -8,6 +8,7 @@ use App\Enums\SourceType;
 use App\Models\Source;
 use Database\Seeders\CategorySeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Testing\AssertableInertia as Assert;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
@@ -143,7 +144,14 @@ class PagesTest extends TestCase
 
     public function test_the_sources_page_lists_active_sources(): void
     {
-        $nkNews = Source::factory()->create(['name' => 'NK News', 'website_url' => 'https://www.nknews.org']);
+        $disk = Storage::fake('public');
+        $logoPath = 'source-logos/nk-news.png';
+        $disk->put($logoPath, 'logo');
+        $nkNews = Source::factory()->create([
+            'name' => 'NK News',
+            'website_url' => 'https://www.nknews.org',
+            'logo_path' => $logoPath,
+        ]);
         Source::factory()->create(['name' => 'Paused outlet', 'is_active' => false]);
 
         $this->get(route('sources'))
@@ -154,6 +162,7 @@ class PagesTest extends TestCase
                 ->has('sources', 1)
                 ->where('sources.0.id', $nkNews->id)
                 ->where('sources.0.websiteUrl', 'https://www.nknews.org')
+                ->where('sources.0.logoUrl', $disk->url($logoPath))
             );
     }
 

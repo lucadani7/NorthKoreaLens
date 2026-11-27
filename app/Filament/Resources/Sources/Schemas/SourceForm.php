@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Sources\Schemas;
 
 use App\Enums\SourceType;
 use App\Models\Category;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -38,6 +39,14 @@ class SourceForm
                 ->url()
                 ->required()
                 ->maxLength(255),
+            FileUpload::make('logo_path')
+                ->label('Logo')
+                ->image()
+                ->disk('public')
+                ->directory('source-logos')
+                ->visibility('public')
+                ->maxSize(2048)
+                ->helperText('Shown next to the publication name on cards, article pages and the Sources page.'),
             TextInput::make('feed_url')
                 ->label('RSS or Atom feed')
                 ->url()

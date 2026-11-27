@@ -9,8 +9,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * @property int $id
@@ -19,6 +21,7 @@ use Illuminate\Support\Facades\Lang;
  * @property SourceType $type
  * @property int|null $category_id Section for its posts; null means the default for the type
  * @property string $website_url
+ * @property string|null $logo_path
  * @property string|null $feed_url
  * @property string $feed_format "feed" (RSS or Atom) or "rodong" (Rodong Sinmun home page)
  * @property int $fetch_every_hours Hours between two fetches
@@ -57,6 +60,7 @@ class Source extends Model
         'type',
         'category_id',
         'website_url',
+        'logo_path',
         'feed_url',
         'feed_format',
         'fetch_every_hours',
@@ -142,6 +146,18 @@ class Source extends Model
 
         // __() gives an array for a key that names a group of translations, not one text.
         return is_string($notice) ? $notice : null;
+    }
+
+    public function logoUrl(): ?string
+    {
+        if ($this->logo_path === null) {
+            return null;
+        }
+
+        /** @var FilesystemAdapter $disk */
+        $disk = Storage::disk('public');
+
+        return $disk->url($this->logo_path);
     }
 
     /** Whether the hourly run should fetch it now: never fetched, or its interval has passed. */

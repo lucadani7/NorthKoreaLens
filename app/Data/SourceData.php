@@ -13,6 +13,7 @@ class SourceData extends Data
         public int $id,
         public string $name,
         public string $slug,
+        public ?string $logoUrl,
         public SourceType $type,
         /** Null when the site may not be linked for this visitor (North Korean sites, in South Korea). */
         public ?string $websiteUrl,
@@ -28,6 +29,7 @@ class SourceData extends Data
             id: $source->id,
             name: $source->name,
             slug: $source->slug,
+            logoUrl: $source->logoUrl(),
             type: $source->type,
             websiteUrl: VisitorRegion::current()->allows($source->website_url) ? $source->website_url : null,
             forbidsAi: $source->forbids_ai,

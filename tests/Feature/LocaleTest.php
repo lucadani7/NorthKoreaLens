@@ -69,6 +69,17 @@ class LocaleTest extends TestCase
             ->assertCookieMissing('locale');
     }
 
+    public function test_google_tts_has_a_fixed_voice_for_every_supported_locale(): void
+    {
+        $voices = config('services.google_tts.voices');
+
+        $this->assertSame(array_keys(config('locales.supported')), array_keys($voices));
+
+        foreach ($voices as $locale => $voice) {
+            $this->assertStringStartsWith($voice['language_code'].'-', $voice['name'], $locale);
+        }
+    }
+
     public function test_every_language_translates_every_interface_string(): void
     {
         $keys = $this->keysUsedByTheInterface();

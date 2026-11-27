@@ -44,11 +44,16 @@ class PostData extends Data
         public ?SourceData $source,
     ) {}
 
-    public static function fromModel(Post $post): self
+    public static function fromModel(Post $post, bool $includeOriginalEditorialNote = false): self
     {
         $region = VisitorRegion::current();
         $linkAllowed = $region->allows($post->original_url);
         $locale = app()->getLocale();
+        $editorialNote = $post->localized('editorial_note', $locale);
+
+        if ($post->isOriginalByNkLens() && ! $includeOriginalEditorialNote) {
+            $editorialNote = null;
+        }
 
         return new self(
             id: $post->id,
@@ -59,7 +64,7 @@ class PostData extends Data
             imageCredit: $region->allows($post->image_url) ? $post->image_credit : null,
             publishedAt: $post->published_at?->toIso8601String(),
             isPropaganda: $post->isPropaganda(),
-            editorialNote: $post->localized('editorial_note', $locale),
+            editorialNote: $editorialNote,
             epigraph: $post->epigraph,
             hasBody: filled($post->body),
             linkWithheld: ! $linkAllowed,

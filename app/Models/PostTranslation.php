@@ -16,12 +16,22 @@ use Illuminate\Support\Carbon;
  * @property string|null $excerpt
  * @property string|null $body
  * @property string|null $editorial_note
+ * @property string|null $audio_path
+ * @property string|null $audio_hash
+ * @property Carbon|null $audio_generated_at
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
 class PostTranslation extends Model
 {
     protected $fillable = ['post_id', 'locale', 'title', 'excerpt', 'body', 'editorial_note'];
+
+    protected function casts(): array
+    {
+        return [
+            'audio_generated_at' => 'datetime',
+        ];
+    }
 
     protected static function booted(): void
     {

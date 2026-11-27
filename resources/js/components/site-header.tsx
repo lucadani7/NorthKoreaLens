@@ -88,29 +88,15 @@ function AccountLinks({
     );
 }
 
-function SearchAction({
-    currentPath,
-    stacked = false,
-    onNavigate,
-}: {
-    currentPath: string;
-    stacked?: boolean;
-    onNavigate?: () => void;
-}) {
+function SearchAction({ currentPath }: { currentPath: string }) {
     const { t } = useTranslation();
     const isSearchPage = currentPath === search().url;
-    const className = stacked
-        ? cn(
-              'flex min-h-11 items-center gap-2 rounded-lg px-3 text-[15px]',
-              isSearchPage
-                  ? 'bg-nk-blue font-bold text-white'
-                  : 'font-medium text-foreground hover:bg-muted',
-          )
-        : 'ml-12 inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-nk-blue hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
+    const className =
+        'inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-white px-3 text-sm font-semibold text-nk-blue hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
     const content = (
         <>
             <SearchIcon aria-hidden="true" className="size-4" />
-            {t('Search')}
+            <span className="hidden sm:inline">{t('Search')}</span>
         </>
     );
 
@@ -119,7 +105,7 @@ function SearchAction({
             <button
                 type="submit"
                 form="archive-search-form"
-                onClick={onNavigate}
+                aria-label={t('Search')}
                 className={className}
             >
                 {content}
@@ -128,7 +114,7 @@ function SearchAction({
     }
 
     return (
-        <Link href={search()} onClick={onNavigate} className={className}>
+        <Link href={search()} aria-label={t('Search')} className={className}>
             {content}
         </Link>
     );
@@ -205,11 +191,6 @@ function MobileMenu() {
                             {t(title)}
                         </Link>
                     ))}
-                    <SearchAction
-                        currentPath={path}
-                        stacked
-                        onNavigate={() => setOpen(false)}
-                    />
                 </nav>
 
                 <div className="grid gap-2 border-t border-border px-5 py-4 text-sm">
@@ -262,9 +243,8 @@ function MobileMenu() {
 }
 
 /**
- * Phones and tablets: one row with the logo, the language and a menu button.
- * From 1024 px, where the sections sit beside the feed: the logo, then language,
- * theme and account links side by side.
+ * The search and language controls sit together in the header on every screen size.
+ * Larger screens also show theme and account links beside them.
  */
 export default function SiteHeader() {
     const { name } = usePage().props;
@@ -284,7 +264,10 @@ export default function SiteHeader() {
                     </span>
                 </Link>
 
-                <LanguagePicker compact />
+                <div className="flex shrink-0 items-center gap-2">
+                    <SearchAction currentPath={path} />
+                    <LanguagePicker compact />
+                </div>
 
                 <ThemeToggle className="hidden lg:flex" />
 
@@ -316,7 +299,6 @@ export default function SiteHeader() {
                         {t(title)}
                     </Link>
                 ))}
-                <SearchAction currentPath={path} />
             </nav>
             <FlagStripe />
         </header>

@@ -10,6 +10,7 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/storage/app/google-tts-credentials.json
 /resources/js/actions
 /resources/js/routes
 /resources/js/wayfinder

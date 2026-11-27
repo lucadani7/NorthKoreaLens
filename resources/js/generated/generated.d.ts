@@ -43,6 +43,7 @@ export type SourceData = {
 id: number,
 name: string,
 slug: string,
+logoUrl: string | null,
 type: App.Enums.SourceType,
 websiteUrl: string | null,
 forbidsAi: boolean,
@@ -51,6 +52,7 @@ notice: string | null,
 export type SourceListingData = {
 id: number,
 name: string,
+logoUrl: string | null,
 type: App.Enums.SourceType,
 websiteUrl: string | null,
 };

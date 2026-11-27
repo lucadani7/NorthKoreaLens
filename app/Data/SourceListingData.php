@@ -12,6 +12,7 @@ class SourceListingData extends Data
     public function __construct(
         public int $id,
         public string $name,
+        public ?string $logoUrl,
         public SourceType $type,
         /** Null for state media: we do not link to North Korean state sites. */
         public ?string $websiteUrl,
@@ -22,6 +23,7 @@ class SourceListingData extends Data
         return new self(
             id: $source->id,
             name: $source->name,
+            logoUrl: $source->logoUrl(),
             type: $source->type,
             websiteUrl: $source->type->isPropaganda() ? null : $source->website_url,
         );

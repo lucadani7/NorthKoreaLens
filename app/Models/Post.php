@@ -30,6 +30,10 @@ use Laravel\Scout\Searchable;
  * @property string|null $image_url
  * @property string|null $image_credit Author and licence of the image, shown under it
  * @property string $language
+ * @property bool $is_nklens_original
+ * @property string|null $audio_path
+ * @property string|null $audio_hash
+ * @property Carbon|null $audio_generated_at
  * @property Carbon|null $published_at
  * @property Carbon|null $source_published_at When the source published it; drafts keep it until published
  * @property Carbon|null $created_at
@@ -48,6 +52,19 @@ class Post extends Model
 
     use Searchable;
     use SoftDeletes;
+
+    protected static function booted(): void
+    {
+        static::creating(function (Post $post): void {
+            $post->is_nklens_original = $post->source_id === null;
+        });
+
+        static::updating(function (Post $post): void {
+            if ($post->source_id !== null) {
+                $post->is_nklens_original = false;
+            }
+        });
+    }
 
     protected $fillable = [
         'source_id',
@@ -72,6 +89,8 @@ class Post extends Model
         return [
             'published_at' => 'datetime',
             'source_published_at' => 'datetime',
+            'is_nklens_original' => 'boolean',
+            'audio_generated_at' => 'datetime',
         ];
     }
 
@@ -241,5 +260,11 @@ class Post extends Model
     public function isPublished(): bool
     {
         return $this->published_at !== null && $this->published_at->lte(now());
+    }
+
+    /** Posts without a source are authored by the NK Lens team in this application. */
+    public function isOriginalByNkLens(): bool
+    {
+        return $this->is_nklens_original && $this->source_id === null;
     }
 }

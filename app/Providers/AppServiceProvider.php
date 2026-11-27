@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Contracts\SpeechSynthesizer;
+use App\Models\Post;
+use App\Models\PostTranslation;
+use App\Observers\PostObserver;
+use App\Observers\PostTranslationObserver;
+use App\Services\GoogleCloudSpeechSynthesizer;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(SpeechSynthesizer::class, GoogleCloudSpeechSynthesizer::class);
     }
 
     /**
@@ -24,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        Post::observe(PostObserver::class);
+        PostTranslation::observe(PostTranslationObserver::class);
     }
 
     /**
