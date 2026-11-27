@@ -88,6 +88,18 @@ class SourceSeeder extends Seeder
             ],
         ];
 
+        // UHN Plus provides a dedicated Spanish-language North Korea RSS feed.
+        $sources[] = [
+            'name' => 'UHN Plus',
+            'slug' => 'uhn-plus',
+            'type' => SourceType::Independent,
+            'website_url' => 'https://www.uhnplus.com',
+            'feed_url' => 'https://www.uhnplus.com/tag/corea-del-norte/rss/',
+            'feed_format' => 'ghost',
+            'language' => 'es',
+            'forbids_ai' => false,
+        ];
+
         // Charles Ryu, a North Korean escapee in the US, on YouTube. His videos wait as drafts so
         // the team picks the testimonies worth showing (not the reactions or street interviews).
         // Readers see the notice in lang/<locale>/source_notices.php on every post.

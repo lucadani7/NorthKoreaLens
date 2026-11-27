@@ -22,6 +22,7 @@ use Laravel\Scout\Searchable;
  * @property int $category_id
  * @property string $title
  * @property string|null $excerpt
+ * @property string|null $search_terms
  * @property string|null $body
  * @property string|null $editorial_note
  * @property string|null $epigraph A short verse or quote shown above the text, in every language
@@ -72,6 +73,7 @@ class Post extends Model
         'category_id',
         'title',
         'excerpt',
+        'search_terms',
         'body',
         'editorial_note',
         'epigraph',
@@ -101,6 +103,7 @@ class Post extends Model
         $searchable = [
             'title' => $this->title,
             'excerpt' => $this->excerpt,
+            'search_terms' => $this->search_terms,
             'body' => $this->body,
             'editorial_note' => $this->editorial_note,
             'epigraph' => $this->epigraph,

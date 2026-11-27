@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Storage;
  * @property string $website_url
  * @property string|null $logo_path
  * @property string|null $feed_url
- * @property string $feed_format "feed" (RSS or Atom) or "rodong" (Rodong Sinmun home page)
+ * @property string $feed_format "feed" (RSS or Atom), "ghost" (Ghost RSS and archive), or "rodong"
  * @property int $fetch_every_hours Hours between two fetches
  * @property list<string>|null $keywords Import only items that mention one of these
  * @property bool $needs_review Import as drafts, to be published by hand

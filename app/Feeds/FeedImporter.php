@@ -5,6 +5,7 @@ namespace App\Feeds;
 use App\Models\Post;
 use App\Models\Source;
 use App\Support\YouTube;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
@@ -32,23 +33,40 @@ class FeedImporter
         }
 
         $publishedAt = $item->publishedAt ? Carbon::instance($item->publishedAt) : Carbon::now();
+        $searchTerms = implode(' ', array_unique(array_filter(array_map('trim', $item->categories))));
+        $searchTerms = $searchTerms !== '' ? $searchTerms : null;
 
+        $guid = Str::limit($item->guid, 250, '');
         // withTrashed: a post we deleted (or a draft we rejected) is not imported again.
-        $post = Post::withTrashed()->firstOrCreate(
-            ['source_id' => $source->id, 'guid' => Str::limit($item->guid, 250, '')],
-            [
-                'category_id' => $source->importCategory()->id,
-                'title' => Str::limit($item->title, 250),
-                'excerpt' => self::excerpt($item),
-                'original_url' => $item->link,
-                'image_url' => $item->imageUrl,
-                'language' => $source->language,
-                // A feed item without a date is shown as published when we first saw it.
-                // Items that need review stay drafts (no date) until someone publishes them.
-                'published_at' => $source->needs_review ? null : $publishedAt,
-                'source_published_at' => $publishedAt,
-            ],
-        );
+        // RSS GUIDs and archive-page links can differ for the same Ghost article.
+        $post = Post::withTrashed()
+            ->where('source_id', $source->id)
+            ->where(fn (Builder $query) => $query->where('guid', $guid)->orWhere('original_url', $item->link))
+            ->orderBy('id')
+            ->first();
+
+        if ($post === null) {
+            $post = Post::withTrashed()->firstOrCreate(
+                ['source_id' => $source->id, 'guid' => $guid],
+                [
+                    'category_id' => $source->importCategory()->id,
+                    'title' => Str::limit($item->title, 250),
+                    'excerpt' => self::excerpt($item),
+                    'original_url' => $item->link,
+                    'image_url' => $item->imageUrl,
+                    'language' => $source->language,
+                    // A feed item without a date is shown as published when we first saw it.
+                    // Items that need review stay drafts (no date) until someone publishes them.
+                    'published_at' => $source->needs_review ? null : $publishedAt,
+                    'source_published_at' => $publishedAt,
+                    'search_terms' => $searchTerms,
+                ],
+            );
+        }
+
+        if (! $post->wasRecentlyCreated && $post->search_terms !== $searchTerms) {
+            $post->forceFill(['search_terms' => $searchTerms])->save();
+        }
 
         return $post->wasRecentlyCreated;
     }

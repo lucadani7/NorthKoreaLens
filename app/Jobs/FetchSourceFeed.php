@@ -3,7 +3,9 @@
 namespace App\Jobs;
 
 use App\Feeds\FeedImporter;
+use App\Feeds\FeedItem;
 use App\Feeds\FeedParser;
+use App\Feeds\GhostArchiveParser;
 use App\Feeds\RodongParser;
 use App\Models\Source;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -29,7 +31,7 @@ class FetchSourceFeed implements ShouldQueue
 
     public function __construct(public Source $source) {}
 
-    public function handle(FeedParser $parser, RodongParser $rodong, FeedImporter $importer): void
+    public function handle(FeedParser $parser, GhostArchiveParser $ghost, RodongParser $rodong, FeedImporter $importer): void
     {
         if (! $this->source->is_active || $this->source->feed_url === null) {
             return;
@@ -45,14 +47,47 @@ class FetchSourceFeed implements ShouldQueue
             ->get($this->source->feed_url)
             ->throw();
 
-        $items = $isRodong
-            ? $rodong->parse($response->body(), $this->source->feed_url)
-            : $parser->parse($response->body());
+        $items = match (true) {
+            $isRodong => $rodong->parse($response->body(), $this->source->feed_url),
+            $this->source->feed_format === 'ghost' => [
+                ...$parser->parse($response->body()),
+                ...$this->fetchGhostArchive($ghost),
+            ],
+            default => $parser->parse($response->body()),
+        };
 
         foreach ($items as $item) {
             $importer->import($this->source, $item);
         }
 
         $this->source->forceFill(['last_fetched_at' => now()])->save();
+    }
+
+    /** @return list<FeedItem> */
+    private function fetchGhostArchive(GhostArchiveParser $parser): array
+    {
+        $archiveUrl = $parser->archiveUrl((string) $this->source->feed_url);
+        $response = Http::timeout(20)
+            ->retry(1, 0, throw: false)
+            ->withUserAgent(config('app.name').' feed reader (+'.config('app.url').')')
+            ->accept('text/html')
+            ->get($archiveUrl)
+            ->throw();
+        $html = $response->body();
+        $items = $parser->parse($html, $archiveUrl);
+
+        for ($page = 2, $pageCount = $parser->pageCount($html); $page <= $pageCount; $page++) {
+            $pageUrl = rtrim($archiveUrl, '/')."/page/{$page}/";
+            $pageResponse = Http::timeout(20)
+                ->retry(1, 0, throw: false)
+                ->withUserAgent(config('app.name').' feed reader (+'.config('app.url').')')
+                ->accept('text/html')
+                ->get($pageUrl)
+                ->throw();
+
+            array_push($items, ...$parser->parse($pageResponse->body(), $pageUrl));
+        }
+
+        return $items;
     }
 }

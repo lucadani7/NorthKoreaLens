@@ -146,6 +146,7 @@ return [
                 'searchableAttributes' => [
                     'title',
                     'excerpt',
+                    'search_terms',
                     'body',
                     'editorial_note',
                     'epigraph',

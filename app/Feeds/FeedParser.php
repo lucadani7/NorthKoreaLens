@@ -73,6 +73,7 @@ class FeedParser
                 imageUrl: $this->rssImage($item, $content.$description),
                 publishedAt: $this->date((string) $item->pubDate),
                 description: $this->cleanText($description !== '' ? $description : $content),
+                categories: $this->rssCategories($item),
             );
         }
 
@@ -111,10 +112,44 @@ class FeedParser
                 imageUrl: $this->firstImageIn($summary) ?? $this->safeUrl($thumbnail),
                 publishedAt: $this->date((string) ($entry->published ?? '') ?: (string) $entry->updated),
                 description: $this->cleanText($summary),
+                categories: $this->atomCategories($entry),
             );
         }
 
         return $items;
+    }
+
+    /** @return list<string> */
+    private function rssCategories(SimpleXMLElement $item): array
+    {
+        $categories = [];
+
+        foreach ($item->category as $category) {
+            $name = $this->cleanText((string) $category);
+
+            if ($name !== '') {
+                $categories[] = $name;
+            }
+        }
+
+        return array_values(array_unique($categories));
+    }
+
+    /** @return list<string> */
+    private function atomCategories(SimpleXMLElement $entry): array
+    {
+        $categories = [];
+
+        foreach ($entry->children(self::NS_ATOM)->category as $category) {
+            $term = (string) $category->attributes()->term;
+            $name = $this->cleanText($term !== '' ? $term : (string) $category);
+
+            if ($name !== '') {
+                $categories[] = $name;
+            }
+        }
+
+        return array_values(array_unique($categories));
     }
 
     private function atomLink(SimpleXMLElement $entry): ?string

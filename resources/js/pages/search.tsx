@@ -1,6 +1,7 @@
 import { Head, Link, useForm } from '@inertiajs/react';
 import type { FormEvent } from 'react';
 import PostCard from '@/components/feed/post-card';
+import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/use-translation';
 import { search as searchRoute } from '@/routes';
 
@@ -287,18 +288,23 @@ export default function SearchPage({
                                 </div>
                             )}
                         </fieldset>
-                        {hasFilters && (
-                            <Link
-                                href={
-                                    form.data.q
-                                        ? `${searchRoute.url()}?q=${encodeURIComponent(form.data.q)}`
-                                        : searchRoute.url()
-                                }
-                                className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-nk-blue underline-offset-4 hover:underline dark:text-sky-300"
-                            >
-                                {filterLabels.clear}
-                            </Link>
-                        )}
+                        <div className="mt-4 flex flex-wrap items-center gap-3">
+                            <Button type="submit" className="h-11">
+                                {t('Search')}
+                            </Button>
+                            {hasFilters && (
+                                <Link
+                                    href={
+                                        form.data.q
+                                            ? `${searchRoute.url()}?q=${encodeURIComponent(form.data.q)}`
+                                            : searchRoute.url()
+                                    }
+                                    className="inline-flex min-h-11 items-center text-sm font-semibold text-nk-blue underline-offset-4 hover:underline dark:text-sky-300"
+                                >
+                                    {filterLabels.clear}
+                                </Link>
+                            )}
+                        </div>
                     </form>
                     {Object.entries(form.errors).map(([field, error]) => (
                         <p

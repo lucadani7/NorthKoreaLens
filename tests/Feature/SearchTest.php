@@ -116,6 +116,61 @@ class SearchTest extends TestCase
             );
     }
 
+    public function test_spanish_search_keeps_spanish_sources_and_excludes_haihui_videos(): void
+    {
+        $category = Category::factory()->create();
+        $uhnPlus = Source::factory()->create([
+            'name' => 'UHN Plus',
+            'language' => 'es',
+        ]);
+        $uhnPost = Post::factory()->for($category)->for($uhnPlus)->create([
+            'title' => 'Corea del Norte anuncia nuevas medidas',
+            'language' => 'es',
+        ]);
+        $otherSpanishSource = Source::factory()->create([
+            'name' => 'Another Spanish publisher',
+            'language' => 'es',
+        ]);
+        $otherSpanishPost = Post::factory()->for($category)->for($otherSpanishSource)->create([
+            'title' => 'Corea del Norte responde a las sanciones',
+            'language' => 'es',
+        ]);
+        $uhnPostTaggedByFeed = Post::factory()->for($category)->for($uhnPlus)->create([
+            'title' => 'Una noticia del feed con un titular diferente',
+            'excerpt' => 'El titular y el resumen no mencionan el tema.',
+            'search_terms' => 'Corea del Norte',
+            'language' => 'es',
+        ]);
+        $haihui = Source::factory()->create([
+            'name' => 'HaiHui în doi',
+            'type' => SourceType::TravelVlog,
+            'language' => 'en',
+        ]);
+        Post::factory()->for($category)->for($haihui)->create([
+            'title' => 'Corea del Norte: viaje por el país',
+            'language' => 'en',
+        ]);
+
+        $this->get(route('search', [
+            'q' => 'Corea del Norte',
+            'language' => 'es',
+        ]))
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('filters.language', 'es')
+                ->has('posts', 3)
+                ->where('posts', fn ($posts) => collect($posts)
+                    ->pluck('id')
+                    ->sort()
+                    ->values()
+                    ->all() === collect([$uhnPost->id, $otherSpanishPost->id, $uhnPostTaggedByFeed->id])
+                    ->sort()
+                    ->values()
+                    ->all())
+                ->where('pagination.total', 3)
+            );
+    }
+
     public function test_filter_only_search_uses_publication_dates_for_internal_and_external_posts(): void
     {
         $category = Category::factory()->create();

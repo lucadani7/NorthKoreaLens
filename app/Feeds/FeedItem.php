@@ -18,5 +18,7 @@ final readonly class FeedItem
         public ?DateTimeImmutable $publishedAt,
         /** The whole description as plain text, used to match the source's keywords. */
         public string $description = '',
+        /** @var list<string> */
+        public array $categories = [],
     ) {}
 }

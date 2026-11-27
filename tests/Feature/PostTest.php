@@ -70,6 +70,7 @@ class PostTest extends TestCase
             ->create([
                 'title' => 'Yonhap title',
                 'excerpt' => 'Short excerpt',
+                'search_terms' => null,
                 'body' => null,
                 'editorial_note' => 'Human editorial context',
                 'epigraph' => null,
@@ -79,6 +80,7 @@ class PostTest extends TestCase
         $this->assertSame([
             'title' => 'Yonhap title',
             'excerpt' => 'Short excerpt',
+            'search_terms' => null,
             'body' => null,
             'editorial_note' => 'Human editorial context',
             'epigraph' => null,
@@ -102,9 +104,8 @@ class PostTest extends TestCase
 
         $this->assertSame(9, Category::count());
         $this->assertTrue(Source::where('slug', 'rodong-sinmun')->first()->type->isPropaganda());
-        // 38 North is seeded inactive, so NK News, Daily NK, KOREA NOW, Rodong Sinmun, the SCMP,
-        // Charles North Korea and HaiHui în doi are fetched.
-        $this->assertSame(7, Source::fetchable()->count());
+        // 38 North is seeded inactive; UHN Plus joins the active news feeds and channels.
+        $this->assertSame(8, Source::fetchable()->count());
 
         $charles = Source::where('slug', 'charles-north-korea')->firstOrFail();
         $this->assertSame('human-rights', $charles->importCategory()->slug);
