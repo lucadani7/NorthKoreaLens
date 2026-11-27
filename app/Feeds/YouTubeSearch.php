@@ -8,16 +8,73 @@ use Illuminate\Support\Facades\Http;
 use RuntimeException;
 
 /**
- * Searches a YouTube channel's whole archive through the YouTube Data API v3,
- * for the videos an RSS feed no longer lists (it only has the latest 15).
- * Each page costs 100 of the 10,000 free daily quota units. Also reads chosen videos by id
- * (1 unit for up to 50 videos).
+ * Reads channel uploads and video details through the YouTube Data API v3.
+ * The search endpoint remains available for the manual catalogue; backfills use uploads
+ * pagination because search results are capped and not exhaustive.
  */
 class YouTubeSearch
 {
     private const ENDPOINT = 'https://www.googleapis.com/youtube/v3/search';
 
+    private const CHANNELS_ENDPOINT = 'https://www.googleapis.com/youtube/v3/channels';
+
+    private const PLAYLIST_ITEMS_ENDPOINT = 'https://www.googleapis.com/youtube/v3/playlistItems';
+
     private const VIDEOS_ENDPOINT = 'https://www.googleapis.com/youtube/v3/videos';
+
+    /** @return list<string> Every video in the channel's uploads playlist, in playlist order. */
+    public function channelUploadIds(string $channelId): array
+    {
+        $key = $this->key();
+        $channel = Http::timeout(20)->get(self::CHANNELS_ENDPOINT, [
+            'part' => 'contentDetails',
+            'id' => $channelId,
+            'key' => $key,
+        ])->throw();
+        $playlistId = $channel->json('items.0.contentDetails.relatedPlaylists.uploads');
+
+        if (! is_string($playlistId) || $playlistId === '') {
+            throw new RuntimeException("YouTube returned no uploads playlist for channel {$channelId}.");
+        }
+
+        $ids = [];
+        $pageToken = null;
+        $seenPageTokens = [];
+
+        do {
+            $page = Http::timeout(20)->get(self::PLAYLIST_ITEMS_ENDPOINT, array_filter([
+                'part' => 'contentDetails,snippet',
+                'playlistId' => $playlistId,
+                'maxResults' => 50,
+                'pageToken' => $pageToken,
+                'key' => $key,
+            ]))->throw();
+
+            foreach ($page->json('items', []) as $item) {
+                $id = data_get($item, 'contentDetails.videoId')
+                    ?? data_get($item, 'snippet.resourceId.videoId');
+
+                if (is_string($id) && preg_match('/\\A[A-Za-z0-9_-]{11}\\z/', $id) === 1) {
+                    $ids[$id] = $id;
+                }
+            }
+
+            $nextPageToken = $page->json('nextPageToken');
+
+            if (! is_string($nextPageToken) || $nextPageToken === '') {
+                break;
+            }
+
+            if (isset($seenPageTokens[$nextPageToken])) {
+                throw new RuntimeException('YouTube repeated an uploads playlist page token.');
+            }
+
+            $seenPageTokens[$nextPageToken] = true;
+            $pageToken = $nextPageToken;
+        } while (true);
+
+        return array_values($ids);
+    }
 
     /**
      * @param  list<string>  $keywords  Matched with YouTube's OR operator; none means every video.
@@ -116,7 +173,7 @@ class YouTubeSearch
         $key = config('services.youtube.key');
 
         if (! is_string($key) || $key === '') {
-            throw new RuntimeException('Set YOUTUBE_API_KEY in .env to search YouTube.');
+            throw new RuntimeException('Set YOUTUBE_API_KEY in .env to use the YouTube Data API.');
         }
 
         return $key;

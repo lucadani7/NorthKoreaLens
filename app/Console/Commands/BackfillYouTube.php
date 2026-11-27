@@ -10,16 +10,11 @@ use Illuminate\Console\Command;
 class BackfillYouTube extends Command
 {
     protected $signature = 'youtube:backfill
-                            {source : Slug of a source whose feed is a YouTube channel, e.g. korea-now}
-                            {--pages=4 : Pages of 50 results to read; each costs 100 of the 10,000 daily quota units}';
+                            {source : Slug of a source whose feed is a YouTube channel, e.g. korea-now or national-geographic}';
 
-    protected $description = "Import older videos from a YouTube channel's archive that match the source's keywords";
+    protected $description = "Scan a YouTube channel's complete uploads playlist and import keyword matches";
 
-    /**
-     * The API cannot tell Shorts apart, only the length. Shorts last at most 3 minutes, so
-     * sources without Shorts ask for videos of 4 minutes or more (regular ones under 4 are lost).
-     */
-    private const DURATIONS_WITHOUT_SHORTS = ['medium', 'long'];
+    private const SHORTS_MAX_SECONDS = 180;
 
     public function handle(YouTubeSearch $search, FeedImporter $importer): int
     {
@@ -39,25 +34,35 @@ class BackfillYouTube extends Command
             return self::FAILURE;
         }
 
-        $pages = max(1, (int) $this->option('pages'));
-        $videos = [];
-
-        foreach ($source->skip_shorts ? self::DURATIONS_WITHOUT_SHORTS : [null] as $duration) {
-            array_push($videos, ...$search->channelVideos($channelId, $source->keywords ?? [], $pages, $duration));
-        }
+        $ids = $search->channelUploadIds($channelId);
+        $videos = $search->videos($ids);
+        $matches = 0;
         $imported = 0;
 
         foreach ($videos as $video) {
-            // YouTube's search is loose, so our own keyword check runs again.
-            $imported += $importer->import($source, $video) ? 1 : 0;
+            if ($video['channelId'] !== $channelId
+                || ($source->skip_shorts && ($video['seconds'] === null || $video['seconds'] <= self::SHORTS_MAX_SECONDS))) {
+                continue;
+            }
+
+            $item = $video['item'];
+
+            if (! $source->wants($item->title.' '.$item->description)) {
+                continue;
+            }
+
+            $matches++;
+            $imported += $importer->import($source, $item) ? 1 : 0;
         }
 
         $this->info(sprintf(
-            '%s: %d videos found, %d new %s.',
+            '%s: %d uploads listed, %d videos available, %d keyword matches, %d new %s.',
             $source->name,
+            count($ids),
             count($videos),
+            $matches,
             $imported,
-            $source->needs_review ? 'drafts to review in /admin' : 'posts',
+            $source->needs_review ? 'drafts' : 'posts',
         ));
 
         return self::SUCCESS;

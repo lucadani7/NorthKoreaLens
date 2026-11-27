@@ -88,6 +88,29 @@ class SourceSeeder extends Seeder
             ],
         ];
 
+        // National Geographic covers many subjects; matching videos wait for review in Documentaries.
+        $sources[] = [
+            'name' => 'National Geographic',
+            'slug' => 'national-geographic',
+            'type' => SourceType::Independent,
+            'category_id' => Category::where('slug', 'documentaries')->value('id'),
+            'website_url' => 'https://www.nationalgeographic.com',
+            'feed_url' => 'https://www.youtube.com/feeds/videos.xml?channel_id=UCpVm7bg6pXKo1Pr6k5kxG9A',
+            'keywords' => [
+                'North Korea', 'North Korean', 'DPRK', 'Pyongyang',
+                'Kim Jong Un', 'Kim Jong-un', 'Kim Il Sung', 'Kim Il-sung',
+                'Kim Jong Il', 'Kim Jong-il', 'Korean Peninsula', 'inter-Korean',
+                'DMZ', 'Korean Demilitarized Zone', 'Panmunjom', 'Korean War',
+                'Juche', 'Paektu', 'Mount Paektu', 'Kaesong', 'Rason',
+                'Sinuiju', 'Wonsan', 'Hamhung', 'Chongjin',
+                'North Korean defector', 'North Korean defectors',
+            ],
+            'language' => 'en',
+            'needs_review' => true,
+            'forbids_ai' => false,
+            'skip_shorts' => true,
+        ];
+
         // UHN Plus provides a dedicated Spanish-language North Korea RSS feed.
         $sources[] = [
             'name' => 'UHN Plus',

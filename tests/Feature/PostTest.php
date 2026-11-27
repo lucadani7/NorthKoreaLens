@@ -104,8 +104,8 @@ class PostTest extends TestCase
 
         $this->assertSame(9, Category::count());
         $this->assertTrue(Source::where('slug', 'rodong-sinmun')->first()->type->isPropaganda());
-        // 38 North is seeded inactive; UHN Plus joins the active news feeds and channels.
-        $this->assertSame(8, Source::fetchable()->count());
+        // 38 North is seeded inactive; UHN Plus and National Geographic join the active sources.
+        $this->assertSame(9, Source::fetchable()->count());
 
         $charles = Source::where('slug', 'charles-north-korea')->firstOrFail();
         $this->assertSame('human-rights', $charles->importCategory()->slug);
@@ -134,6 +134,25 @@ class PostTest extends TestCase
         $scmp = Source::where('slug', 'scmp')->firstOrFail();
         $this->assertTrue($scmp->wants('Kim Jong Un inspects a new missile'));
         $this->assertFalse($scmp->wants('Beijing urges peaceful unification with Taiwan'));
+
+        $nationalGeographic = Source::where('slug', 'national-geographic')->firstOrFail();
+        $this->assertSame('documentaries', $nationalGeographic->importCategory()->slug);
+        $this->assertSame('UCpVm7bg6pXKo1Pr6k5kxG9A', $nationalGeographic->youtubeChannelId());
+        $this->assertSame([
+            'North Korea', 'North Korean', 'DPRK', 'Pyongyang',
+            'Kim Jong Un', 'Kim Jong-un', 'Kim Il Sung', 'Kim Il-sung',
+            'Kim Jong Il', 'Kim Jong-il', 'Korean Peninsula', 'inter-Korean',
+            'DMZ', 'Korean Demilitarized Zone', 'Panmunjom', 'Korean War',
+            'Juche', 'Paektu', 'Mount Paektu', 'Kaesong', 'Rason',
+            'Sinuiju', 'Wonsan', 'Hamhung', 'Chongjin',
+            'North Korean defector', 'North Korean defectors',
+        ], $nationalGeographic->keywords);
+        $this->assertTrue($nationalGeographic->needs_review);
+        $this->assertTrue($nationalGeographic->skip_shorts);
+        $this->assertFalse($nationalGeographic->forbids_ai);
+        $this->assertTrue($nationalGeographic->wants('A documentary about PYONGYANG'));
+        $this->assertTrue($nationalGeographic->wants('The story of the Korean War'));
+        $this->assertFalse($nationalGeographic->wants('Wildlife in the Amazon'));
     }
 
     public function test_category_names_are_translated(): void

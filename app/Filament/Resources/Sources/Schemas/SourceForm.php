@@ -76,7 +76,7 @@ class SourceForm
             TagsInput::make('keywords')
                 ->label('Only import items that mention')
                 ->placeholder('e.g. North Korea')
-                ->helperText('Matched in the title and description, ignoring case. Leave empty to import everything.'),
+                ->helperText('Matched in titles and descriptions, ignoring case. Used by feeds and youtube:backfill; leave empty to import everything.'),
             Toggle::make('needs_review')
                 ->label('Import as drafts, to be published by hand')
                 ->default(false),
