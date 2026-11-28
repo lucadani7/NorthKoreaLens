@@ -128,6 +128,30 @@ class FetchSourceFeedTest extends TestCase
         $this->assertNotNull($source->fresh()->last_fetched_at);
     }
 
+    public function test_38_north_feed_uses_browser_headers_and_parses_rss_items(): void
+    {
+        $this->seed(SourceSeeder::class);
+        $source = Source::query()->where('slug', '38-north')->firstOrFail();
+        $source->update(['is_active' => true]);
+
+        Http::fake([$source->feed_url => Http::response(self::FEED)]);
+
+        FetchSourceFeed::dispatchSync($source);
+
+        Http::assertSent(function (Request $request) use ($source): bool {
+            $userAgent = $request->header('User-Agent')[0] ?? '';
+
+            return $request->url() === $source->feed_url
+                && str_starts_with($userAgent, 'Mozilla/5.0')
+                && str_contains($userAgent, 'Chrome/')
+                && $request->hasHeader('Accept', 'application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8')
+                && $request->hasHeader('Accept-Language', 'en-US,en;q=0.9');
+        });
+
+        $this->assertSame(2, $source->posts()->count());
+        $this->assertSame('First article', $source->posts()->where('guid', 'first')->value('title'));
+    }
+
     public function test_uhn_plus_articles_are_imported_as_external_spanish_news_without_audio_restrictions(): void
     {
         $this->seed(SourceSeeder::class);

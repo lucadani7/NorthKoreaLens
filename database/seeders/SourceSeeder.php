@@ -12,8 +12,8 @@ class SourceSeeder extends Seeder
     public function run(): void
     {
         // NK News and Daily NK feeds checked on 2026-11-22 (RSS 2.0).
-        // 38 North sits behind a Cloudflare challenge that blocks feed readers (HTTP 403),
-        // so it stays inactive until they allow our reader or we add its posts by hand.
+        // 38 North's Cloudflare challenge returns HTTP 403 even with browser-like feed headers,
+        // so it stays inactive until a different feed URL or an approved server-side access path exists.
         $sources = [
             [
                 'name' => 'NK News',

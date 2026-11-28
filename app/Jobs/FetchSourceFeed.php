@@ -20,6 +20,12 @@ class FetchSourceFeed implements ShouldQueue
 {
     use Queueable;
 
+    private const BROWSER_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+
+    private const FEED_ACCEPT = 'application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8';
+
+    private const ACCEPT_LANGUAGE = 'en-US,en;q=0.9';
+
     public int $tries = 3;
 
     /**
@@ -40,12 +46,22 @@ class FetchSourceFeed implements ShouldQueue
         $isRodong = $this->source->feed_format === 'rodong';
 
         // The Rodong Sinmun site is slow (its home page is several megabytes) and often down.
-        $response = Http::timeout($isRodong ? 300 : 20)
+        $request = Http::timeout($isRodong ? 300 : 20)
             ->retry($isRodong ? 3 : 1, $isRodong ? 60_000 : 0, throw: false)
-            ->withUserAgent(config('app.name').' feed reader (+'.config('app.url').')')
-            ->accept($isRodong ? 'text/html' : 'application/rss+xml, application/atom+xml, application/xml, text/xml')
-            ->get($this->source->feed_url)
-            ->throw();
+            ->withOptions(['allow_redirects' => true]);
+
+        if ($isRodong) {
+            $request->withUserAgent(config('app.name').' feed reader (+'.config('app.url').')')
+                ->accept('text/html');
+        } else {
+            $request->withHeaders([
+                'User-Agent' => self::BROWSER_USER_AGENT,
+                'Accept' => self::FEED_ACCEPT,
+                'Accept-Language' => self::ACCEPT_LANGUAGE,
+            ]);
+        }
+
+        $response = $request->get($this->source->feed_url)->throw();
 
         $items = match (true) {
             $isRodong => $rodong->parse($response->body(), $this->source->feed_url),
